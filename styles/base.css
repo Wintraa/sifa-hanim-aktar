@@ -1,0 +1,228 @@
+/* Temel sıfırlama, tipografi ve erişilebilirlik kuralları */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 20rem;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: var(--font-sans);
+  font-size: var(--font-base);
+  line-height: 1.65;
+  color: var(--text-main);
+  background:
+    radial-gradient(circle at 10% 0%, rgba(200, 182, 166, 0.28), transparent 26rem),
+    radial-gradient(circle at 92% 12%, rgba(168, 161, 150, 0.18), transparent 22rem),
+    linear-gradient(155deg, var(--bg-main) 0%, var(--bg-soft) 100%);
+  text-rendering: optimizeLegibility;
+}
+
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  content: "";
+  opacity: 0.28;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(141, 123, 104, 0.22) 1px, transparent 0);
+  background-size: 28px 28px;
+  mask-image: linear-gradient(to bottom, #000, transparent 62%);
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  max-width: 100%;
+  font: inherit;
+}
+
+button,
+[role="button"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  min-height: 2.75rem;
+}
+
+button:not(:disabled),
+[role="button"]:not([aria-disabled="true"]),
+label[for] {
+  cursor: pointer;
+}
+
+button:disabled,
+input:disabled,
+textarea:disabled,
+select:disabled,
+[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.52;
+  filter: grayscale(0.25);
+}
+
+::selection {
+  color: var(--text-on-accent);
+  background: var(--accent-brown-dark);
+}
+
+:where(a, button, input, textarea, select, [tabindex]):focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+:where(h1, h2, h3, h4, p) {
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-serif);
+  color: var(--text-main);
+  line-height: 1.22;
+  font-weight: 600;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: var(--font-2xl);
+}
+
+h2 {
+  font-size: var(--font-xl);
+}
+
+h3 {
+  font-size: var(--font-lg);
+}
+
+p {
+  text-wrap: pretty;
+}
+
+.sidebar__brand h1,
+.sidebar__brand h2,
+.topbar h1,
+.topbar h2,
+.hero-card h2,
+.hero-card h3,
+.plants-section h3,
+.detail-header h1,
+.detail-hero h2,
+.info-card h3,
+.detail-empty h2,
+.profile-summary-content h2,
+.profile-card__header h2 {
+  margin: 0;
+}
+
+.sidebar__brand p,
+.sidebar__footer p,
+.hero-card__text,
+.plants-section__meta,
+.plants-section__intro,
+.detail-description,
+.detail-subtitle,
+.detail-empty p,
+.filter-chips__empty,
+.completion-hint,
+.topbar__subtitle {
+  color: var(--text-muted);
+}
+
+.topbar__subtitle {
+  margin: 0.2rem 0 0;
+  font-size: var(--font-sm);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.section-label,
+.sidebar__eyebrow,
+.detail-tag {
+  margin: 0 0 var(--space-1);
+  color: var(--accent-brown-dark);
+  font-size: var(--font-xs);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* Klavye kullanıcılarının tekrarlanan gezinmeyi atlamasını sağlar. */
+.skip-link {
+  position: fixed;
+  top: var(--space-2);
+  left: var(--space-2);
+  z-index: 100;
+  padding: 0.7rem var(--space-2);
+  border-radius: var(--radius-pill);
+  color: var(--text-on-accent);
+  background: var(--text-main);
+  box-shadow: var(--shadow-md);
+  font-weight: 700;
+  transform: translateY(calc(-100% - var(--space-3)));
+  transition: transform var(--duration-fast) var(--ease-standard);
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+.noscript-notice {
+  max-width: 72rem;
+  margin: var(--space-2) auto;
+  padding: var(--space-2);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  background: var(--bg-soft);
+}
+
+body.has-open-menu {
+  overflow: hidden;
+}

@@ -1,0 +1,41 @@
+﻿# Bagimliliklar
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Build / cache
+dist/
+build/
+.vite/
+*.log
+npm-debug.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Ortam degiskenleri (gizli bilgiler)
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Gecici / ham veri (buyuk veya gereksiz)
+data/pubmed-*-raw.json
+data/pubmed-vakalar-progress.json
+data/vaka-rewrite-*.json
+data/vaka-rewrite-input.json
+scripts/_candidates/
+exports/
+
+# SQLite yan dosyalari (asıl .db genelde commit edilir)
+*.db-wal
+*.db-shm

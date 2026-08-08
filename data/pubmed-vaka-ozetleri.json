@@ -1,0 +1,933 @@
+{
+  "1": {
+    "baslik": "Papatya çayı sonrası ağır alerjik şok",
+    "sorun": "Saman nezlesi ve astımı olan 8 yaşındaki çocuk, hayatında ilk kez papatya çayı içtikten sonra ağır alerjik şok (anafilaksi) geçirdi.",
+    "yaklasim": "Papatya çayı özütüne deri testi, pasif transfer testi ve ELISA ile IgE antikorları incelendi; pelin ve diğer polenlerle çapraz alerji testleri yapıldı.",
+    "sonuc": "Tepkinin IgE aracılı alerji olduğu doğrulandı; pelin polenine daha önce duyarlı olan çocuğun papatyadaki polenlerle çapraz reaksiyon verdiği gösterildi.",
+    "anlatim": "Polen alerjisi olan bir çocuk ilk papatya çayını içtikten sonra ağır alerjik şoka girdi. Testler papatyaya karşı IgE antikorları ve pelin ile çapraz duyarlılığı ortaya koydu. Yazarlar tepkinin tip I IgE aracılı mekanizmayla açıklandığını belirtti. Bu olgu ciddi alerji riskini belgeler. Bu metin tıbbi tavsiye değildir."
+  },
+  "5": {
+    "baslik": "Adaçayı çayı sonrası yüzde şişlik",
+    "sorun": "13 yaşındaki erkek çocukta, kekik içeren yemekten ve ardından adaçayı çayından sonra yüzde ve vücutta ani şişlik (anjiyoödem) gelişti; daha önce bilinen alerji öyküsü yoktu.",
+    "yaklasim": "Et, peynir, adaçayı, kekik ve nane ayrı ayrı ağızdan deneme (OFC) ve deri testleriyle değerlendirildi.",
+    "sonuc": "Adaçayı, kekik ve nane denemelerinde şişlik tekrarladı; ballıbabagiller (Lamiaceae) alerjisi tanısı kondu. Deri testi yalnızca nanede pozitifti; tanı çoğunlukla ağızdan denemeye dayandı.",
+    "anlatim": "Çocuğun ilk şişliği yemekteki kekikten, ikincisi adaçayı çayından kaynaklandı. Nane ile de benzer reaksiyon görüldü. Aynı bitki ailesindeki baharatlar alerji tetikleyici olabilir. Bu metin tıbbi tavsiye değildir."
+  },
+  "7": {
+    "baslik": "Yenidoğanda kekik suyu sonrası ağır kriz",
+    "sorun": "14 günlük bebek, gaz sancısı (infantil kolik) için şekerli kekik suyu içirildikten iki saat sonra ağır nefes darlığıyla acile geldi. Kan şekeri düşük, kanda asit birikimi (laktik asidoz) vardı.",
+    "yaklasim": "Acil değerlendirme yapıldı; altta yatan fruktoz 1-6 difosfataz eksikliği araştırılıp doğrulandı.",
+    "sonuc": "Nadir metabolik hastalık tanısı kondu. Asidozun kekik suyuna eklenen şeker/fruktoz veya kekikteki fenolik bileşenlerle tetiklenmiş olabileceği düşünüldü.",
+    "anlatim": "Gaz için verilen şekerli kekik suyu sonrası yenidoğan ağır solunum sıkıntısıyla hastaneye getirildi. İnceleme altta yatan enzim eksikliğini ortaya çıkardı. Yazarlar tatlandırıcı veya kekik bileşenlerinin krizi tetiklemiş olabileceğini belirtti. Bu metin tıbbi tavsiye değildir."
+  },
+  "10": {
+    "baslik": "Kas hastalığında Ayurveda bakımı",
+    "sorun": "Dokuz yaşındaki erkek çocukta Duchenne kas distrofisi vardı: altı yaşından beri yardım olmadan ayakta duramıyor ve yürüyemiyordu. Alt ekstremite güçsüzlüğü, iştahsızlık, düzensiz bağırsak hareketleri ve huzursuzluk eşlik ediyordu.",
+    "yaklasim": "Dört ay boyunca altı seans Ayurveda uygulandı: dış ve iç Swedana, Basti, ağızdan bitkisel ilaçlar (Zingiber officinale dahil) ve diyet düzenlemesi; fizyoterapi sürdürüldü.",
+    "sonuc": "Üçüncü seans sonrası yatak kenarından destekle ayakta durma ve taş tutup atma görüldü. Bir ay sonunda iştah ve bağırsak alışkanlıklarında iyileşme bildirildi; kabızlık azaldı, üst ekstremite kas tonusunda ince değişiklikler ve yaşam kalitesinde artış kaydedildi.",
+    "anlatim": "Ağır kas hastalığı olan çocuğa Ayurveda temelli çok bileşenli bakım uygulandı; zencefil ağızdan verilen bitkiler arasındaydı. Takipte ayakta durma kapasitesi ve genel şikayetlerde iyileşme bildirildi. Bu tek olgu deneyimidir. Bu metin tıbbi tavsiye değildir."
+  },
+  "11": {
+    "baslik": "COVID-19'da ekinezya fayda-risk değerlendirmesi",
+    "sorun": "Hafif, grip benzeri COVID-19 şikayetlerinde birçok kişinin bitkisel destek eklemesi bekleniyordu; hangisinin güvenli veya yararlı olduğu net değildi.",
+    "yaklasim": "DSÖ ve EMA listelerindeki 39 bitki için klinik ve laboratuvar verileri derlendi; fayda-risk dengesi paracetamol, ibuprofen ve kodein referans alınarak sınıflandırıldı.",
+    "sonuc": "Echinacea purpurea dahil 12 bitki umut verici (promising) olarak sınıflandırıldı. Derleme, erken/hafif gripte destek tedavisi olarak klinik tartışmaya değer olabilecek bitkileri öne çıkardı.",
+    "anlatim": "Bu derleme COVID-19 döneminde solunum şikayetlerinde kullanılan bitkilerin fayda-risk dengesini değerlendirir. Ekinezya umut verici grupta yer alır. Metin tek hasta öyküsü değil, bilimsel kanıt özetidir. Bu metin tıbbi tavsiye değildir."
+  },
+  "12": {
+    "baslik": "Deri sertleşmesinde Ayurveda bakımı",
+    "sorun": "45 yaşındaki kadında üç yıldır yaygın deri sertleşmesi, renk açılması, eklem katılığı, eklem ağrısı, iştahsızlık, kabızlık ve göğüs yanması vardı. Yaygın sistemik skleroz tanısı konmuştu.",
+    "yaklasim": "Ayurveda protokolü uygulandı: pippali rasayan, svedana, virechan, basti ve ağızdan bitkisel ilaçlar; rezene (Foeniculum vulgare) arka da dahildi.",
+    "sonuc": "Sekiz hafta sonra renk açılması azaldı, yeni saç çıkışı görüldü, hafif deri yumuşaması oldu; göğüs yanması, iştahsızlık ve uykusuzluk azaldı, ruhsal iyilik hali arttı.",
+    "anlatim": "Uzun süredir sistemik skleroz yaşayan kadına Ayurveda bakımı verildi; rezene ağızdan preparatların parçasıydı. Sekiz haftada deri ve şikayetlerde kısmi düzelme kaydedildi. Bu tek olgu deneyimidir. Bu metin tıbbi tavsiye değildir."
+  },
+  "13": {
+    "baslik": "Kontrolsüz hipertiroidide melisa çayı",
+    "sorun": "27 yaşındaki kadında kronik hipertiroidi vardı: düşük TSH, yüksek T3-T4, ekzoftalmus, çarpıntı, kaygı, uyku sorunu, saç dökülmesi ve kuru cilt. Bir yıl prednizolon ve metimazol sonrası yeterli düzelme olmamıştı.",
+    "yaklasim": "Geleneksel Fars tıbbı paketi verildi: yaşam tarzı düzenlemesi, melisa bitki çayı ve Fars arpa suyu; bir yıl izlendi.",
+    "sonuc": "İki ayda TSH arttı, T3-T4 düştü; ekzoftalmus, çarpıntı, kaygı, uyku bozukluğu ve cilt kuruluğu belirgin düzeldi. Üç ayda tiroid kan değerleri normal aralığa girdi; bir yıllık izlemde durum stabil kaldı.",
+    "anlatim": "İlaçlara rağmen kontrolsüz hipertiroidisi olan kadın melisa çayı içeren geleneksel bakım aldı. Takipte hem laboratuvar hem şikayetlerde iyileşme kaydedildi. Bu tek olgu sunumudur. Bu metin tıbbi tavsiye değildir."
+  },
+  "14": {
+    "baslik": "Yenidoğanda ısırgan suyuyla kurdeşen",
+    "sorun": "17 günlük bebekte yaygın kurdeşen (ürtiker) çıktı. Anne, meme çatlakları için emzirmeden önce ve sonra ısırgan otu kaynatma suyunu meme ucuna sürmüştü.",
+    "yaklasim": "Bebek ve annede kanda ısırgana özel IgE düzeyleri ölçüldü; bebekte ısırgan suyuyla deri çizik testi yapıldı.",
+    "sonuc": "Bebekte yüksek IgE ve pozitif deri testi saptandı. Döküntüler ilaç verilmeden birinci günde geriledi, ikinci günde kayboldu.",
+    "anlatim": "Emziren annenin ısırgan kaynatmasıyla temastan sonra bebekte kurdeşen görüldü. Testler bebekte duyarlılığı destekledi. Döküntü kısa sürede kendiliğinden geçti. Bu metin tıbbi tavsiye değildir."
+  },
+  "15": {
+    "baslik": "Civanperçemi alerjisi ve bağışıklık hücreleri",
+    "sorun": "38 yaşındaki alerjisi olmayan erkek oduncuda mevsimsel hava yoluyla temas dermatiti vardı; ışığa maruz cilt bölgelerinde kızarık-skalöz lezyonlar ve kabarcıklar görülüyordu.",
+    "yaklasim": "Civanperçemi dahil birkaç Compositae (bileşikgiller) özütüne yama testi yapıldı; kanından alınan T hücreleri laboratuvar ortamında incelendi.",
+    "sonuc": "Civanperçemi dahil birçok Compositae özütüne pozitif yama testi elde edildi. T hücre klonları Th0 fenotipi gösterdi; IFN-gamma ve IL-4 yüksek düzeyde üretildi.",
+    "anlatim": "Oduncunun mevsimsel cilt döküntüsünde civanperçemi yama testinde pozitifti. Bağışıklık hücrelerinin sitokin profili incelendi; IL-4'ün de rol oynayabileceği belirtildi. Bu immunoloji çalışmasıdır, tedavi sonucu raporu değildir. Bu metin tıbbi tavsiye değildir."
+  },
+  "16": {
+    "baslik": "Kirlenmiş hatmi köküyle zehirlenme",
+    "sorun": "27 yaşındaki erkek ve 28 yaşındaki gebe kadın, soğuk algınlığı için hatmi kökü karışımını sıcak çikolataya ekledikten sonra ağır antikolinerjik sendromla (ağız kuruluğu, bilinç değişikliği vb.) acile geldi.",
+    "yaklasim": "Kısa süre yoğun bakımda destek tedavi verildi. Bitki örneğinde yüksek miktarda atropin bulundu; muhtemelen güzelavrat otundan (Atropa belladonna) bulaşmıştı.",
+    "sonuc": "Semptomlar geriledi ve hastalar taburcu edildi. Maruz kalınan atropin dozu 2 mg'lık hafif toksik dozun çok üzerindeydi (20-200 mg).",
+    "anlatim": "Hatmi kökü ürününün zehirli bir bitkiyle karışmış olduğu anlaşıldı. İki kişi ağır zehirlendi ama destek tedaviyle düzeldi. Bu istenmeyen olay belgesidir. Bu metin tıbbi tavsiye değildir."
+  },
+  "17": {
+    "baslik": "Bebekte anason karışımıyla karaciğer yetmezliği",
+    "sorun": "4 aylık bebekte karaciğer enzimleri çok yükseldi, kan pıhtılaşması bozuldu, kan şekeri düştü, nöbet ve gözlerde istemsiz hareketler (nistagmus) gelişti.",
+    "yaklasim": "Enfeksiyon, metabolik ve bağışıklık hastalıkları dışlandı. Aile, iki aydır her gün yıldız anason ve yeşil anason kaynatması verdiğini söyledi.",
+    "sonuc": "Ev yapımı anason ürününe bağlı karaciğer yetmezliği olarak değerlendirildi. Bebeklere evde bitki çayı vermenin ciddi riski vurgulandı.",
+    "anlatim": "Gaz için verilen anason karışımı sonrası bebekte ağır karaciğer ve sinir sistemi tablosu belgelendi. Başka nedenler ekarte edildi. Bu olumsuz olgu sunumudur. Bu metin tıbbi tavsiye değildir."
+  },
+  "18": {
+    "baslik": "COVID-19'da çörek otu içeren ev desteği",
+    "sorun": "44 yaşındaki erkek hekimde hastaneden kapılan COVID-19 doğrulandı. Sonra kuru öksürük ve nefes alma zorluğu gelişti.",
+    "yaklasim": "Evde izolasyon ve öksürük ilacı sonrası TaibUVID karışımı (çörek otu, papatya ve bal) hem buhar hem ağızdan günde beş kez dört gün kullanıldı.",
+    "sonuc": "Ertesi gün belirtiler hafifledi. İki gün sonra burun-boğaz sürüntüsü PCR negatif oldu; diğer hastalar hâlâ pozitifti. Birkaç gün sonra semptomlar kayboldu ve işe döndü.",
+    "anlatim": "COVID-19'lu bir hekim çörek otu içeren ev yapımı destek kullandı. Kısa sürede rahatlama hissetti ve PCR negatife döndü. Bu tek kişi deneyimidir. Bu metin tıbbi tavsiye değildir."
+  },
+  "19": {
+    "baslik": "Romatoid artritte kuşburnu tozu çalışması",
+    "sorun": "Romatoid artritli 89 hastada (ortalama yaş 56,6; ortalama hastalık süresi 12,8 yıl) günlük işlev kaybı ve hastalık aktivitesi vardı.",
+    "yaklasim": "Çift kör plasebo kontrollü çalışmada altı ay boyunca günde 5 gram kapsüllü kuşburnu tozu veya plasebo verildi. HAQ, DAS-28 ve yaşam kalitesi skorları izlendi.",
+    "sonuc": "Kuşburnu grubunda HAQ-DI 0,105 iyileşti, plasebo grubunda 0,039 kötüleşti (p=0,032). DAS-28'de kuşburnu lehine eğilim (p=0,056) ve hekim global skorunda anlamlı üstünlük (p=0,012) görüldü.",
+    "anlatim": "Romatoid artritli katılımcılar altı ay kuşburnu tozu aldı. Günlük işlev skorlarında plaseboya göre iyileşme bildirildi. Bu klinik araştırma özetidir. Bu metin tıbbi tavsiye değildir."
+  },
+  "20": {
+    "baslik": "Bacak yarası ve selülitte aynısefa bakımı",
+    "sorun": "Kadın hastada sol alt bacakta sivilce benzeri lezyondan ağrılı yara (ülser) gelişti. Kızarıklık, şişlik, sıcaklık ve hassasiyet selülit (deri altı iltihabı) ile uyumluydu.",
+    "yaklasim": "Kişiye özel homeopati yaklaşımında Pyrogenium, aynısefa (Calendula) ve Myristica sırayla verildi; antiseptik yara bakımı ve aynısefa merhemi uygulandı.",
+    "sonuc": "Takipte ağrı, iltihap ve yara boyutlarında kademeli azalma görüldü; yara iyileşmesi tatmin edici bulundu, advers olay bildirilmedi.",
+    "anlatim": "Bacak ülseri ve selüliti olan hastaya aynısefa içeren bireyselleştirilmiş bakım uygulandı. Seri fotoğraflarla iyileşme izlendi. MONARCH ölçeğinde olumlu ilişki skoru elde edildi. Bu tek olgu deneyimidir. Bu metin tıbbi tavsiye değildir."
+  },
+  "21": {
+    "baslik": "Diyabetik ayak enfeksiyonunda sarı kantaronlu ışık tedavisi",
+    "sorun": "Diyabetli iki hastada ayak yarası ve kemik enfeksiyonu (osteomiyelit) vardı; ampütasyon riski taşıyorlardı.",
+    "yaklasim": "Fotodinamik antimikrobiyal bakım (PACT) uygulandı: yara içine fenotiyazin boyaları ve sarı kantaron (Hypericum) özütü enjekte edilip ışık verildi. Seanslar başlangıçta günlük, iyileşme başlayınca haftalık yapıldı.",
+    "sonuc": "Her iki hasta da ampütasyon öncesinde iyileşti. Röntgenlerde kemik iyileşmesi ve doku yapısında düzelme görüldü.",
+    "anlatim": "Osteomiyelitli diyabetik iki hastaya sarı kantaron özütü içeren PACT protokolü uygulandı. Ampütasyon planlanan hastalar iyileşti. Bu klinik deneyim raporudur. Bu metin tıbbi tavsiye değildir."
+  },
+  "22": {
+    "baslik": "Çemen tozuyla ani ağır alerji",
+    "sorun": "İki kişide çemen tohumu tozunun solunması, yutulması veya saça sürülmesi sonrası ani alerji gelişti. Birinde burun akıntısı, hırıltı ve bayılma; diğerinde baş uyuşması, yüzde şişlik ve hırıltı vardı.",
+    "yaklasim": "Deri çizik testleri, çift kör plasebo kontrollü ağızdan deneme ve immunoblot ile IgE bağlanması incelendi.",
+    "sonuc": "Her iki hastada çemen ve nohuta duyarlılık doğrulandı; ağızdan denemede solunum akımında %20'den fazla düşüş görüldü. Çemen gıda alerjenleri listesine eklendi.",
+    "anlatim": "Çemen baharatı ciddi solunum ve deri reaksiyonlarına yol açtı. Testler alerjiyi objektif olarak doğruladı. Bu olumsuz alerji olgularıdır. Bu metin tıbbi tavsiye değildir."
+  },
+  "26": {
+    "baslik": "Lynch sendromunda meyan kökü Ayurveda bakımı",
+    "sorun": "28 yaşındaki erkekte Lynch sendromu vardı. Üç ameliyat ve kemoterapi sonrası 2019'da adenokanser tanısı aldı; yeni ameliyat yerine Ayurveda danışmanlığı istedi.",
+    "yaklasim": "15 gün meyan kökü (Glycyrrhiza glabra) sütlü kalpa preparatı verildi.",
+    "sonuc": "15 günde yaşam kalitesi skorunda anlamlı iyileşme (P<0,001) ve karın BT'de bağırsak duvarı kalınlığında 2,8 cm'den 1,5 cm'ye düşüş (~%50) görüldü; komplikasyon kötüleşmedi.",
+    "anlatim": "Kalıtsal bağırsak kanseri yatkınlığı olan genç erkek meyan kökü içeren Ayurveda bakımı aldı. Kısa sürede yaşam kalitesi ve görüntülemede düzelme bildirildi. Bu tek olgu sunumudur. Bu metin tıbbi tavsiye değildir."
+  },
+  "27": {
+    "baslik": "Tekrarlayan divertikülitte safran içeren destek",
+    "sorun": "72 yaşındaki emekli hekimde yedi yıldır tekrarlayan divertikülit vardı. İlk altı yılda yılda 3-4 antibiyotik gerektiren atak, 2013'te yaklaşık iki ayda bir atak olmaya başladı.",
+    "yaklasim": "Mart 2013'te Carpellum Mali comp. (ağızdan) ve safran (Crocus) içeren Kalium aceticum comp. (cilt altı) eklendi.",
+    "sonuc": "Dört ayda semptomsuz iyileşme görüldü. Sonraki 28 ayda 4 hafif atak, ardından 11 ay ataksız geçti; 41 aylık izlemde yan etki bildirilmedi.",
+    "anlatim": "Sık divertikülit atakları yaşayan hekim safran içeren entegratif preparatlar aldı. Atak sıklığı belirgin azaldı. Bu tek olgu deneyimidir. Bu metin tıbbi tavsiye değildir."
+  },
+  "28": {
+    "baslik": "Altın otu paketlemede akar kaynaklı döküntü salgını",
+    "sorun": "Bitkisel ilaç üreten işyerinde altın otu tartıp paketleyen 18 çalışanda kaşıntılı, sulu kabarcıklı döküntü gelişti; bazılarında grip benzeri hastalık da vardı.",
+    "yaklasim": "Meslek hastalıkları merkezinde değerlendirme yapıldı. Bitki örneklerinde Pyemotes ventricosus adlı akar doğrulandı.",
+    "sonuc": "İlk 16 çalışanda lezyonlar görüldü; 44 gün sonra iki yeni olgu eklendi. Etken bitkinin kendisi değil, bitkiye bulaşan akarlardı.",
+    "anlatim": "Altın otu işleyen işçilerde kaşıntılı döküntü salgını bildirildi. İnceleme kontamine akar kaynaklı olduğunu gösterdi. Bu mesleki maruziyet belgesidir. Bu metin tıbbi tavsiye değildir."
+  },
+  "30": {
+    "baslik": "Hepatopulmoner sendromda yüksek doz sarımsak",
+    "sorun": "Ağır hepatopulmoner sendromlu hastada kanda oksijen düşüklüğü (hipoksi) vardı. Somatostatin yanıt vermedi; karaciğer naklini reddetti.",
+    "yaklasim": "Hasta kendi girişimiyle 18 ay boyunca yüksek doz toz sarımsak aldı.",
+    "sonuc": "18 aylık kullanımda semptomlarda kısmi hafifleme ve bazı objektif iyileşme bulguları bildirildi.",
+    "anlatim": "Karaciğer-akciğer sendromu olan hasta nakli reddedip yüksek doz sarımsak kullandı. Takipte kısmi rahatlama kaydedildi. Bu tek olgu deneyimidir. Bu metin tıbbi tavsiye değildir."
+  },
+  "31": {
+    "baslik": "Prion hastalığında mürver lektiniyle doku boyaması",
+    "sorun": "Nadir Gerstmann-Sträussler-Scheinker (GSS) prion hastalığında beyinde anormal prion proteini birikimleri vardı.",
+    "yaklasim": "Kara mürverden elde edilen lektin (SNA) dahil çeşitli lektinlerle doku boyaması yapıldı; prion antikoru ile eşleştirme incelendi.",
+    "sonuc": "SNA, prion birikimlerinin çekirdeğinde sialil (açılı şeker) yapıları boyadı. Glikozilasyon (şeker ekleme) değişikliklerinin nöron hasarında erken olay olabileceği gösterildi.",
+    "anlatim": "GSS hastalığı beyin dokusunda mürver kaynaklı lektin boyaması kullanıldı. Kara mürver burada ilaç değil, laboratuvar aracıdır. Bu patoloji çalışmasıdır. Bu metin tıbbi tavsiye değildir."
+  },
+  "32": {
+    "baslik": "Depresyonda lavanta dahil bitki derlemesi",
+    "sorun": "Depresyon dünya çapında yaygın ve ciddi bir ruhsal hastalıktır; klasik ilaçların yan etkileri nedeniyle doğal tedavi arayışı artmaktadır.",
+    "yaklasim": "2015-2024 arası PubMed, ClinicalKey ve MedNar tarandı; 13 rastgele kontrollü çalışma ve 1 meta-analiz derlemeye alındı. Lavandula angustifolia dahil bitkiler değerlendirildi.",
+    "sonuc": "Safran, lavanta, sarı kantaron ve zerdeçalın insan çalışmalarında depresyon belirtilerini hafiflettiği bildirildi. Bitkisel ürünler klasik farmakoterapiyi destekleyebilir.",
+    "anlatim": "Sistematik derleme depresyonda fitoterapinin klinik çalışmalardaki yerini özetler. Lavanta etkili bitkiler arasında sayılır. Bu bireysel vaka değil, derlemedir. Bu metin tıbbi tavsiye değildir."
+  },
+  "33": {
+    "baslik": "Göz altı koyuluğunda andız içeren krem",
+    "sorun": "35-60 yaş arası 40 kadında orta-ağır göz altı koyuluğu, şişlik ve ince çizgiler vardı.",
+    "yaklasim": "12 haftalık açık etiketli çalışmada andız otu (Inula helenium) prebiyotiği, C vitamini türevi, peptidler, krizın ve kafein içeren göz kremi kullanıldı.",
+    "sonuc": "37 katılımcı tamamladı. Krem kısa ve uzun vadede objektif ve öznel ölçümlerde iyileşme gösterdi; mikrodamar tıkanıklığı, melanin ve hemoglobin kaynaklı renk koyulaşmasında azalma bildirildi.",
+    "anlatim": "Göz altı koyuluğu olan kadınlara andız içeren topikal krem uygulandı. Görünümde anlamlı iyileşme kaydedildi. Bu kozmetik klinik çalışmasıdır. Bu metin tıbbi tavsiye değildir."
+  },
+  "54": {
+    "baslik": "Bahçe otlarıyla temastan hedef tahtası döküntüsü",
+    "sorun": "52 yaşındaki kadın, ev bahçesinde otlarla temastan sonra 13 yıldır hedef tahtası benzeri deri döküntüsü (eritema multiforme) atakları yaşıyordu.",
+    "yaklasim": "Taze bitkilerle yama ve ışıkla yama testleri yapıldı. Karahindiba dahil birkaç ottta egzama tipi pozitiflik ve ışıkla artma görüldü.",
+    "sonuc": "Testin dördüncü gününde tipik döküntü yeniden başladı; yama testi komplikasyonu olarak eritema multiforme tekrarladı.",
+    "anlatim": "Bahçe otlarıyla teması olan kadında eritema multiforme tekrarladı. Karahindiba yama testinde pozitifti. Test sırasında döküntü yeniden alevlendi. Bu olumsuz temas olgusudur. Bu metin tıbbi tavsiye değildir."
+  },
+  "55": {
+    "baslik": "Domuzlarda çoban çantası nitrit zehirlenmesi",
+    "sorun": "18 domuzdan 4'ü öldü. Otopside kanın tipik kahverengi renk değişimi görüldü.",
+    "yaklasim": "Hayvanların yediği bahçe artığı ve otlar incelendi. Yalnızca çoban çantası otunda nitrit bulundu.",
+    "sonuc": "Çoban çantası kaynaklı şüpheli nitrit zehirlenmesi olarak bildirildi; literatürde ilk rapor olarak sunuldu.",
+    "anlatim": "Bahçe artığı yiyen domuzlarda ölüm ve nitrit zehirlenmesini düşündüren otopsi bulguları vardı. Nitrit yalnızca çoban çantası otunda saptandı. Bu veteriner olgusudur. Bu metin tıbbi tavsiye değildir."
+  },
+  "56": {
+    "baslik": "Melanom sonrası ökse otu özütü deneyimi",
+    "sorun": "68 yaşındaki erkekte 1992'de kolda, 1999'da omuzda melanom vardı; omuz tümörü evre IIA (pT3, pN0, M0) olarak çıkarıldı.",
+    "yaklasim": "Ameliyat sonrası tek destek olarak standardize ökse otu özütü (Iscador M) başlandı. 2001'de karaciğerde tek metastaz saptandı; kemoterapi veya radyoterapi verilmedi, ökse otu dozu ayarlandı.",
+    "sonuc": "Haziran 2002'de karaciğer metastazında tam remisyon tanısı kondu. Mayıs 2006'ya kadar yeni metastaz saptanmadı; hasta stabil kaldı.",
+    "anlatim": "İki kez melanom geçiren hastaya ameliyat sonrası ökse otu özütü verildi. Karaciğer metastazı tamamen geriledi. Bu tek olgu deneyimidir. Bu metin tıbbi tavsiye değildir."
+  },
+  "57": {
+    "baslik": "Lorazepam ile kedi otu etkileşimi",
+    "sorun": "Yaygın kaygı bozukluğu için lorazepam kullanan hasta, kendi kendine kedi otu ve çarkıfelek de aldı. 32 saat içinde el titremesi, baş dönmesi, çarpıntı ve kas yorgunluğu gelişti.",
+    "yaklasim": "Aile öyküsü ve muayene ile esansiyel tremor, Parkinson ve Wilson hastalığı dışlandı. Bitki-ilaç etkileşimi değerlendirildi.",
+    "sonuc": "Kedi otu ve çarkıfeleğin lorazepam etkisini artırarak GABA reseptörlerinde güçlendirici etki yapmış olabileceği düşünüldü.",
+    "anlatim": "Lorazepam kullanan hasta kedi otu ve çarkıfeleği birlikte alınca titreme, baş dönmesi ve çarpıntı yaşadı. Nörolojik hastalıklar elendi. Bu etkileşim uyarısıdır. Bu metin tıbbi tavsiye değildir."
+  },
+  "58": {
+    "baslik": "Lorazepam ile çarkıfelek etkileşimi",
+    "sorun": "Lorazepam kullanırken çarkıfelek ve kedi otu alan hastada el titremesi, baş dönmesi, çarpıntı ve kas yorgunluğu ortaya çıktı.",
+    "yaklasim": "Nörolojik hastalıklar dışlandı. Bitkisel ürün ile reçeteli ilaç etkileşimi klinik olarak değerlendirildi.",
+    "sonuc": "Çarkıfelek ve kedi otunun lorazepam ile birlikte alındığında belirtilere yol açmış olabileceği; etkinin birbirine eklenmiş olabileceği düşünüldü.",
+    "anlatim": "Çarkıfelek ve kedi otunun lorazepam ile birlikte kullanımı sonrası istenmeyen belirtiler belgelendi. Etkinin birbirine eklenmiş olabileceği düşünüldü. Bu etkileşim uyarısıdır. Bu metin tıbbi tavsiye değildir."
+  },
+  "59": {
+    "baslik": "Lösemi kemoterapisinde deve dikeni desteği",
+    "sorun": "Akut miyeloid lösemi için yeniden indüksiyon kemoterapisi sırasında karaciğer enzimleri yükseldi; destek bakıyla düzelmedi.",
+    "yaklasim": "Deve dikeni (Silybum marianum / milk thistle) eklendi; karaciğer testleri izlendi.",
+    "sonuc": "Karaciğer testlerinde hızlı düşüş görüldü; sonraki kemoterapilerde daha az yükselme bildirildi.",
+    "anlatim": "Lösemi kemoterapisi sırasında karaciğer enzimleri yükselen hastaya deve dikeni eklendi. Enzimler hızla düştü ve sonraki kürlerde daha az yükseldi. Bu tek olgu deneyimidir. Bu metin tıbbi tavsiye değildir."
+  },
+  "60": {
+    "baslik": "Enginar tozuyla mesleki burun ve astım alerjisi",
+    "sorun": "İki sebze deposu işçisinde enginar duyarlanmasıyla mesleki burun alerjisi (rinit) ve bronşiyal astım gelişti.",
+    "yaklasim": "Deri çizik testi, bitkiye özel IgE, protein analizi, burun denemesi ve bir hastada işyeri solunum ölçümü yapıldı.",
+    "sonuc": "Her iki hastada enginar deri testi pozitif; bitkiye özel IgE saptandı. Burun denemesinde solunum akımı %81-85 düştü. Parietaria poleni ile çapraz reaktivite gösterildi.",
+    "anlatim": "Sebze deposunda çalışan iki kişide enginar tozuna bağlı burun ve astım alerjisi belgelendi. Testler duyarlılığı doğruladı. Bu mesleki alerji olgusudur. Bu metin tıbbi tavsiye değildir."
+  },
+  "61": {
+    "baslik": "Huzursuz bağırsakta şahtere çalışması",
+    "sorun": "Huzursuz bağırsak sendromlu 106 hastada karın ağrısı ve şişkinlik vardı.",
+    "yaklasim": "Çift kör plasebo kontrollü çalışmada şahtere (günde 1500 mg), zerdeçal türü veya plasebo 18 hafta verildi.",
+    "sonuc": "Ağrı ve şişkinlikte gruplar arasında anlamlı fark gösterilmedi (p=0,81 ve p=0,48). Şahtere veya zerdeçal plaseboya üstünlük kanıtlanmadı.",
+    "anlatim": "Huzursuz bağırsak yakınması olan kişilere şahtere veya zerdeçal verildi. Plaseboya göre anlamlı üstünlük bulunmadı. Bu nötr sonuçlu araştırma özetidir. Bu metin tıbbi tavsiye değildir."
+  },
+  "62": {
+    "baslik": "Mahlep baharatına alerjik tepki",
+    "sorun": "40 yaşındaki kadın, badem ve ağaç yemişi alerjisi öyküsüyle mahlep çekirdeği yedikten kısa süre sonra orta şiddette kaşıntı ve ağız-boğaz şişliği yaşadı.",
+    "yaklasim": "Antep fıstığı, badem ve mahlep özütleriyle deri çizik testleri ve ELISA/Western blot analizi yapıldı.",
+    "sonuc": "Mahlep deri testinde 7 mm wheal; bademle antijenik benzerlik ve çapraz reaktivite gösterildi. Mahlebe akut alerji ilk kez belgelendi.",
+    "anlatim": "Ağaç yemişi alerjisi olan kadın mahlep yedikten sonra ağız-boğaz şişliği yaşadı. Testler mahlep duyarlılığını ve bademle çapraz reaksiyonu destekledi. Bu alerji uyarısıdır. Bu metin tıbbi tavsiye değildir."
+  },
+  "63": {
+    "baslik": "Aşırı üzerlik çayıyla ağır zehirlenme",
+    "sorun": "41 yaşındaki kadın, sakinleşmek için önerilen dozun 10-20 katı (~100 g) üzerlik tohumunu kaynatarak içtikten sonra bilinç kaybı, yüksek tansiyon, hızlı nabız ve hızlı solunum gelişti.",
+    "yaklasim": "Solunum tüpü takılması (entübasyon) ve beş gün destek tedavi uygulandı; karaciğer ve böbrek değerleri izlendi.",
+    "sonuc": "Bilinç, böbrek ve karaciğer değerleri kademeli normale döndü. Yüksek dozda yaşamı tehdit edebilen zehirlenme olgusudur; destek tedaviyle iyileşme bildirildi.",
+    "anlatim": "Çok yüksek doz üzerlik çayı sonrası kadın ağır bilinç kaybı ve solunum sorunu yaşadı. Yoğun bakım desteğiyle düzeldi. Bu zehirlenme olgusudur. Bu metin tıbbi tavsiye değildir."
+  },
+  "64": {
+    "baslik": "Sıçanlarda radyasyon yarasında eğir kökü",
+    "sorun": "Kanser radyoterapisinde sık görülen radyasyon kaynaklı cilt yarası iyileşmeyi geciktirir; önleme ve tedavi için az ilaç vardır.",
+    "yaklasim": "Sıçanlara 45 Gy radyasyon uygulandı; 10%, 20% ve 40% eğir kökü (Acorus calamus) özütü 45 gün verildi. Yara iyileşmesi, iltihap, hücre ölümü ve damar oluşumu ölçüldü.",
+    "sonuc": "Orta doz grupta 45. günde %88,97 iyileşme oranı en yüksekti. İltihap azaldı, IL-1β/IL-6/TNF-α düştü, damar oluşumu arttı.",
+    "anlatim": "Radyasyon yarası olan sıçanlarda eğir kökü özütü yara iyileşmesini hızlandırdı. Bu hayvan modeli çalışmasıdır, insan olgusu değildir. Bu metin tıbbi tavsiye değildir."
+  },
+  "65": {
+    "baslik": "Sıçanlarda ağız yarasında sinir otu",
+    "sorun": "Ağız yaraları çeşitli nedenlerle oluşur; ağız ortamı sürekli değiştiği için kesin tedavi zordur.",
+    "yaklasim": "72 Wistar sıçanına damakta 2 mm yara açıldı; farklı dozlarda nano-emülsifiye sinir otu (Plantago major) özütü uygulandı.",
+    "sonuc": "%5 sinir otu nano-emülsiyonunda yara yeniden kaplanma oranı %66,7 ile en yüksekti; diğer formlar belirgin fayda göstermedi. Dört doz sonrası gruplar arasında anlamlı fark bulunmadı.",
+    "anlatim": "Sıçan ağız yaralarında sinir otu nano-emülsiyonu yeniden kaplanmayı artırdı; diğer formlar belirgin fayda göstermedi. Bu hayvan çalışmasıdır. Bu metin tıbbi tavsiye değildir."
+  },
+  "66": {
+    "baslik": "Kadın hastalıklarında ayı üzümü kullanımı",
+    "sorun": "Kadınlar adet, menopoz yakınmaları ve basit idrar yolu enfeksiyonları için bitkisel ürün kullanıyordu.",
+    "yaklasim": "PhytoVIS veri tabanından 1658 kadının kendi bildirdiği bitkisel kullanımları analiz edildi.",
+    "sonuc": "Basit idrar yolu enfeksiyonunda ayı üzümü (Arctostaphylos uva-ursi) en çok kullanılan bitkilerden biriydi. Algılanan etkinlik ve tolerabilite çok iyi puanlandı.",
+    "anlatim": "Gerçek yaşam verisinde kadınların bitkisel ürün tercihleri incelendi. Ayı üzümü idrar yolu şikayetlerinde öne çıktı. Bu gözlemsel analizdir. Bu metin tıbbi tavsiye değildir."
+  },
+  "67": {
+    "baslik": "Hafif prolaktin yüksekliğinde hayıt deneyimi",
+    "sorun": "Hafif prolaktin yüksekliği ve seyrek adet (oligomenore) olan hastada göreli östrojen düşüklüğü vardı; hipofiz tümörü yoktu. Bromokriptin ilacını tolere edemedi.",
+    "yaklasim": "Hayıt (Vitex agnus-castus) özütü başlandı.",
+    "sonuc": "Şikayetlerde rahatlama ve hormonal testlerde düzelme bildirildi.",
+    "anlatim": "İlacı tolere edemeyen hastaya hayıt özütü verildi. Şikayet ve hormon testlerinde düzelme kaydedildi. Bu tek olgu sunumudur. Bu metin tıbbi tavsiye değildir."
+  },
+  "68": {
+    "baslik": "Zayıflama takviyesiyle kalp ritmi duraklaması",
+    "sorun": "37 yaşındaki sağlıklı erkek, 10 gün Hydroxycut Hardcore zayıflama takviyesi aldıktan sonra bayılma (senkop) yaşadı. Telemetride tekrarlayan sinüs düğüm duraklamaları ve 24 saniyelik duraklama görüldü.",
+    "yaklasim": "Ürün kesildi; kardiyak izlem yapıldı.",
+    "sonuc": "İlaç bırakılınca semptomlar tamamen geçti. Hydroxycut'a bağlı bradiaritmi (yavaş kalp ritmi) ve senkop ilk kez raporlandı.",
+    "anlatim": "Zayıflama takviyesi kullanan erkekte bayılma ve kalp ritmi duraklamaları görüldü. Ürün kesilince düzeldi. Özet Hydroxycut Hardcore takviyesini anlatır; aslanpençesi bu yayında geçmez. Bu metin tıbbi tavsiye değildir."
+  },
+  "70": {
+    "baslik": "At kestanesi içeren saç takviyesiyle morarma",
+    "sorun": "23 yaşındaki kadın, doğum kontrol hapı başladıktan kısa sonra bacaklarda ağrılı morarmalarla acile geldi. Hap kesilince morarma geçti.",
+    "yaklasim": "Sonradan aynı dönemde at kestanesi özütü içeren oral saç takviyesi de aldığı anlaşıldı. Hap tek başına yeniden denendi.",
+    "sonuc": "Yalnızca hapla reaksiyon olmadı; at kestanesi içeren takviyenin kan sulandırıcı etkisi daha olası neden sayıldı.",
+    "anlatim": "Morarmalar önce doğum kontrol hapına bağlandı. Sonra aynı dönemde at kestanesi içeren saç takviyesi aldığı anlaşıldı; yalnız hapla tepki yeniden olmadı. Bu istenmeyen olay belgesidir. Bu metin tıbbi tavsiye değildir."
+  },
+  "71": {
+    "baslik": "İleri karaciğer kanserinde geven içeren macun",
+    "sorun": "55 yaşındaki kadında yaygın karaciğer kanseri, portal ven pıhtısı ve idrar söktürücülere dirençli karın suyu (asit) vardı. Genel durumu kötüydü (ECOG skoru 3).",
+    "yaklasim": "Göbek çevresindeki bir noktaya geven (Astragalus) içeren bitkisel macun ve günde bir saat bitkisel ısıtma (moksibüstyon) uygulandı.",
+    "sonuc": "Bir ayda bel çevresi 86 cm'den 71 cm'ye düştü, genel durum skorunda iyileşme oldu; istenmeyen etki gözlenmedi.",
+    "anlatim": "İleri karaciğer kanserli ve karın suyu biriken kadına geven içeren dışarıdan macun ve ısıtma uygulandı. Bir ayda bel çevresi ve genel durumda düzelme bildirildi. Bu tek olgu deneyimidir. Bu metin tıbbi tavsiye değildir."
+  },
+  "72": {
+    "baslik": "Üreter stenti şikayetlerinde altınbaşak kompleksi",
+    "sorun": "İdrar yoluna double-J stent takılan 60 hastada idrar yakınmaları, ağrı ve yaşam kalitesi bozulması vardı.",
+    "yaklasim": "Açık etiketli rastgele çalışmada altınbaşak (Solidago) içeren bitkisel kompleks veya tamsulosin bir ay verildi; USSQ skorları izlendi.",
+    "sonuc": "Her iki tedavide skorlar başlangıca göre iyileşti; idrar semptomlarında 7. ve 21. günlerde tamsulosin lehine anlamlı fark vardı. Ağrı ve diğer alanlarda anlamlı fark bildirilmedi.",
+    "anlatim": "Stent şikâyeti olan hastalara altınbaşak içeren kompleks veya tamsulosin verildi. İkisinde de skorlar düzeldi; bazı idrar yakınmalarında ilaç kolu biraz öndeydi. Bu araştırma özetidir. Bu metin tıbbi tavsiye değildir."
+  },
+  "74": {
+    "baslik": "Köpekte hünnap çekirdeği yabancı cisim",
+    "sorun": "15 yaşındaki kısırlaştırılmış erkek Maltese köpek, bütün hünnap yedikten beş gün sonra iştahsızlık ve halsizlik yaşadı.",
+    "yaklasim": "Röntgenlerde karakteristik çizgili opak cisimler görüldü. Ameliyatla mideden altı sivri uçlu çekirdek çıkarıldı.",
+    "sonuc": "Köpek sorunsuz iyileşti. Veteriner literatürde hünnap çekirdeği yutma ilk kez bu şekilde raporlandı.",
+    "anlatim": "Bütün hünnap yiyen köpeğin midesinden sivri çekirdekler ameliyatla çıkarıldı. Köpek iyileşti. Bu veteriner olgusudur, insan şifa deneyimi değildir. Bu metin tıbbi tavsiye değildir."
+  },
+  "75": {
+    "baslik": "Alıç kökü tabletiyle yavaş nabız",
+    "sorun": "Hasta kilo vermek için internetten alıç kökü (Crataegus mexicana) tableti aldıktan sonra yaygın kas ağrıları, baş dönmesi ve dakikada 52 atımlık yavaş nabızla (bradikardi) acile geldi.",
+    "yaklasim": "Tekrar sorulunca bitkisel ürün öyküsü alındı. Kanda digoksin benzeri düzey ölçüldü; gözlem yapıldı.",
+    "sonuc": "Şikayetler gözlemle düzeldi, kalp hızı normale döndü. Alıç kökünün kalp glikozidi benzeri etkisine bağlı toksisite olarak değerlendirildi.",
+    "anlatim": "İnternetten alınan alıç kökü tableti sonrası yavaş nabız ve kas ağrıları belgelendi. Gözlemle düzeldi. Bu zehirlenme olgusudur. Bu metin tıbbi tavsiye değildir."
+  },
+  "76": {
+    "baslik": "Yeşil çay özütüyle ağır karaciğer yetmezliği",
+    "sorun": "Kişi, zayıflama için satılan yeşil çay hidroalkolik özütünü (Exolise) kendi kendine kullanırken ani ve ağır karaciğer yetmezliği (fulminan hepatit) geliştirdi.",
+    "yaklasim": "Klinik değerlendirme yapıldı; karaciğer nakli gerekti.",
+    "sonuc": "Fulminan hepatit nedeniyle karaciğer nakli yapıldığı bildirildi.",
+    "anlatim": "Zayıflama için satılan yeşil çay özütünü kendi kendine kullanan kişide ani ve ağır karaciğer yetmezliği gelişti. Karaciğer nakli gerekti. Bu toksisite uyarısıdır. Bu metin tıbbi tavsiye değildir."
+  },
+  "77": {
+    "baslik": "Bitkisel panax kombinasyonu kullanan erkekte akut akciğer embolisi",
+    "sorun": "41 yaşındaki erkek, ani nefes darlığı ve bayılma (senkop) ile acile başvurdu. İncelemelerde akut masif akciğer embolisi (akciğer damarlarına pıhtı) tanısı kondu.",
+    "yaklasim": "Hasta Tribulus terrestris, yulaf ve Panax ginseng içeren bitkisel kombinasyon (clavis panax) kullanıyordu. Pıhtı eritici (trombolitik) tedavi verildi; taburcu olurken kan sulandırıcı (Coumadin) başlandı.",
+    "sonuc": "Trombolitik tedavi sonrası nefes darlığı düzeldi. Hasta bitkisel kombinasyon riskleri, özellikle panax konusunda bilgilendirilerek taburcu edildi.",
+    "anlatim": "Yayımlanmış olguda, bitkisel kombinasyon kullanan erkekte ani nefes darlığı ve bayılmayla ağır akciğer embolisi saptandı. Pıhtı eritici tedaviyle nefes darlığı düzeldi. Taburcu edilirken bitkisel ürün riskleri anlatıldı. Bu metin tıbbi tavsiye değildir."
+  },
+  "78": {
+    "baslik": "Üç bitki karışımı sonrası ağır böbrek yetmezliği",
+    "sorun": "17 yaşındaki hastada ağır akut böbrek yetmezliği, yemek borusu iltihabı (özofajit), mide erozyonu ve iltihabi kansızlık gelişti; başka bariz neden bulunamadı.",
+    "yaklasim": "Diğer olası nedenler dışlandıktan sonra tablo, kronik olarak alınan pelin otu (Artemisia absinthium), bozotu (Marrubium vulgare) ve kantaron (Centaurium erythraea) karışımına bağlandı. Böbrek biyopsisinde antikor birikimsiz interstisyel nefrit (böbrek dokusu iltihabı) görüldü.",
+    "sonuc": "Bu üç bitkiyle ilişkili ilk bildirilen akut böbrek hasarı olgusu olarak kayda geçti. Bitki karışımının böbrek güvenliği için daha fazla çalışma gerektiği vurgulandı.",
+    "anlatim": "Genç hastada ağır böbrek yetmezliği ve mide-yemek borusu bulguları vardı. Kronik içilen pelin, bozotu ve kantaron karışımı sorumlu görüldü; biyopside böbrek iltihabı doğrulandı. Bu ciddi istenmeyen olay kaydıdır. Bu metin tıbbi tavsiye değildir."
+  },
+  "79": {
+    "baslik": "Yarpuz alımında zehirli metabolit düzeyleri",
+    "sorun": "Dört yarpuz (pennyroyal) alım olgusu incelendi. Olgu serisinde biri öldü, birine N-asetilsistein verildi, ikisi düşük miktarda almış ve N-asetilsistein almadı.",
+    "yaklasim": "Klinik olgularda kanda pulegon ve mentofuran (yarpuz metabolitleri) gaz kromatografisi ve kütle spektrometresiyle ölçüldü. Ölümcül olguda serumda 72 saat sonra pulegon 18 ng/mL, mentofuran 1 ng/mL bulundu.",
+    "sonuc": "Önceki 18 vaka derlemesinde en az 10 mL yarpuz yağına maruz kalanlarda orta-ağır zehirlenme bildirildi. Yarpuz halk sağlığı açısından önemli bir bitki zehirlenmesi olarak değerlendirildi.",
+    "anlatim": "Dört yarpuz alım olgusunda kanda zehirli metabolitler ölçüldü; bir olguda ölüm, birinde N-asetilsistein tedavisi uygulandı. Literatürde 10 mL ve üzeri yağ maruziyetinde ağır tablo sık görülüyor. Bu metin tıbbi tavsiye değildir."
+  },
+  "81": {
+    "baslik": "Pirolizidin içeren bitki çayı sonrası geri dönüşlü karaciğer damar hastalığı",
+    "sorun": "18 aylık erkek çocukta üçüncü aydan beri düzenli bitki çayı içimi sonrası portal hipertansiyon (karaciğer kapı damarında yüksek basınç) ve ağır karın suyu (asit) gelişti.",
+    "yaklasim": "Karaciğer biyopsisinde veno-oklüzif hastalık (karaciğer toplardamar tıkanıklığı) görüldü. Çayda yüksek pirolizidin alkaloidleri saptandı; anne öksürük otu sandığı bitki aslında Adenostyles alliariae idi.",
+    "sonuc": "Yalnızca destekleyici tedaviyle çocuk iki ay içinde tamamen iyileşti. Bitki toplama hatalarının ciddi sonuçları olabileceği vurgulandı.",
+    "anlatim": "Bebekte bitki çayı sonrası karaciğer damar tıkanıklığı ve karın suyu birikimi gelişti. Yanlış toplanan bitkide toksik alkaloidler bulundu. Destek tedavisiyle tam iyileşme sağlandı. Bu metin tıbbi tavsiye değildir."
+  },
+  "82": {
+    "baslik": "Yüz siğillerinde vücuda sürülen mersin uygulaması",
+    "sorun": "İran'dan iki hastada yaygın siğiller vardı; yüz siğilleri için geleneksel tedavide sınırlamalar ve yan etkiler bildirilmişti.",
+    "yaklasim": "İran geleneksel tıbbında Myrtus communis (mersin) yüze değil, vücudun başka bölgesine topikal uygulandı.",
+    "sonuc": "Her iki olguda da yüz siğilleri tamamen iyileşti. Mersinin sistemik etki de gösterebileceği öne sürüldü.",
+    "anlatim": "İki hastada yüz siğilleri için mersin vücuda sürüldü. Her ikisinde de yüz siğillerinin tamamen geçtiği bildirildi. Daha fazla araştırma gerektiği belirtildi. Bu metin tıbbi tavsiye değildir."
+  },
+  "83": {
+    "baslik": "Polen bileşiği yutma sonrası ağır alerjik şok",
+    "sorun": "32 yaşındaki alerjik rinit öykülü hasta, aktardan aldığı polen bileşiğini yuttuktan birkaç dakika sonra yaygın kaşıntı, kızarıklık, yüz şişmesi, öksürük, ses kısıklığı ve ses bozukluğu gelişti.",
+    "yaklasim": "Deri altı adrenalin ve damardan metilprednizolon verildi. Deri testleri ve IgE ölçümünde pelin otu, karahindiba ve ak söğüt (Salix alba) duyarlılığı saptandı; bileşikte bu polenler de vardı.",
+    "sonuc": "Gıda kaynaklı sistemik alerjik reaksiyon (anafilaksi) belgelendi. Polen alerjisi olanların bu tür bileşikleri kullanma riski vurgulandı.",
+    "anlatim": "Alerjik hastada polen karışımı yutulduktan dakikalar içinde ağır alerjik şok gelişti. Adrenalin ve kortizonla müdahale edildi. Testler söğüt poleni dahil polen duyarlılığını doğruladı. Bu metin tıbbi tavsiye değildir."
+  },
+  "84": {
+    "baslik": "Ameliyat sonrası hıçkırıkta centiyane acısı",
+    "sorun": "70 yaşındaki erkek, propofol anestezisiyle küçük üroloji ameliyatından sonra inatçı hıçkırık (singultus) yaşadı. Metoklopramid yanıt vermedi.",
+    "yaklasim": "Hasta yaklaşık 20 mL geleneksel centiyane (Gentiana lutea) acı içkisi (schnapps) aldı.",
+    "sonuc": "Hıçkırık bir dakika içinde tamamen kesildi. Aynı gün iki kez daha nüks ettiğinde aynı etki tekrarlandı; üçüncü uygulamadan sonra tekrarlamadı.",
+    "anlatim": "Ameliyat sonrası inatçı hıçkırığı olan yaşlı erkek centiyane acısı içtikten sonra hızlı rahatlama bildirdi. Etki aynı gün tekrarlanabilir göründü. Alkol etkisi dışlanamadı. Bu metin tıbbi tavsiye değildir."
+  },
+  "86": {
+    "baslik": "Kronik hepatit B'de Çin bitkileriyle karaciğer hasarı",
+    "sorun": "2004'te karaciğer bozukluğu nedeniyle yatan 45 kronik hepatit B hastasından yedisinde (%15,6) tablo geleneksel Çin tıbbına bağlandı.",
+    "yaklasim": "Karaciğere zararlı olabilecek bileşenler literatürle eşleştirildi; nane türü Mentha haplocalyx listede yer aldı. Bir formülasyona N-nitrosofenfluramin karıştırıldığı da saptandı.",
+    "sonuc": "Üç hastada ağır sonuç oldu: iki ölüm, bir karaciğer nakli. Bir hastada siroz hızlandı ve nakil bekleniyordu.",
+    "anlatim": "Kronik hepatit B hastalarında geleneksel Çin bitkileri sonrası karaciğer bozulması incelendi. Nane türü de şüpheli bileşenler arasındaydı. Yedi olguda ilişki kuruldu; üçünde ölüm veya nakil vardı. Bu metin tıbbi tavsiye değildir."
+  },
+  "87": {
+    "baslik": "Raynaud olgusunda biberiye yağıyla parmak ısınması",
+    "sorun": "53 yaşındaki sistemik sklerozlu kadında Raynaud fenomeni (soğukta parmak damarlarının kasılması) vardı.",
+    "yaklasim": "Ellere üç gün boyunca biberiye (Rosmarinus officinalis) esansiyel yağı sürüldü; ayrı dönemde zeytinyağı uygulandı. Isı kamerası (termografi) ile değerlendirildi.",
+    "sonuc": "Biberiye yağı sonrası parmaklarda belirgin ısınma görüldü; zeytinyağında olmadı. Hasta da ısınmayı hissetti.",
+    "anlatim": "Raynaud bulgulu kadının ellerine biberiye yağı sürüldü. Isı kamerasında ve hastanın hissinde ısınma saptandı; zeytinyağında bu etki yoktu. Tek olgu deneyimidir. Bu metin tıbbi tavsiye değildir."
+  },
+  "88": {
+    "baslik": "Kekik çayı ve kan sulandırıcıda INR yükselmesi",
+    "sorun": "77 yaşındaki atriyal fibrilasyonlu kadın 8 yıldır asenokumarol kullanıyordu; 4 yıldır INR (kan sulandırma ölçümü) 2–3 aralığındaydı. Bir haftalık kekik (Origanum vulgare) ve ara sıra mine çiçeği (verbena) çayı sonrası INR 6,42'ye çıktı.",
+    "yaklasim": "Kan sulandırıcı geçici kesildi; çay bırakılınca INR düştü. Hasta çayı tekrar içmek isteyince doz seyreltilerek ve ilaç dozu ayarlanarak INR dengelendi.",
+    "sonuc": "Kekik çayı kesildiğinde INR normale yaklaştı. Seyreltilmiş çay ve düşük ilaç dozuyla Nisan 2024'te INR 2,3 olarak kaydedildi.",
+    "anlatim": "Uzun süredir kan sulandırıcı kullanan kadında kekik çayı sonrası INR belirgin yükseldi. Çay kesilince değer düştü; seyreltilmiş devam ve doz ayarıyla INR dengelendi. Bu metin tıbbi tavsiye değildir."
+  },
+  "89": {
+    "baslik": "Hodan yağı sonrası peş peşe durmayan nöbetler",
+    "sorun": "Hasta bir hafta boyunca hodan (Borago officinalis) yağı tüketti. Hodan yağı romatizma, egzama ve menopoz şikayetleri için pazarlanmaktadır.",
+    "yaklasim": "Klinik değerlendirmede status epileptikus (peş peşe durmayan nöbetler) saptandı.",
+    "sonuc": "Nöbet tablosu hodan yağı alımıyla ilişkilendirildi.",
+    "anlatim": "Bir hafta hodan yağı kullanan hastada peş peşe durmayan nöbetler belgelendi. Tablo yağ alımıyla bağlandı. Bu metin tıbbi tavsiye değildir."
+  },
+  "90": {
+    "baslik": "Omurilik yaralanmasında Ayurveda bakımı",
+    "sorun": "C4 seviyesinde omurilik yaralanması olan hastada hareket kaybı, mesane kontrol sorunu ve yatak yarası riski gibi bulgular vardı.",
+    "yaklasim": "İki ay boyunca Ayurveda kombine bakımı uygulandı: ağızdan bitkisel ilaçlar (aralarında Withania somnifera tozu günde iki kez 3 g) ve Pancakarma işlemleri (terleme, lavman vb.).",
+    "sonuc": "İki ay sonunda nörolojik eksikliklerde ve yaşam kalitesinde belirgin klinik iyileşme bildirildi.",
+    "anlatim": "Omurilik yaralanmalı hastaya Ayurveda ilaçları ve işlemleri uygulandı; aşwagandha bu rejimin parçasıydı. İki ayda belirgin klinik iyileşme kaydedildi. Bu metin tıbbi tavsiye değildir."
+  },
+  "91": {
+    "baslik": "Uzun süreli kannabis kullanan iki erkekte destek tedavisi",
+    "sorun": "28 ve 39 yaşındaki uzun süreli kannabis kullanan erkeklerde kaygı, depresyon veya yorgunluk vardı. Kan testlerinde homosistein yüksekliği, düşük vitamin ve düşük kortizol saptandı.",
+    "yaklasim": "Folik asit, metilkobalamin, piridoksin, D vitamini, altın kök (Rhodiola rosea) ve L-tirozin takviyesi ile psikoterapi verildi.",
+    "sonuc": "İki ay sonra her iki hasta iyileşti ve kannabis tüketimini azalttı.",
+    "anlatim": "İki kannabis kullanan erkeğe vitaminler, altın kök ve psikoterapi uygulandı. İki ayda iyileşme ve kannabis azaltma bildirildi. Bu metin tıbbi tavsiye değildir."
+  },
+  "92": {
+    "baslik": "Kenevir polenine mesleki ani tip alerji",
+    "sorun": "26 yaşındaki alerji öyküsü olmayan kriminalistik teknisyen, kenevir ve haşiş temasıyla el-önkol kurdeşeni, burun akıntısı ve göz iltihabı yaşadı.",
+    "yaklasim": "Polenli haşişle ovma testi güçlü pozitifti. Kenevir antijeni bulunamayınca aynı familyadan şerbetçi otu (Humulus lupulus) ile duyarsızlaştırma başlandı.",
+    "sonuc": "Kenevir ve haşişe karşı mesleki ani tip alerji belgelendi.",
+    "anlatim": "Kenevir/haşişle çalışan teknisyende deri ve solunum alerjisi saptandı. Kenevir antijeni olmadığı için şerbetçi otu ile duyarsızlaştırma denendi. Bu metin tıbbi tavsiye değildir."
+  },
+  "93": {
+    "baslik": "Ağız liken planusunda Roma papatyası jeli çalışması",
+    "sorun": "Ağız liken planuslu (OLP) hastalarda kronik ağız iltihabı vardı; OLP tükürükte oksidatif stresle ilişkilendirilmişti.",
+    "yaklasim": "55 OLP hastasında çift kör çalışmada 26 hastaya %2 Roma papatyası (Chamaemelum nobile) jeli, 29 hastaya plasebo verildi. Dört hafta sonra tükürük antioksidan kapasitesi ölçüldü.",
+    "sonuc": "Başlangıçta gruplar arasında fark yoktu. Dört hafta sonra plasebo grubunda FRAP değeri anlamlı arttı. Tükürük antioksidan artışı ağrı ve ağız kuruluğuyla, drenaj azalmasıyla ilişkiliydi.",
+    "anlatim": "OLP hastalarına Roma papatyası jeli veya plasebo uygulandı. Plasebo grubunda bazı antioksidan ölçümlerinde artış görüldü. Yazarlar hastalık stabilizasyonu için Roma papatyası jelini önerdi. Bu metin tıbbi tavsiye değildir."
+  },
+  "94": {
+    "baslik": "Gümüşdüğme kullanımı sonrası vajinal kanama",
+    "sorun": "36 yaşındaki migrenli kadın 9 aydır günde üç kez 800 mg gümüşdüğme (Tanacetum parthenium) kapsülü alıyordu. Son 3 ayda vajinal kanama, uzamış adet ve morarmadan çok kızarık cilt gelişti.",
+    "yaklasim": "Kadın doğum polikliniğinde değerlendirildi. Naranjo ölçeği gümüşdüğme ile kanama arasında olası ilişki gösterdi.",
+    "sonuc": "Gümüşdüğme ile pıhtılaşma testi değişikliği ve vajinal kanama birlikte bildirildi. Ameliyat planlayan, pıhtı bozukluğu olan veya kan sulandırıcı kullananların dikkatli olması gerektiği vurgulandı.",
+    "anlatim": "Migren için gümüşdüğme kullanan kadında vajinal kanama ve pıhtılaşma testi değişikliği belgelendi. Naranjo ölçeği olası ilişkiyi gösterdi. Bu metin tıbbi tavsiye değildir."
+  },
+  "97": {
+    "baslik": "Selülit sonrası el ağrısında homeopatik arnika bandı",
+    "sorun": "55 yaşındaki kadında avuç içi selüliti sonrası sağ elde ağrı ve 4. parmakta uyuşma vardı. Ağızdan ibuprofen ve arnika merhemine rağmen ağrı skoru 7/10'du.",
+    "yaklasim": "Homeopatik arnika bandı (3X seyreltme) gece ağrılı bölgelere şeritler halinde uygulandı.",
+    "sonuc": "Üç gün sonra ağrı skoru 1'e düştü; uyuşma ve 3. metakarpal bölgedeki hassas nodül belirgin azaldı. Sonraki iki günde belirtiler daha da geriledi; gece ağrıyla uyanma kesildi.",
+    "anlatim": "Selülit sonrası el ağrısı süren kadına gece arnika bandı uygulandı. Üç günde ağrıda belirgin azalma ve el işlevi geri kazanımı bildirildi. Bu metin tıbbi tavsiye değildir."
+  },
+  "98": {
+    "baslik": "Diş tedavisi yanığında cadı fındığı özütü",
+    "sorun": "Kanal tedavisi sırasında lastik örtüden sızarak sodyum hipoklorit cilde değdi. Hasta yanma hissetti; çene ve çevresinde döküntü ve kabuklanma oluştu.",
+    "yaklasim": "Cilde sürülen cadı fındığı (Hamamelis virginiana) özütü ile yaklaşık 2 haftalık tedavi uygulandı.",
+    "sonuc": "Tam iyileşme sağlandı.",
+    "anlatim": "Diş tedavisinde cilde değen hipoklorit yanığı cadı fındığı özütüyle desteklenerek yaklaşık iki haftada iyileşti. Asıl olay kazaya bağlıdır. Bu metin tıbbi tavsiye değildir."
+  },
+  "99": {
+    "baslik": "Cushing hastalığında meşe homeopatisi (at ve köpek)",
+    "sorun": "At ve köpeklerde Cushing hastalığı (aşırı kortizol) klinik bulguları vardı.",
+    "yaklasim": "41 olguda ACTH 30c ve meşe (Quercus robur) 30c homeopatik karışımı standart olarak uygulandı.",
+    "sonuc": "Genel başarı oranı %80 olarak bildirildi; sonuçlar iki tür arasında benzerdi.",
+    "anlatim": "Cushing bulgulu 41 at ve köpeğe meşe içeren homeopatik karışım verildi. Bildirilen başarı oranı %80'di. Veteriner çalışmasıdır. Bu metin tıbbi tavsiye değildir."
+  },
+  "100": {
+    "baslik": "Kıvırcık labada ile ölümcül zehirlenme",
+    "sorun": "53 yaşındaki erkek kıvırcık labada (Rumex crispus) yedikten sonra mide-bağırsak yakınmaları, ağır kalsiyum düşüklüğü, metabolik asidoz ve akut karaciğer yetmezliği geliştirdi.",
+    "yaklasim": "Tedavi önlemlerine rağmen tablo kötüleşti. Otopside karaciğerde santral nekroz ve böbreklerde çift kırınımlı kristaller görüldü.",
+    "sonuc": "Yemeden 72 saat sonra hasta öldü.",
+    "anlatim": "Kıvırcık labada yiyen erkekte ağır karaciğer yetmezliği ve kalsiyum düşüklüğü gelişti. Tedaviye rağmen 72 saatte yaşamını yitirdi. Bu metin tıbbi tavsiye değildir."
+  },
+  "101": {
+    "baslik": "Kuş otu temasında hedef tahtası döküntüsü",
+    "sorun": "52 yaşındaki kadın 13 yıldır bahçe otlarıyla temas sonrası tekrarlayan hedef tahtası benzeri döküntü (eritema multiforme) yaşıyordu.",
+    "yaklasim": "Taze yapraklarla yama testinde kuş otu (Stellaria media), karahindiba, süt otu ve yonca pozitifti. Kuş otunda ışıkla artma da görüldü.",
+    "sonuc": "Yama testinden dört gün sonra tipik döküntü yeniden başladı; kabul edildiği kadar genişledi.",
+    "anlatim": "Bahçe otlarıyla teması olan kadında döküntü tekrarladı. Kuş otu yama testinde pozitifti ve test sonrası döküntü alevlendi. Bu metin tıbbi tavsiye değildir."
+  },
+  "103": {
+    "baslik": "Mine çiçeği çayı ve kan sulandırıcıda INR yükselmesi",
+    "sorun": "77 yaşındaki atriyal fibrilasyonlu kadın 8 yıldır asenokumarol kullanıyordu; 4 yıldır INR 2–3 aralığındaydı. Bir hafta boyunca günde bir fincan kekik ve ara sıra mine çiçeği (verbena) çayı içtikten sonra INR 6,42'ye çıktı.",
+    "yaklasim": "Kan sulandırıcı geçici kesildi; çaylar bırakılınca INR düştü. Hasta çayı sürdürmek isteyince seyreltilmiş infüzyon ve düşük ilaç dozuyla INR dengelendi.",
+    "sonuc": "Bitki çayları kesildiğinde INR normale yaklaştı. Nisan 2024 kontrolünde INR 2,3 olarak kaydedildi.",
+    "anlatim": "Kan sulandırıcı kullanan kadında kekik ve mine çiçeği çayı sonrası INR belirgin yükseldi. Çay kesilince değer düştü. Mine çiçeği bu olguda kekikle birlikte alınmıştır. Bu metin tıbbi tavsiye değildir."
+  },
+  "105": {
+    "baslik": "Kedi nanesi yiyen küçük çocukta bilinç baskılanması",
+    "sorun": "Yürümeye yeni başlamış çocuk büyük miktarda kedi nanesi (Nepeta cataria) yedikten sonra merkezi sinir sistemi baskılanması ve ağır uyuşukluk gösterdi.",
+    "yaklasim": "Uyuşukluk başka bir nedene bağlanamadı; kedi nanesi alımıyla ilişkilendirildi.",
+    "sonuc": "Kedi nanesinin insan bilincini etkileyip etkilemediği tartışmasına ek olgu olarak sunuldu.",
+    "anlatim": "Çok miktarda kedi nanesi yiyen küçük çocukta ağır uyuşukluk görüldü. Başka neden bulunamadı. Bu metin tıbbi tavsiye değildir."
+  },
+  "106": {
+    "baslik": "Ballıbabagiller ailesinde kekik ve dağ kekiği alerjisi",
+    "sorun": "Aynı hastada kekik (Origanum vulgare) ve dağ kekiği (Thymus vulgaris) yutulması sonrası üç kez tüm vücudu tutan alerjik reaksiyon gelişti.",
+    "yaklasim": "Deri testleri ve özel IgE ölçümleri yapıldı. Ballıbabagiller (Lamiaceae) familyası bitkilerinde ovma testleri pozitifti; çördük (Hyssopus officinalis) aynı familyanın üyesidir.",
+    "sonuc": "Kontrol hastalarında bu bitkilere duyarlılık saptanmadı. Ballıbabagiller familyasında çapraz duyarlılık olduğu sonucuna varıldı.",
+    "anlatim": "Aynı hastada kekik ve dağ kekiği yutulması sonrası üç sistemik alerjik reaksiyon belgelendi. Çördük de bu familyadandır; olguda reaksiyon kekik ve dağ kekiğiyle ilişkilendirildi. Bu metin tıbbi tavsiye değildir."
+  },
+  "107": {
+    "baslik": "Atık suyla sulanan yaz kekiğinde ağır metal birikimi",
+    "sorun": "Güney Tahran'da içme ve atık su karışımıyla sulanan yaprak sebzelerde ağır metal birikimi ve sağlık riski araştırıldı; yaz kekiği (Satureja hortensis) sekiz türden biriydi.",
+    "yaklasim": "Sera koşullarında %0–100 atık su oranlarıyla sebzeler yetiştirildi. Toprak, bitki büyümesi ve sağlık risk indeksleri ölçüldü.",
+    "sonuc": "Düşük atık su (%50 ve altı) büyümeyi artırdı; yüksek oranlarda toprak tuzluluğu ve kobalt, bakır, nikel, çinko arttı. Çocuklarda yetişkinlere göre 2,8–3,1 kat daha yüksek günlük alım ve risk skoru vardı.",
+    "anlatim": "Atık suyla sulanan yaprak sebzelerde ağır metal birikimi incelendi. Yüksek atık su oranında toprak metalleri ve sağlık riski arttı. Çevresel güvenlik çalışmasıdır. Bu metin tıbbi tavsiye değildir."
+  },
+  "108": {
+    "baslik": "Karaman kimyonu sonrası tiroid ilacı dengesinin bozulması",
+    "sorun": "Papiller tiroid kanserli, levotiroksin kullanan hastada karaman kimyonu (Carum carvi) alımı sonrası tiroid uyarı hormonu (TSH) 60,3 mIU/L'ye çıktı; ilaç dozu değişmemişti.",
+    "yaklasim": "Kimyon kesilince TSH normal aralığa döndü. Araştırmacı kendinde günde 40 mg/kg kimyon denedi.",
+    "sonuc": "Araştırmacıda da iki hafta sonra TSH belirgin yükseldi; kimyonu bıraktıktan 5 ay sonra normale döndü. Kimyonun hipotiroid (tiroid az çalışması) hastalarda TSH'yi artırabileceği bildirildi.",
+    "anlatim": "Tiroid ilacı kullanan hastada kimyon sonrası TSH çok yükseldi; kimyon kesilince normale döndü. Araştırmacıda da benzer yükselme görüldü. Bu metin tıbbi tavsiye değildir."
+  },
+  "109": {
+    "baslik": "Akut bronşitte yaban turpu ve nasturtium kombinasyonu",
+    "sorun": "Akut bronşitli hastalarda öksürük, balgam ve göğüs ağrısı gibi belirtiler vardı.",
+    "yaklasim": "384 hastada çift kör, plasebo kontrollü faz IV çalışmada yaban turpu kökü (Armoracia rusticana) ve nasturtium otu (Tropaeolum majus) içeren ürün plaseboyla karşılaştırıldı.",
+    "sonuc": "Üçüncü günden itibaren plaseboya göre istatistiksel olarak anlamlı hızlı iyileşme görüldü; öksürük, balgam ve göğüs ağrısında azalma 10. güne kadar sürdü.",
+    "anlatim": "Akut bronşitli 384 hastada yaban turpu ve nasturtium içeren ürün plaseboyla karşılaştırıldı. Üçüncü günden itibaren belirtilerde daha hızlı düzelme bildirildi. Bu metin tıbbi tavsiye değildir."
+  },
+  "110": {
+    "baslik": "Kateter ilişkili idrar yolu enfeksiyonunda bitkisel ürün",
+    "sorun": "Kateter ilişkili idrar yolu enfeksiyonu olan yatan hastalarda antibiyotik direnci endişesi vardı.",
+    "yaklasim": "96 hastada 5 haftalık gözlemsel çalışmada üç grup karşılaştırıldı: Angocin (nasturtium ve yaban turpu) tek başına (%42), Angocin + antibiyotik (%29), yalnız antibiyotik (%29).",
+    "sonuc": "Antibiyotik ± Angocin kollarında tüm enfeksiyonlar ortalama 9–10,5 günde iyileşti. Angocin tek başına başarı oranı %46, ortalama 28 günde. Angocin ile nüks oranı %50; yalnız antibiyotikte %79,3.",
+    "anlatim": "Kateter ilişkili idrar yolu enfeksiyonunda nasturtium-yaban turpu ürünü tek başına veya antibiyotikle denendi. Antibiyotik kollarında daha hızlı tam iyileşme; ürünle nüks oranı daha düşüktü. Bu metin tıbbi tavsiye değildir."
+  },
+  "111": {
+    "baslik": "Vajinal acı biber yerleştirilmesi (şiddet olgusu)",
+    "sorun": "36 yaşındaki kadında yakın partner şiddeti bağlamında vajinaya kısmi acı biber (Capsicum annuum) kabuğu yerleştirilmesi sonrası alt karın ve vulvada şiddetli yanma gelişti.",
+    "yaklasim": "Jinekolojik değerlendirme ve bakım yapıldı.",
+    "sonuc": "Tahriş edici yabancı cisim travması belgelendi. Jinekologların şiddeti tanıma ve tedavi rolü vurgulandı.",
+    "anlatim": "Partner şiddeti bağlamında vajinaya acı biber yerleştirilmesi sonrası şiddetli yanma belgelendi. Bu bitkisel tedavi değil, travma kaydıdır. Bu metin tıbbi tavsiye değildir."
+  },
+  "113": {
+    "baslik": "Alzheimer'da kadıntuzluğu dahil bitkisel yaklaşımlar",
+    "sorun": "Alzheimer hastalığı demans vakalarının %50–70'ini oluşturur; mevcut tedaviler çoğunlukla belirtileri hafifletir ve yan etkileri olabilir.",
+    "yaklasim": "Antioksidan, antienflamatuvar ve sinir koruyucu bitkilerin Alzheimer'daki potansiyeli anlatısal derlemede incelendi; kadıntuzluğu (Berberis) umut verici bitkiler arasında sayıldı.",
+    "sonuc": "Zerdeçal, ginseng, kadıntuzluğu ve safran gibi bitkilerin bilişsel bozukluklarda gelecekte rol oynayabileceği belirtildi.",
+    "anlatim": "Alzheimer'da fitoterapi potansiyelini inceleyen derlemede kadıntuzluğu umut verici bitkiler arasında sayıldı. Bireysel hasta sonucu vermez; derleme makalesidir. Bu metin tıbbi tavsiye değildir."
+  },
+  "114": {
+    "baslik": "İlaçları tolere edemeyen OKB'de altınmühürlü rejim",
+    "sorun": "16 yaşındaki erkekte ağır takıntı-zorlantı bozukluğu (OKB), sağlık takıntıları, çevrenin gerçek dışı gelmesi (derealizasyon) ve işlev kaybı vardı. SSRI ve bupropion kaygı, somatik endişe veya baş ağrısı nedeniyle tolere edilemedi.",
+    "yaklasim": "Dekstrometorfan, pirasetam ve altınmühür (Hydrastis canadensis) kök özütü 600 mg/gün ile düşük doz pregabalin, risperidon ve aripiprazol kullanıldı.",
+    "sonuc": "Altınmühür eklenmesinden dört hafta içinde depresyon ve kaygı skorları remisyon eşiğine indi; takıntılar ve derealizasyon düzeldi, okula dönüş sağlandı. Fayda iki ay sürdü; altınmühürden olumsuz etki bildirilmedi.",
+    "anlatim": "Klasik ilaçları tolere edemeyen ergende altınmühür içeren karma rejim kullanıldı. Dört haftada skorlarda belirgin düzelme ve okula dönüş bildirildi. Bu metin tıbbi tavsiye değildir."
+  },
+  "115": {
+    "baslik": "Beyin tümörü tedavisinde Çin bitkileriyle karaciğer hasarı",
+    "sorun": "65 yaşındaki glioblastom (hızlı büyüyen beyin tümörü) hastasında radyokemoterapi sonrası hastalık stabildi. Ek olarak artesunat ve Çin koptişi (Coptis chinensis) dahil bitki kaynatması alınca klinik kötüleşme oldu.",
+    "yaklasim": "Artesunat ve Çin bitkileri kesildi; karaciğer enzimleri izlendi.",
+    "sonuc": "Karaciğer enzimleri zirve değerlerinde yükselmişti (GPT 238, GOT 226, γ-GT 347 U/L). Kesim sonrası normale döndü ve hasta kendini iyi hissetti.",
+    "anlatim": "Beyin tümörü tedavisine ek Çin bitkileri ve artesunat sonrası karaciğer enzimleri yükseldi. Kesilince değerler düzeldi. Bu metin tıbbi tavsiye değildir."
+  },
+  "116": {
+    "baslik": "Stres ve uykuda kutsal fesleğen özütü çalışması",
+    "sorun": "Stres yaşayan 18–65 yaş yetişkinlerde algılanan stres, duygu durum ve uyku kalitesi değerlendirildi.",
+    "yaklasim": "100 gönüllüde 8 haftalık çift kör çalışmada günde iki kez 125 mg kutsal fesleğen (Ocimum tenuiflorum) özütü veya plasebo verildi. Stres skoru, uyku ölçekleri, saç kortizolu ve laboratuvar stres testi kullanıldı.",
+    "sonuc": "Plaseboya kıyasla stres ve uykusuzluk skorlarında daha fazla iyileşme, 8. haftada saç kortizolunda düşüş ve stres testinde daha düşük tükürük kortizolu, tansiyon ve öznel stres bildirildi. Ciddi yan etki rapor edilmedi.",
+    "anlatim": "Stresli yetişkinlere 8 hafta kutsal fesleğen özütü veya plasebo verildi. Stres ve uyku ölçümlerinde plaseboya göre daha iyi sonuçlar bildirildi. Bu metin tıbbi tavsiye değildir."
+  },
+  "118": {
+    "baslik": "Sakız ağacı yağıyla ani yaygın irinli döküntü",
+    "sorun": "İki hastada sakız ağacı (Pistacia lentiscus) esansiyel yağı içildikten sonra ani yaygın irinli döküntü (AGEP) gelişti.",
+    "yaklasim": "Deri görünümü, seyir ve doku incelemesi EuroSCAR kriterlerine göre değerlendirildi.",
+    "sonuc": "Her iki olguda da kesin AGEP tanısı kondu. Bitkisel özütlerin AGEP'in nadir nedeni olabileceği vurgulandı.",
+    "anlatim": "Sakız ağacı esansiyel yağı içilen iki olguda ani yaygın irinli döküntü belgelendi. Tanı standart kriterlerle kondu. Bu metin tıbbi tavsiye değildir."
+  },
+  "119": {
+    "baslik": "Zeytin fidesinde laboratuvar çoğaltma yöntemi",
+    "sorun": "Olea europaea L. cv Canino zeytin sürgünlerinin laboratuvar koşullarında çoğaltılması ve büyüme hızının artırılması hedeflendi.",
+    "yaklasim": "Geleneksel yarı katı ortam ile Plantform biyoreaktör (geçici daldırma sistemi) karşılaştırıldı. 16 saatte bir 8 dakika daldırma ve havalandırma uygulandı.",
+    "sonuc": "Plantform'da daha yüksek çoğalma, sürgün uzunluğu ve canlılık görüldü. 5 veya 10 µM zeatin ile benzer sürgün uzunluğu elde edildi; yarım hormon konsantrasyonu yeterli olabilir.",
+    "anlatim": "Zeytin sürgünleri geleneksel ortam ve biyoreaktörde çoğaltıldı. Biyoreaktör yaklaşımında daha iyi büyüme bildirildi. Bitki üretim çalışmasıdır; insan tedavisi değildir. Bu metin tıbbi tavsiye değildir."
+  },
+  "120": {
+    "baslik": "İncir budaması sonrası ışığa bağlı deri yanığı",
+    "sorun": "İki ağaç işçisi fırtınada zarar gören incir ağacını (Ficus carica) budadıktan ertesi sabah önkol, el ve parmaklarda yanma, kızarıklık ve su toplamaları yaşadı.",
+    "yaklasim": "Klinik tablo bitki teması ve güneş ışığına bağlı deri yanığı/kızarıklığı (fitofotodermatit) olarak değerlendirildi.",
+    "sonuc": "Belirtiler 4–6 hafta içinde geriledi.",
+    "anlatim": "İncir budayan işçilerde ertesi gün güneşle birleşince yanık benzeri döküntü çıktı. Haftalar içinde düzeldi. Bu metin tıbbi tavsiye değildir."
+  },
+  "121": {
+    "baslik": "Pika hastasında nar özütü deneyimi",
+    "sorun": "Pika (toprak, kil, sabun gibi yenmeyen maddelere aşırı istek) olan hastada bu yeme davranışı vardı.",
+    "yaklasim": "Fars geleneksel tıbbında yemeklerden sonra günde dört kez 15 ml nar (Punica granatum) özütü, 3 hafta; sabah aç karnına da kullanıldı.",
+    "sonuc": "Üç hafta içinde iştah düzeldi ve pika belirtilerinde belirgin iyileşme bildirildi.",
+    "anlatim": "Pika hastasına nar özütü verildi. Üç haftada iştah ve pika belirtilerinde düzelme bildirildi. Tek olgu deneyimidir. Bu metin tıbbi tavsiye değildir."
+  },
+  "122": {
+    "baslik": "Dirençli melazmada üzüm çekirdeği içeren protokol",
+    "sorun": "Dört hastada dirençli yüzde renk lekesi (melazma) vardı; hidrokinon dahil önceki tedaviler yetersiz kalmıştı.",
+    "yaklasim": "16 haftalık protokol: peeling formülünde üzüm çekirdeği (Vitis vinifera) özütü, ağızdan antioksidanda da üzüm çekirdeği; gece kremi ve güneş koruyucu eşlik etti.",
+    "sonuc": "Üç hastada mükemmel (>%75), birinde iyi (%50–75) iyileşme görüldü. Dört hasta da çok memnun kaldı. Son peelingden 12 hafta sonra nüks olmadı.",
+    "anlatim": "Dirençli melazmalı dört hastaya üzüm çekirdeği içeren peeling ve destek protokolü uygulandı. Üçünde mükemmel, birinde iyi iyileşme bildirildi. Bu metin tıbbi tavsiye değildir."
+  },
+  "123": {
+    "baslik": "Atopik egzamada siyah frenk üzümü tomurcuğu",
+    "sorun": "27 yaşındaki kadında kuru, kalınlaşmış, hafif kızarık ve pullu atopik egzama lezyonları vardı (EASI skoru 1,6); atopi ve çoklu alerji öyküsü vardı.",
+    "yaklasim": "Siyah frenk üzümü (Ribes nigrum) tomurcukları, uzun biber ve perilla içeren bitkisel paraparmasötikler kullanıldı; damla ve krem birlikte uygulandı.",
+    "sonuc": "İki hafta sonra lezyonlar kayboldu, EASI skoru 0 oldu. Altı ay sonra cilt durumu korundu. Dokuzuncu ayda başka bölgede lezyon gelişince iki günde yine EASI 0'a indi.",
+    "anlatim": "Atopik egzamalı kadına siyah frenk üzümü tomurcuğu içeren bitkisel ürünler verildi. İki haftada cilt lezyonları düzeldi; altı ay korundu. Karışım preparatıdır. Bu metin tıbbi tavsiye değildir."
+  },
+  "124": {
+    "baslik": "Kuru sarı nokta hastalığında yaban mersini desteği",
+    "sorun": "Kuru yaşa bağlı sarı nokta hastalığı (makula dejenerasyonu) olan hastada görme bozulması ve sarı birikintiler (drusen) vardı; onaylı kesin tedavi yoktu.",
+    "yaklasim": "Lutein, resveratrol ve yaban mersini (Vaccinium myrtillus) altı ay diyet desteği olarak birlikte kullanıldı.",
+    "sonuc": "Altı ayda göz tomografisinde drusen hacmi ve sayısında azalma, görme keskinliğinde iyileşme, göz yorgunluğunda azalma ve renk kontrastında artış bildirildi.",
+    "anlatim": "Kuru sarı nokta hastalığı olan kişiye yaban mersini içeren destek verildi. Altı ayda görüntüleme ve görme ölçümlerinde düzelme bildirildi. Tek olgu deneyimidir. Bu metin tıbbi tavsiye değildir."
+  },
+  "125": {
+    "baslik": "Warfarin ile turna yemişi suyu etkileşimi",
+    "sorun": "46 yaşındaki kadın haftalık 56 mg warfarin ile INR ortalaması 2,0 iken, iki gün günde yaklaşık 1,5 litre turna yemişi kokteyli içtikten sonra INR 4,6'ya çıktı.",
+    "yaklasim": "Warfarin dozu aynı kaldı; turna yemişi kesildi, gerekince warfarin tutuldu.",
+    "sonuc": "Turna yemişi olmadan INR hedefe yaklaştı. Sonraki dönemde 3–4 gün günde yaklaşık 2 litre içince INR 6,5'e yükseldi; kesim sonrası tekrar normale döndü. Nedensellik değerlendirmesi etkileşimi yüksek olasılıklı buldu.",
+    "anlatim": "Warfarin kullanan kadında bol turna yemişi suyu sonrası INR tehlikeli düzeylere çıktı. Turna yemişi kesilince değer hedefe yaklaştı. Bu olay iki kez tekrarlandı. Bu metin tıbbi tavsiye değildir."
+  },
+  "127": {
+    "baslik": "Ahududu özütünün lenfosit ve kanser hücrelerine etkisi",
+    "sorun": "3. Uluslararası Genomik Tıp Konferansı bildiri özetleri derlemesinde P19 başlıklı çalışma yer aldı.",
+    "yaklasim": "Batol Imran Dheeb ve arkadaşları ahududu (Rubus idaeus) özütünün normal insan lenfositleri ve kanser hücre hattı üzerindeki etkilerini inceledi.",
+    "sonuc": "Konferans özet derlemesinde P19 için yalnızca çalışma başlığı ve yazar bilgisi verilmiştir; klinik sonuç bildirilmemiştir.",
+    "anlatim": "Konferans bildiri özetlerinde ahududu özütünün lenfosit ve kanser hücre hattı üzerindeki etkilerini inceleyen laboratuvar çalışması duyuruldu. İnsan klinik sonucu bu özet derlemede yer almaz. Bu metin tıbbi tavsiye değildir."
+  },
+  "129": {
+    "baslik": "Fare modelinde ebegümeci ve kronik cilt iltihabı",
+    "sorun": "Sedef hastalığı (psoriasis) gibi hiperproliferatif cilt hastalıklarında iltihap ve aşırı hücre çoğalması sorun oluşturur.",
+    "yaklasim": "Fare kulaklarında TPA ile kronik iltihap modeli oluşturuldu; ebegümeci (Malva sylvestris) hidroalkolik özütü topikal uygulandı.",
+    "sonuc": "Ödem, beyaz kan hücresi göçü ve keratinosit hiperproliferasyonu azaldı. Özüt düşük toksisite gösterdi ve sedef benzeri iltihapta etkili bulundu.",
+    "anlatim": "Fare modelinde ebegümeci özütü kronik cilt iltihabını ve aşırı hücre çoğalmasını azalttı. Preklinik (hayvan) çalışmasıdır; insan tedavisi sonucu bildirilmemiştir. Bu metin tıbbi tavsiye değildir."
+  },
+  "131": {
+    "baslik": "Atopik egzamada üç renkli menekşe içeren ürün",
+    "sorun": "27 yaşındaki kadında kuru, kalınlaşmış atopik egzama lezyonları vardı (EASI skoru 1,6); atopi ve çoklu alerji öyküsü vardı.",
+    "yaklasim": "Üç renkli menekşe (Viola tricolor) dahil bitkisel damla ve krem içeren paraparmasötikler kullanıldı.",
+    "sonuc": "İki hafta sonra lezyonlar kayboldu, EASI skoru 0 oldu. Altı ay sonra cilt durumu korundu. Dokuzuncu ayda başka bölgede lezyon gelişince iki günde yine EASI 0'a indi.",
+    "anlatim": "Atopik egzamalı kadına üç renkli menekşe içeren bitkisel ürünler verildi. İki haftada cilt lezyonları düzeldi. Karışım preparatıdır; etki yalnızca menekşeye bağlanamaz. Bu metin tıbbi tavsiye değildir."
+  },
+  "132": {
+    "baslik": "Kırlangıçotu sonrası karaciğer hasarı olguları",
+    "sorun": "Avrupa'dan gelen 22 hastada büyük kırlangıçotu (Chelidonium majus) kullanımı sonrası zehirli karaciğer hasarı şüphesi vardı.",
+    "yaklasim": "Olgular karaciğere özgü uluslararası nedensellik ölçeğiyle yeniden değerlendirildi.",
+    "sonuc": "İki olguda nedensellik çok yüksek olasılıklı, altı olguda olası bulundu; kadınlarda daha sık, ortalama 56 yaş, ortalama 36 günlük kullanım ve sarılık öncesi yaklaşık 30 günlük gecikme bildirildi.",
+    "anlatim": "Almanya'dan 22 spontan olgu, karaciğere özgü nedensellik ölçeğiyle yeniden puanlandı. Bulgular, kırlangıçotuna bağlı ayrı bir bitkisel karaciğer hasarı formunu destekliyor. Hasar genelde karaciğer hücrelerini etkileyen bir paternle seyrediyor. Veri kalitesi sınırlı olduğu için bazı olgularda nedensellik düşürüldü. Bu metin tıbbi tavsiye değildir."
+  },
+  "133": {
+    "baslik": "Hindibaya bağlı mesleki ve ağızdan alerji",
+    "sorun": "Sebze toptancısında hindiba (Cichorium intybus) ile ağız, deri veya solunum yolu teması sonrası alerji belirtileri gelişti; endivye ve marulda da tepki bildirildi.",
+    "yaklasim": "SDS-PAGE ve immünoblot ile yaklaşık 48 kDa'lık alerjen tanımlandı; pelin, çim ve huş polenleriyle çapraz reaktivite arandı.",
+    "sonuc": "Alerjen bitkinin ışık almayan kısımlarında bulundu; polenlerle çapraz reaksiyon saptanmadı. Hindibaya özgü mesleki alerji olarak ilk olgu sunuldu.",
+    "anlatim": "Sebze toptancısında hindiba teması sonrası ani tip alerji belgelendi. Laboratuvar çalışmasında sorumlu protein tanımlandı. Pelin, çim ve huş polenleriyle çapraz duyarlılık bulunmadı; alerjenin kaynağının sebze olduğu düşünüldü. Endivye ve marulda da benzer tepkiler bildirildi. Bu metin tıbbi tavsiye değildir."
+  },
+  "134": {
+    "baslik": "Atopik egzamada bitkisel ürünlerle cilt düzelmesi",
+    "sorun": "27 yaşındaki kadında atopik egzama (kaşıntılı, tekrarlayan cilt iltihabı), atopi öyküsü ve çoklu alerji vardı; cilt lezyon skoru (EASI) 1,6 idi.",
+    "yaklasim": "Üç bitkisel paraparmasötik uygulandı; bunlardan biri büyük dulavratotu (Arctium lappa) kökü içeriyordu.",
+    "sonuc": "İki hafta sonra lezyonlar kayboldu ve EASI 0 oldu; altı ay sonra cilt durumu korundu. Dokuzuncu ayda başka bölgede yeni lezyon gelince yine iki günde EASI 0'a indi.",
+    "anlatim": "Atopik egzaması olan kadına dulavratotu kökü de dahil üç bitkisel ürün verildi. İki haftada kuru ve kalınlaşmış cilt lezyonları düzeldi. Altı ay boyunca aynı bölgelerde egzama tekrarlamadı. Dokuzuncu ayda başka bölgede lezyon gelince yine kısa sürede düzelme bildirildi. Hasta tedaviden memnun kaldığını belirtti. Bu metin tıbbi tavsiye değildir."
+  },
+  "136": {
+    "baslik": "Solucanotu dahil papatyagiller temas dermatiti",
+    "sorun": "Alerjiye yatkın 9 yaşındaki erkek çocukta mevsimsel deri döküntüsü vardı; yazın, özellikle temmuzda kötüleşiyor, ayakkabıyla örtülü ayakları etkilemiyordu.",
+    "yaklasim": "Yama testlerinde solucanotu (Tanacetum vulgare), karahindiba, ragweed, adaçayı ve diğer papatyagiller pozitif bulundu; temastan kaçınıldı.",
+    "sonuc": "Temastan kaçınınca döküntü düzeldi. Papatyagiller oleoresinlerine bağlı kontak dermatit tanısı kondu.",
+    "anlatim": "Alerjik yapısı olan çocukta yaz aylarında kötüleşen deri döküntüsü görüldü. Yama testlerinde solucanotu dahil birçok papatyagil bitkisine duyarlılık saptandı. Döküntü avuç içi ve yüzde belirgindi, ayakkabı altındaki ayak bölgesi etkilenmedi. Temastan kaçınılınca düzelme sağlandı. Bu metin tıbbi tavsiye değildir."
+  },
+  "137": {
+    "baslik": "Ayçiçeği tohumu alerjisi ve pelin çapraz duyarlılığı",
+    "sorun": "40 yaşındaki erkek ayçiçeği tohumu yedikten kısa süre sonra nefes darlığı ve kurdeşenle hastaneye yatırıldı; boğaz, ağız ve dilde şişlik vardı.",
+    "yaklasim": "Deri çizik testlerinde pelin poleni (Artemisia vulgaris) ve ayçiçeği tohumu güçlü pozitifti; kanda pelin ve yabani ot karışımına karşı IgE yükselmişti.",
+    "sonuc": "Pelin polenine alerji ve ayçiçeği tohumu yutması sonrası anafilaktik reaksiyon doğrulandı; çapraz reaktif proteinler saptandı.",
+    "anlatim": "Erkek ayçiçeği tohumu yedikten sonra nefes darlığı, kurdeşen ve boğaz şişmesi gelişti. Testler pelin polenine duyarlılığı gösterdi. Ayçiçeği alerjenlerinin pelin alerjenleriyle çapraz reaksiyon verdiği kanıtlandı. Yazarlar reaksiyonun pelin duyarlılığı ve çapraz proteinlerle ilişkili olduğunu belirtti. Bu metin tıbbi tavsiye değildir."
+  },
+  "138": {
+    "baslik": "İlaç dirençli sıtmada tatlı pelin yaprak tableti",
+    "sorun": "Altı aylık çalışma döneminde artemisinin kombinasyon tedavisi (ACT) ve damardan artesunata yanıt vermeyen 18 ağır sıtma hastası vardı.",
+    "yaklasim": "Hastalara 5 gün boyunca günde iki kez 0,5 g kurutulmuş tatlı pelin (Artemisia annua) yaprak tableti verildi; klinik bulgular ve kan yayması izlendi.",
+    "sonuc": "18 hastanın tamamı parazit negatif olup klinik olarak düzelince taburcu edildi; raporda iki pediatrik olgu ayrıntılı anlatıldı.",
+    "anlatim": "Standart sıtma ilaçlarına yanıt vermeyen ağır hastalara tatlı pelin yaprak tableti uygulandı. Parazitler mikroskopla saptanamaz hale gelince ve belirtiler geçince hastalar iyileşmiş sayıldı. 18 olgunun tamamında tam iyileşme bildirildi. Bu şefkat amaçlı kullanım serisidir. Bu metin tıbbi tavsiye değildir."
+  },
+  "146": {
+    "baslik": "Graves hastalığında Çin bitkisel formülü",
+    "sorun": "50 yaşındaki kadın ve 56 yaşındaki erkekte Graves tipi hipertiroidi (tiroid bezinin aşırı hormon üretmesi) vardı.",
+    "yaklasim": "Jia Wei Xiao Yao San formülü ile kendi kendini iyileştiren ot (Prunella vulgaris), Fritillaria thunbergii ve istiridye kabuğu (Crassostrea gigas) kullanıldı.",
+    "sonuc": "Birinci olguda 10 ayda, ikinci olguda 8 ayda tiroid hormonları normale döndü; tedavi sırasında yan etki bildirilmedi ve bir yıldan uzun takipte kontrol sürdü.",
+    "anlatim": "Graves hastalığı olan iki hastaya Çin bitkisel formülü verildi. Formülde kendi kendini iyileştiren ot da yer aldı. Aylar süren tedavi sonunda tiroid hormonları normale indi. Her iki hastada da bir yıldan fazla takipte durum kontrol altında kaldı. Tedavi sırasında komplikasyon bildirilmedi. Bu metin tıbbi tavsiye değildir."
+  },
+  "148": {
+    "baslik": "Yüksükotu kaynatmasıyla zehirlenme",
+    "sorun": "36 yaşındaki kadın yüksükotu (Digitalis purpurea) kaynatması içtikten sonra bulantı, kusma, karın ağrısı ve yavaş nabızlı kardiyovasküler şok yaşadı.",
+    "yaklasim": "Atropin, dimetikon, aljinik asit ve metoklopramid verildi; kan ve idrarda digitalis glikozitleri LC-MS ile ölçüldü.",
+    "sonuc": "Beşinci günde belirti kalmadan taburcu edildi; serum glikozit düzeyleri ilk günden itibaren geriledi.",
+    "anlatim": "Kadın yüksükotu kaynatması içtikten sonra mide bulantısı ve yavaş kalp atışı gelişti. Kan ve idrarda digitalis glikozitleri saptandı; en yüksek düzeyler ilk günde ölçüldü. Destek tedavisiyle klinik durum düzeldi. Beşinci günde taburcu edildi. Ölümcül olmayan bir zehirlenme olgusu olarak bildirildi. Bu metin tıbbi tavsiye değildir."
+  },
+  "149": {
+    "baslik": "Yenilebilir ot sanılarak zehirli bitki yeme",
+    "sorun": "Üç yetişkin yabani pırasa (ramps) sandıkları bitkiyi yedikten sonra tansiyon düşüklüğü, yavaş nabız ve ölçülebilir digoksin benzeri kan düzeyleri gelişti.",
+    "yaklasim": "Acil serviste değerlendirildi; bir hastaya digoksin antikoru verildi. Bitki numunesinde Veratrum alkaloidi saptandı.",
+    "sonuc": "Üç hasta komplikasyonsuz iyileşti. İnci çiçeği (Convallaria majalis) convallatoksin ile digoksin ölçümünü etkileyebilir.",
+    "anlatim": "Üç kişi yenilebilir ot toplarken yanlış bitki yedi. Acil servise tansiyon düşüklüğü ve yavaş nabızla geldiler. Kan testlerinde digoksin benzeri düzeyler ölçüldü. Bitki analizinde toksik alkaloid bulundu. Üç hasta da sorunsuz iyileşti. İnci çiçeği digoksin benzeri maddeler içerir. Bu metin tıbbi tavsiye değildir."
+  },
+  "150": {
+    "baslik": "Astım ve reflüde güzelavrat otu içeren karışım",
+    "sorun": "2 yaşındaki erkek çocukta astım ve gastroözofageal reflü (mide asidinin yemek borusuna kaçması) vardı; inhale kortizon, beta agonist ve 6 haftalık mide koruyucu tedaviye yanıt vermedi.",
+    "yaklasim": "Pulvis stomachicus cum Belladonna adlı ağızdan karışım verildi; içinde papatya, güzelavrat otu (Atropa belladonna), bizmut ve antimonit bulunuyordu.",
+    "sonuc": "Karışım kullanıldıkça belirtiler yavaş yavaş kayboldu; yazarlar mide koruyucu ve bronş genişletici etkileri nedeniyle umut verici buldu.",
+    "anlatim": "Astım ve reflüsü olan çocuğa güzelavrat otu içeren antroposofik bir karışım verildi. Standart ilaçlara yanıt alınamamıştı. Karışım sonrası belirtilerde kademeli düzelme gözlendi. Güzelavrat otundaki antikolinerjik maddeler bronş genişlemesine katkı sağlayabilir. Papatya ve bizmutun mide koruyucu etkileri de vardır. Bu metin tıbbi tavsiye değildir."
+  },
+  "151": {
+    "baslik": "Banotu dozuna bağlı istenmeyen reaksiyon",
+    "sorun": "Genelleşmiş kaygı bozukluğu (Chittodwega) tedavisinde banotu (Hyoscyamus niger) kapsülü alan iki hastada istenmeyen ilaç reaksiyonu gelişti.",
+    "yaklasim": "500 mg günlük dozda reaksiyon görüldü; doz 250 mg'a indirildi, biri günde iki kez, biri günde bir kez aldı.",
+    "sonuc": "250 mg günde bir kez doz güvenli bulundu; her iki hasta Pitta beden tipindeydi ve banotunun Pitta'yı artırarak reaksiyonu tetiklediği düşünüldü.",
+    "anlatim": "Ayurveda tedavisinde banotu kapsülü kullanan iki hastada yan etki görüldü. Aynı dozda birçok başka hastada sorun bildirilmedi. 500 mg doz Pitta tipi iki hastada reaksiyonu tetikledi. Doz 250 mg'a düşürülünce yan etkiler engellendi. Kapha ve Vata tipi hastalarda yan etki gözlenmedi. Bu metin tıbbi tavsiye değildir."
+  },
+  "152": {
+    "baslik": "Moonflower tohumuyla antikolinerjik zehirlenme",
+    "sorun": "18 yaşındaki erkek markete getirildiğinde hayal görüyordu ve konuşması dağınıktı; hızlı nabız, genişlemiş göz bebekleri ve kuru, kızarık, sıcak cilt vardı.",
+    "yaklasim": "Yoğun bakıma alındı; hastanın moonflower tohumu yediği öğrenildi.",
+    "sonuc": "36-48 saatte halüsinasyonlar ve belirtiler düzeldi; dördüncü günde taburcu edildi. Bitkinin Datura inoxia olduğu düşünüldü.",
+    "anlatim": "Genç erkek moonflower tohumu yedikten sonra hayal görme ve zihin karışıklığı yaşadı. Hızlı nabız, geniş göz bebekleri ve kuru cilt gibi antikolinerjik bulgular vardı. Yoğun bakımda izlendi. 36-48 saatte belirtiler geçti. Dört gün sonra taburcu edildi. Bu metin tıbbi tavsiye değildir."
+  },
+  "153": {
+    "baslik": "Kurtboğan zehirlenmesi üç olgu",
+    "sorun": "Üç hastada kurtboğan (Aconitum napellus) maruziyeti vardı: 24 yaşındaki kadında bitki yeme sonrası ağır kalp ritim bozukluğu, 2 yaşındaki çocukta deri teması, 34 yaşındaki kadında maydanoz sanarak yeme.",
+    "yaklasim": "Ağır olguda canlandırma yapıldı; hafif olguda mide yıkama ve aktif kömür uygulandı.",
+    "sonuc": "Ağır olguda ventriküler aritmi (kalpte hızlı ve düzensiz atım) gelişti; spesifik antidot yoktur, destek tedavisi esastır. Hafif olgularda gözlem sırasında belirti gelişmedi.",
+    "anlatim": "Üç farklı olguda kurtboğan maruziyeti anlatıldı. Bir kadın bitki yedikten sonra ağır kalp ritim bozukluğu geçirdi ve canlandırıldı. İki yaşındaki çocukta yalnızca ağız çevresinde kızarıklık vardı. Başka bir kadın acı tad nedeniyle hastaneye başvurdu ve mide yıkaması yapıldı. Kurtboğan alkaloidleri ciddi aritmilere yol açabilir. Bu metin tıbbi tavsiye değildir."
+  },
+  "157": {
+    "baslik": "Limonla akraba mantarla göz enfeksiyonu",
+    "sorun": "81 yaşındaki çiftçi ve 68 yaşındaki erkekte göz kornea iltihabı (keratit) vardı; etken yeni tanımlanan Diaporthe türleri olarak bildirildi.",
+    "yaklasim": "Mantar morfolojisi ve DNA dizileme ile tanımlandı; bir tür limon üzerindeki D. limonicola'ya yakın bulundu. Antifungal duyarlılık testleri yapıldı.",
+    "sonuc": "D. oculi ve D. pseudooculi adlı iki yeni tür tanımlandı; tanımlama, ilaç duyarlılığı ve tedavi sonuçları rapor edildi.",
+    "anlatim": "İki hastada göz mantar enfeksiyonu görüldü. Etkenler morfoloji ve gen analiziyle yeni Diaporthe türleri olarak tanımlandı. Biri limon üzerindeki yakın türe benziyordu. Antifungal duyarlılık ve tedavi sonuçları bildirildi. Diaporthe türleri nadiren insan hastalığı yapar. Bu metin tıbbi tavsiye değildir."
+  },
+  "158": {
+    "baslik": "Sinefrinli takviye sonrası iskemik inme",
+    "sorun": "38 yaşındaki erkek bir hafta boyunca sinefrin (acı portakal, Citrus aurantium) ve kafein içeren efedrasız takviye aldıktan sonra bellek kaybı ve dengesiz yürüyüş yaşadı.",
+    "yaklasim": "Beyin görüntülemesinde sol talamus ve sol beyincikte subakut enfarktlar saptandı; damar spazmı en olası neden sayıldı.",
+    "sonuc": "Neredeyse tam düzelmeyle taburcu edildi. Sinefrinin iskemik inme ile ilişkili olabileceği bildirildi.",
+    "anlatim": "Genç erkek bir hafta boyunca sinefrinli diyet takviyesi kullandı. Bellek ve denge sorunları gelişti. Görüntülemede beyinde küçük damar tıkanıklığına bağlı lezyonlar görüldü. Başka nedenler elendi. Taburcu olurken belirtiler büyük ölçüde geçmişti. Sinefrin damarları daraltabilir. Bu metin tıbbi tavsiye değildir."
+  },
+  "159": {
+    "baslik": "Ardıç altı bitki çeşitliliği karşılaştırması",
+    "sorun": "Pannonic kum çayırında yerli ardıç (Juniperus communis) ile istilacı karaçamın (Pinus nigra) alt bitki örtüsüne etkisi incelendi.",
+    "yaklasim": "Altı tekil ağaç çevresinde 520 mikrokare ile tür varlığı ölçüldü; bileşimsel çeşitlilik hesaplandı.",
+    "sonuc": "Ardıç altında daha karmaşık mikrohabitat ve daha yüksek çeşitlilik bulundu; istilacı çam alt bitki örtüsünü olumsuz etkiledi.",
+    "anlatim": "Kum çayırında yerli ardıç ile istilacı karaçamın altındaki bitkiler karşılaştırıldı. Ardıç altında bitki çeşitliliği ve düzeni daha yüksekti. İstilacı çam altında bazı türlerde boşluklar ve kümelenmeler görüldü. Yazarlar istilacı ağaçların uzaklaştırılmasını önerdi. Bu bir ekoloji çalışmasıdır. Bu metin tıbbi tavsiye değildir."
+  },
+  "163": {
+    "baslik": "Huş yaprağı metabolit analizi otomasyonu",
+    "sorun": "Transgenik izopren salan gümüş huş (Betula pendula) yapraklarında yüksek verimli metabolit analizi gerekiyordu.",
+    "yaklasim": "96 kuyucuklu robotik sistemle metabolit özütleme otomatikleştirildi; manuel protokolle karşılaştırıldı.",
+    "sonuc": "İzopren salınımı arttıkça flavonoidler, karbonhidratlar, amino asitler ve lipid metabolitleri yükseldi; sükroz izoprenle ters ilişkili bulundu.",
+    "anlatim": "Huş yapraklarından metabolit çıkarmak için robotik sistem geliştirildi. Manuel yöntemle karşılaştırılarak tekrarlanabilirlik iyileştirildi. Transgenik huşlarda izopren salınımına bağlı metabolit değişimleri gözlendi. Robotik sistem büyük ölçekli bitki araştırmalarında kullanılabilir. Bu bir laboratuvar yöntem çalışmasıdır. Bu metin tıbbi tavsiye değildir."
+  },
+  "164": {
+    "baslik": "Korunan alanda kara kavak zehirlenmesi",
+    "sorun": "2015'te İsviçre'deki korunan bir koruda yaşlı kara kavak (Populus nigra) ağaçları ani öldü; 2016'da komşu akçaağaç ve ceviz ağaçları da kurumaya başladı.",
+    "yaklasim": "Kök boğazında çok sayıda delik bulundu; ağaç halkası, odun anatomisi ve dendrojeokimyasal analizler yapıldı.",
+    "sonuc": "Köklerde alüminyum, arsenik, demir, krom, nikel içeren pestisitler veya glifosat benzeri maddeler enjekte edildiği gösterildi; bulgular adli soruşturmada kullanıldı.",
+    "anlatim": "Korunan bir alanda ani ölen kara kavaklar incelendi. Köklerde onlarca delik ve kimyasal enjeksiyon izleri saptandı. Bilimsel analizler gizli ağaç zehirlemesini destekledi. Sonuçlar ceza soruşturmasında kullanıldı. Bu bir adli ağaç bilimi çalışmasıdır. Bu metin tıbbi tavsiye değildir."
+  },
+  "165": {
+    "baslik": "Migren ve reflüde kaygan karaağaç desteği",
+    "sorun": "23 yaşındaki kadında 3 aydır atipik migren vardı; ağır mide-yemek borusu reflüsü nedeniyle beslenmesi değişmişti. İlaç ve kas-iskelet tedavileri yanıtsızdı.",
+    "yaklasim": "Diyet ve yaşam tarzı değişikliği, multivitamin, magnezyum oksit ve kaygan karaağaç (Ulmus rubra) önerildi.",
+    "sonuc": "Reflü belirtileri düzelince migrenler de iyileşti.",
+    "anlatim": "Genç kadında atipik migren ve şiddetli reflü vardı. Önceki tedavilere yanıt alınamamıştı. Diyet düzenlemesi ve kaygan karaağaç dahil destekler verildi. Mide reflüsü düzelince migren şikayetleri de geçti. Tek olgu raporudur. Bu metin tıbbi tavsiye değildir."
+  },
+  "168": {
+    "baslik": "Çin raventi içeren karışımlarla karaciğer hasarı",
+    "sorun": "2004'te karaciğer bozukluğu nedeniyle yatırılan 45 kronik hepatit B hastasının yedisinde (%15,6) sorun Çin bitkisel ilaçlarına bağlandı.",
+    "yaklasim": "Hepatit B alevlenmesine benzeyen karaciğer bozukluğu paterni görüldü; toksik bileşenler arasında Çin raventi (Rheum palmatum) de yer aldı.",
+    "sonuc": "Üç hastada ağır sonuç gelişti: iki ölüm, bir karaciğer nakli; bir hastada siroz hızlandı.",
+    "anlatim": "Kronik hepatit B hastalarında Çin bitkisel ilaç kullanımı sonrası karaciğer hasarı tarandı. Yedi olguda bitkilere bağlı bozulma saptandı. Çin raventi şüpheli bileşenler arasında sayıldı. Ölüm ve karaciğer nakli gibi ağır sonuçlar bildirildi. Bir karışımda yüksek toksik bir madde bulundu. Bu metin tıbbi tavsiye değildir."
+  },
+  "169": {
+    "baslik": "Atık sahasında kuzu kulağı ve spontan bitkiler",
+    "sorun": "Suzhou'daki kapatılmış inşaat atığı deponisinde ekosistem restorasyonu için spontan bitki türleri incelendi.",
+    "yaklasim": "Sahadaki tür bileşimi, çeşitlilik indeksleri ve 26 türün büyüme kapasitesi değerlendirildi.",
+    "sonuc": "Kuzu kulağı (Rumex acetosa) yüksek büyüme ve yayılma kapasitesi olan türler arasında sayıldı; deponide çevreye göre daha az tür ve çeşitlilik vardı.",
+    "anlatim": "Kapatılmış inşaat atığı sahasındaki kendiliğinden yetişen bitkiler incelendi. Otlar baskın türlerdi. Sahada çevreye kıyasla daha az bitki çeşitliliği bulundu. Güneş seven ve kuraklığa dayanıklı türler yaygındı. Kuzu kulağı restorasyon potansiyeli yüksek türler arasında gösterildi. Bu bir ekoloji çalışmasıdır. Bu metin tıbbi tavsiye değildir."
+  },
+  "171": {
+    "baslik": "Isırgan takviyesi sonrası istemeden süt gelmesi",
+    "sorun": "30 yaşındaki obez kadın bir aydır çevresel alerji için 500 mg ısırgan (Urtica dioica) takviyesi alırken yeni başlayan süt gelmesi (galaktore) ile başvurdu.",
+    "yaklasim": "Gebelik testi negatif; prolaktin, TSH ve metabolik panel normaldi. Isırgan kesildi, başka ilaç değişikliği yapılmadı.",
+    "sonuc": "Bir hafta sonra galaktore tamamen düzeldi.",
+    "anlatim": "Kadın alerji için ısırgan takviyesi kullanırken memeden süt gelmesi başladı. Gebelik dışlandı, hormon testleri normaldi. Meme görüntülemelerinde şüpheli bulgu yoktu. Isırgan bırakılınca bir haftada süt gelmesi tamamen geçti. Takviyelerin hormonları etkileyebileceği vurgulandı. Bu metin tıbbi tavsiye değildir."
+  },
+  "173": {
+    "baslik": "Japonya'da sinirli ot polen alerjisi",
+    "sorun": "Hokkaido Üniversitesi kulak burun boğaz polikliniğinde 160 alerjik rinitli hasta incelendi.",
+    "yaklasim": "Sinirli ot (Plantago lanceolata) polenine özgü IgE testi, Sapporo polen sayımları ve klinik şikayetler değerlendirildi.",
+    "sonuc": "RAST pozitiflik oranı %12,8 bulundu; polen mayıs-eylül arasında dağılıyor, şikayetler haziranda zirve yapıyordu.",
+    "anlatim": "Alerjik nezleli 160 hastada sinirli ot polenine duyarlılık araştırıldı. Polen sayımları mayıstan eylüle uzanan bir dönemde yüksekti. IgE testi pozitiflik oranı ragweed ve adaçayıyla benzer düzeydeydi. Hiçbir hasta yalnızca sinirli ota duyarlı değildi. Sonuçlar sinirli otun Japonya'da önemli bir polen kaynağı olabileceğini gösterdi. Bu metin tıbbi tavsiye değildir."
+  },
+  "174": {
+    "baslik": "Psyllium laksatifine aşırı duyarlılık",
+    "sorun": "40 yaşındaki kadın iki yıl düzenli psyllium (Plantago ovata) laksatif kullandıktan sonra tüm vücutta kaşıntılı döküntü, göğüs-boğaz sıkışması ve dudak şişmesi yaşadı.",
+    "yaklasim": "Psyllium kesilince belirtiler geçti; yeniden verilince hemen tekrarladı. Total IgE yüksek, psylliuma özgü IgE pozitifti.",
+    "sonuc": "Psyllium aşırı duyarlılığı doğrulandı; alerjenlerin tohum iç kısmındaki proteinlerden geldiği düşünüldü.",
+    "anlatim": "Kadın uzun süre psyllium laksatif kullandıktan sonra yaygın döküntü ve nefes darlığı hissi gelişti. Ürün kesilince düzeldi, tekrar alınca belirtiler geri geldi. Kan testlerinde psylliuma karşı IgE saptandı. Alerjenin tohum içindeki proteinlerden kaynaklandığı bildirildi. Bu metin tıbbi tavsiye değildir."
+  },
+  "175": {
+    "baslik": "Adet öncesi sendromda keten tohumu yağlı bakım",
+    "sorun": "36 yaşındaki kadında 18 yaşından beri adet öncesi sendrom vardı; bel ağrısı, şişkinlik, meme hassasiyeti ve stres yaşıyordu. Semptom skoru 50/60 idi.",
+    "yaklasim": "Akupunktur, CoQ10, B kompleksi, magnezyum, keten tohumu yağı (Linum usitatissimum), zerdeçal ve meditasyon uygulandı.",
+    "sonuc": "3 ayda 12 seans sonrası skor 18/60'a düştü; 32 hafta daha 20'nin altında kaldı.",
+    "anlatim": "Adet öncesi sendromu olan kadına akupunktur ve keten tohumu yağı dahil destekler verildi. Başlangıç semptom skoru 50 idi. Üç ayda skor 18'e indi. Sonraki 32 haftada da 20'nin altında kaldı. Meditasyon stresi azaltmak için önerildi. Tek olgu raporudur. Bu metin tıbbi tavsiye değildir."
+  },
+  "176": {
+    "baslik": "Delta-8-THC kullanımı sonrası psikoz",
+    "sorun": "Üç hasta yalnızca delta-8-tetrahidrokannabinol (Δ8-THC) düzenli kullandıktan sonra psikotik ve paranoid belirtiler geliştirdi; şiddet önceki tablolarını aştı.",
+    "yaklasim": "Üçü de üniversite psikiyatri hastanesine yatırıldı.",
+    "sonuc": "İki hastada yeni başlangıçlı şiddet ve görsel halüsinasyonlar, birinde banyoda yavruların eridiğine dair sabit sanrılar bildirildi.",
+    "anlatim": "Kenevir türevi Δ8-THC kullanan üç kişide ağır psikotik belirtiler gelişti. İki hastada görsel halüsinasyon ve şiddet görüldü. Birinde daha önce psikiyatrik öykü yokken yeni sanrılar başladı. Belirtilerin Δ8-THC kullanımıyla zaman içinde ilişkili olduğu bildirildi. Hekimlerin bu maddeyi sorması önerildi. Bu metin tıbbi tavsiye değildir."
+  },
+  "177": {
+    "baslik": "Kırmızı yonca sonrası kanama bozukluğu",
+    "sorun": "28 yaşındaki kadın kırmızı yonca (Trifolium pratense) aldıktan sonra kanama bozukluğu gelişti. Warfarin kullanmıyordu ama kanında warfarin saptandı.",
+    "yaklasim": "Kanama bozukluğu değerlendirildi; kırmızı yonca doğal kumarin kaynağı olarak değerlendirildi.",
+    "sonuc": "Uluslararası normalize oran (INR, kan sulandırma ölçümü) artışı ve kanama riski ile ilişkilendirildi.",
+    "anlatim": "Genç kadın reçetesiz kırmızı yonca aldıktan sonra kanama sorunu yaşadı. Warfarin kullanmadığı halde kanında warfarin saptandı. Yonca doğal kumarin içerebilir ve kan sulandırma ölçümünü etkileyebilir. Hekimlerin bitkisel ürünleri sorması gerektiği vurgulandı. Bu metin tıbbi tavsiye değildir."
+  },
+  "178": {
+    "baslik": "Yonca kökü mikoriza sporlarındaki bakteriler",
+    "sorun": "Gigaspora margarita mikoriza mantarı sporlarıyla ilişkili bakteri çeşitliliği ve işlevleri bilinmiyordu.",
+    "yaklasim": "Yonca (Medicago sativa), sorgum ve mısır konaklarında üretilen sporlardan 43 bakteri izole edildi; 16S analizi yapıldı.",
+    "sonuc": "23 cinse ait bakteriler bulundu; bazıları spor çimlenmesini uyardı, %57,5'i fosfor çözdü; saksı deneyinde üç izolat yonca büyümesini artırdı.",
+    "anlatim": "Mikoriza mantarı sporları yonca, sorgum ve mısırda çoğaltıldı. Sporlardan 43 bakteri izole edildi. Bacillus ve Streptomyces en sık bulunan cinslerdi. Bazı bakteriler spor çimlenmesini ve fosfor çözünürlüğünü artırdı. Üç izolat yonca büyümesini destekledi. Bu bir tarım mikrobiyolojisi çalışmasıdır. Bu metin tıbbi tavsiye değildir."
+  },
+  "181": {
+    "baslik": "Ağız yanığında zerdeçal jeli ile iyileşme",
+    "sorun": "49 yaşındaki kadın Calotropis procera lateksini diş etine sürdükten sonra alt çene ön bölgesinde ağrılı beyaz lezyon geliştirdi.",
+    "yaklasim": "Kimyasal yanık tanısı kondu; günde üç kez %2 curcumin (zerdeçal, Curcuma longa) ağız jeli 1-1,5 hafta uygulandı.",
+    "sonuc": "7. günde belirtiler belirgin düzeldi; 3 aylık takipte tam iyileşme ve nüks olmadı.",
+    "anlatim": "Kadın ağrı gidermek için zehirli bitki lateksini diş etine sürdü. Beyaz, ağrılı bir yanık oluştu. Zerdeçal etken maddeli ağız jeli verildi. Yedinci günde belirtiler büyük ölçüde geçti. Üç ay sonra tam iyileşme doğrulandı. Doğrulanmamış bitkisel tedavilerin riski vurgulandı. Bu metin tıbbi tavsiye değildir."
+  },
+  "191": {
+    "baslik": "Aşırı sinameki çayıyla karaciğer yetmezliği",
+    "sorun": "52 yaşındaki kadın 3 yıldan uzun süre her gün 70 g kuru sinameki meyvesinden bir litre çay içtikten sonra akut karaciğer yetmezliği ve böbrek bozukluğu geliştirdi.",
+    "yaklasim": "Yoğun bakım destek tedavisi uygulandı; karaciğer nakli görüşüldü. İdrarda geçici yüksek kadmiyum saptandı.",
+    "sonuc": "Destek tedaviyle iyileşti; hepatotoksisite sinameki laksatif kötüye kullanımına bağlı olabilir.",
+    "anlatim": "Kadın yıllarca çok yüksek doz sinameki çayı içiyordu. Akut karaciğer yetmezliği, bilinç bozukluğu ve böbrek sorunları gelişti. Karaciğer nakli düşünüldü ama destek tedaviyle düzeldi. Yazarlar büyük sinameki dozlarının karaciğer hasarı riski taşıdığını belirtti. Bu metin tıbbi tavsiye değildir."
+  },
+  "192": {
+    "baslik": "Pazopanib ile kudret narı etkileşiminde pankreatit",
+    "sorun": "65 yaşındaki böbrek kanseri hastası 8. yıl pazopanib tedavisindeyken 4 gün kudret narı özütü (günde 100-150 ml) aldıktan sonra karın ağrısı, bulantı ve kusma gelişti.",
+    "yaklasim": "Pazopanib kesildi, akut pankreatit tedavisi uygulandı; amilaz 9163 U/L, lipaz 14.206 U/L idi.",
+    "sonuc": "Hasta düzelince pazopanib yeniden başlandı; enzimler tekrar yükselmedi. Kudret narı ile pazopanib etkileşimi olası neden sayıldı.",
+    "anlatim": "Kanser ilacı kullanan hasta kısa süre kudret narı özütü aldı. Sonrasında çok yüksek pankreas enzimleriyle akut pankreatit gelişti. İlaç kesilip tedavi edildi. Düzelince pazopanib yeniden verildi ve sorun tekrarlamadı. İlaç-bitki etkileşimi olasılığı bildirildi. Bu metin tıbbi tavsiye değildir."
+  },
+  "193": {
+    "baslik": "Mide kanamasında Ankaferd destek tedavisi",
+    "sorun": "Düşük trombosit sayısı ve bozuk pıhtılaşması olan hastada zor üst sindirim sistemi kanaması vardı.",
+    "yaklasim": "Endoskopik tedavide Ankaferd Blood Stopper destek olarak kullanıldı; içinde küçük havlıcan (Alpinia officinarum) da bulunur.",
+    "sonuc": "Kanamanın endoskopik olarak kontrol altına alındığı bildirildi.",
+    "anlatim": "Pıhtılaşma sorunu olan hastada üst mide-bağırsak kanaması görüldü. Endoskopik işlem sırasında Ankaferd adlı bitkisel preparat destek olarak kullanıldı. Preparat kekik, meyan, asma, küçük havlıcan ve ısırgan içerir. Kanamanın başarıyla durdurulduğu bildirildi. Bu metin tıbbi tavsiye değildir."
+  },
+  "194": {
+    "baslik": "Ağız kimyasal yanığında curcumin jeli",
+    "sorun": "49 yaşındaki kadın Calotropis procera lateksini diş etine uyguladıktan sonra alt sağ diş eti bölgesinde ağrılı beyaz lezyon geliştirdi.",
+    "yaklasim": "Kimyasal yanık tanısı kondu; curcumin (Curcuma türlerinden elde edilen polifenol) içeren %2 ağız jeli günde üç kez uygulandı.",
+    "sonuc": "7. günde belirtiler belirgin düzeldi; 3 aylık takipte tam iyileşme doğrulandı.",
+    "anlatim": "Kadın ağrı gidermek için zehirli bitki lateksini diş etine sürdü. Kimyasal yanık oluştu. Curcumin içeren ağız jeli reçete edildi. Yedinci günde belirtiler büyük ölçüde geçti. Üç ay sonra tam iyileşme ve nüks olmadığı bildirildi. Bu metin tıbbi tavsiye değildir."
+  },
+  "195": {
+    "baslik": "Uzun süre zencefil sonrası idrar yakınmaları",
+    "sorun": "43 yaşındaki erkek reçetesiz zencefil (Zingiber officinale) kullandıktan sonra idrar akımında kesilme, idrar yakması (dizüri) ve yan ağrısı yaşadı; şikayetler dört yıl sürdü.",
+    "yaklasim": "Zencefil alımı kesildi; başka müdahale yapılmadığı bildirildi.",
+    "sonuc": "Kesimden sekiz hafta sonra şikayetlerin gerilediği kaydedildi.",
+    "anlatim": "Erkek reçetesiz zencefil kullandıktan sonra idrar yaparken yakınma ve yan ağrısı başladı. Şikayetler yıllarca sürdü. Zencefil bırakılınca sekiz haftada belirtiler azaldı. Açıklanamayan idrar şikayetlerinde bitki kullanım öyküsünün sorulması önerildi. Bu metin tıbbi tavsiye değildir."
+  },
+  "196": {
+    "baslik": "Büyük havlıcanla alerjik deri döküntüsü",
+    "sorun": "Hastada büyük havlıcan (Alpinia galanga) cilde sürülen bitkisel uygulama sonrası yerel temas dermatiti ve ardından yaygın hedef tahtası benzeri döküntü gelişti.",
+    "yaklasim": "Yama testlerinde taze ve kuru büyük havlıcanda alerjen saptandı.",
+    "sonuc": "Bitkiye bağlı alerjik kontak dermatit ve yaygın eritema multiforme benzeri reaksiyon belgelendi.",
+    "anlatim": "Hasta bitkisel karışımı cilde sürdükten sonra önce yerel, sonra yaygın döküntü geliştirdi. Yama testleri büyük havlıcanda alerjen gösterdi. Havlıcan Güneydoğu Asya mutfağında yaygın bir baharattır. Alerjik reaksiyon hem yerel hem genelleşmiş olarak bildirildi. Bu metin tıbbi tavsiye değildir."
+  },
+  "198": {
+    "baslik": "Sirozlu asitte uzun biberli Ayurveda tedavisi",
+    "sorun": "Kriptojenik siroz ve portal hipertansiyona bağlı karın sıvısı (asit) olan hasta Ayurveda kliniğine başvurdu.",
+    "yaklasim": "Snehapana ve virecana sonrası Vardhamana pippali rasayana (uzun biber, Piper longum) uygulandı.",
+    "sonuc": "Asit ve alt bacak ödemi tamamen çözüldü; bir yıllık takipte asit nüksü bildirilmedi.",
+    "anlatim": "Siroz ve karın sıvısı olan hastaya Ayurveda tedavisi uygulandı. Tedavide uzun biber (pippali) yapılandırılmış dozla verildi. Asit ve bacak şişliği tamamen geçti. Bir yıl sonra asit tekrarlamadı. Tek olgu raporudur. Bu metin tıbbi tavsiye değildir."
+  },
+  "199": {
+    "baslik": "Parkinson'da kadife fasulye ile dopamin düzensizliği",
+    "sorun": "Parkinson hastası reçeteli levodopa/karbidopa ile birlikte kendi kendine kadife fasulye (Mucuna pruriens, levodopa içerir) kullandıktan sonra dopamin düzensizlik sendromu (DDS) gelişti.",
+    "yaklasim": "DDS, motor belirtileri kontrol etmek için gerekenden fazla dopamin replasman tedavisi kullanımı olarak tanımlandı.",
+    "sonuc": "DDS tanısının ve risk faktörlerinin tanınmasının önemli olduğu vurgulandı; hem reçeteli ilaç hem kadife fasulye kötüye kullanımının izlenmesi gerektiği bildirildi.",
+    "anlatim": "Parkinson hastası reçeteli levodopa ile birlikte kendi kendine kadife fasulye takviyesi aldı. Bu durum dopamin düzensizlik sendromu ile ilişkilendirildi. Sendrom, dopamin ilacının gereğinden fazla kullanılmasıyla ortaya çıkar. Kadife fasulye de levodopa içerir. Hekimlerin hastaları hem ilaç hem takviye kullanımı konusunda izlemesi önerildi. Bu metin tıbbi tavsiye değildir."
+  },
+  "200": {
+    "baslik": "Diz kireçlenmesinde akgünlük içeren Ayurveda",
+    "sorun": "63 yaşındaki kadında sol dizde ileri osteoartrit (kireçlenme), kemik çıkıntıları, ağrı ve hareket kısıtlılığı vardı.",
+    "yaklasim": "70 gün Sri Lanka geleneksel/Ayurveda tedavisi; ardından akgünlük (Boswellia serrata / Shallaki) kapsül ve Jeewya tabletleri 5 ay sürdürüldü.",
+    "sonuc": "70 günde ağrı, hareket ve stabilite skorları iyi, işlev skoru mükemmel düzeye çıktı; takip döneminde skorlar değişmedi.",
+    "anlatim": "İleri diz kireçlenmesi olan kadına Ayurveda bakımı uygulandı. Sonrasında akgünlük kapsül ve Jeewya tabletleri verildi. Yetmiş günde ağrı ve hareket skorları belirgin iyileşti. Takip döneminde skorlar korundu. Yaşam kalitesinin arttığı bildirildi. Tek olgu raporudur. Bu metin tıbbi tavsiye değildir."
+  },
+  "202": {
+    "baslik": "Diyabette kas enfarktüsü ve danshen kullanımı",
+    "sorun": "İki diyabetli hastada karın duvarı (olgu 1) ve göğüs kası (olgu 2) kas enfarktüsü (kas damar tıkanıklığı) vardı.",
+    "yaklasim": "Yatak istirahati, ağrı kesici, yoğun insülin, heparin, silostazol ve kırmızı adaçayı/danshen (Salvia miltiorrhiza) uygulandı.",
+    "sonuc": "Üç haftada şikayetler geriledi; bir olguda karşı tarafta nüks 40 günde düzeldi.",
+    "anlatim": "Diyabetli iki hastada kas enfarktüsü tanısı kondu. MRI ve biyopsi ile doğrulandı. Destek tedaviye danshen de eklendi. Üç haftada belirtiler azaldı. Bir hastada karın kasında karşı tarafta tekrarlayan enfarktüs 40 günde düzeldi. Bu metin tıbbi tavsiye değildir."
+  },
+  "203": {
+    "baslik": "Boğada şeytan pençesi meyvesi sıkışması",
+    "sorun": "3 yaşındaki Brahman boğada kızgın ineğe aşım denemesinde penis dışarı çıkamıyordu.",
+    "yaklasim": "Preputial boşlukta şeytan pençesi (Harpagophytum procumbens) kuru meyvesi bulundu; elle çıkarıldı, antiseptik ve antibiyotik verildi.",
+    "sonuc": "Yaralar iyileşti, penis çıkışı ve aşım yeteneği geri geldi.",
+    "anlatim": "Botsvana'da bir boğada penis çıkışı engellenmişti. Muayenede preputial boşlukta şeytan pençesi kuru meyvesi bulundu. Meyve çıkarıldı ve tedavi verildi. Yaralar iyileşince boğa normal aşım yapabildi. İlk veteriner olgu olarak bildirildi. Bu metin tıbbi tavsiye değildir."
+  },
+  "204": {
+    "baslik": "Katar'da meme kanseri bitki bilgisi taraması",
+    "sorun": "Katar'da meme kanseri hastaları arasında bitkisel tamamlayıcı tedavi kullanımı yaygın; geleneksel bilgi kaybolma riski taşıyor.",
+    "yaklasim": "Doha'da 13 aktarla etnobotanik anket yapıldı; önerilen bitkiler literatürle karşılaştırıldı.",
+    "sonuc": "Udi hindi (Saussurea costus), zencefil ve çörek otu en çok önerilen bitkilerdi; birçok bitkinin meme kanseri hücrelerine karşı sitotoksik etkisi literatürde bildirildi.",
+    "anlatim": "Katar'da 13 aktar meme kanseri tedavisinde kullandıkları bitkiler hakkında görüşüldü. On farklı familyadan bitki kaydedildi. Udi hindi en sık önerilen bitkilerden biriydi. Bitkilerin çoğu Hindistan ve İran'dan temin ediliyordu. Literatür taramasında antikanser bileşenler ve hücre ölümü yolları bildirildi. Bu bir etnobotanik çalışmadır. Bu metin tıbbi tavsiye değildir."
+  },
+  "205": {
+    "baslik": "Üreter stentinde yakı otu fitokompleksi",
+    "sorun": "Double-J stent takılan 60 hastada stentle ilişkili idrar ve ağrı şikayetleri vardı.",
+    "yaklasim": "30 hastaya tamsulosin 0,4 mg, 30 hastaya yakı otu (Epilobium angustifolium) dahil fitokompleks verildi; USSQ skorları 1., 7. ve 21. gün ölçüldü.",
+    "sonuc": "Her iki grupta da iyileşme görüldü; idrar semptomlarında 7. ve 21. günde tamsulosin lehine anlamlı fark vardı.",
+    "anlatim": "Stent takılan 60 hasta rastgele iki gruba ayrıldı. Bir gruba tamsulosin, diğerine yakı otu içeren fitokompleks verildi. Her iki tedavide de skorlar başlangıca göre iyileşti. İdrar şikayetlerinde tamsulosin grubu anlamlı olarak daha iyi bulundu. Ağrı ve genel sağlık skorlarında anlamlı fark yoktu. Bu metin tıbbi tavsiye değildir."
+  },
+  "206": {
+    "baslik": "Süpürge otu tozuyla aşırı duyarlılık pnömonisi",
+    "sorun": "35 yaşındaki süpürge otu (Calluna vulgaris) imalat işçisi kadında üç aydır nefes darlığı, ateş ve öksürük vardı.",
+    "yaklasim": "Toraks BT'de buzlu cam opasitesi ve mozaik perfüzyon görüldü; damardan prednizolon başlandı.",
+    "sonuc": "Neredeyse tam klinik düzelme sağlandı; mesleki aşırı duyarlılık pnömonisi tanısı kondu.",
+    "anlatim": "Süpürge otu üreten kadında nefes darlığı, ateş ve öksürük gelişti. Akciğer görüntülemesinde buzlu cam görünümü vardı. Prednizolon tedavisiyle neredeyse tam düzelme sağlandı. Meslek öyküsünün sorgulanması tanı için önemli vurgulandı. Bu metin tıbbi tavsiye değildir."
+  },
+  "208": {
+    "baslik": "Venöz bacak ülserinde hint yağı otu yaprağı",
+    "sorun": "55 yaşındaki erkekte sol bacakta ağrı, sertlik, renk değişimi, şişlik ve iyileşmeyen venöz ülser vardı.",
+    "yaklasim": "Hint yağı otu (Ricinus communis) yapraklarıyla Patradana, macun ve ağızdan Ayurveda ilaçları uygulandı.",
+    "sonuc": "10 günde ağrı, şişlik ve sertlikte belirgin azalma; 14 günde yara iyileşmesi bildirildi; 4 ay takipte nüks olmadı.",
+    "anlatim": "İyileşmeyen venöz bacak ülseri olan erkeğe hint yağı otu yaprakları dahil Ayurveda bakımı uygulandı. On günde ağrı ve şişlik belirgin azaldı. On dört günde yara iyileşti. Dört aylık takipte ülser tekrarlamadı. Yaşam kalitesi arttığı bildirildi. Tek olgu raporudur. Bu metin tıbbi tavsiye değildir."
+  },
+  "210": {
+    "baslik": "Sık burkulmada aspir içeren farmakopunktur",
+    "sorun": "47 yaşındaki kadın 9 ayda 23 kez diz, başparmak, bilek, ayak bileği ve bel burkulması yaşadı. Akupunktur sonrası bayılma öyküsü nedeniyle iğne tedavisi istemiyordu.",
+    "yaklasim": "Scutellaria, Phellodendron ve aspir (Carthamus tinctorius) dahil TA farmakopunktur (ağrı noktalarına bitkisel enjeksiyon) uygulandı.",
+    "sonuc": "Tedavi genelde 4 seans içinde tamamlandı; ağrı skoru (VAS) 1'e indi. Hafif ağrıda 1-2 seans sonrası iyileşme bildirildi.",
+    "anlatim": "Sık burkulan kadın iğne korkusu nedeniyle alternatif yöntem aradı. Aspir dahil bitkisel ekstrakt enjeksiyonu uygulandı. Tedavi genelde dört seans sürdü. Ağrı skoru 1'e düştü. Hafif burkulmalarda bir-iki seans sonrası rahatlama bildirildi. Tek olgu raporudur. Bu metin tıbbi tavsiye değildir."
+  }
+}

@@ -1,0 +1,48 @@
+﻿# --- Python & Sanal Ortamlar ---
+# Sanal ortam klasörleri (Yüzlerce kütüphane dosyası içerir, context'i anında bitirir)
+venv/
+.venv/
+env/
+ENV/
+pythonenv*/
+
+# Byte-compiled / optimize edilmiş Python dosyaları
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# --- Veritabanı & Dump Dosyaları ---
+# Yerel SQLite veya MySQL yedek/log dosyaları
+*.sqlite3
+*.db
+*.sql
+*.dump
+*.log
+
+# --- Front-End & Node.js (Eğer paket yöneticisi kullanıyorsan) ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+pnpm-lock.yaml
+
+# --- Versiyon Kontrol & Editör Dosyaları ---
+.git/
+.gitignore
+.vscode/
+.idea/
+.DS_Store
+
+# --- Ortam Değişkenleri & Hassas Veriler ---
+# API anahtarları veya veritabanı şifreleri içeren dosyalar
+.env
+.env.*
+!.env.example
+
+# --- Geçici / Çıktı Dosyaları ---
+build/
+dist/
+*.tmp
+*.bak

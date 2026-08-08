@@ -1,0 +1,24 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" rx="48" fill="#F5EFE6"/>
+  <rect x="52" y="52" width="1096" height="796" rx="36" fill="#FDFBF7" stroke="#C8B6A6" stroke-width="6"/>
+  <circle cx="910" cy="210" r="128" fill="#E8DECF"/>
+  <circle cx="260" cy="196" r="84" fill="#EEE7DE"/>
+  <path d="M603 664C603 664 598 424 603 320" stroke="#8D7B68" stroke-width="18" stroke-linecap="round"/>
+  <path d="M603 381C533 326 430 345 372 414C445 448 538 455 603 381Z" fill="#A8A196"/>
+  <path d="M603 435C691 364 805 387 865 466C767 490 667 484 603 435Z" fill="#8FB39C"/>
+  <path d="M603 495C520 454 431 498 389 579C471 593 553 566 603 495Z" fill="#B7C7A4"/>
+  <path d="M603 553C693 514 785 554 833 631C748 644 653 629 603 553Z" fill="#9AAE8E"/>
+  <circle cx="603" cy="285" r="68" fill="#A084E8"/>
+  <circle cx="544" cy="245" r="54" fill="#C8B6A6"/>
+  <circle cx="662" cy="245" r="54" fill="#C8B6A6"/>
+  <circle cx="544" cy="325" r="54" fill="#C8B6A6"/>
+  <circle cx="662" cy="325" r="54" fill="#C8B6A6"/>
+  <circle cx="603" cy="206" r="54" fill="#C8B6A6"/>
+  <circle cx="603" cy="364" r="54" fill="#C8B6A6"/>
+  <text x="600" y="760" text-anchor="middle" fill="#4A3E3D" font-family="Arial, sans-serif" font-size="54" font-weight="700">
+    Dogal Bitki Gorseli
+  </text>
+  <text x="600" y="815" text-anchor="middle" fill="#8D7B68" font-family="Arial, sans-serif" font-size="30">
+    Yerel SVG varligi
+  </text>
+</svg>

@@ -1,0 +1,30 @@
+# SKILL & HOOK RULES: Natural Plants Directory Project
+
+## Architecture & Tech Stack
+- **Tech:** Pure HTML5, Modern CSS3 (CSS Variables for Earthy Theme), Native JavaScript (ES6+ Module Pattern).
+- **Data:** All plant information must be read dynamically from `data/plants.json`.
+- **Pages:**
+  - `index.html`: Main listing with vertical sidebar menu, header user dropdown, 3x3 plant grid, and pagination.
+  - `detail.html`: Detailed view page loading data based on URL query param (`?id=...`).
+
+## Design & Theme Guidelines
+- **Color Palette:** Warm cream background (#FDFBF7, #F5EFE6), earth tones (#8D7B68, #A084E8, #A8A196, #C8B6A6, #4A3E3D).
+- **Layout Structure:**
+  - Desktop: Left fixed/sticky vertical menu + Top right user avatar with dropdown menu + Main grid content.
+  - Mobile: Left menu collapses into a clean Hamburger Menu.
+- **Plant Cards Grid:** Exactly 3 rows x 3 columns on desktop.
+- **Pagination:** Google-style numbered pagination at the bottom (e.g., `< Prev 1 2 3 Next >`).
+
+## Detail Page Structure (`detail.html`)
+Must include:
+1. General Overview Paragraph (Tavsiye / Tanıtım metni).
+2. Comprehensive Data Tables separated into 4 distinct structured categories:
+   - Category 1: Temel Bilgiler & Kimlik (Türkçe Adı, Botanik Adı, Türü)
+   - Category 2: Sağlık & Kullanım (Faydaları, Kullanım Şekli, Yan Etkiler & Uyarılar)
+   - Category 3: Coğrafya & Mevsim (Yetiştiği Yerler, Hasat Mevsimi, Çiçeklenme Zamanı)
+   - Category 4: Bakım & Yetiştirme (Işık İhtiyacı, Sulama Sıklığı, Toprak Tipi)
+
+## Code Quality Rules
+- Keep code clean, modular, and fully commented in Turkish.
+- Use Semantic HTML elements (`<header>`, `<nav>`, `<main>`, `<aside>`, `<footer>`).
+- No external heavy CSS frameworks (pure modern CSS Grid & Flexbox).

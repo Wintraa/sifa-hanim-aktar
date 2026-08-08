@@ -1,0 +1,155 @@
+{
+  "added": [
+    {
+      "id": 179,
+      "ad": "Gül",
+      "botanikAd": "Rosa damascena",
+      "kaynak": "Kew POWO / Missouri Botanical Garden"
+    },
+    {
+      "id": 180,
+      "ad": "Orkide",
+      "botanikAd": "Phalaenopsis amabilis",
+      "kaynak": "Kew POWO / Missouri Botanical Garden"
+    },
+    {
+      "id": 181,
+      "ad": "Zerdeçal",
+      "botanikAd": "Curcuma longa",
+      "kaynak": "Kew POWO; EMA HMPC Curcumae longae rhizoma"
+    },
+    {
+      "id": 182,
+      "ad": "Kakule",
+      "botanikAd": "Elettaria cardamomum",
+      "kaynak": "USDA GRIN; Missouri Botanical Garden"
+    },
+    {
+      "id": 183,
+      "ad": "Paçuli",
+      "botanikAd": "Pogostemon cablin",
+      "kaynak": "Kew POWO / USDA GRIN"
+    },
+    {
+      "id": 184,
+      "ad": "Begonya",
+      "botanikAd": "Begonia cucullata",
+      "kaynak": "Missouri Botanical Garden"
+    },
+    {
+      "id": 185,
+      "ad": "Camgüzeli",
+      "botanikAd": "Impatiens walleriana",
+      "kaynak": "Missouri Botanical Garden / Kew POWO"
+    },
+    {
+      "id": 186,
+      "ad": "Barış Çiçeği",
+      "botanikAd": "Spathiphyllum wallisii",
+      "kaynak": "Missouri Botanical Garden"
+    },
+    {
+      "id": 187,
+      "ad": "Aşk Merdiveni",
+      "botanikAd": "Nephrolepis exaltata",
+      "kaynak": "Missouri Botanical Garden / Kew POWO"
+    },
+    {
+      "id": 188,
+      "ad": "Atatürk Çiçeği",
+      "botanikAd": "Euphorbia pulcherrima",
+      "kaynak": "Missouri Botanical Garden / Kew POWO"
+    },
+    {
+      "id": 189,
+      "ad": "Kalanço",
+      "botanikAd": "Kalanchoe blossfeldiana",
+      "kaynak": "Missouri Botanical Garden"
+    },
+    {
+      "id": 190,
+      "ad": "Begonvil",
+      "botanikAd": "Bougainvillea glabra",
+      "kaynak": "Missouri Botanical Garden / Kew POWO"
+    },
+    {
+      "id": 191,
+      "ad": "Sinameki",
+      "botanikAd": "Senna alexandrina",
+      "kaynak": "WHO Monographs; EMA HMPC Senna alexandrina; Commission E"
+    },
+    {
+      "id": 192,
+      "ad": "Kudret Narı",
+      "botanikAd": "Momordica charantia",
+      "kaynak": "MSKCC About Herbs; Drugs.com Professional"
+    },
+    {
+      "id": 193,
+      "ad": "Küçük Havlıcan",
+      "botanikAd": "Alpinia officinarum",
+      "kaynak": "Kew POWO / USDA GRIN"
+    },
+    {
+      "id": 194,
+      "ad": "Zedoarya",
+      "botanikAd": "Curcuma zedoaria",
+      "kaynak": "Kew POWO / USDA GRIN"
+    },
+    {
+      "id": 195,
+      "ad": "Şampuan Zencefili",
+      "botanikAd": "Zingiber zerumbet",
+      "kaynak": "Kew POWO / USDA GRIN"
+    },
+    {
+      "id": 196,
+      "ad": "Büyük Havlıcan",
+      "botanikAd": "Alpinia galanga",
+      "kaynak": "Kew POWO / USDA GRIN"
+    },
+    {
+      "id": 197,
+      "ad": "Kencur",
+      "botanikAd": "Kaempferia galanga",
+      "kaynak": "Kew POWO / USDA GRIN"
+    },
+    {
+      "id": 198,
+      "ad": "Uzun Biber",
+      "botanikAd": "Piper longum",
+      "kaynak": "Kew POWO / USDA GRIN"
+    },
+    {
+      "id": 199,
+      "ad": "Kadife Fasulye",
+      "botanikAd": "Mucuna pruriens",
+      "kaynak": "Kew POWO; MSKCC / bilimsel güvenlik uyarıları"
+    },
+    {
+      "id": 200,
+      "ad": "Akgünlük",
+      "botanikAd": "Boswellia serrata",
+      "kaynak": "NCCIH Boswellia; NCBI LiverTox"
+    },
+    {
+      "id": 201,
+      "ad": "Benzoin Ağacı",
+      "botanikAd": "Styrax benzoin",
+      "kaynak": "Kew POWO / USDA GRIN"
+    },
+    {
+      "id": 202,
+      "ad": "Kırmızı Adaçayı",
+      "botanikAd": "Salvia miltiorrhiza",
+      "kaynak": "Klinik literatür (warfarin etkileşimi); Kew POWO"
+    },
+    {
+      "id": 203,
+      "ad": "Şeytan Pençesi",
+      "botanikAd": "Harpagophytum procumbens",
+      "kaynak": "German Commission E; SANBI PlantZAfrica"
+    }
+  ],
+  "skipped": []
+}

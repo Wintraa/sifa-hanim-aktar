@@ -1,0 +1,170 @@
+[
+  {
+    "id": 3,
+    "ad": "Aloe Vera",
+    "botanikAd": "Aloe barbadensis Miller",
+    "tur": "Süs Bitkileri"
+  },
+  {
+    "id": 44,
+    "ad": "Ylang-Ylang",
+    "botanikAd": "Cananga odorata",
+    "tur": "Aromatik Bitkiler"
+  },
+  {
+    "id": 65,
+    "ad": "Yucca",
+    "botanikAd": "Yucca elephantipes",
+    "tur": "Süs Bitkileri"
+  },
+  {
+    "id": 69,
+    "ad": "Ginseng",
+    "botanikAd": "Panax ginseng",
+    "tur": "Tıbbi Bitkiler"
+  },
+  {
+    "id": 70,
+    "ad": "Ginkgo Biloba",
+    "botanikAd": "Ginkgo biloba",
+    "tur": "Tıbbi Bitkiler"
+  },
+  {
+    "id": 97,
+    "ad": "Goji Berry",
+    "botanikAd": "Lycium barbarum",
+    "tur": "Tıbbi Bitkiler"
+  },
+  {
+    "id": 111,
+    "ad": "Gotu Kola",
+    "botanikAd": "Centella asiatica",
+    "tur": "Tıbbi Bitkiler"
+  },
+  {
+    "id": 114,
+    "ad": "Şizandra",
+    "botanikAd": "Schisandra chinensis",
+    "tur": "Tıbbi Bitkiler"
+  },
+  {
+    "id": 115,
+    "ad": "Sibirya Ginsengi",
+    "botanikAd": "Eleutherococcus senticosus",
+    "tur": "Tıbbi Bitkiler"
+  },
+  {
+    "id": 120,
+    "ad": "Grindelya",
+    "botanikAd": "Grindelia robusta",
+    "tur": "Tıbbi Bitkiler"
+  },
+  {
+    "id": 130,
+    "ad": "Amerikan Takke Otu",
+    "botanikAd": "Scutellaria lateriflora",
+    "tur": "Tıbbi Bitkiler"
+  },
+  {
+    "id": 140,
+    "ad": "Oregon Üzümü",
+    "botanikAd": "Mahonia aquifolium",
+    "tur": "Tıbbi Bitkiler"
+  },
+  {
+    "id": 143,
+    "ad": "Andrografis",
+    "botanikAd": "Andrographis paniculata",
+    "tur": "Tıbbi Bitkiler"
+  },
+  {
+    "id": 149,
+    "ad": "Kara Hile",
+    "botanikAd": "Terminalia chebula",
+    "tur": "Tıbbi Bitkiler"
+  },
+  {
+    "id": 150,
+    "ad": "Bellerik Hile",
+    "botanikAd": "Terminalia bellirica",
+    "tur": "Tıbbi Bitkiler"
+  },
+  {
+    "id": 151,
+    "ad": "Amla",
+    "botanikAd": "Phyllanthus emblica",
+    "tur": "Tıbbi Bitkiler"
+  },
+  {
+    "id": 152,
+    "ad": "Neem",
+    "botanikAd": "Azadirachta indica",
+    "tur": "Tıbbi Bitkiler"
+  },
+  {
+    "id": 154,
+    "ad": "Brahmi",
+    "botanikAd": "Bacopa monnieri",
+    "tur": "Tıbbi Bitkiler"
+  },
+  {
+    "id": 156,
+    "ad": "Gurmar",
+    "botanikAd": "Gymnema sylvestre",
+    "tur": "Tıbbi Bitkiler"
+  },
+  {
+    "id": 157,
+    "ad": "Şatavari",
+    "botanikAd": "Asparagus racemosus",
+    "tur": "Tıbbi Bitkiler"
+  },
+  {
+    "id": 158,
+    "ad": "Guduchi",
+    "botanikAd": "Tinospora cordifolia",
+    "tur": "Tıbbi Bitkiler"
+  },
+  {
+    "id": 159,
+    "ad": "Guggul",
+    "botanikAd": "Commiphora mukul",
+    "tur": "Tıbbi Bitkiler"
+  },
+  {
+    "id": 178,
+    "ad": "Jiaogulan",
+    "botanikAd": "Gynostemma pentaphyllum",
+    "tur": "Tıbbi Bitkiler"
+  },
+  {
+    "id": 182,
+    "ad": "Damiana",
+    "botanikAd": "Turnera diffusa",
+    "tur": "Tıbbi Bitkiler"
+  },
+  {
+    "id": 216,
+    "ad": "Cascara",
+    "botanikAd": "Frangula purshiana",
+    "tur": "Tıbbi Bitkiler"
+  },
+  {
+    "id": 217,
+    "ad": "Acı Aloe",
+    "botanikAd": "Aloe ferox",
+    "tur": "Tıbbi Bitkiler"
+  },
+  {
+    "id": 230,
+    "ad": "Guarana",
+    "botanikAd": "Paullinia cupana",
+    "tur": "Tıbbi Bitkiler"
+  },
+  {
+    "id": 231,
+    "ad": "Yerba Mate",
+    "botanikAd": "Ilex paraguariensis",
+    "tur": "Tıbbi Bitkiler"
+  }
+]

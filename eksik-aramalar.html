@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bulunamayan Aramalar | Şifa Hanım Aktar</title>
+    <link rel="stylesheet" href="styles/tokens.css" />
+    <link rel="stylesheet" href="styles/base.css" />
+    <style>
+      .missing-page {
+        max-width: 720px;
+        margin: 2rem auto;
+        padding: 0 1.25rem 3rem;
+      }
+      .missing-page h1 {
+        font-family: var(--font-display, Georgia, serif);
+        font-size: 1.75rem;
+        margin-bottom: 0.35rem;
+      }
+      .missing-page .lead {
+        color: var(--color-text-muted, #6b5e54);
+        margin-bottom: 1.5rem;
+      }
+      .missing-table {
+        width: 100%;
+        border-collapse: collapse;
+        background: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+      }
+      .missing-table th,
+      .missing-table td {
+        text-align: left;
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid #eee;
+        font-size: 0.95rem;
+      }
+      .missing-table th {
+        background: #f5efe6;
+        font-weight: 600;
+      }
+      .missing-empty,
+      .missing-error {
+        padding: 1.25rem;
+        background: #f5efe6;
+        border-radius: 12px;
+      }
+      .back-link {
+        display: inline-block;
+        margin-bottom: 1.25rem;
+        color: #8d7b68;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="missing-page">
+      <a class="back-link" href="index.html">← Ana sayfaya dön</a>
+      <h1>Bulunamayan aramalar</h1>
+      <p class="lead">
+        Annem (veya ziyaretçi) sitede arayıp bulamadığı kelimeler burada birikir.
+        En çok arananlar üstte görünür — hangi bitkiyi eklemen gerektiğini buradan anlarsın.
+      </p>
+      <div id="missingRoot" role="status">Yükleniyor…</div>
+    </main>
+    <script>
+      const root = document.getElementById("missingRoot");
+
+      fetch("/api/bulunamayan-aramalar", { cache: "no-cache" })
+        .then((r) => {
+          if (!r.ok) throw new Error("Liste alınamadı. Sunucu açık mı?");
+          return r.json();
+        })
+        .then((rows) => {
+          if (!Array.isArray(rows) || rows.length === 0) {
+            root.innerHTML =
+              '<p class="missing-empty">Henüz kaydedilmiş bulunamayan arama yok.</p>';
+            return;
+          }
+
+          const body = rows
+            .map(
+              (row) => `
+              <tr>
+                <td>${escapeHtml(row.aramaMetni)}</td>
+                <td>${row.tekrarSayisi}</td>
+                <td>${escapeHtml(row.sonTarih || "")}</td>
+              </tr>`
+            )
+            .join("");
+
+          root.innerHTML = `
+            <table class="missing-table">
+              <thead>
+                <tr>
+                  <th>Aranan kelime</th>
+                  <th>Kaç kez</th>
+                  <th>Son tarih</th>
+                </tr>
+              </thead>
+              <tbody>${body}</tbody>
+            </table>`;
+        })
+        .catch((err) => {
+          root.innerHTML = `<p class="missing-error">${escapeHtml(err.message)}</p>`;
+        });
+
+      function escapeHtml(value) {
+        return String(value)
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;");
+      }
+    </script>
+  </body>
+</html>

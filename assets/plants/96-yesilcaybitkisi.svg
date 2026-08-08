@@ -1,0 +1,7 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" rx="48" fill="#F5EFE6"/><rect x="52" y="52" width="1096" height="796" rx="36" fill="#FDFBF7" stroke="#C8B6A6" stroke-width="6"/>
+  <circle cx="220" cy="180" r="70" fill="#C8B6A6" opacity=".35"/><circle cx="980" cy="220" r="110" fill="#A8A196" opacity=".28"/>
+  <path d="M600 700V300" stroke="#8D7B68" stroke-width="16" stroke-linecap="round"/><path d="M600 480C485 360 390 430 360 530C480 550 565 530 600 480Z" fill="#A8A196"/><path d="M600 520C720 390 825 450 850 550C730 570 640 555 600 520Z" fill="#C8B6A6"/>
+  <circle cx="600" cy="285" r="82" fill="#C8B6A6"/><circle cx="545" cy="245" r="36" fill="#FDFBF7"/><circle cx="655" cy="245" r="36" fill="#FDFBF7"/><circle cx="600" cy="335" r="32" fill="#8D7B68"/>
+  <text x="600" y="790" text-anchor="middle" fill="#4A3E3D" font-family="Arial, sans-serif" font-size="48" font-weight="700">Yeşil Çay Bitkisi</text>
+</svg>

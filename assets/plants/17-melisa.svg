@@ -1,0 +1,14 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" rx="48" fill="#F3EDE4"/>
+  <rect x="52" y="52" width="1096" height="796" rx="36" fill="#FDFBF7" stroke="#A084E8" stroke-width="6"/>
+  <circle cx="220" cy="180" r="70" fill="#A084E8" opacity="0.35"/>
+  <circle cx="980" cy="220" r="110" fill="#C8B6A6" opacity="0.28"/>
+  
+  <path d="M600 680 C560 520 520 360 500 250" stroke="#C8B6A6" stroke-width="34" stroke-linecap="round" fill="none"/>
+  <path d="M600 680 C640 520 680 360 700 250" stroke="#6B8F71" stroke-width="34" stroke-linecap="round" fill="none"/>
+  <path d="M600 680 C580 540 540 420 480 340" stroke="#A084E8" stroke-width="28" stroke-linecap="round" fill="none"/>
+  <path d="M600 680 C620 540 660 420 720 340" stroke="#C8B6A6" stroke-width="28" stroke-linecap="round" fill="none"/>
+  <path d="M600 680 C600 560 600 460 600 360" stroke="#6B8F71" stroke-width="30" stroke-linecap="round" fill="none"/>
+
+  <text x="600" y="790" text-anchor="middle" fill="#4A3E3D" font-family="Arial, sans-serif" font-size="48" font-weight="700">Melisa</text>
+</svg>

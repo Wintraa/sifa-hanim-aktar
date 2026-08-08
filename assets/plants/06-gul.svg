@@ -1,0 +1,19 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" rx="48" fill="#F8F2E9"/>
+  <rect x="52" y="52" width="1096" height="796" rx="36" fill="#FDFBF7" stroke="#C8B6A6" stroke-width="6"/>
+  <circle cx="220" cy="180" r="70" fill="#C8B6A6" opacity="0.35"/>
+  <circle cx="980" cy="220" r="110" fill="#A084E8" opacity="0.28"/>
+  
+  <path d="M600 700 V280" stroke="#6E7B63" stroke-width="14" stroke-linecap="round"/>
+  <ellipse cx="560" cy="340" rx="28" ry="42" fill="#C8B6A6"/>
+  <ellipse cx="640" cy="340" rx="28" ry="42" fill="#C8B6A6"/>
+  <ellipse cx="560" cy="420" rx="28" ry="42" fill="#C8B6A6"/>
+  <ellipse cx="640" cy="420" rx="28" ry="42" fill="#C8B6A6"/>
+  <ellipse cx="560" cy="500" rx="28" ry="42" fill="#C8B6A6"/>
+  <ellipse cx="640" cy="500" rx="28" ry="42" fill="#C8B6A6"/>
+  <ellipse cx="600" cy="280" rx="34" ry="48" fill="#6E7B63"/>
+  <path d="M600 520 C520 560 470 620 450 680" stroke="#A084E8" stroke-width="18" fill="none" stroke-linecap="round"/>
+  <path d="M600 560 C680 590 740 640 760 690" stroke="#A084E8" stroke-width="18" fill="none" stroke-linecap="round"/>
+
+  <text x="600" y="790" text-anchor="middle" fill="#4A3E3D" font-family="Arial, sans-serif" font-size="48" font-weight="700">Gul</text>
+</svg>

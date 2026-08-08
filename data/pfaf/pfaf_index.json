@@ -1,0 +1,960 @@
+{
+  "Matricaria chamomilla": {
+    "status": "ok",
+    "file": "matricaria-chamomilla.json"
+  },
+  "Salvia officinalis": {
+    "status": "ok",
+    "file": "salvia-officinalis.json"
+  },
+  "Lavandula angustifolia": {
+    "status": "ok",
+    "file": "lavandula-angustifolia.json"
+  },
+  "Aloe barbadensis Miller": {
+    "status": "ok",
+    "file": "aloe-barbadensis-miller.json",
+    "matchedName": "Aloe vera"
+  },
+  "Mentha spicata": {
+    "status": "ok",
+    "file": "mentha-spicata.json"
+  },
+  "Salvia rosmarinus": {
+    "status": "ok",
+    "file": "salvia-rosmarinus.json",
+    "matchedName": "Rosmarinus officinalis"
+  },
+  "Rosa spp.": {
+    "status": "not_found"
+  },
+  "Jasminum officinale": {
+    "status": "ok",
+    "file": "jasminum-officinale.json"
+  },
+  "Thymus vulgaris": {
+    "status": "ok",
+    "file": "thymus-vulgaris.json"
+  },
+  "Ocimum basilicum": {
+    "status": "ok",
+    "file": "ocimum-basilicum.json"
+  },
+  "Phalaenopsis spp.": {
+    "status": "not_found"
+  },
+  "Tilia tomentosa": {
+    "status": "ok",
+    "file": "tilia-tomentosa.json"
+  },
+  "Zingiber officinale": {
+    "status": "ok",
+    "file": "zingiber-officinale.json"
+  },
+  "Curcuma longa": {
+    "status": "not_found"
+  },
+  "Echinacea purpurea": {
+    "status": "ok",
+    "file": "echinacea-purpurea.json"
+  },
+  "Foeniculum vulgare": {
+    "status": "ok",
+    "file": "foeniculum-vulgare.json"
+  },
+  "Melissa officinalis": {
+    "status": "ok",
+    "file": "melissa-officinalis.json"
+  },
+  "Urtica dioica": {
+    "status": "ok",
+    "file": "urtica-dioica.json"
+  },
+  "Achillea millefolium": {
+    "status": "ok",
+    "file": "achillea-millefolium.json"
+  },
+  "Althaea officinalis": {
+    "status": "ok",
+    "file": "althaea-officinalis.json"
+  },
+  "Pimpinella anisum": {
+    "status": "ok",
+    "file": "pimpinella-anisum.json"
+  },
+  "Nigella sativa": {
+    "status": "ok",
+    "file": "nigella-sativa.json"
+  },
+  "Rosa canina": {
+    "status": "ok",
+    "file": "rosa-canina.json"
+  },
+  "Calendula officinalis": {
+    "status": "ok",
+    "file": "calendula-officinalis.json"
+  },
+  "Hypericum perforatum": {
+    "status": "ok",
+    "file": "hypericum-perforatum.json"
+  },
+  "Trigonella foenum-graecum": {
+    "status": "ok",
+    "file": "trigonella-foenum-graecum.json"
+  },
+  "Cuminum cyminum": {
+    "status": "ok",
+    "file": "cuminum-cyminum.json"
+  },
+  "Coriandrum sativum": {
+    "status": "ok",
+    "file": "coriandrum-sativum.json"
+  },
+  "Laurus nobilis": {
+    "status": "ok",
+    "file": "laurus-nobilis.json"
+  },
+  "Glycyrrhiza glabra": {
+    "status": "ok",
+    "file": "glycyrrhiza-glabra.json"
+  },
+  "Crocus sativus": {
+    "status": "ok",
+    "file": "crocus-sativus.json"
+  },
+  "Helichrysum arenarium": {
+    "status": "ok",
+    "file": "helichrysum-arenarium.json"
+  },
+  "Origanum majorana": {
+    "status": "ok",
+    "file": "origanum-majorana.json"
+  },
+  "Allium sativum": {
+    "status": "ok",
+    "file": "allium-sativum.json"
+  },
+  "Sambucus nigra": {
+    "status": "ok",
+    "file": "sambucus-nigra.json"
+  },
+  "Lavandula stoechas": {
+    "status": "ok",
+    "file": "lavandula-stoechas.json"
+  },
+  "Inula helenium": {
+    "status": "ok",
+    "file": "inula-helenium.json"
+  },
+  "Ocimum basilicum var. purpureum": {
+    "status": "ok",
+    "file": "ocimum-basilicum-var-purpureum.json",
+    "matchedName": "Ocimum basilicum"
+  },
+  "Artemisia dracunculus": {
+    "status": "ok",
+    "file": "artemisia-dracunculus.json"
+  },
+  "Petroselinum crispum": {
+    "status": "ok",
+    "file": "petroselinum-crispum.json"
+  },
+  "Anethum graveolens": {
+    "status": "ok",
+    "file": "anethum-graveolens.json"
+  },
+  "Elettaria cardamomum": {
+    "status": "not_found"
+  },
+  "Vanilla planifolia": {
+    "status": "ok",
+    "file": "vanilla-planifolia.json"
+  },
+  "Cananga odorata": {
+    "status": "ok",
+    "file": "cananga-odorata.json"
+  },
+  "Pogostemon cablin": {
+    "status": "not_found"
+  },
+  "Citrus bergamia": {
+    "status": "ok",
+    "file": "citrus-bergamia.json",
+    "matchedName": "Citrus aurantium"
+  },
+  "Tulipa gesneriana": {
+    "status": "ok",
+    "file": "tulipa-gesneriana.json"
+  },
+  "Hydrangea macrophylla": {
+    "status": "ok",
+    "file": "hydrangea-macrophylla.json"
+  },
+  "Begonia semperflorens": {
+    "status": "not_found"
+  },
+  "Rhododendron simsii": {
+    "status": "ok",
+    "file": "rhododendron-simsii.json",
+    "matchedName": "Rhododendron indicum"
+  },
+  "Viola odorata": {
+    "status": "ok",
+    "file": "viola-odorata.json"
+  },
+  "Chrysanthemum morifolium": {
+    "status": "ok",
+    "file": "chrysanthemum-morifolium.json",
+    "matchedName": "Chrysanthemum x morifolium"
+  },
+  "Pelargonium hortorum": {
+    "status": "ok",
+    "file": "pelargonium-hortorum.json",
+    "matchedName": "Pelargonium zonale"
+  },
+  "Paeonia lactiflora": {
+    "status": "ok",
+    "file": "paeonia-lactiflora.json"
+  },
+  "Narcissus poeticus": {
+    "status": "ok",
+    "file": "narcissus-poeticus.json"
+  },
+  "Hyacinthus orientalis": {
+    "status": "ok",
+    "file": "hyacinthus-orientalis.json"
+  },
+  "Lilium candidum": {
+    "status": "ok",
+    "file": "lilium-candidum.json"
+  },
+  "Impatiens walleriana": {
+    "status": "not_found"
+  },
+  "Sansevieria trifasciata": {
+    "status": "ok",
+    "file": "sansevieria-trifasciata.json"
+  },
+  "Monstera deliciosa": {
+    "status": "ok",
+    "file": "monstera-deliciosa.json"
+  },
+  "Spathiphyllum wallisii": {
+    "status": "not_found"
+  },
+  "Nephrolepis exaltata": {
+    "status": "not_found"
+  },
+  "Euphorbia pulcherrima": {
+    "status": "not_found"
+  },
+  "Ficus elastica": {
+    "status": "ok",
+    "file": "ficus-elastica.json"
+  },
+  "Yucca elephantipes": {
+    "status": "ok",
+    "file": "yucca-elephantipes.json",
+    "matchedName": "Yucca gigantea"
+  },
+  "Kalanchoe blossfeldiana": {
+    "status": "not_found"
+  },
+  "Bougainvillea glabra": {
+    "status": "not_found"
+  },
+  "Acacia dealbata": {
+    "status": "ok",
+    "file": "acacia-dealbata.json"
+  },
+  "Panax ginseng": {
+    "status": "ok",
+    "file": "panax-ginseng.json"
+  },
+  "Ginkgo biloba": {
+    "status": "ok",
+    "file": "ginkgo-biloba.json"
+  },
+  "Taraxacum officinale": {
+    "status": "ok",
+    "file": "taraxacum-officinale.json"
+  },
+  "Capsella bursa-pastoris": {
+    "status": "ok",
+    "file": "capsella-bursa-pastoris.json"
+  },
+  "Viscum album": {
+    "status": "ok",
+    "file": "viscum-album.json"
+  },
+  "Senna alexandrina": {
+    "status": "not_found"
+  },
+  "Valeriana officinalis": {
+    "status": "ok",
+    "file": "valeriana-officinalis.json"
+  },
+  "Passiflora incarnata": {
+    "status": "ok",
+    "file": "passiflora-incarnata.json"
+  },
+  "Silybum marianum": {
+    "status": "ok",
+    "file": "silybum-marianum.json"
+  },
+  "Cynara scolymus": {
+    "status": "ok",
+    "file": "cynara-scolymus.json"
+  },
+  "Momordica charantia": {
+    "status": "not_found"
+  },
+  "Fumaria officinalis": {
+    "status": "ok",
+    "file": "fumaria-officinalis.json"
+  },
+  "Alpinia officinarum": {
+    "status": "not_found"
+  },
+  "Prunus mahaleb": {
+    "status": "ok",
+    "file": "prunus-mahaleb.json"
+  },
+  "Peganum harmala": {
+    "status": "ok",
+    "file": "peganum-harmala.json"
+  },
+  "Acorus calamus": {
+    "status": "ok",
+    "file": "acorus-calamus.json"
+  },
+  "Plantago major": {
+    "status": "ok",
+    "file": "plantago-major.json"
+  },
+  "Arctostaphylos uva-ursi": {
+    "status": "ok",
+    "file": "arctostaphylos-uva-ursi.json"
+  },
+  "Vitex agnus-castus": {
+    "status": "ok",
+    "file": "vitex-agnus-castus.json"
+  },
+  "Alchemilla vulgaris": {
+    "status": "ok",
+    "file": "alchemilla-vulgaris.json",
+    "matchedName": "Alchemilla xanthochlora"
+  },
+  "Elymus repens": {
+    "status": "ok",
+    "file": "elymus-repens.json"
+  },
+  "Aesculus hippocastanum": {
+    "status": "ok",
+    "file": "aesculus-hippocastanum.json"
+  },
+  "Astragalus membranaceus": {
+    "status": "ok",
+    "file": "astragalus-membranaceus.json"
+  },
+  "Solidago virgaurea": {
+    "status": "ok",
+    "file": "solidago-virgaurea.json"
+  },
+  "Viburnum opulus": {
+    "status": "ok",
+    "file": "viburnum-opulus.json"
+  },
+  "Ziziphus jujuba": {
+    "status": "ok",
+    "file": "ziziphus-jujuba.json"
+  },
+  "Crataegus monogyna": {
+    "status": "ok",
+    "file": "crataegus-monogyna.json"
+  },
+  "Camellia sinensis": {
+    "status": "ok",
+    "file": "camellia-sinensis.json"
+  },
+  "Lycium barbarum": {
+    "status": "ok",
+    "file": "lycium-barbarum.json"
+  },
+  "Tribulus terrestris": {
+    "status": "ok",
+    "file": "tribulus-terrestris.json"
+  },
+  "Artemisia absinthium": {
+    "status": "ok",
+    "file": "artemisia-absinthium.json"
+  },
+  "Mentha pulegium": {
+    "status": "ok",
+    "file": "mentha-pulegium.json"
+  },
+  "Cnicus benedictus": {
+    "status": "ok",
+    "file": "cnicus-benedictus.json"
+  },
+  "Tussilago farfara": {
+    "status": "ok",
+    "file": "tussilago-farfara.json"
+  },
+  "Myrtus communis": {
+    "status": "ok",
+    "file": "myrtus-communis.json"
+  },
+  "Salix alba": {
+    "status": "ok",
+    "file": "salix-alba.json"
+  },
+  "Gentiana lutea": {
+    "status": "ok",
+    "file": "gentiana-lutea.json"
+  },
+  "Tilia cordata": {
+    "status": "ok",
+    "file": "tilia-cordata.json"
+  },
+  "Mentha piperita": {
+    "status": "ok",
+    "file": "mentha-piperita.json",
+    "matchedName": "Mentha x piperita"
+  },
+  "Rosmarinus officinalis": {
+    "status": "ok",
+    "file": "rosmarinus-officinalis.json"
+  },
+  "Origanum vulgare": {
+    "status": "ok",
+    "file": "origanum-vulgare.json"
+  },
+  "Borago officinalis": {
+    "status": "ok",
+    "file": "borago-officinalis.json"
+  },
+  "Centella asiatica": {
+    "status": "ok",
+    "file": "centella-asiatica.json"
+  },
+  "Withania somnifera": {
+    "status": "ok",
+    "file": "withania-somnifera.json"
+  },
+  "Rhodiola rosea": {
+    "status": "ok",
+    "file": "rhodiola-rosea.json"
+  },
+  "Schisandra chinensis": {
+    "status": "ok",
+    "file": "schisandra-chinensis.json"
+  },
+  "Eleutherococcus senticosus": {
+    "status": "ok",
+    "file": "eleutherococcus-senticosus.json"
+  },
+  "Humulus lupulus": {
+    "status": "ok",
+    "file": "humulus-lupulus.json"
+  },
+  "Chamaemelum nobile": {
+    "status": "ok",
+    "file": "chamaemelum-nobile.json"
+  },
+  "Tanacetum parthenium": {
+    "status": "ok",
+    "file": "tanacetum-parthenium.json"
+  },
+  "Petasites hybridus": {
+    "status": "ok",
+    "file": "petasites-hybridus.json"
+  },
+  "Grindelia robusta": {
+    "status": "ok",
+    "file": "grindelia-robusta.json"
+  },
+  "Euphrasia officinalis": {
+    "status": "ok",
+    "file": "euphrasia-officinalis.json"
+  },
+  "Arnica montana": {
+    "status": "ok",
+    "file": "arnica-montana.json"
+  },
+  "Hamamelis virginiana": {
+    "status": "ok",
+    "file": "hamamelis-virginiana.json"
+  },
+  "Quercus robur": {
+    "status": "ok",
+    "file": "quercus-robur.json"
+  },
+  "Rumex crispus": {
+    "status": "ok",
+    "file": "rumex-crispus.json"
+  },
+  "Stellaria media": {
+    "status": "ok",
+    "file": "stellaria-media.json"
+  },
+  "Galium aparine": {
+    "status": "ok",
+    "file": "galium-aparine.json"
+  },
+  "Verbena officinalis": {
+    "status": "ok",
+    "file": "verbena-officinalis.json"
+  },
+  "Leonurus cardiaca": {
+    "status": "ok",
+    "file": "leonurus-cardiaca.json"
+  },
+  "Scutellaria lateriflora": {
+    "status": "ok",
+    "file": "scutellaria-lateriflora.json"
+  },
+  "Nepeta cataria": {
+    "status": "ok",
+    "file": "nepeta-cataria.json"
+  },
+  "Hyssopus officinalis": {
+    "status": "ok",
+    "file": "hyssopus-officinalis.json"
+  },
+  "Satureja hortensis": {
+    "status": "ok",
+    "file": "satureja-hortensis.json"
+  },
+  "Carum carvi": {
+    "status": "ok",
+    "file": "carum-carvi.json"
+  },
+  "Armoracia rusticana": {
+    "status": "ok",
+    "file": "armoracia-rusticana.json"
+  },
+  "Nasturtium officinale": {
+    "status": "ok",
+    "file": "nasturtium-officinale.json"
+  },
+  "Capsicum annuum": {
+    "status": "ok",
+    "file": "capsicum-annuum.json"
+  },
+  "Syzygium aromaticum": {
+    "status": "ok",
+    "file": "syzygium-aromaticum.json"
+  },
+  "Berberis vulgaris": {
+    "status": "ok",
+    "file": "berberis-vulgaris.json"
+  },
+  "Mahonia aquifolium": {
+    "status": "ok",
+    "file": "mahonia-aquifolium.json"
+  },
+  "Hydrastis canadensis": {
+    "status": "ok",
+    "file": "hydrastis-canadensis.json"
+  },
+  "Coptis chinensis": {
+    "status": "ok",
+    "file": "coptis-chinensis.json"
+  },
+  "Andrographis paniculata": {
+    "status": "ok",
+    "file": "andrographis-paniculata.json"
+  },
+  "Curcuma zedoaria": {
+    "status": "not_found"
+  },
+  "Zingiber zerumbet": {
+    "status": "not_found"
+  },
+  "Alpinia galanga": {
+    "status": "not_found"
+  },
+  "Kaempferia galanga": {
+    "status": "not_found"
+  },
+  "Piper longum": {
+    "status": "not_found"
+  },
+  "Terminalia chebula": {
+    "status": "ok",
+    "file": "terminalia-chebula.json"
+  },
+  "Terminalia bellirica": {
+    "status": "ok",
+    "file": "terminalia-bellirica.json"
+  },
+  "Phyllanthus emblica": {
+    "status": "ok",
+    "file": "phyllanthus-emblica.json"
+  },
+  "Azadirachta indica": {
+    "status": "ok",
+    "file": "azadirachta-indica.json"
+  },
+  "Ocimum tenuiflorum": {
+    "status": "ok",
+    "file": "ocimum-tenuiflorum.json"
+  },
+  "Bacopa monnieri": {
+    "status": "ok",
+    "file": "bacopa-monnieri.json"
+  },
+  "Mucuna pruriens": {
+    "status": "not_found"
+  },
+  "Gymnema sylvestre": {
+    "status": "ok",
+    "file": "gymnema-sylvestre.json"
+  },
+  "Asparagus racemosus": {
+    "status": "ok",
+    "file": "asparagus-racemosus.json"
+  },
+  "Tinospora cordifolia": {
+    "status": "ok",
+    "file": "tinospora-cordifolia.json"
+  },
+  "Commiphora mukul": {
+    "status": "ok",
+    "file": "commiphora-mukul.json",
+    "matchedName": "Commiphora wightii"
+  },
+  "Boswellia serrata": {
+    "status": "not_found"
+  },
+  "Commiphora myrrha": {
+    "status": "ok",
+    "file": "commiphora-myrrha.json"
+  },
+  "Styrax benzoin": {
+    "status": "not_found"
+  },
+  "Pistacia lentiscus": {
+    "status": "ok",
+    "file": "pistacia-lentiscus.json"
+  },
+  "Olea europaea": {
+    "status": "ok",
+    "file": "olea-europaea.json"
+  },
+  "Ficus carica": {
+    "status": "ok",
+    "file": "ficus-carica.json"
+  },
+  "Punica granatum": {
+    "status": "ok",
+    "file": "punica-granatum.json"
+  },
+  "Vitis vinifera": {
+    "status": "ok",
+    "file": "vitis-vinifera.json"
+  },
+  "Ribes nigrum": {
+    "status": "ok",
+    "file": "ribes-nigrum.json"
+  },
+  "Vaccinium myrtillus": {
+    "status": "ok",
+    "file": "vaccinium-myrtillus.json"
+  },
+  "Vaccinium macrocarpon": {
+    "status": "ok",
+    "file": "vaccinium-macrocarpon.json"
+  },
+  "Fragaria vesca": {
+    "status": "ok",
+    "file": "fragaria-vesca.json"
+  },
+  "Rubus idaeus": {
+    "status": "ok",
+    "file": "rubus-idaeus.json"
+  },
+  "Rubus fruticosus": {
+    "status": "ok",
+    "file": "rubus-fruticosus.json"
+  },
+  "Malva sylvestris": {
+    "status": "ok",
+    "file": "malva-sylvestris.json"
+  },
+  "Primula veris": {
+    "status": "ok",
+    "file": "primula-veris.json"
+  },
+  "Viola tricolor": {
+    "status": "ok",
+    "file": "viola-tricolor.json"
+  },
+  "Chelidonium majus": {
+    "status": "ok",
+    "file": "chelidonium-majus.json"
+  },
+  "Gynostemma pentaphyllum": {
+    "status": "ok",
+    "file": "gynostemma-pentaphyllum.json"
+  },
+  "Cichorium intybus": {
+    "status": "ok",
+    "file": "cichorium-intybus.json"
+  },
+  "Arctium lappa": {
+    "status": "ok",
+    "file": "arctium-lappa.json"
+  },
+  "Helichrysum italicum": {
+    "status": "ok",
+    "file": "helichrysum-italicum.json"
+  },
+  "Turnera diffusa": {
+    "status": "ok",
+    "file": "turnera-diffusa.json"
+  },
+  "Tanacetum vulgare": {
+    "status": "ok",
+    "file": "tanacetum-vulgare.json"
+  },
+  "Artemisia vulgaris": {
+    "status": "ok",
+    "file": "artemisia-vulgaris.json"
+  },
+  "Artemisia annua": {
+    "status": "ok",
+    "file": "artemisia-annua.json"
+  },
+  "Mentha aquatica": {
+    "status": "ok",
+    "file": "mentha-aquatica.json"
+  },
+  "Mentha arvensis": {
+    "status": "ok",
+    "file": "mentha-arvensis.json"
+  },
+  "Clinopodium vulgare": {
+    "status": "ok",
+    "file": "clinopodium-vulgare.json"
+  },
+  "Thymus serpyllum": {
+    "status": "ok",
+    "file": "thymus-serpyllum.json"
+  },
+  "Satureja montana": {
+    "status": "ok",
+    "file": "satureja-montana.json"
+  },
+  "Salvia sclarea": {
+    "status": "ok",
+    "file": "salvia-sclarea.json"
+  },
+  "Salvia miltiorrhiza": {
+    "status": "not_found"
+  },
+  "Lamium album": {
+    "status": "ok",
+    "file": "lamium-album.json"
+  },
+  "Prunella vulgaris": {
+    "status": "ok",
+    "file": "prunella-vulgaris.json"
+  },
+  "Galeopsis tetrahit": {
+    "status": "ok",
+    "file": "galeopsis-tetrahit.json"
+  },
+  "Digitalis purpurea": {
+    "status": "ok",
+    "file": "digitalis-purpurea.json"
+  },
+  "Convallaria majalis": {
+    "status": "ok",
+    "file": "convallaria-majalis.json"
+  },
+  "Atropa belladonna": {
+    "status": "ok",
+    "file": "atropa-belladonna.json"
+  },
+  "Hyoscyamus niger": {
+    "status": "ok",
+    "file": "hyoscyamus-niger.json"
+  },
+  "Datura stramonium": {
+    "status": "ok",
+    "file": "datura-stramonium.json"
+  },
+  "Aconitum napellus": {
+    "status": "ok",
+    "file": "aconitum-napellus.json"
+  },
+  "Eucalyptus globulus": {
+    "status": "ok",
+    "file": "eucalyptus-globulus.json"
+  },
+  "Melaleuca alternifolia": {
+    "status": "ok",
+    "file": "melaleuca-alternifolia.json"
+  },
+  "Pelargonium graveolens": {
+    "status": "ok",
+    "file": "pelargonium-graveolens.json"
+  },
+  "Citrus limon": {
+    "status": "ok",
+    "file": "citrus-limon.json"
+  },
+  "Citrus aurantium": {
+    "status": "ok",
+    "file": "citrus-aurantium.json"
+  },
+  "Juniperus communis": {
+    "status": "ok",
+    "file": "juniperus-communis.json"
+  },
+  "Cupressus sempervirens": {
+    "status": "ok",
+    "file": "cupressus-sempervirens.json"
+  },
+  "Pinus sylvestris": {
+    "status": "ok",
+    "file": "pinus-sylvestris.json"
+  },
+  "Abies alba": {
+    "status": "ok",
+    "file": "abies-alba.json"
+  },
+  "Betula pendula": {
+    "status": "ok",
+    "file": "betula-pendula.json"
+  },
+  "Populus nigra": {
+    "status": "ok",
+    "file": "populus-nigra.json"
+  },
+  "Ulmus rubra": {
+    "status": "ok",
+    "file": "ulmus-rubra.json"
+  },
+  "Frangula alnus": {
+    "status": "ok",
+    "file": "frangula-alnus.json"
+  },
+  "Rhamnus cathartica": {
+    "status": "ok",
+    "file": "rhamnus-cathartica.json"
+  },
+  "Frangula purshiana": {
+    "status": "ok",
+    "file": "frangula-purshiana.json"
+  },
+  "Aloe ferox": {
+    "status": "ok",
+    "file": "aloe-ferox.json"
+  },
+  "Rheum palmatum": {
+    "status": "ok",
+    "file": "rheum-palmatum.json"
+  },
+  "Rumex acetosa": {
+    "status": "ok",
+    "file": "rumex-acetosa.json"
+  },
+  "Oxalis acetosella": {
+    "status": "ok",
+    "file": "oxalis-acetosella.json"
+  },
+  "Urtica urens": {
+    "status": "ok",
+    "file": "urtica-urens.json"
+  },
+  "Parietaria officinalis": {
+    "status": "ok",
+    "file": "parietaria-officinalis.json"
+  },
+  "Plantago lanceolata": {
+    "status": "ok",
+    "file": "plantago-lanceolata.json"
+  },
+  "Plantago ovata": {
+    "status": "ok",
+    "file": "plantago-ovata.json"
+  },
+  "Linum usitatissimum": {
+    "status": "ok",
+    "file": "linum-usitatissimum.json"
+  },
+  "Cannabis sativa": {
+    "status": "ok",
+    "file": "cannabis-sativa.json"
+  },
+  "Harpagophytum procumbens": {
+    "status": "not_found"
+  },
+  "Trifolium pratense": {
+    "status": "ok",
+    "file": "trifolium-pratense.json"
+  },
+  "Medicago sativa": {
+    "status": "ok",
+    "file": "medicago-sativa.json"
+  },
+  "Paullinia cupana": {
+    "status": "ok",
+    "file": "paullinia-cupana.json"
+  },
+  "Ilex paraguariensis": {
+    "status": "ok",
+    "file": "ilex-paraguariensis.json"
+  },
+  "Saussurea costus": {
+    "status": "ok",
+    "raw": "data/pfaf/raw/saussurea-costus.json",
+    "matchedName": "Saussurea costus",
+    "sourceUrl": "https://pfaf.org/user/Plant.aspx?LatinName=Saussurea+costus"
+  },
+  "Epilobium angustifolium": {
+    "status": "ok",
+    "raw": "data/pfaf/raw/epilobium-angustifolium.json",
+    "matchedName": "Epilobium angustifolium",
+    "sourceUrl": "https://pfaf.org/user/Plant.aspx?LatinName=Epilobium+angustifolium"
+  },
+  "Calluna vulgaris": {
+    "status": "ok",
+    "raw": "data/pfaf/raw/calluna-vulgaris.json",
+    "matchedName": "Calluna vulgaris",
+    "sourceUrl": "https://pfaf.org/user/Plant.aspx?LatinName=Calluna+vulgaris"
+  },
+  "Dittrichia viscosa": {
+    "status": "ok",
+    "raw": "data/pfaf/raw/dittrichia-viscosa.json",
+    "matchedName": "Dittrichia viscosa",
+    "sourceUrl": "https://pfaf.org/user/Plant.aspx?LatinName=Dittrichia+viscosa"
+  },
+  "Ricinus communis": {
+    "status": "ok",
+    "raw": "data/pfaf/raw/ricinus-communis.json",
+    "matchedName": "Ricinus communis",
+    "sourceUrl": "https://pfaf.org/user/Plant.aspx?LatinName=Ricinus+communis"
+  },
+  "Styrax officinalis": {
+    "status": "ok",
+    "raw": "data/pfaf/raw/styrax-officinalis.json",
+    "matchedName": "Styrax officinalis",
+    "sourceUrl": "https://pfaf.org/user/Plant.aspx?LatinName=Styrax+officinalis"
+  },
+  "Carthamus tinctorius": {
+    "status": "ok",
+    "raw": "data/pfaf/raw/carthamus-tinctorius.json",
+    "matchedName": "Carthamus tinctorius",
+    "sourceUrl": "https://pfaf.org/user/Plant.aspx?LatinName=Carthamus+tinctorius"
+  },
+  "Simmondsia chinensis": {
+    "status": "ok",
+    "raw": "data/pfaf/raw/simmondsia-chinensis.json",
+    "matchedName": "Simmondsia chinensis",
+    "sourceUrl": "https://pfaf.org/user/Plant.aspx?LatinName=Simmondsia+chinensis"
+  }
+}

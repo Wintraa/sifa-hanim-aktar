@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bitki Ayrıntısı | Doğal Bitkiler Ansiklopedisi</title>
+    <meta
+      name="description"
+      content="Seçilen bitkinin tanıtımı, sağlık ve kullanım bilgileri, coğrafya, mevsim ve bakım esasları."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Doğal Bitkiler Ansiklopedisi" />
+    <meta name="theme-color" content="#8D7B68" />
+    <meta name="color-scheme" content="light" />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:site_name" content="Doğal Bitkiler Ansiklopedisi" />
+    <meta property="og:title" content="Bitki Ayrıntısı | Doğal Bitkiler Ansiklopedisi" />
+    <meta
+      property="og:description"
+      content="Seçilen bitkinin tanıtımı, sağlık ve kullanım bilgileri, coğrafya, mevsim ve bakım esasları."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,500;0,600;0,700;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/tokens.css" />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/layout.css" />
+    <link rel="stylesheet" href="styles/components.css" />
+    <link rel="stylesheet" href="styles/pages.css" />
+    <link rel="stylesheet" href="styles/responsive.css" />
+  </head>
+  <body class="detail-body">
+    <a class="skip-link" href="#main-content">İçeriğe atla</a>
+
+    <noscript>
+      <p class="noscript-notice">
+        Bitki detayları JavaScript ile yüklenir. Lütfen JavaScript’i etkinleştirin.
+      </p>
+    </noscript>
+
+    <header class="detail-header">
+      <a class="back-button" href="index.html">Kataloğa Dön</a>
+      <div class="detail-header__title">
+        <p class="section-label">Bitki maddesi</p>
+        <h1 id="detailTitle">Yükleniyor</h1>
+      </div>
+      <div class="detail-header__actions">
+        <button
+          class="favorite-button favorite-button--large"
+          id="detailFavoriteButton"
+          type="button"
+          hidden
+          aria-pressed="false"
+        >
+          <span aria-hidden="true">♡</span>
+          <span id="detailFavoriteLabel">Favorilere Ekle</span>
+        </button>
+        <button
+          class="profile-tertiary-button detail-action-button"
+          id="shareButton"
+          type="button"
+          hidden
+          aria-label="Bitkiyi paylaş"
+        >
+          Paylaş
+        </button>
+        <button
+          class="profile-tertiary-button detail-action-button"
+          id="printButton"
+          type="button"
+          hidden
+          aria-label="Bitki detayını yazdır"
+        >
+          Yazdır
+        </button>
+      </div>
+    </header>
+
+    <main class="detail-main" id="main-content">
+      <section class="loading-state" id="detailLoading" hidden role="status" aria-live="polite">
+        <p>Bitki bilgileri yükleniyor.</p>
+      </section>
+
+      <section class="detail-hero" id="detailHero" hidden aria-labelledby="detailName">
+        <img
+          id="detailImage"
+          src=""
+          alt=""
+          class="detail-hero__image"
+          width="840"
+          height="630"
+          decoding="async"
+          fetchpriority="high"
+        />
+        <div class="detail-hero__content">
+          <p class="detail-tag" id="detailType"></p>
+          <h2 id="detailName"></h2>
+          <p class="detail-subtitle" id="detailBotanicalName"></p>
+          <p class="detail-description" id="detailOverview"></p>
+        </div>
+      </section>
+
+      <section class="tables-grid" id="tablesGrid" hidden aria-label="Bitki bilgi tabloları">
+        <article class="info-card" aria-labelledby="headingBasic">
+          <h3 id="headingBasic">Temel Bilgiler ve Kimlik</h3>
+          <table class="info-table">
+            <caption class="visually-hidden">Temel bilgiler ve kimlik tablosu</caption>
+            <tbody id="tableBasic"></tbody>
+          </table>
+        </article>
+
+        <article class="info-card" aria-labelledby="headingHealth">
+          <h3 id="headingHealth">Sağlık ve Kullanım</h3>
+          <table class="info-table">
+            <caption class="visually-hidden">Sağlık ve kullanım tablosu</caption>
+            <tbody id="tableHealth"></tbody>
+          </table>
+        </article>
+
+        <article class="info-card" aria-labelledby="headingGeo">
+          <h3 id="headingGeo">Coğrafya ve Mevsim</h3>
+          <table class="info-table">
+            <caption class="visually-hidden">Coğrafya ve mevsim tablosu</caption>
+            <tbody id="tableGeo"></tbody>
+          </table>
+        </article>
+
+        <article class="info-card" id="careInfoCard" aria-labelledby="headingCare">
+          <h3 id="headingCare">Bakım ve Yetiştirme</h3>
+          <table class="info-table">
+            <caption class="visually-hidden">Bakım ve yetiştirme tablosu</caption>
+            <tbody id="tableCare"></tbody>
+          </table>
+        </article>
+      </section>
+
+      <section class="info-card case-experience" id="caseExperience" hidden aria-labelledby="caseExperienceTitle">
+        <p class="section-label">Gerçek yaşamdan klinik örnek</p>
+        <h3 id="caseExperienceTitle">Bir kişinin deneyimi</h3>
+        <p class="case-experience__lead" id="caseExperienceLead"></p>
+        <dl class="case-experience__facts">
+          <div>
+            <dt>Ne şikayeti vardı?</dt>
+            <dd id="caseProblem"></dd>
+          </div>
+          <div>
+            <dt>Ne yapıldı?</dt>
+            <dd id="caseApproach"></dd>
+          </div>
+          <div>
+            <dt>Sonuç ne oldu?</dt>
+            <dd id="caseOutcome"></dd>
+          </div>
+        </dl>
+        <blockquote class="case-experience__story" id="caseStory"></blockquote>
+        <p class="case-experience__source" id="caseSource"></p>
+        <p class="case-experience__disclaimer">
+          Bu özet, güvenilir tıbbi dergilerde (çoğunlukla PubMed) yayımlanmış gerçek klinik
+          kayıtlara dayanır. Herkesin sonucu aynı olmayabilir; teşhis veya tedavi yerine geçmez.
+          Bitkisel ürün kullanmadan önce hekiminize danışın.
+        </p>
+      </section>
+
+      <section class="source-note" id="sourceNote" hidden aria-label="Tıbbi uyarı"></section>
+
+      <section class="info-card care-panel" id="carePanel" hidden aria-labelledby="carePanelTitle">
+        <h3 id="carePanelTitle">Kişisel bakım notu</h3>
+        <p class="detail-description" id="carePanelDesc">
+          Favorilerinize eklediğiniz bitkiler için sulama aralığı ve kısa bir not kaydedebilirsiniz.
+          Bu not yalnızca bu tarayıcıda saklanır.
+        </p>
+        <form id="careForm" class="care-form" aria-describedby="careFeedback">
+          <label class="profile-field" for="careIntervalInput">
+            <span>Sulama aralığı (gün)</span>
+            <input
+              id="careIntervalInput"
+              name="careInterval"
+              type="number"
+              min="1"
+              max="60"
+              value="7"
+              required
+              inputmode="numeric"
+              autocomplete="off"
+              aria-describedby="carePanelDesc"
+            />
+          </label>
+          <label class="profile-field" for="careNoteInput">
+            <span>Kısa not</span>
+            <input
+              id="careNoteInput"
+              name="careNote"
+              type="text"
+              maxlength="160"
+              placeholder="Örneğin: Sabah erken sulayın"
+              autocomplete="off"
+            />
+          </label>
+          <div class="profile-form-actions">
+            <button class="back-button" type="submit">Notu Kaydet</button>
+            <button class="profile-tertiary-button" id="careRemoveButton" type="button">Sil</button>
+          </div>
+          <p id="careFeedback" class="profile-feedback" aria-live="polite" role="status"></p>
+        </form>
+      </section>
+
+      <section class="similar-section" id="similarSection" hidden aria-labelledby="similarTitle">
+        <div class="plants-section__header">
+          <div>
+            <p class="section-label">İlgili maddeler</p>
+            <h3 id="similarTitle">Aynı kategorideki bitkiler</h3>
+          </div>
+        </div>
+        <div class="similar-grid" id="similarGrid"></div>
+      </section>
+
+      <section class="detail-empty" id="detailEmpty" hidden aria-labelledby="detailEmptyTitle">
+        <h2 id="detailEmptyTitle">Bitki bulunamadı</h2>
+        <p>İstenen bitki bilgisi yüklenemedi veya bağlantı geçersiz.</p>
+        <a class="back-button" href="index.html">Kataloğa Dön</a>
+      </section>
+    </main>
+
+    <script type="module" src="detail.js?v=20260803d"></script>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+{
+  "tarih": "2026-07-30",
+  "duzeltmeler": [
+    {
+      "id": 31,
+      "ad": "Kara Mürver",
+      "botanikAd": "Sambucus nigra",
+      "eskiGorsel": "assets/plants/photos/35-openverse.jpg",
+      "yeniGorsel": "assets/plants/photos/031-sambucus-nigra.jpg",
+      "gerekce": "mikroskobik gövde kesiti görseli"
+    },
+    {
+      "id": 34,
+      "ad": "Reyhan",
+      "botanikAd": "Ocimum basilicum var. purpureum",
+      "eskiGorsel": "assets/plants/photos/38-ocimum-basilicum.jpg",
+      "yeniGorsel": "assets/plants/photos/034-ocimum-basilicum-purpureum.jpg",
+      "gerekce": "mor değil yeşil fesleğen"
+    },
+    {
+      "id": 44,
+      "ad": "Kasımpatı",
+      "botanikAd": "Chrysanthemum morifolium",
+      "eskiGorsel": "assets/plants/photos/52-chrysanthemum.png",
+      "yeniGorsel": "assets/plants/photos/044-chrysanthemum-morifolium.jpg",
+      "gerekce": "fotoğraf değil Çince 菊 karakteri"
+    },
+    {
+      "id": 45,
+      "ad": "Sardunya",
+      "botanikAd": "Pelargonium hortorum",
+      "eskiGorsel": "assets/plants/photos/53-pelargonium-hortorum.jpg",
+      "yeniGorsel": "assets/plants/photos/045-pelargonium-hortorum.jpg",
+      "gerekce": "Pelargonium değil gerçek Geranium"
+    },
+    {
+      "id": 60,
+      "ad": "Enginar Yaprağı",
+      "botanikAd": "Cynara scolymus",
+      "eskiGorsel": "assets/plants/photos/78-cynara-scolymus.jpg",
+      "yeniGorsel": "assets/plants/photos/060-cynara-scolymus.jpg",
+      "gerekce": "enginar değil bromelya benzeri rozet"
+    },
+    {
+      "id": 90,
+      "ad": "Aşgabat Otu",
+      "botanikAd": "Withania somnifera",
+      "eskiGorsel": "assets/plants/photos/112-withania-somnifera.jpg",
+      "yeniGorsel": "assets/plants/photos/090-withania-somnifera.jpg",
+      "gerekce": "üzerinde telif filigranı vardı"
+    },
+    {
+      "id": 93,
+      "ad": "Roma Papatyası",
+      "botanikAd": "Chamaemelum nobile",
+      "eskiGorsel": "assets/plants/photos/117-chamaemelum-nobile.jpg",
+      "yeniGorsel": "assets/plants/photos/093-chamaemelum-nobile.jpg",
+      "gerekce": "ışınsız sarı çiçek, Roma papatyası değil"
+    },
+    {
+      "id": 97,
+      "ad": "Arnika",
+      "botanikAd": "Arnica montana",
+      "eskiGorsel": "assets/plants/photos/122-arnica-montana.jpg",
+      "yeniGorsel": "assets/plants/photos/097-arnica-montana.jpg",
+      "gerekce": "mercan rengi pompon çiçek, Arnica değil"
+    },
+    {
+      "id": 160,
+      "ad": "Servi",
+      "botanikAd": "Cupressus sempervirens",
+      "eskiGorsel": "assets/plants/photos/208-cupressus-sempervirens.jpg",
+      "yeniGorsel": "assets/plants/photos/160-cupressus-sempervirens.jpg",
+      "gerekce": "yayvan kozalaklı, sütun servi değil"
+    },
+    {
+      "id": 179,
+      "ad": "Gül",
+      "botanikAd": "Rosa damascena",
+      "eskiGorsel": "assets/plants/photos/06-rose.jpg",
+      "yeniGorsel": "assets/plants/photos/179-rosa-damascena.jpg",
+      "gerekce": "tek katlı yabani gül, şam gülü değil"
+    },
+    {
+      "id": 188,
+      "ad": "Atatürk Çiçeği",
+      "botanikAd": "Euphorbia pulcherrima",
+      "eskiGorsel": "assets/plants/photos/63-euphorbia-pulcherrima.jpg",
+      "yeniGorsel": "assets/plants/photos/188-euphorbia-pulcherrima.jpg",
+      "gerekce": "tanınmayan yabani form"
+    },
+    {
+      "id": 202,
+      "ad": "Kırmızı Adaçayı",
+      "botanikAd": "Salvia miltiorrhiza",
+      "eskiGorsel": "assets/plants/photos/192-salvia-miltiorrhiza.jpg",
+      "yeniGorsel": "assets/plants/photos/202-salvia-miltiorrhiza.jpg",
+      "gerekce": "bitki seçilmeyen uzak peyzaj karesi"
+    }
+  ]
+}

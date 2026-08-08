@@ -1,0 +1,14 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" rx="48" fill="#F4EEE5"/>
+  <rect x="52" y="52" width="1096" height="796" rx="36" fill="#FDFBF7" stroke="#B8A4D8" stroke-width="6"/>
+  <circle cx="220" cy="180" r="70" fill="#B8A4D8" opacity="0.35"/>
+  <circle cx="980" cy="220" r="110" fill="#A8A196" opacity="0.28"/>
+  
+  <path d="M600 690 V300" stroke="#8D6A5A" stroke-width="14" stroke-linecap="round"/>
+  <path d="M600 380 C480 300 390 360 360 470 C470 510 560 480 600 380Z" fill="#A8A196"/>
+  <path d="M600 450 C720 360 820 410 850 520 C740 560 640 530 600 450Z" fill="#B8A4D8"/>
+  <path d="M600 540 C500 500 410 560 390 650 C500 670 570 620 600 540Z" fill="#A8A196"/>
+  <path d="M600 590 C690 550 790 600 810 680 C710 700 640 660 600 590Z" fill="#8D6A5A"/>
+
+  <text x="600" y="790" text-anchor="middle" fill="#4A3E3D" font-family="Arial, sans-serif" font-size="48" font-weight="700">Zencefil</text>
+</svg>

@@ -1,0 +1,1238 @@
+{
+  "counts": {
+    "good": 70,
+    "adverse": 16,
+    "weak": 45,
+    "none": 28
+  },
+  "items": {
+    "1": {
+      "plantId": 1,
+      "ad": "Papatya",
+      "pmid": "2674263",
+      "quality": "good",
+      "flags": [],
+      "title": "Anaphylactic reaction after the ingestion of chamomile tea: a study of cross-reactivity with other composite pollens."
+    },
+    "5": {
+      "plantId": 5,
+      "ad": "Ada Çayı",
+      "pmid": "29512375",
+      "quality": "adverse",
+      "flags": [
+        "adverse"
+      ],
+      "title": "Angioedema Due to Lamiaceae Allergy."
+    },
+    "7": {
+      "plantId": 7,
+      "ad": "Kekik",
+      "pmid": "24600990",
+      "quality": "good",
+      "flags": [],
+      "title": "An interesting newborn case of fructose 1-6 diphosphatase deficiency triggered after thyme juice ingestion."
+    },
+    "10": {
+      "plantId": 10,
+      "ad": "Zencefil",
+      "pmid": "41637849",
+      "quality": "weak",
+      "flags": [
+        "therapeutic",
+        "peripheral"
+      ],
+      "title": "Potential benefits of Ayurveda in Duchenne muscular Dystrophy: A case based analysis."
+    },
+    "11": {
+      "plantId": 11,
+      "ad": "Ekinezya",
+      "pmid": "33071794",
+      "quality": "weak",
+      "flags": [
+        "therapeutic",
+        "peripheral"
+      ],
+      "title": "COVID-19: Is There Evidence for the Use of Herbal Medicines as Adjuvant Symptomatic Therapy?"
+    },
+    "12": {
+      "plantId": 12,
+      "ad": "Rezene",
+      "pmid": "39303382",
+      "quality": "weak",
+      "flags": [
+        "peripheral"
+      ],
+      "title": "Ayurvedic management of systemic sclerosis - A case report."
+    },
+    "13": {
+      "plantId": 13,
+      "ad": "Melisa",
+      "pmid": "39236697",
+      "quality": "weak",
+      "flags": [
+        "review",
+        "therapeutic",
+        "peripheral"
+      ],
+      "title": "Successful Maintenance Treatment of a Patient with Resistant Hyperthyroidism with Traditional Persian Medicine Recommendations: A Case Report and Literature Review."
+    },
+    "14": {
+      "plantId": 14,
+      "ad": "Isırgan Otu",
+      "pmid": "20953796",
+      "quality": "good",
+      "flags": [],
+      "title": "Urticaria due to Urtica dioica in a neonate."
+    },
+    "15": {
+      "plantId": 15,
+      "ad": "Civanperçemi",
+      "pmid": "10583117",
+      "quality": "good",
+      "flags": [],
+      "title": "T-lymphocyte cytokine profiles in compositae airborne dermatitis."
+    },
+    "16": {
+      "plantId": 16,
+      "ad": "Hatmi Çiçeği",
+      "pmid": "28612694",
+      "quality": "adverse",
+      "flags": [
+        "adverse"
+      ],
+      "title": "[Anticholinergic syndrome caused by contaminated herbal tea; acting swiftly to identify the source]."
+    },
+    "17": {
+      "plantId": 17,
+      "ad": "Anason",
+      "pmid": "26875753",
+      "quality": "adverse",
+      "flags": [
+        "adverse"
+      ],
+      "title": "Liver failure secondary to poisoning by a homemade product made of star and green anise in a 4-month-old infant."
+    },
+    "18": {
+      "plantId": 18,
+      "ad": "Çörek Otu",
+      "pmid": "33489449",
+      "quality": "good",
+      "flags": [
+        "therapeutic"
+      ],
+      "title": "TaibUVID nutritional supplements help rapid cure of COVID-19 infection and rapid reversion to negative nasopharyngeal swab PCR: for better public prophylaxis and treatment of COVID-19 pandemic."
+    },
+    "19": {
+      "plantId": 19,
+      "ad": "Kuşburnu",
+      "pmid": "19818588",
+      "quality": "good",
+      "flags": [
+        "therapeutic"
+      ],
+      "title": "Rose hip herbal remedy in patients with rheumatoid arthritis - a randomised controlled trial."
+    },
+    "20": {
+      "plantId": 20,
+      "ad": "Aynısefa",
+      "pmid": "41802103",
+      "quality": "weak",
+      "flags": [
+        "peripheral"
+      ],
+      "title": "Homoeopathic Management of a Lower Leg Ulcer with Cellulitis: An Evidence-Based Case Report."
+    },
+    "21": {
+      "plantId": 21,
+      "ad": "Sarı Kantaron",
+      "pmid": "19196112",
+      "quality": "good",
+      "flags": [
+        "therapeutic"
+      ],
+      "title": "Treatment of osteomyelitis in the feet of diabetic patients by photodynamic antimicrobial chemotherapy."
+    },
+    "22": {
+      "plantId": 22,
+      "ad": "Çemen",
+      "pmid": "9087156",
+      "quality": "adverse",
+      "flags": [
+        "adverse"
+      ],
+      "title": "Allergy to fenugreek (Trigonella foenum graecum)."
+    },
+    "26": {
+      "plantId": 26,
+      "ad": "Meyan Kökü",
+      "pmid": "32754525",
+      "quality": "good",
+      "flags": [],
+      "title": "Role of Kalpa Chikitsa in the management of Lynch syndrome- A case report."
+    },
+    "27": {
+      "plantId": 27,
+      "ad": "Safran",
+      "pmid": "30219450",
+      "quality": "good",
+      "flags": [],
+      "title": "Reduction of the frequency of recurrent diverticulitis episodes under treatment with the integrative medicine therapies Carpellum Mali comp. and Kalium aceticum comp.-A case report."
+    },
+    "28": {
+      "plantId": 28,
+      "ad": "Altın Otu",
+      "pmid": "28445563",
+      "quality": "good",
+      "flags": [],
+      "title": "Outbreak of Occupational Dermatitis Associated With Pyemotes ventricosus."
+    },
+    "30": {
+      "plantId": 30,
+      "ad": "Sarımsak",
+      "pmid": "1479173",
+      "quality": "good",
+      "flags": [
+        "therapeutic"
+      ],
+      "title": "Ancient remedies revisited: does Allium sativum (garlic) palliate the hepatopulmonary syndrome?"
+    },
+    "31": {
+      "plantId": 31,
+      "ad": "Kara Mürver",
+      "pmid": "20667006",
+      "quality": "weak",
+      "flags": [
+        "peripheral"
+      ],
+      "title": "Sialylated and O-glycosidically linked glycans in prion protein deposits in a case of Gerstmann-Sträussler-Scheinker disease."
+    },
+    "32": {
+      "plantId": 32,
+      "ad": "Karabaş Otu",
+      "pmid": "39717381",
+      "quality": "weak",
+      "flags": [
+        "review",
+        "peripheral"
+      ],
+      "title": "Phytochemicals in the treatment of patients with depression: a systemic review."
+    },
+    "33": {
+      "plantId": 33,
+      "ad": "Andız Otu",
+      "pmid": "38112168",
+      "quality": "weak",
+      "flags": [
+        "peripheral"
+      ],
+      "title": "Effectiveness and tolerance of multicorrective topical treatment for infraorbital dark circles and puffiness."
+    },
+    "54": {
+      "plantId": 54,
+      "ad": "Karahindiba",
+      "pmid": "12641574",
+      "quality": "weak",
+      "flags": [
+        "peripheral"
+      ],
+      "title": "Erythema multiforme due to contact with weeds: a recurrence after patch testing."
+    },
+    "55": {
+      "plantId": 55,
+      "ad": "Çoban Çantası",
+      "pmid": "11811708",
+      "quality": "adverse",
+      "flags": [
+        "adverse"
+      ],
+      "title": "Suspected nitrite poisoning in pigs caused by Capsella bursa-pastoris (L.) Medik. ('herderstassie', shepherd's purse)."
+    },
+    "56": {
+      "plantId": 56,
+      "ad": "Ökse Otu",
+      "pmid": "17532738",
+      "quality": "good",
+      "flags": [
+        "therapeutic"
+      ],
+      "title": "Successful treatment of metastatic malignant melanoma with Viscum album extract (Iscador M)."
+    },
+    "57": {
+      "plantId": 57,
+      "ad": "Kedi Otu",
+      "pmid": "19441067",
+      "quality": "good",
+      "flags": [],
+      "title": "Interactions of Valeriana officinalis L. and Passiflora incarnata L. in a patient treated with lorazepam."
+    },
+    "58": {
+      "plantId": 58,
+      "ad": "Çarkıfelek",
+      "pmid": "19441067",
+      "quality": "good",
+      "flags": [],
+      "title": "Interactions of Valeriana officinalis L. and Passiflora incarnata L. in a patient treated with lorazepam."
+    },
+    "59": {
+      "plantId": 59,
+      "ad": "Deve Dikeni",
+      "pmid": "22378810",
+      "quality": "good",
+      "flags": [],
+      "title": "Silybum marianum (milk thistle) in the management and prevention of hepatotoxicity in a patient undergoing reinduction therapy for acute myelogenous leukemia."
+    },
+    "60": {
+      "plantId": 60,
+      "ad": "Enginar Yaprağı",
+      "pmid": "12877457",
+      "quality": "weak",
+      "flags": [
+        "peripheral"
+      ],
+      "title": "Occupational rhinitis and bronchial asthma due to artichoke (Cynara scolymus)."
+    },
+    "61": {
+      "plantId": 61,
+      "ad": "Şahtere Otu",
+      "pmid": "16173134",
+      "quality": "good",
+      "flags": [
+        "therapeutic"
+      ],
+      "title": "Herbal medicine with curcuma and fumitory in the treatment of irritable bowel syndrome: a randomized, placebo-controlled, double-blind clinical trial."
+    },
+    "62": {
+      "plantId": 62,
+      "ad": "Mahlep",
+      "pmid": "33117599",
+      "quality": "weak",
+      "flags": [
+        "adverse",
+        "peripheral"
+      ],
+      "title": "Case Report: Allergic Reactivity to Mahaleb (Prunus mahaleb) Spice in a Subject With Almond and Other Tree Nut Allergies."
+    },
+    "63": {
+      "plantId": 63,
+      "ad": "Üzerlik Otu",
+      "pmid": "18803088",
+      "quality": "good",
+      "flags": [
+        "adverse",
+        "therapeutic"
+      ],
+      "title": "Syrian rue tea: a recipe for disaster."
+    },
+    "64": {
+      "plantId": 64,
+      "ad": "Eğir Kökü",
+      "pmid": "41587128",
+      "quality": "good",
+      "flags": [],
+      "title": "Therapeutic Effects of Acorus calamus L. Extract on Radiation-induced Skin Injury in a Rat Model."
+    },
+    "65": {
+      "plantId": 65,
+      "ad": "Sinir Otu",
+      "pmid": "39227926",
+      "quality": "good",
+      "flags": [],
+      "title": "The healing effect of nano emulsified Plantago major L extract on oral wounds in a wistar rat model."
+    },
+    "66": {
+      "plantId": 66,
+      "ad": "Ayı Üzümü",
+      "pmid": "41937616",
+      "quality": "good",
+      "flags": [],
+      "title": "Trends and Patterns for the Use of Herbal Medicinal Products for Gynaecological Ailments."
+    },
+    "67": {
+      "plantId": 67,
+      "ad": "Hayıt Otu",
+      "pmid": "26277178",
+      "quality": "good",
+      "flags": [
+        "therapeutic"
+      ],
+      "title": "[Vitex Agnus Castus in the treatment of hyperprolactinemia and menstrual disorders - a case report]."
+    },
+    "70": {
+      "plantId": 70,
+      "ad": "At Kestanesi",
+      "pmid": "37719129",
+      "quality": "good",
+      "flags": [],
+      "title": "Painful bruising: Gynecology, hematology, or just pill bias? A case report."
+    },
+    "71": {
+      "plantId": 71,
+      "ad": "Geven Otu",
+      "pmid": "41859174",
+      "quality": "weak",
+      "flags": [
+        "therapeutic",
+        "peripheral"
+      ],
+      "title": "Marked effect of topical application of Chinese medicine combined with moxibustion in a case of refractory malignant ascites in diffuse liver cancer."
+    },
+    "72": {
+      "plantId": 72,
+      "ad": "Altınbaşak",
+      "pmid": "42244389",
+      "quality": "weak",
+      "flags": [
+        "peripheral"
+      ],
+      "title": "A randomized controlled trial comparing alpha-blocker (tamsulosin) and a phyto-complex (Solidago virga-aurea, Phyllantus niruri, Epilobium angustifolium, Peumus boldus and Ononis spinosa) in the treatment of ureteral stent-related symptoms."
+    },
+    "74": {
+      "plantId": 74,
+      "ad": "Hünnap",
+      "pmid": "42357749",
+      "quality": "good",
+      "flags": [],
+      "title": "Radiographic Characteristics of Jujube Pit Foreign Bodies in a Dog."
+    },
+    "75": {
+      "plantId": 75,
+      "ad": "Alıç",
+      "pmid": "37973470",
+      "quality": "weak",
+      "flags": [
+        "adverse",
+        "peripheral"
+      ],
+      "title": "Hawthorne root (Crataegus mexicana) toxicity."
+    },
+    "76": {
+      "plantId": 76,
+      "ad": "Yeşil Çay Bitkisi",
+      "pmid": "16148563",
+      "quality": "good",
+      "flags": [],
+      "title": "Fulminant hepatitis during self-medication with hydroalcoholic extract of green tea."
+    },
+    "77": {
+      "plantId": 77,
+      "ad": "Çobançökerten",
+      "pmid": "23760126",
+      "quality": "good",
+      "flags": [],
+      "title": "[Acute massive pulmonary embolism in a patient using clavis panax]."
+    },
+    "78": {
+      "plantId": 78,
+      "ad": "Pelin Otu",
+      "pmid": "39735399",
+      "quality": "good",
+      "flags": [],
+      "title": "Acute Kidney Injury Following the Ingestion of a Medicinal Plants' Mixture: A Case Report."
+    },
+    "81": {
+      "plantId": 81,
+      "ad": "Öksürük Otu",
+      "pmid": "7720737",
+      "quality": "good",
+      "flags": [],
+      "title": "Reversible hepatic veno-occlusive disease in an infant after consumption of pyrrolizidine-containing herbal tea."
+    },
+    "82": {
+      "plantId": 82,
+      "ad": "Mersin Bitkisi",
+      "pmid": "24719732",
+      "quality": "good",
+      "flags": [
+        "therapeutic"
+      ],
+      "title": "First Case Report: Treatment of the Facial Warts by Using Myrtus communis L. Topically on the Other Part of the Body."
+    },
+    "83": {
+      "plantId": 83,
+      "ad": "Söğüt Kabuğu",
+      "pmid": "8807513",
+      "quality": "adverse",
+      "flags": [
+        "adverse"
+      ],
+      "title": "Anaphylaxis induced by ingestion of a pollen compound."
+    },
+    "84": {
+      "plantId": 84,
+      "ad": "Centiyane",
+      "pmid": "40900241",
+      "quality": "good",
+      "flags": [],
+      "title": "Gentian root bitters for the rapid suppression of post-propofol singultus: a case report."
+    },
+    "86": {
+      "plantId": 86,
+      "ad": "Nane",
+      "pmid": "17014576",
+      "quality": "good",
+      "flags": [],
+      "title": "Traditional Chinese medicine causing hepatotoxicity in patients with chronic hepatitis B infection: a 1-year prospective study."
+    },
+    "87": {
+      "plantId": 87,
+      "ad": "Biberiye",
+      "pmid": "30219447",
+      "quality": "weak",
+      "flags": [
+        "name_weak"
+      ],
+      "title": "Effect of topical rosemary essential oil on Raynaud phenomenon in systemic sclerosis."
+    },
+    "88": {
+      "plantId": 88,
+      "ad": "Kekik",
+      "pmid": "39793412",
+      "quality": "adverse",
+      "flags": [
+        "adverse"
+      ],
+      "title": "[Origanum vulgare and hemorrhagic risk, about a case]."
+    },
+    "89": {
+      "plantId": 89,
+      "ad": "Hodan",
+      "pmid": "21387119",
+      "quality": "good",
+      "flags": [],
+      "title": "Status epilepticus associated with borage oil ingestion."
+    },
+    "90": {
+      "plantId": 90,
+      "ad": "Aşgabat Otu",
+      "pmid": "26283809",
+      "quality": "good",
+      "flags": [],
+      "title": "Ayurvedic approach in the management of spinal cord injury: A case study."
+    },
+    "91": {
+      "plantId": 91,
+      "ad": "Altın Kök",
+      "pmid": "36420369",
+      "quality": "weak",
+      "flags": [
+        "peripheral"
+      ],
+      "title": "Management of Hyperhomocysteinemia, Low Vitamin Levels, and Low Cortisol in Cannabis Users: A Report of 2 Cases."
+    },
+    "92": {
+      "plantId": 92,
+      "ad": "Şerbetçi Otu",
+      "pmid": "6447587",
+      "quality": "adverse",
+      "flags": [
+        "adverse"
+      ],
+      "title": "[Occupational immediate type allergy to hemp pollen and hashish (author's transl)]."
+    },
+    "93": {
+      "plantId": 93,
+      "ad": "Roma Papatyası",
+      "pmid": "29992150",
+      "quality": "good",
+      "flags": [],
+      "title": "Salivary Antioxidant Status in Patients with Oral Lichen Planus: Correlation with Clinical Signs and Evolution during Treatment with Chamaemelum nobile."
+    },
+    "94": {
+      "plantId": 94,
+      "ad": "Gümüşdüğme",
+      "pmid": "34434419",
+      "quality": "good",
+      "flags": [],
+      "title": "Alteration of Coagulation Test Results and Vaginal Bleeding Associated With the Use of Feverfew (Tanacetum parthenium)."
+    },
+    "97": {
+      "plantId": 97,
+      "ad": "Arnika",
+      "pmid": "24278813",
+      "quality": "good",
+      "flags": [
+        "therapeutic"
+      ],
+      "title": "A Homeopathic Arnica Patch for the Relief of Cellulitis-derived Pain and Numbness in the Hand."
+    },
+    "98": {
+      "plantId": 98,
+      "ad": "Cadı Fındığı",
+      "pmid": "15055439",
+      "quality": "good",
+      "flags": [],
+      "title": "Accidental sodium hypochlorite-induced skin injury during endodontic treatment."
+    },
+    "99": {
+      "plantId": 99,
+      "ad": "Meşe",
+      "pmid": "11212087",
+      "quality": "good",
+      "flags": [],
+      "title": "Cushing's disease: a new approach to therapy in equine and canine patients."
+    },
+    "100": {
+      "plantId": 100,
+      "ad": "Kıvırcık Labada",
+      "pmid": "2238449",
+      "quality": "adverse",
+      "flags": [
+        "adverse"
+      ],
+      "title": "Fatal poisoning by Rumex crispus (curled dock): pathological findings and application of scanning electron microscopy."
+    },
+    "101": {
+      "plantId": 101,
+      "ad": "Kuş Otu",
+      "pmid": "12641574",
+      "quality": "good",
+      "flags": [],
+      "title": "Erythema multiforme due to contact with weeds: a recurrence after patch testing."
+    },
+    "103": {
+      "plantId": 103,
+      "ad": "Mine Çiçeği",
+      "pmid": "39793412",
+      "quality": "weak",
+      "flags": [
+        "adverse",
+        "peripheral"
+      ],
+      "title": "[Origanum vulgare and hemorrhagic risk, about a case]."
+    },
+    "105": {
+      "plantId": 105,
+      "ad": "Kedi Nanesi",
+      "pmid": "9397511",
+      "quality": "weak",
+      "flags": [
+        "review"
+      ],
+      "title": "Catnip and the alteration of human consciousness."
+    },
+    "106": {
+      "plantId": 106,
+      "ad": "Çördük",
+      "pmid": "8630713",
+      "quality": "adverse",
+      "flags": [
+        "adverse"
+      ],
+      "title": "Labiatae allergy: systemic reactions due to ingestion of oregano and thyme."
+    },
+    "107": {
+      "plantId": 107,
+      "ad": "Yaz Kekiği",
+      "pmid": "40921997",
+      "quality": "weak",
+      "flags": [
+        "peripheral"
+      ],
+      "title": "Heavy Metal Accumulation and Health Risks in Selected Leafy Vegetables Irrigated with Mixed Potable and Wastewater-A Case Study: Southern Tehran, Iran."
+    },
+    "108": {
+      "plantId": 108,
+      "ad": "Karaman Kimyonu",
+      "pmid": "25616491",
+      "quality": "good",
+      "flags": [],
+      "title": "Carum induced hypothyroidism: an interesting observation and an experiment."
+    },
+    "109": {
+      "plantId": 109,
+      "ad": "Yaban Turpu",
+      "pmid": "37167822",
+      "quality": "good",
+      "flags": [],
+      "title": "A combination of Tropaeolum majus herb and Armoracia rusticana root for the treatment of acute bronchitis."
+    },
+    "110": {
+      "plantId": 110,
+      "ad": "Su Teresi",
+      "pmid": "30054678",
+      "quality": "weak",
+      "flags": [
+        "therapeutic",
+        "peripheral"
+      ],
+      "title": "[Phytotherapy in catheter-associated urinary tract infection : Observational study recording the efficacy and safety of a fixed herbal combination containing Tropaeoli majoris herba and Armoraciae rusticanae radix]."
+    },
+    "111": {
+      "plantId": 111,
+      "ad": "Kırmızı Biber",
+      "pmid": "35441017",
+      "quality": "good",
+      "flags": [],
+      "title": "Intimate partner violence with vaginal insertion of a partial chili pod (Capsicum annuum): A case report."
+    },
+    "113": {
+      "plantId": 113,
+      "ad": "Kadıntuzluğu",
+      "pmid": "39200276",
+      "quality": "weak",
+      "flags": [
+        "review",
+        "peripheral"
+      ],
+      "title": "Phytotherapy in Alzheimer's Disease-A Narrative Review."
+    },
+    "114": {
+      "plantId": 114,
+      "ad": "Altınmühür",
+      "pmid": "41783550",
+      "quality": "weak",
+      "flags": [
+        "therapeutic",
+        "peripheral"
+      ],
+      "title": "Marked Improvement in Treatment-Intolerant Obsessive-Compulsive Disorder in an Adolescent Using a Glutamatergic Regimen With Dextromethorphan, Piracetam, and Goldenseal Root."
+    },
+    "115": {
+      "plantId": 115,
+      "ad": "Çin Koptişi",
+      "pmid": "27519711",
+      "quality": "weak",
+      "flags": [
+        "review",
+        "adverse",
+        "therapeutic",
+        "peripheral"
+      ],
+      "title": "Hepatotoxicity by combination treatment of temozolomide, artesunate and Chinese herbs in a glioblastoma multiforme patient: case report review of the literature."
+    },
+    "116": {
+      "plantId": 116,
+      "ad": "Kutsal Fesleğen",
+      "pmid": "36185698",
+      "quality": "good",
+      "flags": [],
+      "title": "A randomized, double-blind, placebo-controlled trial investigating the effects of an Ocimum tenuiflorum (Holy Basil) extract (HolixerTM) on stress, mood, and sleep in adults experiencing stress."
+    },
+    "118": {
+      "plantId": 118,
+      "ad": "Sakız Ağacı",
+      "pmid": "22582909",
+      "quality": "good",
+      "flags": [],
+      "title": "Acute generalized exanthematous pustulosis induced by the essential oil of Pistacia lentiscus."
+    },
+    "119": {
+      "plantId": 119,
+      "ad": "Zeytin",
+      "pmid": "30023149",
+      "quality": "good",
+      "flags": [],
+      "title": "In vitro multiplication and growth improvement of Olea europaea L. cv Canino with temporary immersion system (Plantform™)."
+    },
+    "120": {
+      "plantId": 120,
+      "ad": "İncir",
+      "pmid": "17867224",
+      "quality": "good",
+      "flags": [],
+      "title": "Phytophotodermatitis caused by contact with a fig tree (Ficus carica)."
+    },
+    "121": {
+      "plantId": 121,
+      "ad": "Nar",
+      "pmid": "34390288",
+      "quality": "good",
+      "flags": [],
+      "title": "Pica: Treatment with Punica Granatum extract."
+    },
+    "122": {
+      "plantId": 122,
+      "ad": "Asma",
+      "pmid": "32161485",
+      "quality": "good",
+      "flags": [],
+      "title": "A Treatment Combination of Peels, Oral Antioxidants, and Topical Therapy for Refractory Melasma: A Report of 4 Cases."
+    },
+    "123": {
+      "plantId": 123,
+      "ad": "Siyah Frenk Üzümü",
+      "pmid": "37043584",
+      "quality": "weak",
+      "flags": [
+        "peripheral"
+      ],
+      "title": "Case study of clinical improvement of atopic dermatitis in a patient treated with herbal-based parapharmaceuticals."
+    },
+    "124": {
+      "plantId": 124,
+      "ad": "Yaban Mersini",
+      "pmid": "32575145",
+      "quality": "good",
+      "flags": [
+        "therapeutic"
+      ],
+      "title": "Nutraceuticals for dry age-related macular degeneration: a case report based on novel pathogenic and morphological insights."
+    },
+    "125": {
+      "plantId": 125,
+      "ad": "Turna Yemişi",
+      "pmid": "21364039",
+      "quality": "weak",
+      "flags": [
+        "name_weak",
+        "peripheral"
+      ],
+      "title": "Warfarin-cranberry juice interaction."
+    },
+    "127": {
+      "plantId": 127,
+      "ad": "Ahududu",
+      "pmid": "27454254",
+      "quality": "weak",
+      "flags": [
+        "adverse",
+        "therapeutic",
+        "peripheral"
+      ],
+      "title": "Abstracts from the 3rd International Genomic Medicine Conference (3rd IGMC 2015) : Jeddah, Kingdom of Saudi Arabia. 30 November - 3 December 2015."
+    },
+    "129": {
+      "plantId": 129,
+      "ad": "Ebegümeci",
+      "pmid": "28711022",
+      "quality": "adverse",
+      "flags": [
+        "adverse"
+      ],
+      "title": "Pre-clinical efficacy assessment of Malva sylvestris on chronic skin inflammation."
+    },
+    "131": {
+      "plantId": 131,
+      "ad": "Üç Renkli Menekşe",
+      "pmid": "37043584",
+      "quality": "weak",
+      "flags": [
+        "peripheral"
+      ],
+      "title": "Case study of clinical improvement of atopic dermatitis in a patient treated with herbal-based parapharmaceuticals."
+    },
+    "132": {
+      "plantId": 132,
+      "ad": "Kırlangıçotu",
+      "pmid": "21893153",
+      "quality": "good",
+      "flags": [],
+      "title": "Herbal hepatotoxicity by Greater Celandine (Chelidonium majus): causality assessment of 22 spontaneous reports."
+    },
+    "133": {
+      "plantId": 133,
+      "ad": "Hindiba",
+      "pmid": "8877160",
+      "quality": "adverse",
+      "flags": [
+        "adverse"
+      ],
+      "title": "Inhalative occupational and ingestive immediate-type allergy caused by chicory (Cichorium intybus)."
+    },
+    "134": {
+      "plantId": 134,
+      "ad": "Büyük Dulavratotu",
+      "pmid": "37043584",
+      "quality": "weak",
+      "flags": [
+        "peripheral"
+      ],
+      "title": "Case study of clinical improvement of atopic dermatitis in a patient treated with herbal-based parapharmaceuticals."
+    },
+    "136": {
+      "plantId": 136,
+      "ad": "Solucanotu",
+      "pmid": "3827282",
+      "quality": "weak",
+      "flags": [
+        "peripheral"
+      ],
+      "title": "Compositae dermatitis in childhood."
+    },
+    "137": {
+      "plantId": 137,
+      "ad": "Pelin Otu",
+      "pmid": "27222528",
+      "quality": "weak",
+      "flags": [
+        "adverse",
+        "peripheral"
+      ],
+      "title": "Sunflower seed allergy."
+    },
+    "138": {
+      "plantId": 138,
+      "ad": "Tatlı Pelin",
+      "pmid": "28732806",
+      "quality": "good",
+      "flags": [
+        "therapeutic"
+      ],
+      "title": "Artemisia annua dried leaf tablets treated malaria resistant to ACT and i.v. artesunate: Case reports."
+    },
+    "146": {
+      "plantId": 146,
+      "ad": "Kendi Kendini İyileştiren Ot",
+      "pmid": "33109498",
+      "quality": "weak",
+      "flags": [
+        "review",
+        "therapeutic"
+      ],
+      "title": "Successful intervention with Chinese herbal medicine for hyperthyroidism: Two case reports and a literature review."
+    },
+    "148": {
+      "plantId": 148,
+      "ad": "Yüksükotu",
+      "pmid": "11005196",
+      "quality": "weak",
+      "flags": [
+        "adverse",
+        "peripheral"
+      ],
+      "title": "A non-fatal case of intoxication with foxglove, documented by means of liquid chromatography-electrospray-mass spectrometry."
+    },
+    "149": {
+      "plantId": 149,
+      "ad": "İnci Çiçeği",
+      "pmid": "35691768",
+      "quality": "adverse",
+      "flags": [
+        "adverse"
+      ],
+      "title": "Detectable Digoxin Concentrations in 3 Patients with Ramps Misadventure."
+    },
+    "150": {
+      "plantId": 150,
+      "ad": "Güzelavrat Otu",
+      "pmid": "26937321",
+      "quality": "good",
+      "flags": [],
+      "title": "Improvement of Asthma and Gastroesophageal Reflux Disease With Oral Pulvis stomachicus cum Belladonna, a Combination of Matricaria recutita, Atropa belladonna, Bismuth, and Antimonite: A Pediatric Case Report."
+    },
+    "151": {
+      "plantId": 151,
+      "ad": "Banotu",
+      "pmid": "27011719",
+      "quality": "good",
+      "flags": [],
+      "title": "Adverse reaction of Parasika Yavani (Hyoscyamus niger Linn): Two case study reports."
+    },
+    "152": {
+      "plantId": 152,
+      "ad": "Tatula",
+      "pmid": "15572604",
+      "quality": "weak",
+      "flags": [
+        "adverse",
+        "peripheral"
+      ],
+      "title": "Antimuscarinic intoxication resulting from the ingestion of moonflower seeds."
+    },
+    "153": {
+      "plantId": 153,
+      "ad": "Kurtboğan",
+      "pmid": "19785799",
+      "quality": "adverse",
+      "flags": [
+        "adverse"
+      ],
+      "title": "[Intoxication with Monkshood (Aconitum napellus)]."
+    },
+    "157": {
+      "plantId": 157,
+      "ad": "Limon",
+      "pmid": "30424948",
+      "quality": "weak",
+      "flags": [
+        "peripheral"
+      ],
+      "title": "Identification and antifungal sensitivity of two new species of Diaporthe isolated."
+    },
+    "158": {
+      "plantId": 158,
+      "ad": "Acı Portakal",
+      "pmid": "15819293",
+      "quality": "good",
+      "flags": [],
+      "title": "Ischemic stroke associated with use of an ephedra-free dietary supplement containing synephrine."
+    },
+    "159": {
+      "plantId": 159,
+      "ad": "Ardıç",
+      "pmid": "38429361",
+      "quality": "good",
+      "flags": [
+        "therapeutic"
+      ],
+      "title": "A case study on the early stage of Pinus nigra invasion and its impact on species composition and pattern in Pannonic sand grassland."
+    },
+    "163": {
+      "plantId": 163,
+      "ad": "Huş Ağacı",
+      "pmid": "37418159",
+      "quality": "weak",
+      "flags": [
+        "peripheral"
+      ],
+      "title": "Automatization of metabolite extraction for high-throughput metabolomics: case study on transgenic isoprene-emitting birch."
+    },
+    "164": {
+      "plantId": 164,
+      "ad": "Kara Kavak",
+      "pmid": "32072064",
+      "quality": "weak",
+      "flags": [
+        "adverse",
+        "peripheral"
+      ],
+      "title": "When scientists become detectives: investigating systematic tree poisoning in a protected cove."
+    },
+    "165": {
+      "plantId": 165,
+      "ad": "Kaygan Karaağaç",
+      "pmid": "26778934",
+      "quality": "good",
+      "flags": [],
+      "title": "Dietary and Lifestyle Changes in the Treatment of a 23-Year-Old Female Patient With Migraine."
+    },
+    "168": {
+      "plantId": 168,
+      "ad": "Çin Raventi",
+      "pmid": "17014576",
+      "quality": "good",
+      "flags": [],
+      "title": "Traditional Chinese medicine causing hepatotoxicity in patients with chronic hepatitis B infection: a 1-year prospective study."
+    },
+    "169": {
+      "plantId": 169,
+      "ad": "Kuzu Kulağı",
+      "pmid": "38485823",
+      "quality": "weak",
+      "flags": [
+        "peripheral"
+      ],
+      "title": "Taking spontaneous plants as a natural strategy for vegetation restoration in construction and demolition waste landfills: a case study in Suzhou, China."
+    },
+    "171": {
+      "plantId": 171,
+      "ad": "Küçük Isırgan",
+      "pmid": "34876549",
+      "quality": "good",
+      "flags": [],
+      "title": "Stinging Nettle (Urtica dioica): An Unusual Case of Galactorrhea."
+    },
+    "173": {
+      "plantId": 173,
+      "ad": "Sinirli Ot",
+      "pmid": "15885951",
+      "quality": "adverse",
+      "flags": [
+        "adverse"
+      ],
+      "title": "Plantago lanceolata (English plantain) pollinosis in Japan."
+    },
+    "174": {
+      "plantId": 174,
+      "ad": "Karnıyarık Otu",
+      "pmid": "7998662",
+      "quality": "weak",
+      "flags": [
+        "review",
+        "adverse"
+      ],
+      "title": "Psyllium hypersensitivity."
+    },
+    "175": {
+      "plantId": 175,
+      "ad": "Keten",
+      "pmid": "37644997",
+      "quality": "weak",
+      "flags": [
+        "peripheral"
+      ],
+      "title": "Management of a Patient With Premenstrual Syndrome Using Acupuncture, Supplements, and Meditation: A Case Report."
+    },
+    "176": {
+      "plantId": 176,
+      "ad": "Kenevir",
+      "pmid": "36890985",
+      "quality": "weak",
+      "flags": [
+        "review",
+        "adverse",
+        "peripheral"
+      ],
+      "title": "Delta-8-THC association with psychosis: A case report with literature review."
+    },
+    "177": {
+      "plantId": 177,
+      "ad": "Kırmızı Yonca",
+      "pmid": "31172083",
+      "quality": "good",
+      "flags": [],
+      "title": "Coagulation Disorder following Red Clover (Trifolium Pratense) Misuse: a Case Report."
+    },
+    "178": {
+      "plantId": 178,
+      "ad": "Yonca",
+      "pmid": "28391471",
+      "quality": "weak",
+      "flags": [
+        "peripheral"
+      ],
+      "title": "Population and function analysis of cultivable bacteria associated with spores of arbuscular mycorrhizal fungus Gigaspora margarita."
+    },
+    "181": {
+      "plantId": 181,
+      "ad": "Zerdeçal",
+      "pmid": "40719673",
+      "quality": "weak",
+      "flags": [
+        "therapeutic",
+        "peripheral"
+      ],
+      "title": "Oral injury from Calotropis procera: A case report on inadvertent gingival damage."
+    },
+    "191": {
+      "plantId": 191,
+      "ad": "Sinameki",
+      "pmid": "15956233",
+      "quality": "weak",
+      "flags": [
+        "adverse",
+        "peripheral"
+      ],
+      "title": "Acute liver failure with renal impairment related to the abuse of senna anthraquinone glycosides."
+    },
+    "192": {
+      "plantId": 192,
+      "ad": "Kudret Narı",
+      "pmid": "34569860",
+      "quality": "good",
+      "flags": [],
+      "title": "Dangerous interaction of bitter melon (Momordica charantia) with pazopanib: A case of acute pancreatitis."
+    },
+    "193": {
+      "plantId": 193,
+      "ad": "Küçük Havlıcan",
+      "pmid": "20677211",
+      "quality": "good",
+      "flags": [],
+      "title": "Upper gastrointestinal bleeding in a patient with defective hemostasis successfully treated with ankaferd blood stopper."
+    },
+    "194": {
+      "plantId": 194,
+      "ad": "Zedoarya",
+      "pmid": "40719673",
+      "quality": "weak",
+      "flags": [
+        "therapeutic",
+        "peripheral"
+      ],
+      "title": "Oral injury from Calotropis procera: A case report on inadvertent gingival damage."
+    },
+    "195": {
+      "plantId": 195,
+      "ad": "Şampuan Zencefili",
+      "pmid": "34466433",
+      "quality": "good",
+      "flags": [],
+      "title": "Chronic Dysuria Following Ginger (Zingiber officinale) Use: A Case Report."
+    },
+    "196": {
+      "plantId": 196,
+      "ad": "Büyük Havlıcan",
+      "pmid": "16487286",
+      "quality": "adverse",
+      "flags": [
+        "adverse"
+      ],
+      "title": "Erythema multiforme-like generalized allergic contact dermatitis caused by Alpinia galanga."
+    },
+    "198": {
+      "plantId": 198,
+      "ad": "Uzun Biber",
+      "pmid": "27621523",
+      "quality": "good",
+      "flags": [],
+      "title": "Ayurvedic management of cirrhotic ascites."
+    },
+    "199": {
+      "plantId": 199,
+      "ad": "Kadife Fasulye",
+      "pmid": "41220013",
+      "quality": "good",
+      "flags": [],
+      "title": "Dopamine Dysregulation Syndrome in Parkinson's Disease."
+    },
+    "200": {
+      "plantId": 200,
+      "ad": "Akgünlük",
+      "pmid": "26195904",
+      "quality": "good",
+      "flags": [],
+      "title": "Effect of Sri Lankan traditional medicine and Ayurveda on Sandhigata Vata (osteoarthritis of knee joint)."
+    },
+    "202": {
+      "plantId": 202,
+      "ad": "Kırmızı Adaçayı",
+      "pmid": "16401324",
+      "quality": "good",
+      "flags": [
+        "therapeutic"
+      ],
+      "title": "Muscle infarction involving muscles of abdominal and thoracic walls in diabetes."
+    },
+    "203": {
+      "plantId": 203,
+      "ad": "Şeytan Pençesi",
+      "pmid": "11563723",
+      "quality": "good",
+      "flags": [],
+      "title": "Devil's claw (Harpagophytum procumbens) in a Brahman's preputial sheath: a case report from Botswana."
+    },
+    "204": {
+      "plantId": 204,
+      "ad": "Udi Hindi",
+      "pmid": "40028611",
+      "quality": "good",
+      "flags": [],
+      "title": "Ethnobotanical survey of medicinal plants used in management of breast cancers in Qatar."
+    },
+    "205": {
+      "plantId": 205,
+      "ad": "Yakı Otu",
+      "pmid": "42244389",
+      "quality": "good",
+      "flags": [],
+      "title": "A randomized controlled trial comparing alpha-blocker (tamsulosin) and a phyto-complex (Solidago virga-aurea, Phyllantus niruri, Epilobium angustifolium, Peumus boldus and Ononis spinosa) in the treatment of ureteral stent-related symptoms."
+    },
+    "206": {
+      "plantId": 206,
+      "ad": "Funda",
+      "pmid": "26236625",
+      "quality": "good",
+      "flags": [],
+      "title": "Hypersensitivity pneumonitis caused by the broom grass (Calluna vulgaris)."
+    },
+    "208": {
+      "plantId": 208,
+      "ad": "Hint Yağı Otu",
+      "pmid": "40157249",
+      "quality": "good",
+      "flags": [],
+      "title": "A non-invasive Ayurveda management of venous leg ulcer- A case report."
+    },
+    "210": {
+      "plantId": 210,
+      "ad": "Aspir",
+      "pmid": "30407331",
+      "quality": "weak",
+      "flags": [
+        "peripheral"
+      ],
+      "title": "TA pharmacopuncture as a primary and independent treatment for frequent sprains occurring over 9 months in a patient with needle sickness: Case report."
+    }
+  }
+}

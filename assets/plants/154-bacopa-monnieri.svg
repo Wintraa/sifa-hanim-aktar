@@ -1,0 +1,11 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" rx="48" fill="#F7F1E8"/>
+  <rect x="52" y="52" width="1096" height="796" rx="36" fill="#FDFBF7" stroke="#D4A373" stroke-width="6"/>
+  <circle cx="220" cy="180" r="70" fill="#D4A373" opacity="0.35"/>
+  <circle cx="980" cy="220" r="110" fill="#A8A196" opacity="0.28"/>
+  <path d="M600 690 V300" stroke="#8D7B68" stroke-width="14" stroke-linecap="round"/>
+  <path d="M600 380 C480 300 390 360 360 470 C470 510 560 480 600 380Z" fill="#A8A196"/>
+  <path d="M600 450 C720 360 820 410 850 520 C740 560 640 530 600 450Z" fill="#D4A373"/>
+  <circle cx="600" cy="280" r="48" fill="#8D7B68"/>
+  <text x="600" y="790" text-anchor="middle" fill="#4A3E3D" font-family="Georgia, serif" font-size="44" font-weight="700">Brahmi</text>
+</svg>

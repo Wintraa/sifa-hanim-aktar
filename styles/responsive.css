@@ -1,0 +1,332 @@
+/* Büyük tablet: kartlar iki sütuna, geniş içerikler tek sütuna iner */
+@media (max-width: 68.75rem) {
+  .plants-grid,
+  .tables-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .detail-hero,
+  .profile-card--summary {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-hero__image {
+    max-height: 28rem;
+  }
+}
+
+/* Mobil menüye geçiş ve alt filtre çubuğu */
+@media (max-width: 56.25rem) {
+  .site-shell {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 50;
+    width: min(82vw, 20rem);
+    height: 100vh;
+    height: 100dvh;
+    transform: translateX(-105%);
+    transition: transform var(--duration-normal) var(--ease-standard);
+  }
+
+  .sidebar.is-open {
+    transform: translateX(0);
+  }
+
+  .main-panel {
+    grid-column: 1;
+    grid-row: 1;
+    padding: var(--space-2) var(--space-2) calc(6rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  .topbar {
+    top: var(--space-1);
+    margin-bottom: var(--space-3);
+  }
+
+  .menu-toggle {
+    display: inline-block;
+  }
+
+  .mobile-filter-bar {
+    display: block;
+  }
+
+  .toast-host {
+    bottom: calc(5.75rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  .similar-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.625rem;
+    max-width: none;
+  }
+}
+
+/* Küçük tablet ve telefon: içerik tek sütun olur */
+@media (max-width: 45rem) {
+  .topbar,
+  .topbar__right,
+  .plants-section__header,
+  .hero-card,
+  .detail-header,
+  .detail-header__actions,
+  .profile-card__header,
+  .profile-form-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .topbar {
+    position: sticky;
+    padding: var(--space-2);
+  }
+
+  .topbar__left {
+    align-items: center;
+  }
+
+  .topbar__right {
+    width: 100%;
+  }
+
+  .plants-grid,
+  .tables-grid,
+  .profile-info-grid,
+  .profile-form-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .search-box input {
+    padding-right: 5.25rem;
+  }
+
+  .search-box__shortcuts kbd:last-child {
+    display: none;
+  }
+
+  .user-menu,
+  .user-menu__trigger,
+  .favorite-button--large {
+    width: 100%;
+  }
+
+  .user-menu__trigger {
+    justify-content: center;
+  }
+
+  .user-menu__dropdown {
+    right: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .hero-card__badge {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .detail-body,
+  .profile-body {
+    padding: var(--space-2) var(--space-2) calc(var(--space-4) + env(safe-area-inset-bottom, 0px));
+  }
+
+  .detail-header__title {
+    flex: 1 1 100%;
+    order: -1;
+  }
+
+  .detail-hero {
+    gap: var(--space-3);
+  }
+
+  .detail-hero__image {
+    min-height: 15rem;
+  }
+
+  .info-table {
+    table-layout: auto;
+  }
+
+  .info-table th,
+  .info-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .info-table th {
+    padding-bottom: 0.25rem;
+    border-bottom: 0;
+  }
+
+  .info-table td {
+    padding-top: 0.25rem;
+  }
+
+  .profile-avatar-actions > *,
+  .profile-form-actions > * {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .settings-tabs {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .settings-tab {
+    min-width: 0;
+    padding-inline: var(--space-1);
+  }
+}
+
+/* Çok dar ekranlarda kenar boşluklarını ve keşif ızgarasını sıkılaştır */
+@media (max-width: 30rem) {
+  .main-panel {
+    padding-inline: 0.75rem;
+  }
+
+  .topbar,
+  .hero-card,
+  .plant-card,
+  .info-card,
+  .detail-hero,
+  .profile-card {
+    border-radius: var(--radius-md);
+  }
+
+  .similar-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pagination__button {
+    min-width: 2.75rem;
+    padding-inline: 0.75rem;
+  }
+}
+
+/* Hareket hassasiyeti olan kullanıcılar için animasyonları kapat */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .plant-card:hover,
+  .plant-card:focus-within,
+  .plant-card:hover .plant-card__image,
+  .plant-card:focus-within .plant-card__image,
+  .detail-hero:hover .detail-hero__image {
+    transform: none;
+  }
+}
+
+/* Windows yüksek karşıtlık modunda sınırları ve durumları görünür tut */
+@media (forced-colors: active) {
+  :root {
+    --border-soft: CanvasText;
+    --border-strong: CanvasText;
+  }
+
+  body,
+  .sidebar,
+  .topbar,
+  .hero-card,
+  .info-card,
+  .detail-hero,
+  .profile-card,
+  .plant-card,
+  .user-menu__dropdown {
+    color: CanvasText;
+    border-color: CanvasText;
+    background: Canvas;
+    box-shadow: none;
+  }
+
+  :where(
+    .filter-button.is-active,
+    .pagination__button.is-active,
+    .settings-tab.is-active,
+    .mobile-filter-chip.is-active,
+    .favorite-button.is-active,
+    .back-button
+  ) {
+    color: HighlightText;
+    border-color: Highlight;
+    background: Highlight;
+    forced-color-adjust: none;
+  }
+
+  :where(a, button, input, textarea, select, [tabindex]):focus-visible {
+    outline-color: Highlight;
+  }
+
+  .overlay {
+    background: CanvasText;
+    opacity: 0;
+  }
+
+  .overlay.is-visible {
+    opacity: 0.45;
+  }
+}
+
+/* Yazdırmada etkileşimleri gizle ve kartları sayfa içinde koru */
+@media print {
+  @page {
+    margin: 1.5cm;
+  }
+
+  body {
+    color: #000;
+    background: #fff;
+  }
+
+  body::before,
+  .detail-header .back-button,
+  .detail-action-button,
+  .favorite-button,
+  .care-panel,
+  .similar-section,
+  .toast-host,
+  .mobile-filter-bar {
+    display: none !important;
+  }
+
+  .detail-body {
+    padding: 0;
+    background: #fff;
+  }
+
+  .detail-hero,
+  .info-card {
+    border: 1px solid #bbb;
+    box-shadow: none;
+    break-inside: avoid;
+  }
+
+  .detail-hero {
+    grid-template-columns: 35% 1fr;
+  }
+
+  .tables-grid {
+    grid-template-columns: 1fr;
+  }
+}

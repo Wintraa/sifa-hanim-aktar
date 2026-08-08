@@ -1,0 +1,11 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" rx="48" fill="#F2EBE3"/>
+  <rect x="52" y="52" width="1096" height="796" rx="36" fill="#FDFBF7" stroke="#A084E8" stroke-width="6"/>
+  <circle cx="220" cy="180" r="70" fill="#A084E8" opacity="0.35"/>
+  <circle cx="980" cy="220" r="110" fill="#9AAE8E" opacity="0.28"/>
+  <path d="M600 690 V300" stroke="#7A6A5A" stroke-width="14" stroke-linecap="round"/>
+  <path d="M600 380 C480 300 390 360 360 470 C470 510 560 480 600 380Z" fill="#9AAE8E"/>
+  <path d="M600 450 C720 360 820 410 850 520 C740 560 640 530 600 450Z" fill="#A084E8"/>
+  <circle cx="600" cy="280" r="48" fill="#7A6A5A"/>
+  <text x="600" y="790" text-anchor="middle" fill="#4A3E3D" font-family="Georgia, serif" font-size="44" font-weight="700">Kedi Nanesi</text>
+</svg>
