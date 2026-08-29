@@ -4,16 +4,8 @@ import { api } from "../services/api.js";
 import { plantImageUrl } from "../lib/assetUrl.js";
 import { applyPageSeo } from "../lib/seo.js";
 import { recordProductClick } from "../lib/product-clicks.js";
-import { whatsappUrl } from "../lib/whatsapp.js";
 import { SHOP } from "../config/shop.js";
-
-function formatPrice(value) {
-  return new Intl.NumberFormat("tr-TR", {
-    style: "currency",
-    currency: "TRY",
-    maximumFractionDigits: 0,
-  }).format(Number(value));
-}
+import { ProductContactLinks } from "../components/catalog/ProductContactLinks.jsx";
 
 export default function ProductDetailPage() {
   const { id } = useParams();
@@ -75,10 +67,6 @@ export default function ProductDetailPage() {
     );
   }
 
-  const orderUrl = whatsappUrl(
-    `Merhaba, ${product.ad} (${product.birim}, ${formatPrice(product.fiyat)}) sipariş etmek istiyorum.`
-  );
-
   return (
     <main className="detail-main product-detail" id="main-content">
       <header className="detail-header">
@@ -88,18 +76,11 @@ export default function ProductDetailPage() {
         <div className="detail-header__title">
           <p className="section-label">{product.kategori}</p>
           <h1>{product.ad}</h1>
-          <p className="product-detail__price">
-            {formatPrice(product.fiyat)} <small>/ {product.birim}</small>
-          </p>
-        </div>
-        <div className="detail-header__actions">
-          {product.stokta ? (
-            <a className="shop-hero__cta" href={orderUrl} target="_blank" rel="noopener noreferrer">
-              WhatsApp Sipariş
-            </a>
-          ) : (
-            <span className="product-card__soldout">Şu an stokta yok</span>
-          )}
+          {product.birim ? (
+            <p className="product-detail__unit">
+              <small>Birim: {product.birim}</small>
+            </p>
+          ) : null}
         </div>
       </header>
 
@@ -124,9 +105,7 @@ export default function ProductDetailPage() {
               ))}
             </div>
           ) : null}
-          <p className="product-detail__note">
-            Fiyat bilgisi bilgilendirme amaçlıdır; güncel stok ve fiyat için WhatsApp veya dükkanımızı arayın.
-          </p>
+          <ProductContactLinks productName={product.ad} />
         </article>
       </section>
     </main>

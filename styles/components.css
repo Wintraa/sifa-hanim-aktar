@@ -1311,8 +1311,8 @@
 
 .product-card__footer {
   display: flex;
-  align-items: end;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: stretch;
   gap: var(--space-2);
   margin-top: 0.35rem;
 }
@@ -1353,6 +1353,68 @@
 .product-card__soldout {
   color: var(--text-muted);
   font-size: 0.875rem;
+}
+
+.product-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.product-contact--compact {
+  gap: 0.5rem;
+}
+
+.product-contact__text {
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+
+.product-contact__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.product-contact__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.25rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.product-contact__btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-soft);
+}
+
+.product-contact__btn--whatsapp {
+  background: #25d366;
+  color: #fff;
+}
+
+.product-contact__btn--instagram {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+  color: #fff;
+}
+
+.product-contact__handle {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.product-detail__unit {
+  margin: 0.25rem 0 0;
+  color: var(--text-muted);
 }
 
 .modal-backdrop {

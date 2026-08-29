@@ -16,3 +16,8 @@ export function mailUrl(subject = "Şifa Hanım Aktar — Bilgi") {
 export function mapsUrl() {
   return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(SHOP.mapQuery || SHOP.address)}`;
 }
+
+export function instagramUrl() {
+  const handle = String(SHOP.instagram || "").replace(/^@/, "").trim();
+  return handle ? `https://www.instagram.com/${handle}/` : "https://www.instagram.com/";
+}

@@ -1,21 +1,10 @@
 import { Link } from "react-router-dom";
 import { plantImageUrl } from "../../lib/assetUrl.js";
-import { whatsappUrl } from "../../lib/whatsapp.js";
 import { recordProductClick } from "../../lib/product-clicks.js";
-
-function formatPrice(value) {
-  const n = Number(value);
-  if (!Number.isFinite(n)) return "";
-  return new Intl.NumberFormat("tr-TR", {
-    style: "currency",
-    currency: "TRY",
-    maximumFractionDigits: 0,
-  }).format(n);
-}
+import { ProductContactLinks } from "./ProductContactLinks.jsx";
 
 export function ProductCard({ product, visibleIndex = 0, isAdmin = false, onEdit, inVitrin = false }) {
   const detailHref = `/urun/${product.id}`;
-  const orderUrl = whatsappUrl(`Merhaba, ${product.ad} (${product.birim}) için sipariş vermek istiyorum.`);
 
   const trackClick = () => recordProductClick(product.id);
 
@@ -58,23 +47,8 @@ export function ProductCard({ product, visibleIndex = 0, isAdmin = false, onEdit
           </div>
         ) : null}
         <div className="product-card__footer">
-          <div className="product-card__price">
-            <strong>{formatPrice(product.fiyat)}</strong>
-            <small> / {product.birim}</small>
-          </div>
+          <ProductContactLinks productName={product.ad} compact />
           <div className="product-card__actions">
-            {product.stokta ? (
-              <a
-                className="product-card__order"
-                href={orderUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Sipariş
-              </a>
-            ) : (
-              <span className="product-card__soldout">Stok yok</span>
-            )}
             {isAdmin ? (
               <button className="product-card__edit" type="button" onClick={() => onEdit?.(product)}>
                 Düzenle

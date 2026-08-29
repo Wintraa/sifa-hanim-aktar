@@ -8,6 +8,7 @@ export const SHOP = {
   phoneDisplay: "+90 544 216 41 12",
   phoneTel: "+905442164112",
   whatsapp: "905442164112",
+  instagram: "sifahanim_aktar",
   email: "demirmulkiye1402@gmail.com",
   address: "İstiklal Mahallesi, Belediye Sokak No 2B, Çan / Çanakkale",
   mapQuery: "İstiklal Mahallesi Belediye Sokak No 2B Çan Çanakkale",

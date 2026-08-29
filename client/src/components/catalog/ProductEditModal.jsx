@@ -68,7 +68,6 @@ export function ProductEditModal({ product, isNew = false, onClose, onSaved }) {
         ad: String(form.ad || "").trim(),
         kisaAciklama: String(form.kisaAciklama || "").trim(),
         aciklama: String(form.aciklama || "").trim(),
-        fiyat: Number(form.fiyat),
         birim: String(form.birim || "adet").trim(),
         kategori,
         resimUrl: String(form.resimUrl || "").trim(),
@@ -80,9 +79,6 @@ export function ProductEditModal({ product, isNew = false, onClose, onSaved }) {
           .filter(Boolean),
       };
       if (!payload.ad) throw new Error("Ürün adı zorunlu.");
-      if (!Number.isFinite(payload.fiyat) || payload.fiyat < 0) {
-        throw new Error("Geçerli bir fiyat girin.");
-      }
       saveProductOverride(payload);
       showToast(isNew ? "Ürün eklendi." : "Ürün güncellendi.", "success");
       onSaved?.();
@@ -130,34 +126,20 @@ export function ProductEditModal({ product, isNew = false, onClose, onSaved }) {
             />
           </label>
 
-          <div className="profile-form-grid">
-            <label className="profile-field">
-              <span>Fiyat (₺) *</span>
-              <input
-                type="number"
-                min="0"
-                step="1"
-                required
-                placeholder="89"
-                value={form.fiyat ?? ""}
-                onChange={(e) => setField("fiyat", e.target.value)}
-              />
-            </label>
-            <label className="profile-field">
-              <span>Birim *</span>
-              <select
-                required
-                value={form.birim || "adet"}
-                onChange={(e) => setField("birim", e.target.value)}
-              >
-                {birimSecenekleri.map((birim) => (
-                  <option key={birim} value={birim}>
-                    {birim}
-                  </option>
-                ))}
-              </select>
-            </label>
-          </div>
+          <label className="profile-field">
+            <span>Birim *</span>
+            <select
+              required
+              value={form.birim || "adet"}
+              onChange={(e) => setField("birim", e.target.value)}
+            >
+              {birimSecenekleri.map((birim) => (
+                <option key={birim} value={birim}>
+                  {birim}
+                </option>
+              ))}
+            </select>
+          </label>
 
           {categories.length > 0 ? (
             <label className="profile-field">

@@ -94,7 +94,6 @@ export function createEmptyProduct(baseList = []) {
     ad: "",
     kisaAciklama: "",
     aciklama: "",
-    fiyat: "",
     birim: "adet",
     kategori: getCategoryNames()[0] || "",
     resimUrl: "",
