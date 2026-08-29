@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { saveProductOverride, deleteProductOverride } from "../../lib/products.js";
+import { getCategoryNames, CATEGORIES_CHANGED } from "../../lib/product-categories.js";
 import { showToast } from "../../lib/toast.js";
-
-const CATEGORIES = ["Genel", "Sıcak Çaylar", "Soğuk Demlemeler", "Baharat & Harc", "Bitkisel Yağlar", "Karışımlar", "Kurutulmuş Otlar"];
 
 export function ProductEditModal({ product, isNew = false, onClose, onSaved }) {
   const [form, setForm] = useState({ ...product, etiketlerText: "" });
+  const [categories, setCategories] = useState(() => getCategoryNames());
   const [saving, setSaving] = useState(false);
 
   useEffect(() => {
@@ -15,6 +15,13 @@ export function ProductEditModal({ product, isNew = false, onClose, onSaved }) {
     });
   }, [product]);
 
+  useEffect(() => {
+    const reload = () => setCategories(getCategoryNames());
+    reload();
+    window.addEventListener(CATEGORIES_CHANGED, reload);
+    return () => window.removeEventListener(CATEGORIES_CHANGED, reload);
+  }, []);
+
   if (!product) return null;
 
   const setField = (key, value) => setForm((prev) => ({ ...prev, [key]: value }));
@@ -23,6 +30,15 @@ export function ProductEditModal({ product, isNew = false, onClose, onSaved }) {
     e.preventDefault();
     setSaving(true);
     try {
+      const kategori =
+        categories.length > 0
+          ? String(form.kategori || categories[0]).trim()
+          : String(form.kategoriManual || "").trim();
+
+      if (!kategori) {
+        throw new Error("Önce sol menüden kategori ekleyin veya kategori adı yazın.");
+      }
+
       const payload = {
         id: Number(form.id),
         ad: String(form.ad || "").trim(),
@@ -30,7 +46,7 @@ export function ProductEditModal({ product, isNew = false, onClose, onSaved }) {
         aciklama: String(form.aciklama || "").trim(),
         fiyat: Number(form.fiyat),
         birim: String(form.birim || "adet").trim(),
-        kategori: String(form.kategori || "Genel").trim(),
+        kategori,
         resimUrl: String(form.resimUrl || "").trim(),
         oneCikan: Boolean(form.oneCikan),
         stokta: form.stokta !== false,
@@ -114,16 +130,31 @@ export function ProductEditModal({ product, isNew = false, onClose, onSaved }) {
             </label>
           </div>
 
-          <label className="profile-field">
-            <span>Kategori</span>
-            <select value={form.kategori || CATEGORIES[0]} onChange={(e) => setField("kategori", e.target.value)}>
-              {CATEGORIES.map((c) => (
-                <option key={c} value={c}>
-                  {c}
-                </option>
-              ))}
-            </select>
-          </label>
+          {categories.length > 0 ? (
+            <label className="profile-field">
+              <span>Kategori *</span>
+              <select
+                value={form.kategori || categories[0]}
+                onChange={(e) => setField("kategori", e.target.value)}
+              >
+                {categories.map((c) => (
+                  <option key={c} value={c}>
+                    {c}
+                  </option>
+                ))}
+              </select>
+            </label>
+          ) : (
+            <label className="profile-field">
+              <span>Kategori * (sol menüden de ekleyebilirsin)</span>
+              <input
+                required
+                placeholder="Örn: Sıcak Çaylar"
+                value={form.kategoriManual || ""}
+                onChange={(e) => setField("kategoriManual", e.target.value)}
+              />
+            </label>
+          )}
 
           <label className="profile-field">
             <span>Kısa açıklama</span>

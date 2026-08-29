@@ -1,6 +1,8 @@
 /**
  * Ürün verisi + admin düzenlemeleri (localStorage birleşimi).
  */
+import { getCategoryNames } from "./product-categories.js";
+
 const OVERRIDES_KEY = "sifa_product_overrides_v1";
 const DELETED_KEY = "sifa_product_deleted_v1";
 const PRODUCTS_CACHE_KEY = "sifa-products-v2";
@@ -64,7 +66,7 @@ export function createEmptyProduct(baseList = []) {
     aciklama: "",
     fiyat: "",
     birim: "adet",
-    kategori: "Genel",
+    kategori: getCategoryNames()[0] || "",
     resimUrl: "",
     oneCikan: false,
     stokta: true,

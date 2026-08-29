@@ -1,4 +1,6 @@
+import { useCallback, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { getProductCategories, CATEGORIES_CHANGED } from "../../lib/product-categories.js";
 
 const PLANT_FILTERS = [
   { value: "Tumu", label: "Tüm Bitkiler" },
@@ -12,17 +14,6 @@ const PLANT_FILTERS = [
   { value: "Favoriler", label: "Favorilerim", id: "favoritesFilterButton" },
 ];
 
-const PRODUCT_CATEGORIES = [
-  { value: "Tumu", label: "Tüm Ürünler" },
-  { value: "Sıcak Çaylar", label: "Sıcak Çaylar" },
-  { value: "Soğuk Bitki Demlemeleri", label: "Soğuk Demlemeler" },
-  { value: "Baharat & Harc", label: "Baharat & Harc" },
-  { value: "Bitkisel Yağlar", label: "Bitkisel Yağlar" },
-  { value: "Aktar Karışımları", label: "Aktar Karışımları" },
-  { value: "Kurutulmuş Otlar", label: "Kurutulmuş Otlar" },
-  { value: "OneCikan", label: "Öne Çıkanlar", id: "featuredFilterButton" },
-];
-
 export function Sidebar({
   mode = "products",
   selectedTypes = [],
@@ -32,9 +23,23 @@ export function Sidebar({
   onFilter = () => {},
   favoriteCount = 0,
   isOpen,
+  isAdmin = false,
+  onAddCategory,
+  onEditCategory,
 }) {
   const location = useLocation();
   const isProducts = mode === "products";
+  const [categories, setCategories] = useState(() => getProductCategories());
+
+  const reloadCategories = useCallback(() => {
+    setCategories(getProductCategories());
+  }, []);
+
+  useEffect(() => {
+    reloadCategories();
+    window.addEventListener(CATEGORIES_CHANGED, reloadCategories);
+    return () => window.removeEventListener(CATEGORIES_CHANGED, reloadCategories);
+  }, [reloadCategories]);
 
   const isPlantActive = (value) => {
     if (value === "Tumu") return !favoritesOnly && selectedTypes.length === 0;
@@ -55,11 +60,11 @@ export function Sidebar({
     <aside className={`sidebar${isOpen ? " is-open" : ""}`} id="sidebar">
       <div className="sidebar__brand">
         <span className="sidebar__eyebrow">Şifa Hanım Aktar</span>
-        <h2>{isProducts ? "Dükkan" : "Bitki Kütüphanesi"}</h2>
+        <h2>{isProducts ? "Ürünler" : "Bitki Kütüphanesi"}</h2>
         <p>
           {isProducts
-            ? "Doğal ürünler, çaylar, baharatlar ve aktar karışımları — Çan’daki dükkanımızın vitrini."
-            : "Şifalı otların ne işe yaradığını, nasıl kullanıldığını ve nelere dikkat edileceğini keşfedin."}
+            ? "Sol menüden kategori seç; admin olarak kendi kategorilerini ekleyebilirsin."
+            : "Şifalı otların ne işe yaradığını, nasıl kullanıldığını keşfedin."}
         </p>
       </div>
 
@@ -87,33 +92,78 @@ export function Sidebar({
         aria-label={isProducts ? "Ürün kategorileri" : "Bitki filtreleri"}
         id="sidebarFilters"
       >
-        {isProducts
-          ? PRODUCT_CATEGORIES.map((item) => (
-              <button
-                key={item.value}
-                className={`filter-button${isProductActive(item.value) ? " is-active" : ""}`}
-                type="button"
-                id={item.id}
-                aria-pressed={isProductActive(item.value)}
-                onClick={() => onFilter(item.value)}
-              >
-                {item.label}
+        {isProducts ? (
+          <>
+            <button
+              type="button"
+              className={`filter-button${isProductActive("Tumu") ? " is-active" : ""}`}
+              aria-pressed={isProductActive("Tumu")}
+              onClick={() => onFilter("Tumu")}
+            >
+              Tüm Ürünler
+            </button>
+            <button
+              type="button"
+              className={`filter-button${isProductActive("OneCikan") ? " is-active" : ""}`}
+              id="featuredFilterButton"
+              aria-pressed={isProductActive("OneCikan")}
+              onClick={() => onFilter("OneCikan")}
+            >
+              Öne Çıkanlar
+            </button>
+            {categories.length === 0 ? (
+              <p className="sidebar__empty-cat">
+                {isAdmin ? "Henüz kategori yok — aşağıdan ekle." : "Kategoriler yakında."}
+              </p>
+            ) : (
+              categories.map((cat) => (
+                <div key={cat.id} className="sidebar__cat-row">
+                  <button
+                    type="button"
+                    className={`filter-button sidebar__cat-btn${
+                      isProductActive(cat.ad) ? " is-active" : ""
+                    }`}
+                    aria-pressed={isProductActive(cat.ad)}
+                    onClick={() => onFilter(cat.ad)}
+                  >
+                    {cat.ad}
+                  </button>
+                  {isAdmin ? (
+                    <button
+                      type="button"
+                      className="sidebar__cat-edit"
+                      aria-label={`${cat.ad} düzenle`}
+                      title="Düzenle"
+                      onClick={() => onEditCategory?.(cat)}
+                    >
+                      ✎
+                    </button>
+                  ) : null}
+                </div>
+              ))
+            )}
+            {isAdmin ? (
+              <button type="button" className="filter-button sidebar__add-cat" onClick={onAddCategory}>
+                + Kategori Ekle
               </button>
-            ))
-          : PLANT_FILTERS.map((item) => (
-              <button
-                key={item.value}
-                className={`filter-button${isPlantActive(item.value) ? " is-active" : ""}`}
-                data-filter={item.value}
-                type="button"
-                id={item.id}
-                title={item.title}
-                aria-pressed={isPlantActive(item.value)}
-                onClick={() => onFilter(item.value)}
-              >
-                {item.value === "Favoriler" ? favLabel : item.label}
-              </button>
-            ))}
+            ) : null}
+          </>
+        ) : (
+          PLANT_FILTERS.map((item) => (
+            <button
+              key={item.value}
+              className={`filter-button${isPlantActive(item.value) ? " is-active" : ""}`}
+              data-filter={item.value}
+              type="button"
+              id={item.id}
+              title={item.title}
+              aria-pressed={isPlantActive(item.value)}
+              onClick={() => onFilter(item.value)}
+            >
+              {item.value === "Favoriler" ? favLabel : item.label}
+            </button>
+          ))
+        )}
       </nav>
 
       <div className="sidebar__contact">
@@ -123,9 +173,7 @@ export function Sidebar({
       </div>
 
       <footer className="sidebar__footer">
-        <p>
-          Şifa Hanım Aktar — Çan / Çanakkale. Bilgiler bilgilendirme amaçlıdır; tedavi yerine geçmez.
-        </p>
+        <p>Şifa Hanım Aktar — Çan / Çanakkale.</p>
       </footer>
     </aside>
   );

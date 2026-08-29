@@ -68,6 +68,42 @@
   color: var(--text-main);
 }
 
+.sidebar__empty-cat {
+  margin: 0;
+  padding: 0.5rem 0.75rem;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+
+.sidebar__cat-row {
+  display: flex;
+  align-items: stretch;
+  gap: 0.25rem;
+}
+
+.sidebar__cat-btn {
+  flex: 1;
+  min-width: 0;
+}
+
+.sidebar__cat-edit {
+  flex-shrink: 0;
+  width: 2.25rem;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.sidebar__add-cat {
+  margin-top: 0.35rem;
+  border-style: dashed !important;
+  color: var(--accent-brown);
+  font-weight: 600;
+}
+
 .sidebar__footer {
   margin-top: auto;
   padding: var(--space-2);

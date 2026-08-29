@@ -10,6 +10,7 @@ import { Sidebar } from "../components/layout/Sidebar.jsx";
 import { Topbar } from "../components/layout/Topbar.jsx";
 import { ProductCard } from "../components/catalog/ProductCard.jsx";
 import { ProductEditModal } from "../components/catalog/ProductEditModal.jsx";
+import { CategoryEditModal } from "../components/catalog/CategoryEditModal.jsx";
 import { Pagination } from "../components/catalog/Pagination.jsx";
 import { WhatsAppFloatButton } from "../components/layout/ShopContact.jsx";
 import { SHOP } from "../config/shop.js";
@@ -27,8 +28,13 @@ export default function ProductsPage() {
   const [error, setError] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
   const [editingProduct, setEditingProduct] = useState(null);
+  const [editingCategory, setEditingCategory] = useState(null);
   const [addingNew, setAddingNew] = useState(false);
+  const [addingCategory, setAddingCategory] = useState(false);
   const [page, setPage] = useState(1);
+
+  const selectedCategory = searchParams.get("kat") || "";
+  const featuredOnly = searchParams.get("one") === "1";
 
   const loadProducts = useCallback(async () => {
     setLoading(true);
@@ -80,17 +86,79 @@ export default function ProductsPage() {
     setAddingNew(false);
   };
 
-  const totalPages = Math.max(1, Math.ceil(products.length / PAGE_SIZE));
+  const updateParams = useCallback(
+    (patch) => {
+      const next = new URLSearchParams(searchParams);
+      Object.entries(patch).forEach(([key, value]) => {
+        if (value === null || value === undefined || value === "" || value === false) {
+          next.delete(key);
+        } else {
+          next.set(key, String(value));
+        }
+      });
+      next.delete("page");
+      setSearchParams(next, { replace: true });
+      setPage(1);
+    },
+    [searchParams, setSearchParams]
+  );
+
+  const handleFilter = (value) => {
+    setMenuOpen(false);
+    if (value === "Tumu") {
+      updateParams({ kat: null, one: null });
+    } else if (value === "OneCikan") {
+      updateParams({ one: "1", kat: null });
+    } else {
+      updateParams({ kat: value, one: null });
+    }
+  };
+
+  const openAddCategory = () => {
+    if (!isAdmin) {
+      showToast("Kategori eklemek için admin girişi yapın.", "info");
+      navigate("/giris?return=/");
+      return;
+    }
+    setAddingCategory(true);
+    setEditingCategory({});
+  };
+
+  const closeCategoryForm = () => {
+    setEditingCategory(null);
+    setAddingCategory(false);
+  };
+
+  const filteredProducts = useMemo(() => {
+    let list = [...products];
+    if (featuredOnly) list = list.filter((p) => p.oneCikan);
+    else if (selectedCategory) list = list.filter((p) => p.kategori === selectedCategory);
+    return list;
+  }, [products, featuredOnly, selectedCategory]);
+
+  const totalPages = Math.max(1, Math.ceil(filteredProducts.length / PAGE_SIZE));
   const safePage = Math.min(page, totalPages);
   const visible = useMemo(
-    () => products.slice((safePage - 1) * PAGE_SIZE, safePage * PAGE_SIZE),
-    [products, safePage]
+    () => filteredProducts.slice((safePage - 1) * PAGE_SIZE, safePage * PAGE_SIZE),
+    [filteredProducts, safePage]
   );
 
   return (
     <>
       <div className="site-shell">
-        <Sidebar mode="products" onFilter={() => setMenuOpen(false)} isOpen={menuOpen} />
+        <Sidebar
+          mode="products"
+          selectedCategory={selectedCategory}
+          featuredOnly={featuredOnly}
+          onFilter={handleFilter}
+          isOpen={menuOpen}
+          isAdmin={isAdmin}
+          onAddCategory={openAddCategory}
+          onEditCategory={(cat) => {
+            setAddingCategory(false);
+            setEditingCategory(cat);
+          }}
+        />
 
         <button
           type="button"
@@ -145,6 +213,15 @@ export default function ProductsPage() {
                 </div>
               ) : null}
 
+              {!loading && !error && products.length > 0 && filteredProducts.length === 0 ? (
+                <div className="empty-state admin-empty">
+                  <h4>Bu kategoride ürün yok</h4>
+                  <button className="back-button empty-state__cta" type="button" onClick={() => handleFilter("Tumu")}>
+                    Tüm ürünlere dön
+                  </button>
+                </div>
+              ) : null}
+
               {!loading && !error && visible.length > 0 ? (
                 <>
                   <div className="plants-grid products-grid" aria-live="polite">
@@ -180,6 +257,13 @@ export default function ProductsPage() {
             loadProducts();
             closeForm();
           }}
+        />
+      ) : null}
+      {isAdmin && editingCategory !== null ? (
+        <CategoryEditModal
+          category={addingCategory ? {} : editingCategory}
+          onClose={closeCategoryForm}
+          onSaved={closeCategoryForm}
         />
       ) : null}
     </>
