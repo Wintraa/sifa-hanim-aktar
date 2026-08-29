@@ -4,7 +4,7 @@ import { api } from "../services/api.js";
 import { useAuth } from "../context/AuthContext.jsx";
 import { isAdminUser } from "../lib/auth.js";
 import { createEmptyProduct, getFeaturedProducts } from "../lib/products.js";
-import { getTopClickedProducts, isInVitrin } from "../lib/product-clicks.js";
+import { isInVitrin } from "../lib/product-clicks.js";
 import { debounce } from "../lib/utils.js";
 import { applyPageSeo } from "../lib/seo.js";
 import { showToast } from "../lib/toast.js";
@@ -205,23 +205,15 @@ export default function ProductsPage() {
     return list;
   }, [products, featuredOnly, selectedCategory, searchQuery]);
 
-  const showFeaturedRail =
-    !loading &&
-    !error &&
-    products.length > 0 &&
-    !searchQuery &&
-    !selectedCategory &&
-    !featuredOnly;
-
-  const featuredProducts = useMemo(() => {
-    if (!showFeaturedRail) return [];
-    const manual = getFeaturedProducts(products);
-    if (manual.length) return manual.slice(0, 3);
-    return getTopClickedProducts(products).slice(0, 3);
-  }, [showFeaturedRail, products]);
-
-  const featuredRailUsesClicks =
-    showFeaturedRail && getFeaturedProducts(products).length === 0 && featuredProducts.length > 0;
+  /** Tüm ürünlerde öne çıkanlar önce gelsin — ayrı band yerine aynı 3x3 grid. */
+  const gridProducts = useMemo(() => {
+    if (featuredOnly || selectedCategory || searchQuery) return filteredProducts;
+    return [...filteredProducts].sort((a, b) => {
+      const aFeatured = a.oneCikan ? 1 : 0;
+      const bFeatured = b.oneCikan ? 1 : 0;
+      return bFeatured - aFeatured || Number(a.id) - Number(b.id);
+    });
+  }, [filteredProducts, featuredOnly, selectedCategory, searchQuery]);
 
   const resultsLabel = useMemo(() => {
     if (loading || error) return "";
@@ -232,11 +224,11 @@ export default function ProductsPage() {
     return `${n} ürün listeleniyor`;
   }, [loading, error, filteredProducts.length, searchQuery, featuredOnly, selectedCategory, searchParams]);
 
-  const totalPages = Math.max(1, Math.ceil(filteredProducts.length / PAGE_SIZE));
+  const totalPages = Math.max(1, Math.ceil(gridProducts.length / PAGE_SIZE));
   const safePage = Math.min(page, totalPages);
   const visible = useMemo(
-    () => filteredProducts.slice((safePage - 1) * PAGE_SIZE, safePage * PAGE_SIZE),
-    [filteredProducts, safePage]
+    () => gridProducts.slice((safePage - 1) * PAGE_SIZE, safePage * PAGE_SIZE),
+    [gridProducts, safePage]
   );
 
   return (
@@ -351,36 +343,6 @@ export default function ProductsPage() {
                     {searchQuery ? "Aramayı temizle" : "Tüm ürünlere dön"}
                   </button>
                 </div>
-              ) : null}
-
-              {!loading && !error && featuredProducts.length > 0 ? (
-                <section className="featured-rail" aria-labelledby="featuredRailTitle">
-                  <div className="featured-rail__head">
-                    <h2 id="featuredRailTitle">
-                      {featuredRailUsesClicks ? "Çok tıklananlar" : "Öne çıkanlar"}
-                    </h2>
-                    <p>
-                      {featuredRailUsesClicks
-                        ? "En çok ilgi gören ürünler — hızlı sipariş için tıklayın."
-                        : "Dükkanın seçtiği ürünler — hızlı sipariş için tıklayın."}
-                    </p>
-                  </div>
-                  <div className="featured-rail__grid">
-                    {featuredProducts.map((product, index) => (
-                      <ProductCard
-                        key={product.id}
-                        product={product}
-                        visibleIndex={index}
-                        isAdmin={isAdmin}
-                        inVitrin
-                        onEdit={(p) => {
-                          setAddingNew(false);
-                          setEditingProduct(p);
-                        }}
-                      />
-                    ))}
-                  </div>
-                </section>
               ) : null}
 
               {!loading && !error && visible.length > 0 ? (
