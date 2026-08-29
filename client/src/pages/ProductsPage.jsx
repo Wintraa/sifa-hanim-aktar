@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { Link, useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { api } from "../services/api.js";
 import { useAuth } from "../context/AuthContext.jsx";
 import { isAdminUser } from "../lib/auth.js";
@@ -189,9 +189,11 @@ export default function ProductsPage() {
                   <p className="section-label">Şifa Hanım Aktar</p>
                   <h1 id="productsPanelTitle">Ürünler</h1>
                 </div>
-                <button className="add-product-btn" type="button" onClick={openAddForm}>
-                  + Ürün Ekle
-                </button>
+                {isAdmin ? (
+                  <button className="add-product-btn" type="button" onClick={openAddForm}>
+                    + Ürün Ekle
+                  </button>
+                ) : null}
               </div>
 
               {loading ? <p className="plants-section__intro">Yükleniyor…</p> : null}
@@ -205,16 +207,16 @@ export default function ProductsPage() {
               {!loading && !error && products.length === 0 ? (
                 <div className="empty-state admin-empty">
                   <h4>Henüz ürün yok</h4>
-                  <p>Ürünleri sen ekleyeceksin. Aşağıdaki butona bas, bilgileri gir, kaydet.</p>
-                  <button className="add-product-btn add-product-btn--large" type="button" onClick={openAddForm}>
-                    + Ürün Ekle
-                  </button>
-                  {!isAdmin ? (
-                    <p className="admin-panel__hint">
-                      Ürün eklemek için{" "}
-                      <Link to="/giris?return=/?add=1">admin girişi</Link> yap.
-                    </p>
-                  ) : null}
+                  {isAdmin ? (
+                    <>
+                      <p>Ürünleri sen ekleyeceksin. Aşağıdaki butona bas, bilgileri gir, kaydet.</p>
+                      <button className="add-product-btn add-product-btn--large" type="button" onClick={openAddForm}>
+                        + Ürün Ekle
+                      </button>
+                    </>
+                  ) : (
+                    <p>Yakında yeni ürünler eklenecek. Sipariş için WhatsApp’tan yazabilirsin.</p>
+                  )}
                 </div>
               ) : null}
 
