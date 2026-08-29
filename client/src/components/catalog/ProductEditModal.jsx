@@ -2,16 +2,9 @@ import { useEffect, useState } from "react";
 import { saveProductOverride, deleteProductOverride } from "../../lib/products.js";
 import { showToast } from "../../lib/toast.js";
 
-const CATEGORIES = [
-  "Sıcak Çaylar",
-  "Soğuk Bitki Demlemeleri",
-  "Baharat & Harc",
-  "Bitkisel Yağlar",
-  "Aktar Karışımları",
-  "Kurutulmuş Otlar",
-];
+const CATEGORIES = ["Genel", "Sıcak Çaylar", "Soğuk Demlemeler", "Baharat & Harc", "Bitkisel Yağlar", "Karışımlar", "Kurutulmuş Otlar"];
 
-export function ProductEditModal({ product, onClose, onSaved }) {
+export function ProductEditModal({ product, isNew = false, onClose, onSaved }) {
   const [form, setForm] = useState({ ...product });
   const [saving, setSaving] = useState(false);
 
@@ -68,7 +61,7 @@ export function ProductEditModal({ product, onClose, onSaved }) {
         onClick={(e) => e.stopPropagation()}
       >
         <header className="modal-card__header">
-          <h2 id="productEditTitle">Ürün Düzenle — Admin</h2>
+          <h2 id="productEditTitle">{isNew ? "Yeni Ürün Ekle" : "Ürün Düzenle"}</h2>
           <button type="button" className="modal-card__close" onClick={onClose} aria-label="Kapat">
             ×
           </button>
@@ -166,11 +159,13 @@ export function ProductEditModal({ product, onClose, onSaved }) {
           </div>
           <div className="profile-form-actions">
             <button className="back-button" type="submit" disabled={saving}>
-              {saving ? "Kaydediliyor…" : "Kaydet"}
+              {saving ? "Kaydediliyor…" : isNew ? "Ürünü ekle" : "Kaydet"}
             </button>
-            <button className="dropdown-link dropdown-link--button" type="button" onClick={handleDelete}>
-              Vitrinden kaldır
-            </button>
+            {!isNew ? (
+              <button className="dropdown-link dropdown-link--button" type="button" onClick={handleDelete}>
+                Vitrinden kaldır
+              </button>
+            ) : null}
           </div>
         </form>
       </div>

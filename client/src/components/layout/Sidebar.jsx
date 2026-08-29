@@ -29,7 +29,7 @@ export function Sidebar({
   selectedCategory = "",
   favoritesOnly = false,
   featuredOnly = false,
-  onFilter,
+  onFilter = () => {},
   favoriteCount = 0,
   isOpen,
 }) {

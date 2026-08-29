@@ -8,8 +8,7 @@ const PRODUCTS_CACHE_KEY = "sifa-products-v1";
 const isValidProduct = (p) =>
   p &&
   Number.isInteger(Number(p.id)) &&
-  String(p.ad || "").trim() &&
-  String(p.kategori || "").trim();
+  String(p.ad || "").trim();
 
 export function readProductOverrides() {
   try {
@@ -48,6 +47,29 @@ export function mergeProducts(baseList) {
   }
 
   return [...byId.values()].sort((a, b) => Number(a.id) - Number(b.id));
+}
+
+/** Admin yeni ürün eklerken kullanılacak sıradaki id. */
+export function getNextProductId(baseList = []) {
+  const merged = mergeProducts(baseList);
+  const maxId = merged.reduce((max, p) => Math.max(max, Number(p.id) || 0), 0);
+  return maxId + 1;
+}
+
+export function createEmptyProduct(baseList = []) {
+  return {
+    id: getNextProductId(baseList),
+    ad: "",
+    kisaAciklama: "",
+    aciklama: "",
+    fiyat: "",
+    birim: "adet",
+    kategori: "Genel",
+    resimUrl: "",
+    oneCikan: false,
+    stokta: true,
+    etiketler: [],
+  };
 }
 
 export function saveProductOverride(product) {
