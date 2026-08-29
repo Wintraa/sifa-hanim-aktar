@@ -64,7 +64,7 @@ export function PlantCard({ plant, visibleIndex = 0, showCare = false }) {
         >
           <img
             className="plant-card__image"
-            src={plantImageUrl(plant.resimUrl, { width: 480, quality: 72 })}
+            src={plantImageUrl(plant.resimUrl)}
             alt={`${plant.ad} görseli`}
             width="640"
             height="480"

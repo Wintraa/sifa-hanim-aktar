@@ -19,7 +19,7 @@ export function RecentRail({ plants }) {
             title={plant.ad}
           >
             <img
-              src={plantImageUrl(plant.resimUrl, { width: 96, quality: 70 })}
+              src={plantImageUrl(plant.resimUrl)}
               alt={`${plant.ad} görseli`}
               width="48"
               height="48"

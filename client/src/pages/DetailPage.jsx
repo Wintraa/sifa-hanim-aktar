@@ -242,7 +242,7 @@ export default function DetailPage() {
           <>
             <section className="detail-hero" aria-labelledby="detailName">
               <img
-                src={plantImageUrl(plant.resimUrl, { width: 840, quality: 78 })}
+                src={plantImageUrl(plant.resimUrl)}
                 alt={`${plant.ad} görseli`}
                 className="detail-hero__image"
                 width="840"
@@ -354,7 +354,7 @@ export default function DetailPage() {
                   {similar.map((item) => (
                     <Link key={item.id} className="similar-card" to={`/bitki/${item.id}`}>
                       <img
-                        src={plantImageUrl(item.resimUrl, { width: 160, quality: 72 })}
+                        src={plantImageUrl(item.resimUrl)}
                         alt={`${item.ad} görseli`}
                         width="160"
                         height="160"
