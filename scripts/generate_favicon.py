@@ -6,7 +6,8 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "assets" / "brand" / "sifa-hanim-logo-source.png"
 PUBLIC = ROOT / "client" / "public"
-BRAND_OUT = PUBLIC / "assets" / "brand"
+BRAND_OUT = ROOT / "assets" / "brand"
+MAX_LOGO_PX = 512
 
 
 def main() -> None:
@@ -19,8 +20,10 @@ def main() -> None:
     oy = (size - img.height) // 2
     canvas.paste(img, (ox, oy), img)
     square = canvas.convert("RGB")
+    if max(square.size) > MAX_LOGO_PX:
+        square.thumbnail((MAX_LOGO_PX, MAX_LOGO_PX), Image.Resampling.LANCZOS)
 
-    square.save(BRAND_OUT / "sifa-hanim-logo.png", optimize=True)
+    square.save(BRAND_OUT / "sifa-hanim-logo.png", optimize=True, compress_level=9)
 
     for px, name in [
         (512, "icon-512.png"),

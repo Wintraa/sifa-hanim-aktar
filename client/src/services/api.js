@@ -37,6 +37,27 @@ const isValidPlant = (plant) =>
   String(plant.botanikAd || "").trim() &&
   String(plant.tur || "").trim();
 
+const PLANTS_CACHE_KEY = "sifa-plants-v1";
+
+function readPlantsCache() {
+  try {
+    const raw = sessionStorage.getItem(PLANTS_CACHE_KEY);
+    if (!raw) return null;
+    const list = JSON.parse(raw);
+    return Array.isArray(list) ? list.filter(isValidPlant) : null;
+  } catch {
+    return null;
+  }
+}
+
+function writePlantsCache(list) {
+  try {
+    sessionStorage.setItem(PLANTS_CACHE_KEY, JSON.stringify(list));
+  } catch {
+    /* kota doluysa sessizce devam */
+  }
+}
+
 async function postMissingViaNetlifyForm(arama) {
   const body = new URLSearchParams({
     "form-name": "missing-searches",
@@ -106,6 +127,11 @@ export const api = {
 
   /** API yoksa (Netlify gibi) plants.json yedeğine düşer. */
   async getPlantsWithFallback() {
+    const cached = readPlantsCache();
+    if (cached?.length) {
+      return cached;
+    }
+
     if (import.meta.env.DEV) {
       try {
         const data = await request("/bitkiler");
@@ -126,7 +152,9 @@ export const api = {
     if (!Array.isArray(list)) {
       throw new Error("Bitki verisi geçersiz.");
     }
-    return list.filter(isValidPlant);
+    const valid = list.filter(isValidPlant);
+    writePlantsCache(valid);
+    return valid;
   },
 
   async getPlantWithFallback(id) {
