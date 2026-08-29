@@ -1467,3 +1467,44 @@
 .admin-empty {
   margin-top: var(--space-2);
 }
+
+.add-product-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0.75rem 1.5rem;
+  border: 0;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, #8d7b68, #6f6258);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: var(--shadow-xs);
+  transition: var(--transition-interactive);
+}
+
+.add-product-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-raised);
+}
+
+.add-product-btn--large {
+  min-height: 3.5rem;
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  margin-top: var(--space-2);
+}
+
+.admin-panel__hint {
+  margin-top: var(--space-2);
+  color: var(--text-muted);
+  font-size: 0.9375rem;
+}
+
+.product-edit-form__intro {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.9375rem;
+}

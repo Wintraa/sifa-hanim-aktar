@@ -3,7 +3,7 @@
  */
 const OVERRIDES_KEY = "sifa_product_overrides_v1";
 const DELETED_KEY = "sifa_product_deleted_v1";
-const PRODUCTS_CACHE_KEY = "sifa-products-v1";
+const PRODUCTS_CACHE_KEY = "sifa-products-v2";
 
 const isValidProduct = (p) =>
   p &&

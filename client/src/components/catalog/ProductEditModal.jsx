@@ -5,37 +5,47 @@ import { showToast } from "../../lib/toast.js";
 const CATEGORIES = ["Genel", "Sıcak Çaylar", "Soğuk Demlemeler", "Baharat & Harc", "Bitkisel Yağlar", "Karışımlar", "Kurutulmuş Otlar"];
 
 export function ProductEditModal({ product, isNew = false, onClose, onSaved }) {
-  const [form, setForm] = useState({ ...product });
+  const [form, setForm] = useState({ ...product, etiketlerText: "" });
   const [saving, setSaving] = useState(false);
 
   useEffect(() => {
-    setForm({ ...product });
+    setForm({
+      ...product,
+      etiketlerText: (product.etiketler || []).join(", "),
+    });
   }, [product]);
 
   if (!product) return null;
 
   const setField = (key, value) => setForm((prev) => ({ ...prev, [key]: value }));
 
-  const handleSave = async (e) => {
+  const handleSave = (e) => {
     e.preventDefault();
     setSaving(true);
     try {
       const payload = {
-        ...form,
         id: Number(form.id),
+        ad: String(form.ad || "").trim(),
+        kisaAciklama: String(form.kisaAciklama || "").trim(),
+        aciklama: String(form.aciklama || "").trim(),
         fiyat: Number(form.fiyat),
+        birim: String(form.birim || "adet").trim(),
+        kategori: String(form.kategori || "Genel").trim(),
+        resimUrl: String(form.resimUrl || "").trim(),
         oneCikan: Boolean(form.oneCikan),
-        stokta: Boolean(form.stokta),
+        stokta: form.stokta !== false,
         etiketler: String(form.etiketlerText || "")
           .split(",")
           .map((t) => t.trim())
           .filter(Boolean),
       };
-      delete payload.etiketlerText;
+      if (!payload.ad) throw new Error("Ürün adı zorunlu.");
+      if (!Number.isFinite(payload.fiyat) || payload.fiyat < 0) {
+        throw new Error("Geçerli bir fiyat girin.");
+      }
       saveProductOverride(payload);
-      showToast("Ürün kaydedildi.", "success");
+      showToast(isNew ? "Ürün eklendi." : "Ürün güncellendi.", "success");
       onSaved?.();
-      onClose?.();
     } catch (err) {
       showToast(err.message || "Kaydedilemedi.", "error");
     } finally {
@@ -44,11 +54,10 @@ export function ProductEditModal({ product, isNew = false, onClose, onSaved }) {
   };
 
   const handleDelete = () => {
-    if (!window.confirm(`"${product.ad}" vitrinden kaldırılsın mı?`)) return;
+    if (!window.confirm(`"${product.ad}" silinsin mi?`)) return;
     deleteProductOverride(product.id);
-    showToast("Ürün vitrinden kaldırıldı.", "info");
+    showToast("Ürün silindi.", "info");
     onSaved?.();
-    onClose?.();
   };
 
   return (
@@ -61,63 +70,53 @@ export function ProductEditModal({ product, isNew = false, onClose, onSaved }) {
         onClick={(e) => e.stopPropagation()}
       >
         <header className="modal-card__header">
-          <h2 id="productEditTitle">{isNew ? "Yeni Ürün Ekle" : "Ürün Düzenle"}</h2>
+          <h2 id="productEditTitle">{isNew ? "Yeni Ürün" : "Ürünü Düzenle"}</h2>
           <button type="button" className="modal-card__close" onClick={onClose} aria-label="Kapat">
             ×
           </button>
         </header>
 
         <form className="product-edit-form" onSubmit={handleSave}>
+          <p className="product-edit-form__intro">Zorunlu alanları doldurup kaydet.</p>
+
           <label className="profile-field">
-            <span>Ürün adı</span>
+            <span>Ürün adı *</span>
             <input
               required
+              autoFocus
+              placeholder="Örn: Papatya Çiçeği"
               value={form.ad || ""}
               onChange={(e) => setField("ad", e.target.value)}
             />
           </label>
-          <label className="profile-field">
-            <span>Kısa açıklama</span>
-            <input
-              required
-              value={form.kisaAciklama || ""}
-              onChange={(e) => setField("kisaAciklama", e.target.value)}
-            />
-          </label>
-          <label className="profile-field">
-            <span>Detay açıklama</span>
-            <textarea
-              rows={4}
-              value={form.aciklama || ""}
-              onChange={(e) => setField("aciklama", e.target.value)}
-            />
-          </label>
+
           <div className="profile-form-grid">
             <label className="profile-field">
-              <span>Fiyat (₺)</span>
+              <span>Fiyat (₺) *</span>
               <input
                 type="number"
                 min="0"
+                step="1"
                 required
+                placeholder="89"
                 value={form.fiyat ?? ""}
                 onChange={(e) => setField("fiyat", e.target.value)}
               />
             </label>
             <label className="profile-field">
-              <span>Birim</span>
+              <span>Birim *</span>
               <input
                 required
+                placeholder="100 g, adet, 10 ml…"
                 value={form.birim || ""}
                 onChange={(e) => setField("birim", e.target.value)}
               />
             </label>
           </div>
+
           <label className="profile-field">
             <span>Kategori</span>
-            <select
-              value={form.kategori || CATEGORIES[0]}
-              onChange={(e) => setField("kategori", e.target.value)}
-            >
+            <select value={form.kategori || CATEGORIES[0]} onChange={(e) => setField("kategori", e.target.value)}>
               {CATEGORIES.map((c) => (
                 <option key={c} value={c}>
                   {c}
@@ -125,21 +124,44 @@ export function ProductEditModal({ product, isNew = false, onClose, onSaved }) {
               ))}
             </select>
           </label>
+
           <label className="profile-field">
-            <span>Görsel yolu</span>
+            <span>Kısa açıklama</span>
             <input
+              placeholder="Vitrinde görünen tek cümle"
+              value={form.kisaAciklama || ""}
+              onChange={(e) => setField("kisaAciklama", e.target.value)}
+            />
+          </label>
+
+          <label className="profile-field">
+            <span>Detaylı açıklama</span>
+            <textarea
+              rows={3}
+              placeholder="Kullanım, içerik, notlar…"
+              value={form.aciklama || ""}
+              onChange={(e) => setField("aciklama", e.target.value)}
+            />
+          </label>
+
+          <label className="profile-field">
+            <span>Fotoğraf yolu (isteğe bağlı)</span>
+            <input
+              placeholder="assets/plants/photos/01-matricaria-chamomilla.jpg"
               value={form.resimUrl || ""}
               onChange={(e) => setField("resimUrl", e.target.value)}
             />
           </label>
-          <label className="profile-field">
-            <span>Etiketler (virgülle)</span>
-            <input
-              value={form.etiketlerText ?? (form.etiketler || []).join(", ")}
-              onChange={(e) => setField("etiketlerText", e.target.value)}
-            />
-          </label>
+
           <div className="product-edit-form__checks">
+            <label className="checkbox-field">
+              <input
+                type="checkbox"
+                checked={form.stokta !== false}
+                onChange={(e) => setField("stokta", e.target.checked)}
+              />
+              Stokta var
+            </label>
             <label className="checkbox-field">
               <input
                 type="checkbox"
@@ -148,22 +170,15 @@ export function ProductEditModal({ product, isNew = false, onClose, onSaved }) {
               />
               Öne çıkan
             </label>
-            <label className="checkbox-field">
-              <input
-                type="checkbox"
-                checked={form.stokta !== false}
-                onChange={(e) => setField("stokta", e.target.checked)}
-              />
-              Stokta
-            </label>
           </div>
+
           <div className="profile-form-actions">
-            <button className="back-button" type="submit" disabled={saving}>
-              {saving ? "Kaydediliyor…" : isNew ? "Ürünü ekle" : "Kaydet"}
+            <button className="add-product-btn" type="submit" disabled={saving}>
+              {saving ? "Kaydediliyor…" : isNew ? "Ürünü Kaydet" : "Değişiklikleri Kaydet"}
             </button>
             {!isNew ? (
               <button className="dropdown-link dropdown-link--button" type="button" onClick={handleDelete}>
-                Vitrinden kaldır
+                Sil
               </button>
             ) : null}
           </div>

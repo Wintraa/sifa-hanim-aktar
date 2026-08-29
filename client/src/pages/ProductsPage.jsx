@@ -1,10 +1,11 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { api } from "../services/api.js";
 import { useAuth } from "../context/AuthContext.jsx";
 import { isAdminUser } from "../lib/auth.js";
 import { createEmptyProduct } from "../lib/products.js";
 import { applyPageSeo } from "../lib/seo.js";
+import { showToast } from "../lib/toast.js";
 import { Sidebar } from "../components/layout/Sidebar.jsx";
 import { Topbar } from "../components/layout/Topbar.jsx";
 import { ProductCard } from "../components/catalog/ProductCard.jsx";
@@ -18,12 +19,15 @@ const PAGE_SIZE = 9;
 export default function ProductsPage() {
   const { user } = useAuth();
   const isAdmin = isAdminUser(user);
+  const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
 
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
   const [editingProduct, setEditingProduct] = useState(null);
+  const [addingNew, setAddingNew] = useState(false);
   const [page, setPage] = useState(1);
 
   const loadProducts = useCallback(async () => {
@@ -51,8 +55,29 @@ export default function ProductsPage() {
     });
   }, []);
 
-  const openNewProduct = () => {
+  const openAddForm = useCallback(() => {
+    if (!isAdmin) {
+      showToast("Ürün eklemek için admin girişi yapın.", "info");
+      navigate("/giris?return=/?add=1");
+      return;
+    }
+    setAddingNew(true);
     setEditingProduct(createEmptyProduct(products));
+  }, [isAdmin, navigate, products]);
+
+  // Giriş sonrası ?add=1 ile formu otomatik aç
+  useEffect(() => {
+    if (!isAdmin || searchParams.get("add") !== "1") return;
+    setAddingNew(true);
+    setEditingProduct(createEmptyProduct(products));
+    const next = new URLSearchParams(searchParams);
+    next.delete("add");
+    setSearchParams(next, { replace: true });
+  }, [isAdmin, searchParams, setSearchParams, products]);
+
+  const closeForm = () => {
+    setEditingProduct(null);
+    setAddingNew(false);
   };
 
   const totalPages = Math.max(1, Math.ceil(products.length / PAGE_SIZE));
@@ -89,22 +114,11 @@ export default function ProductsPage() {
               <div className="admin-panel__head">
                 <div>
                   <p className="section-label">Şifa Hanım Aktar</p>
-                  <h1 id="productsPanelTitle">Ürün Vitrini</h1>
-                  <p className="admin-panel__lead">
-                    {isAdmin
-                      ? "Buradan ürün ekleyip düzenlersin. Vitrin boş başlar — hepsini sen dolduracaksın."
-                      : "Dükkan ürünleri burada listelenir."}
-                  </p>
+                  <h1 id="productsPanelTitle">Ürünler</h1>
                 </div>
-                {isAdmin ? (
-                  <button className="shop-hero__cta" type="button" onClick={openNewProduct}>
-                    + Yeni Ürün Ekle
-                  </button>
-                ) : (
-                  <Link className="shop-hero__ghost" to="/giris?return=/">
-                    Admin girişi
-                  </Link>
-                )}
+                <button className="add-product-btn" type="button" onClick={openAddForm}>
+                  + Ürün Ekle
+                </button>
               </div>
 
               {loading ? <p className="plants-section__intro">Yükleniyor…</p> : null}
@@ -118,15 +132,15 @@ export default function ProductsPage() {
               {!loading && !error && products.length === 0 ? (
                 <div className="empty-state admin-empty">
                   <h4>Henüz ürün yok</h4>
-                  <p>
-                    {isAdmin
-                      ? "Yukarıdaki “Yeni Ürün Ekle” ile ilk ürününü oluştur."
-                      : "Ürünler yakında eklenecek."}
-                  </p>
-                  {isAdmin ? (
-                    <button className="back-button empty-state__cta" type="button" onClick={openNewProduct}>
-                      İlk ürünü ekle
-                    </button>
+                  <p>Ürünleri sen ekleyeceksin. Aşağıdaki butona bas, bilgileri gir, kaydet.</p>
+                  <button className="add-product-btn add-product-btn--large" type="button" onClick={openAddForm}>
+                    + Ürün Ekle
+                  </button>
+                  {!isAdmin ? (
+                    <p className="admin-panel__hint">
+                      Ürün eklemek için{" "}
+                      <Link to="/giris?return=/?add=1">admin girişi</Link> yap.
+                    </p>
                   ) : null}
                 </div>
               ) : null}
@@ -140,15 +154,14 @@ export default function ProductsPage() {
                         product={product}
                         visibleIndex={index}
                         isAdmin={isAdmin}
-                        onEdit={setEditingProduct}
+                        onEdit={(p) => {
+                          setAddingNew(false);
+                          setEditingProduct(p);
+                        }}
                       />
                     ))}
                   </div>
-                  <Pagination
-                    currentPage={safePage}
-                    totalPages={totalPages}
-                    onPageChange={setPage}
-                  />
+                  <Pagination currentPage={safePage} totalPages={totalPages} onPageChange={setPage} />
                 </>
               ) : null}
             </section>
@@ -161,9 +174,12 @@ export default function ProductsPage() {
       {isAdmin && editingProduct ? (
         <ProductEditModal
           product={editingProduct}
-          isNew={!products.some((p) => Number(p.id) === Number(editingProduct.id))}
-          onClose={() => setEditingProduct(null)}
-          onSaved={loadProducts}
+          isNew={addingNew}
+          onClose={closeForm}
+          onSaved={() => {
+            loadProducts();
+            closeForm();
+          }}
         />
       ) : null}
     </>
