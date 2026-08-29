@@ -1,5 +1,5 @@
 /**
- * Ürün tıklama sayıları — vitrin en çok tıklananları otomatik gösterir.
+ * Ürün tıklama sayıları — ana sayfada «Çok tıklananlar» bandı için (öne çıkan değil).
  */
 const STORAGE_KEY = "sifa_product_clicks_v1";
 export const CLICKS_CHANGED = "sifa-product-clicks-changed";

@@ -1439,6 +1439,10 @@
   box-shadow: var(--shadow-raised);
 }
 
+.product-edit-modal {
+  width: min(100%, 40rem);
+}
+
 .modal-card__header {
   display: flex;
   align-items: center;
@@ -1569,4 +1573,401 @@
   margin: 0;
   color: var(--text-muted);
   font-size: 0.9375rem;
+}
+
+.product-edit-form__image {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.product-edit-form__image-label {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.product-edit-form__pick-btn {
+  min-height: 2.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.9375rem;
+  cursor: pointer;
+}
+
+.product-edit-form__pick-btn.is-disabled {
+  opacity: 0.65;
+  cursor: wait;
+  pointer-events: none;
+}
+
+.product-edit-form__dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  width: 100%;
+  min-height: 11rem;
+  padding: var(--space-3);
+  border: 2px dashed #8d7b68;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 250, 244, 0.95);
+  cursor: pointer;
+  text-align: center;
+  transition: border-color 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.product-edit-form__dropzone:hover {
+  border-color: var(--accent-brown-dark);
+  background: rgba(141, 123, 104, 0.08);
+}
+
+.product-edit-form__image.is-dragging .product-edit-form__dropzone {
+  border-color: var(--accent-brown-dark);
+  background: rgba(141, 123, 104, 0.16);
+  box-shadow: inset 0 0 0 2px rgba(141, 123, 104, 0.25);
+}
+
+.product-edit-form__dropzone-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 999px;
+  background: rgba(141, 123, 104, 0.15);
+  color: var(--accent-brown-dark);
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.product-edit-form__dropzone-hint {
+  margin: 0;
+  color: var(--text-main);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.product-edit-form__dropzone-sub {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+
+.product-edit-form__dropzone--has-image {
+  min-height: auto;
+  padding: var(--space-2);
+  border-style: solid;
+  cursor: default;
+  background: #efe7dc;
+}
+
+.product-edit-form__dropzone--has-image:hover {
+  background: #efe7dc;
+}
+
+.product-edit-form__preview {
+  overflow: hidden;
+  width: 100%;
+  max-width: 16rem;
+  margin: 0 auto;
+  border-radius: var(--radius-md);
+}
+
+.product-edit-form__preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.product-edit-form__image-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.product-edit-form__image-name {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  word-break: break-all;
+}
+
+.product-edit-form__path-field {
+  margin-top: 0.25rem;
+}
+
+/* —— Mağaza sayfası & sipariş akışı —— */
+.shop-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.shop-page__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.shop-page__results {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.featured-rail {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.featured-rail__head h2 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: var(--font-lg);
+  color: var(--text-main);
+}
+
+.featured-rail__head p {
+  margin: 0.35rem 0 0;
+  color: var(--text-muted);
+  font-size: 0.9375rem;
+}
+
+.shop-page__cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+  padding: var(--space-3);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-xl);
+  background:
+    radial-gradient(circle at bottom left, rgba(37, 211, 102, 0.08), transparent 55%),
+    linear-gradient(145deg, rgba(255, 250, 244, 0.98), rgba(245, 239, 230, 0.92));
+  box-shadow: var(--shadow-soft);
+}
+
+.shop-page__cta h2 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: var(--font-lg);
+}
+
+.shop-page__cta p {
+  margin: 0.35rem 0 0;
+  max-width: 36rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.shop-page__cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0.75rem 1.35rem;
+  border-radius: var(--radius-md);
+  background: #25d366;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35);
+  transition: var(--transition-interactive);
+}
+
+.shop-page__cta-btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.04);
+  color: #fff;
+}
+
+.product-card__image-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.product-card__image-link:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.product-card__unit {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+}
+
+.product-card__detail-link {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--accent-brown-dark);
+  text-decoration: none;
+}
+
+.product-card__detail-link:hover {
+  text-decoration: underline;
+}
+
+.product-card__ribbon--right {
+  left: auto;
+  right: 0.75rem;
+}
+
+.product-contact__links {
+  flex-direction: column;
+}
+
+.product-contact--compact .product-contact__links {
+  flex-direction: column;
+}
+
+.product-contact__btn--primary {
+  width: 100%;
+  min-height: 2.5rem;
+  font-size: 0.875rem;
+}
+
+.product-contact--compact .product-contact__btn--instagram {
+  width: 100%;
+}
+
+.product-detail {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.product-detail__header {
+  margin-bottom: 0;
+}
+
+.product-detail__layout {
+  align-items: start;
+}
+
+.product-detail__side {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  position: sticky;
+  top: calc(var(--space-3) + 4rem);
+}
+
+.product-detail__info {
+  padding: var(--space-3);
+}
+
+.product-detail__body {
+  margin: var(--space-2) 0 0;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+.product-order-panel {
+  padding: var(--space-3);
+  border: 1px solid rgba(141, 123, 104, 0.35);
+  border-radius: var(--radius-xl);
+  background:
+    radial-gradient(circle at top right, rgba(37, 211, 102, 0.1), transparent 50%),
+    rgba(255, 250, 244, 0.98);
+  box-shadow: var(--shadow-soft);
+}
+
+.product-order-panel__eyebrow {
+  margin: 0;
+  color: var(--accent-brown);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.product-order-panel__title {
+  margin: 0.35rem 0 0.75rem;
+  font-family: var(--font-serif);
+  font-size: var(--font-lg);
+  line-height: 1.25;
+}
+
+.product-order-panel__text {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.6;
+  font-size: 0.9375rem;
+}
+
+.product-order-panel__list {
+  margin: var(--space-2) 0 0;
+  padding-left: 1.15rem;
+  color: var(--text-main);
+  font-size: 0.9375rem;
+  line-height: 1.55;
+}
+
+.product-order-panel__list li + li {
+  margin-top: 0.35rem;
+}
+
+.product-order-panel__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-top: var(--space-3);
+}
+
+.product-order-panel__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  text-decoration: none;
+  transition: var(--transition-interactive);
+}
+
+.product-order-panel__cta:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-soft);
+}
+
+.product-order-panel__cta--whatsapp {
+  background: #25d366;
+  color: #fff;
+}
+
+.product-order-panel__cta--instagram {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+  color: #fff;
+}
+
+.product-order-panel__handle {
+  margin: var(--space-2) 0 0;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.whatsapp-float {
+  gap: 0.45rem;
+  padding: 0 1.1rem;
+}
+
+.whatsapp-float__label {
+  font-size: 0.875rem;
 }

@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
-import { plantImageUrl } from "../../lib/assetUrl.js";
+import { productImageUrl } from "../../lib/assetUrl.js";
 import { recordProductClick } from "../../lib/product-clicks.js";
 import { ProductContactLinks } from "./ProductContactLinks.jsx";
 
 export function ProductCard({ product, visibleIndex = 0, isAdmin = false, onEdit, inVitrin = false }) {
   const detailHref = `/urun/${product.id}`;
-
   const trackClick = () => recordProductClick(product.id);
 
   return (
@@ -19,7 +18,7 @@ export function ProductCard({ product, visibleIndex = 0, isAdmin = false, onEdit
         >
           <img
             className="product-card__image"
-            src={plantImageUrl(product.resimUrl)}
+            src={productImageUrl(product.resimUrl)}
             alt={`${product.ad} ürün görseli`}
             width="640"
             height="480"
@@ -27,34 +26,35 @@ export function ProductCard({ product, visibleIndex = 0, isAdmin = false, onEdit
             decoding="async"
           />
         </Link>
-        {inVitrin ? <span className="product-card__ribbon">Vitrin · Popüler</span> : null}
-        {!product.stokta ? <span className="product-card__ribbon product-card__ribbon--muted">Tükendi</span> : null}
+        {product.oneCikan ? (
+          <span className="product-card__ribbon">Öne Çıkan</span>
+        ) : inVitrin ? (
+          <span className="product-card__ribbon">Popüler</span>
+        ) : null}
+        {!product.stokta ? (
+          <span className="product-card__ribbon product-card__ribbon--muted product-card__ribbon--right">Tükendi</span>
+        ) : null}
       </div>
 
       <div className="product-card__content">
         <span className="product-card__category">{product.kategori}</span>
         <h4 className="product-card__title">
-          <Link to={detailHref} onClick={trackClick}>{product.ad}</Link>
+          <Link to={detailHref} onClick={trackClick}>
+            {product.ad}
+          </Link>
         </h4>
+        {product.birim ? <p className="product-card__unit">{product.birim}</p> : null}
         <p className="product-card__desc">{product.kisaAciklama}</p>
-        {product.etiketler?.length ? (
-          <div className="product-card__tags">
-            {product.etiketler.slice(0, 3).map((tag) => (
-              <span key={tag} className="product-card__tag">
-                {tag}
-              </span>
-            ))}
-          </div>
-        ) : null}
+        <Link className="product-card__detail-link" to={detailHref} onClick={trackClick}>
+          Ürünü incele →
+        </Link>
         <div className="product-card__footer">
-          <ProductContactLinks productName={product.ad} compact />
-          <div className="product-card__actions">
-            {isAdmin ? (
-              <button className="product-card__edit" type="button" onClick={() => onEdit?.(product)}>
-                Düzenle
-              </button>
-            ) : null}
-          </div>
+          <ProductContactLinks productName={product.ad} birim={product.birim} compact />
+          {isAdmin ? (
+            <button className="product-card__edit" type="button" onClick={() => onEdit?.(product)}>
+              Düzenle
+            </button>
+          ) : null}
         </div>
       </div>
     </article>

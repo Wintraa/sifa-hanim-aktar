@@ -68,13 +68,13 @@ export function WhatsAppFloatButton() {
   return (
     <a
       className="whatsapp-float"
-      href={whatsappUrl()}
+      href={whatsappUrl(SHOP.whatsappMessages.order)}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="WhatsApp ile yazın"
-      title="WhatsApp ile yazın"
+      aria-label="WhatsApp ile sipariş ver"
+      title="WhatsApp ile sipariş ver"
     >
-      <span aria-hidden="true">WhatsApp</span>
+      <span className="whatsapp-float__label">WhatsApp Sipariş</span>
     </a>
   );
 }

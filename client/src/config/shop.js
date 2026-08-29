@@ -18,7 +18,7 @@ export const SHOP = {
   },
   whatsappMessages: {
     general: "Merhaba, Şifa Hanım Aktar sitesinden yazıyorum. Bilgi almak istiyorum.",
-    order: "Merhaba, bir bitki / karışım hakkında sipariş vermek istiyorum.",
+    order: "Merhaba, Şifa Hanım Aktar ürünlerinden sipariş vermek istiyorum. Fiyat bilgisi alabilir miyim?",
     advice: "Merhaba, hangi bitkinin bana uygun olduğu konusunda danışmak istiyorum.",
   },
 };

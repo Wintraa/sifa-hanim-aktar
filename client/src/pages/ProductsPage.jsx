@@ -3,7 +3,7 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import { api } from "../services/api.js";
 import { useAuth } from "../context/AuthContext.jsx";
 import { isAdminUser } from "../lib/auth.js";
-import { createEmptyProduct } from "../lib/products.js";
+import { createEmptyProduct, getFeaturedProducts } from "../lib/products.js";
 import { getTopClickedProducts, isInVitrin } from "../lib/product-clicks.js";
 import { debounce } from "../lib/utils.js";
 import { applyPageSeo } from "../lib/seo.js";
@@ -15,7 +15,9 @@ import { ProductEditModal } from "../components/catalog/ProductEditModal.jsx";
 import { CategoryEditModal } from "../components/catalog/CategoryEditModal.jsx";
 import { Pagination } from "../components/catalog/Pagination.jsx";
 import { WhatsAppFloatButton } from "../components/layout/ShopContact.jsx";
+import { ShopHero, ShopTrustStrip } from "../components/catalog/ShopHero.jsx";
 import { SHOP } from "../config/shop.js";
+import { whatsappUrl } from "../lib/whatsapp.js";
 import { loadBaseCategories, notifyCategoriesChanged } from "../lib/product-categories.js";
 
 const PAGE_SIZE = 9;
@@ -193,8 +195,7 @@ export default function ProductsPage() {
   const filteredProducts = useMemo(() => {
     let list = [...products];
     if (featuredOnly) {
-      const top = getTopClickedProducts(list);
-      list = top.length ? top : [];
+      list = getFeaturedProducts(list);
     } else if (selectedCategory) {
       list = list.filter((p) => p.kategori === selectedCategory);
     }
@@ -203,6 +204,33 @@ export default function ProductsPage() {
     }
     return list;
   }, [products, featuredOnly, selectedCategory, searchQuery]);
+
+  const showFeaturedRail =
+    !loading &&
+    !error &&
+    products.length > 0 &&
+    !searchQuery &&
+    !selectedCategory &&
+    !featuredOnly;
+
+  const featuredProducts = useMemo(() => {
+    if (!showFeaturedRail) return [];
+    const manual = getFeaturedProducts(products);
+    if (manual.length) return manual.slice(0, 3);
+    return getTopClickedProducts(products).slice(0, 3);
+  }, [showFeaturedRail, products]);
+
+  const featuredRailUsesClicks =
+    showFeaturedRail && getFeaturedProducts(products).length === 0 && featuredProducts.length > 0;
+
+  const resultsLabel = useMemo(() => {
+    if (loading || error) return "";
+    const n = filteredProducts.length;
+    if (searchQuery) return `"${searchParams.get("q")}" için ${n} sonuç`;
+    if (featuredOnly) return `Öne çıkan · ${n} ürün`;
+    if (selectedCategory) return `${selectedCategory} · ${n} ürün`;
+    return `${n} ürün listeleniyor`;
+  }, [loading, error, filteredProducts.length, searchQuery, featuredOnly, selectedCategory, searchParams]);
 
   const totalPages = Math.max(1, Math.ceil(filteredProducts.length / PAGE_SIZE));
   const safePage = Math.min(page, totalPages);
@@ -247,12 +275,23 @@ export default function ProductsPage() {
           />
 
           <main className="content" id="main-content">
-            <section className="admin-panel" aria-labelledby="productsPanelTitle">
-              <div className="admin-panel__head">
-                <div>
-                  <p className="section-label">Şifa Hanım Aktar</p>
-                  <h1 id="productsPanelTitle">Ürünler</h1>
+            <section className="admin-panel shop-page" aria-labelledby="productsPanelTitle">
+              {!loading && !error && products.length > 0 ? (
+                <>
+                  <ShopHero productCount={products.length} />
+                  <ShopTrustStrip />
+                </>
+              ) : (
+                <div className="admin-panel__head">
+                  <div>
+                    <p className="section-label">Şifa Hanım Aktar</p>
+                    <h1 id="productsPanelTitle">Ürünler</h1>
+                  </div>
                 </div>
+              )}
+
+              <div className="shop-page__toolbar">
+                {resultsLabel ? <p className="shop-page__results">{resultsLabel}</p> : null}
                 {isAdmin ? (
                   <button className="add-product-btn" type="button" onClick={openAddForm}>
                     + Ürün Ekle
@@ -290,14 +329,16 @@ export default function ProductsPage() {
                     {searchQuery
                       ? `"${searchParams.get("q")}" için sonuç yok`
                       : featuredOnly
-                        ? "Vitrin henüz boş"
+                        ? "Henüz öne çıkan ürün yok"
                         : "Bu kategoride ürün yok"}
                   </h4>
                   <p>
                     {searchQuery
                       ? "Farklı bir kelime dene veya aramayı temizle."
                       : featuredOnly
-                        ? "En çok tıklanan ürünler burada otomatik görünür. Önce birkaç ürüne tıklanması gerekir."
+                        ? isAdmin
+                          ? "Ürün düzenleme ekranında «Öne çıkan» kutusunu işaretleyip kaydedin."
+                          : "Yakında öne çıkan ürünler eklenecek."
                         : null}
                   </p>
                   <button
@@ -312,6 +353,36 @@ export default function ProductsPage() {
                 </div>
               ) : null}
 
+              {!loading && !error && featuredProducts.length > 0 ? (
+                <section className="featured-rail" aria-labelledby="featuredRailTitle">
+                  <div className="featured-rail__head">
+                    <h2 id="featuredRailTitle">
+                      {featuredRailUsesClicks ? "Çok tıklananlar" : "Öne çıkanlar"}
+                    </h2>
+                    <p>
+                      {featuredRailUsesClicks
+                        ? "En çok ilgi gören ürünler — hızlı sipariş için tıklayın."
+                        : "Dükkanın seçtiği ürünler — hızlı sipariş için tıklayın."}
+                    </p>
+                  </div>
+                  <div className="featured-rail__grid">
+                    {featuredProducts.map((product, index) => (
+                      <ProductCard
+                        key={product.id}
+                        product={product}
+                        visibleIndex={index}
+                        isAdmin={isAdmin}
+                        inVitrin
+                        onEdit={(p) => {
+                          setAddingNew(false);
+                          setEditingProduct(p);
+                        }}
+                      />
+                    ))}
+                  </div>
+                </section>
+              ) : null}
+
               {!loading && !error && visible.length > 0 ? (
                 <>
                   <div className="plants-grid products-grid" aria-live="polite">
@@ -321,13 +392,30 @@ export default function ProductsPage() {
                         product={product}
                         visibleIndex={index}
                         isAdmin={isAdmin}
-                        inVitrin={isInVitrin(product.id, products)}
+                        inVitrin={Boolean(product.oneCikan) || isInVitrin(product.id, products)}
                         onEdit={(p) => {
                           setAddingNew(false);
                           setEditingProduct(p);
                         }}
                       />
                     ))}
+                  </div>
+                  <div className="shop-page__cta">
+                    <div>
+                      <h2>Sipariş için bir mesaj yeter</h2>
+                      <p>
+                        Fiyat, stok ve teslimat bilgisi için WhatsApp üzerinden yazın — genelde birkaç
+                        dakika içinde dönüş yapılır.
+                      </p>
+                    </div>
+                    <a
+                      className="shop-page__cta-btn"
+                      href={whatsappUrl(SHOP.whatsappMessages.order)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      WhatsApp ile Sipariş Ver
+                    </a>
                   </div>
                   <Pagination currentPage={safePage} totalPages={totalPages} onPageChange={setPage} />
                 </>

@@ -62,6 +62,11 @@ export function purgeLegacyDemoProducts() {
   localStorage.setItem(PURGE_FLAG, "1");
 }
 
+/** Admin panelinde "Öne çıkan" işaretli ürünler. */
+export function getFeaturedProducts(products) {
+  return products.filter((p) => Boolean(p.oneCikan));
+}
+
 export function mergeProducts(baseList) {
   const overrides = readProductOverrides();
   const deleted = new Set(readDeletedProductIds());

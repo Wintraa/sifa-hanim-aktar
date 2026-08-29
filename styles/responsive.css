@@ -84,6 +84,23 @@
   .shop-hero {
     grid-template-columns: 1fr;
   }
+
+  .product-detail__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .product-detail__side {
+    position: static;
+  }
+
+  .shop-page__cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .shop-page__cta-btn {
+    width: 100%;
+  }
 }
 
 /* Küçük tablet ve telefon: içerik tek sütun olur */

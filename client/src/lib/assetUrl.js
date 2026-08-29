@@ -9,7 +9,13 @@ export function assetUrl(path) {
   return `/${value}`;
 }
 
-/** Kart/detay görselleri — dosyalar build öncesi sıkıştırılıyor, direkt URL kullan. */
+/** Kart/detay görselleri — boşsa marka placeholder. */
+export function productImageUrl(path) {
+  const url = assetUrl(path);
+  return url || "/assets/product-placeholder.svg";
+}
+
+/** @deprecated Bitki görselleri için; ürünlerde productImageUrl kullanın. */
 export function plantImageUrl(path) {
-  return assetUrl(path);
+  return assetUrl(path) || "/assets/product-placeholder.svg";
 }
