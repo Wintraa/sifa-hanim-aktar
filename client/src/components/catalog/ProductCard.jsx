@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { plantImageUrl } from "../../lib/assetUrl.js";
 import { whatsappUrl } from "../../lib/whatsapp.js";
+import { recordProductClick } from "../../lib/product-clicks.js";
 
 function formatPrice(value) {
   const n = Number(value);
@@ -12,14 +13,21 @@ function formatPrice(value) {
   }).format(n);
 }
 
-export function ProductCard({ product, visibleIndex = 0, isAdmin = false, onEdit }) {
+export function ProductCard({ product, visibleIndex = 0, isAdmin = false, onEdit, inVitrin = false }) {
   const detailHref = `/urun/${product.id}`;
   const orderUrl = whatsappUrl(`Merhaba, ${product.ad} (${product.birim}) için sipariş vermek istiyorum.`);
 
+  const trackClick = () => recordProductClick(product.id);
+
   return (
-    <article className={`product-card${product.oneCikan ? " product-card--featured" : ""}`}>
+    <article className={`product-card${inVitrin ? " product-card--featured" : ""}`}>
       <div className="product-card__media">
-        <Link className="product-card__image-link" to={detailHref} aria-label={`${product.ad} detayı`}>
+        <Link
+          className="product-card__image-link"
+          to={detailHref}
+          aria-label={`${product.ad} detayı`}
+          onClick={trackClick}
+        >
           <img
             className="product-card__image"
             src={plantImageUrl(product.resimUrl)}
@@ -30,14 +38,14 @@ export function ProductCard({ product, visibleIndex = 0, isAdmin = false, onEdit
             decoding="async"
           />
         </Link>
-        {product.oneCikan ? <span className="product-card__ribbon">Öne çıkan</span> : null}
+        {inVitrin ? <span className="product-card__ribbon">Vitrin · Popüler</span> : null}
         {!product.stokta ? <span className="product-card__ribbon product-card__ribbon--muted">Tükendi</span> : null}
       </div>
 
       <div className="product-card__content">
         <span className="product-card__category">{product.kategori}</span>
         <h4 className="product-card__title">
-          <Link to={detailHref}>{product.ad}</Link>
+          <Link to={detailHref} onClick={trackClick}>{product.ad}</Link>
         </h4>
         <p className="product-card__desc">{product.kisaAciklama}</p>
         {product.etiketler?.length ? (

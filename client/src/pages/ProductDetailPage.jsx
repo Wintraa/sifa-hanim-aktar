@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { api } from "../services/api.js";
 import { plantImageUrl } from "../lib/assetUrl.js";
 import { applyPageSeo } from "../lib/seo.js";
+import { recordProductClick } from "../lib/product-clicks.js";
 import { whatsappUrl } from "../lib/whatsapp.js";
 import { SHOP } from "../config/shop.js";
 
@@ -27,7 +28,10 @@ export default function ProductDetailPage() {
       setError("");
       try {
         const data = await api.getProductWithFallback(id);
-        if (!cancelled) setProduct(data);
+        if (!cancelled) {
+          setProduct(data);
+          recordProductClick(data.id);
+        }
       } catch (err) {
         if (!cancelled) setError(err.message || "Ürün bulunamadı.");
       } finally {

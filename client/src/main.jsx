@@ -14,10 +14,22 @@ import "../../styles/responsive.css";
 
 applyDensityPreference();
 
-createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </StrictMode>
-);
+const rootEl = document.getElementById("root");
+if (!rootEl) {
+  throw new Error("Kök öğe (#root) bulunamadı.");
+}
+
+try {
+  createRoot(rootEl).render(
+    <StrictMode>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </StrictMode>
+  );
+} catch (err) {
+  console.error(err);
+  rootEl.innerHTML =
+    '<div style="min-height:100vh;display:flex;align-items:center;justify-content:center;padding:1.5rem;text-align:center;font-family:system-ui,sans-serif;background:#fdfbf7;color:#4a3e3d">' +
+    "<div><strong>Şifa Hanım Aktar</strong><p style='margin-top:0.75rem;opacity:0.85'>Sayfa açılamadı. Ctrl+Shift+R ile yenileyin.</p></div></div>";
+}

@@ -4,6 +4,7 @@ import { api } from "../services/api.js";
 import { useAuth } from "../context/AuthContext.jsx";
 import { isAdminUser } from "../lib/auth.js";
 import { createEmptyProduct } from "../lib/products.js";
+import { getTopClickedProducts, isInVitrin } from "../lib/product-clicks.js";
 import { applyPageSeo } from "../lib/seo.js";
 import { showToast } from "../lib/toast.js";
 import { Sidebar } from "../components/layout/Sidebar.jsx";
@@ -131,8 +132,12 @@ export default function ProductsPage() {
 
   const filteredProducts = useMemo(() => {
     let list = [...products];
-    if (featuredOnly) list = list.filter((p) => p.oneCikan);
-    else if (selectedCategory) list = list.filter((p) => p.kategori === selectedCategory);
+    if (featuredOnly) {
+      const top = getTopClickedProducts(list);
+      list = top.length ? top : [];
+    } else if (selectedCategory) {
+      list = list.filter((p) => p.kategori === selectedCategory);
+    }
     return list;
   }, [products, featuredOnly, selectedCategory]);
 
@@ -215,7 +220,12 @@ export default function ProductsPage() {
 
               {!loading && !error && products.length > 0 && filteredProducts.length === 0 ? (
                 <div className="empty-state admin-empty">
-                  <h4>Bu kategoride ürün yok</h4>
+                  <h4>{featuredOnly ? "Vitrin henüz boş" : "Bu kategoride ürün yok"}</h4>
+                  <p>
+                    {featuredOnly
+                      ? "En çok tıklanan ürünler burada otomatik görünür. Önce birkaç ürüne tıklanması gerekir."
+                      : null}
+                  </p>
                   <button className="back-button empty-state__cta" type="button" onClick={() => handleFilter("Tumu")}>
                     Tüm ürünlere dön
                   </button>
@@ -231,6 +241,7 @@ export default function ProductsPage() {
                         product={product}
                         visibleIndex={index}
                         isAdmin={isAdmin}
+                        inVitrin={isInVitrin(product.id, products)}
                         onEdit={(p) => {
                           setAddingNew(false);
                           setEditingProduct(p);
