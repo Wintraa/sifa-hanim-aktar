@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { getCareNote } from "../../lib/care-notes.js";
-import { assetUrl } from "../../lib/assetUrl.js";
+import { plantImageUrl } from "../../lib/assetUrl.js";
 import { useFavorites } from "../../context/FavoritesContext.jsx";
 
 const truncateText = (text, length) => {
@@ -64,7 +64,7 @@ export function PlantCard({ plant, visibleIndex = 0, showCare = false }) {
         >
           <img
             className="plant-card__image"
-            src={assetUrl(plant.resimUrl)}
+            src={plantImageUrl(plant.resimUrl, { width: 480, quality: 72 })}
             alt={`${plant.ad} görseli`}
             width="640"
             height="480"

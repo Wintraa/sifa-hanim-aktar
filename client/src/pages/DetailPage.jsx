@@ -5,7 +5,7 @@ import { useFavorites } from "../context/FavoritesContext.jsx";
 import { addRecentPlant } from "../lib/recent-plants.js";
 import { getCareNote, saveCareNote, removeCareNote } from "../lib/care-notes.js";
 import { showToast } from "../lib/toast.js";
-import { assetUrl } from "../lib/assetUrl.js";
+import { plantImageUrl } from "../lib/assetUrl.js";
 import { applyPlantSeo } from "../lib/seo.js";
 import { PlantTags } from "../components/catalog/PlantTags.jsx";
 import { WhatsAppFloatButton } from "../components/layout/ShopContact.jsx";
@@ -242,7 +242,7 @@ export default function DetailPage() {
           <>
             <section className="detail-hero" aria-labelledby="detailName">
               <img
-                src={assetUrl(plant.resimUrl)}
+                src={plantImageUrl(plant.resimUrl, { width: 840, quality: 78 })}
                 alt={`${plant.ad} görseli`}
                 className="detail-hero__image"
                 width="840"
@@ -354,7 +354,7 @@ export default function DetailPage() {
                   {similar.map((item) => (
                     <Link key={item.id} className="similar-card" to={`/bitki/${item.id}`}>
                       <img
-                        src={assetUrl(item.resimUrl)}
+                        src={plantImageUrl(item.resimUrl, { width: 160, quality: 72 })}
                         alt={`${item.ad} görseli`}
                         width="160"
                         height="160"

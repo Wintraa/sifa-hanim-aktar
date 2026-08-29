@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { assetUrl } from "../../lib/assetUrl.js";
+import { plantImageUrl } from "../../lib/assetUrl.js";
 
 export function RecentRail({ plants }) {
   if (!plants?.length) return null;
@@ -19,7 +19,7 @@ export function RecentRail({ plants }) {
             title={plant.ad}
           >
             <img
-              src={assetUrl(plant.resimUrl)}
+              src={plantImageUrl(plant.resimUrl, { width: 96, quality: 70 })}
               alt={`${plant.ad} görseli`}
               width="48"
               height="48"
