@@ -3,6 +3,24 @@ import { saveProductOverride, deleteProductOverride } from "../../lib/products.j
 import { getCategoryNames, CATEGORIES_CHANGED } from "../../lib/product-categories.js";
 import { showToast } from "../../lib/toast.js";
 
+/** Aktar vitrininde sık kullanılan birimler */
+const BIRIM_SECENEKLERI = [
+  "adet",
+  "50 g",
+  "100 g",
+  "150 g",
+  "200 g",
+  "250 g",
+  "500 g",
+  "1 kg",
+  "10 ml",
+  "20 ml",
+  "50 ml",
+  "100 ml",
+  "set",
+  "paket",
+];
+
 export function ProductEditModal({ product, isNew = false, onClose, onSaved }) {
   const [form, setForm] = useState({ ...product, etiketlerText: "" });
   const [categories, setCategories] = useState(() => getCategoryNames());
@@ -23,6 +41,12 @@ export function ProductEditModal({ product, isNew = false, onClose, onSaved }) {
   }, []);
 
   if (!product) return null;
+
+  const birimSecenekleri = BIRIM_SECENEKLERI.includes(form.birim)
+    ? BIRIM_SECENEKLERI
+    : form.birim
+      ? [form.birim, ...BIRIM_SECENEKLERI]
+      : BIRIM_SECENEKLERI;
 
   const setField = (key, value) => setForm((prev) => ({ ...prev, [key]: value }));
 
@@ -121,12 +145,17 @@ export function ProductEditModal({ product, isNew = false, onClose, onSaved }) {
             </label>
             <label className="profile-field">
               <span>Birim *</span>
-              <input
+              <select
                 required
-                placeholder="100 g, adet, 10 ml…"
-                value={form.birim || ""}
+                value={form.birim || "adet"}
                 onChange={(e) => setField("birim", e.target.value)}
-              />
+              >
+                {birimSecenekleri.map((birim) => (
+                  <option key={birim} value={birim}>
+                    {birim}
+                  </option>
+                ))}
+              </select>
             </label>
           </div>
 
