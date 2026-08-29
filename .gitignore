@@ -39,3 +39,16 @@ exports/
 # SQLite yan dosyalari (asıl .db genelde commit edilir)
 *.db-wal
 *.db-shm
+
+.netlify
+
+.vercel
+
+# Agent skill dosyalari
+.agents/
+skills-lock.json
+
+# Build sirasinda uretilir
+client/public/assets/
+client/public/data/
+client/dist/

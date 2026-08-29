@@ -378,3 +378,32 @@ body[data-density="compact"] .plant-card__description {
   -webkit-line-clamp: 3;
   line-clamp: 3;
 }
+
+/* Detay sayfası konu etiketleri */
+.plant-tags {
+  margin-top: var(--space-3);
+  padding: clamp(1.1rem, 2.2vw, 1.6rem);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  background: var(--surface-glass);
+}
+
+.plant-tags__list {
+  margin-top: var(--space-1);
+}
+
+.plant-tag-chip {
+  text-decoration: none;
+  color: inherit;
+}
+
+.plant-tag-chip:hover {
+  border-color: var(--accent-brown-dark);
+  background: var(--surface-warm);
+}
+
+.plant-tags__hint {
+  margin: var(--space-2) 0 0;
+  font-size: var(--font-sm);
+  color: var(--text-muted);
+}

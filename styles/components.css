@@ -374,7 +374,187 @@
   font-weight: 600;
 }
 
-/* Bitki kartları */
+.site-footer__grid {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.site-footer__link-row {
+  margin-top: var(--space-2);
+}
+
+.site-footer__link-row a {
+  color: var(--accent-brown-dark);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Dükkan iletişim kartları */
+.shop-contact {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-2);
+}
+
+.shop-contact--compact {
+  grid-template-columns: 1fr 1fr;
+}
+
+.shop-contact__card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-soft);
+  background: var(--surface-glass);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 160ms ease, transform 160ms ease;
+}
+
+.shop-contact__card:hover {
+  border-color: var(--accent-brown);
+  transform: translateY(-1px);
+}
+
+.shop-contact__card--whatsapp {
+  border-color: rgba(37, 211, 102, 0.45);
+  background: rgba(37, 211, 102, 0.08);
+}
+
+.shop-contact__card--whatsapp:hover {
+  border-color: #25d366;
+}
+
+.shop-contact__label {
+  font-size: var(--font-xs);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-brown);
+}
+
+.shop-contact__value {
+  font-size: var(--font-sm);
+  color: var(--text-main);
+}
+
+.shop-contact__hint {
+  font-size: var(--font-xs);
+  color: var(--text-muted);
+}
+
+.shop-contact__hours {
+  grid-column: 1 / -1;
+  padding: 0.75rem 0;
+  font-size: var(--font-sm);
+  color: var(--text-muted);
+}
+
+.shop-contact__hours p {
+  margin: 0.15rem 0 0;
+}
+
+.whatsapp-float {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 120;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 3.5rem;
+  min-height: 3.5rem;
+  padding: 0 1rem;
+  border-radius: 999px;
+  background: #25d366;
+  color: #fff;
+  font-weight: 700;
+  font-size: var(--font-sm);
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+}
+
+.whatsapp-float:hover {
+  filter: brightness(1.05);
+}
+
+.contact-page__intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.contact-page__cta {
+  white-space: nowrap;
+  background: #25d366;
+  border-color: #1da851;
+  color: #fff;
+}
+
+.contact-quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.contact-quick-links a {
+  padding: 0.5rem 0.85rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-soft);
+  text-decoration: none;
+  color: var(--text-main);
+  font-size: var(--font-sm);
+}
+
+.contact-quick-links a:hover {
+  border-color: var(--accent-brown);
+}
+
+.auth-card__lead {
+  margin: 0 0 var(--space-2);
+  font-size: var(--font-sm);
+  color: var(--text-muted);
+}
+
+.auth-card__footer {
+  margin: var(--space-2) 0 0;
+  font-size: var(--font-sm);
+}
+
+.auth-card__footer a {
+  color: var(--accent-brown-dark);
+  font-weight: 600;
+}
+
+.dropdown-link--accent {
+  color: var(--text-on-accent);
+  background: var(--accent-brown-dark);
+}
+
+.sidebar__contact {
+  margin-top: var(--space-2);
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--border-soft);
+}
+
+.sidebar__contact-link {
+  width: 100%;
+  text-align: left;
+  text-decoration: none;
+}
+
+.detail-action-button--whatsapp {
+  border-color: rgba(37, 211, 102, 0.5);
+  color: #1a7a3a;
+}
+
 .plant-card {
   display: flex;
   flex-direction: column;

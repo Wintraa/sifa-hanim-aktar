@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Şifa Hanım Aktar — Proje Sunumu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:wght@500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream: #fdfbf7; --cream-2: #f5efe6; --brown: #8d7b68;
+      --brown-dark: #4a3e3d; --sage: #a8a196; --clay: #c8b6a6;
+      --accent: #6b5b4f; --white: #ffffff;
+      --shadow: 0 12px 40px rgba(74, 62, 61, 0.12);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: "Source Sans 3", system-ui, sans-serif; color: var(--brown-dark); background: #e8e0d6; line-height: 1.55; }
+    .slide {
+      width: 297mm; min-height: 210mm; margin: 0 auto 1.5rem;
+      padding: 14mm 18mm; background: linear-gradient(145deg, var(--cream) 0%, var(--cream-2) 100%);
+      box-shadow: var(--shadow); page-break-after: always; position: relative; overflow: hidden;
+    }
+    .slide::before {
+      content: ""; position: absolute; top: 0; right: 0; width: 38%; height: 100%;
+      background: radial-gradient(circle at 80% 20%, rgba(141,123,104,0.12), transparent 55%); pointer-events: none;
+    }
+    .slide--cover {
+      display: flex; flex-direction: column; justify-content: center;
+      background: linear-gradient(135deg, var(--brown-dark) 0%, var(--brown) 55%, var(--sage) 100%); color: var(--cream);
+    }
+    .slide--cover::before { display: none; }
+    .slide--cover h1 { font-family: "Source Serif 4", Georgia, serif; font-size: 3.2rem; line-height: 1.15; max-width: 20ch; margin-bottom: 1rem; }
+    .slide--cover .subtitle { font-size: 1.25rem; opacity: 0.92; max-width: 38ch; margin-bottom: 2rem; line-height: 1.5; }
+    .slide--cover .meta { font-size: 0.92rem; opacity: 0.82; border-top: 1px solid rgba(253,251,247,0.25); padding-top: 1rem; max-width: 32rem; line-height: 1.65; }
+    .badge {
+      display: inline-block; padding: 0.35rem 0.85rem; border-radius: 999px;
+      background: rgba(253,251,247,0.15); border: 1px solid rgba(253,251,247,0.25);
+      font-size: 0.85rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 1.5rem;
+    }
+    h2 { font-family: "Source Serif 4", Georgia, serif; font-size: 1.95rem; color: var(--brown-dark); margin-bottom: 0.35rem; position: relative; z-index: 1; }
+    .slide-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--brown); margin-bottom: 0.5rem; }
+    .lead { font-size: 1.02rem; color: var(--accent); margin-bottom: 1.1rem; max-width: 58ch; position: relative; z-index: 1; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; position: relative; z-index: 1; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; position: relative; z-index: 1; }
+    .card {
+      background: var(--white); border: 1px solid rgba(141,123,104,0.18); border-radius: 14px;
+      padding: 0.9rem 1rem; box-shadow: 0 4px 18px rgba(74,62,61,0.06);
+    }
+    .card h3 { font-size: 0.92rem; color: var(--brown); margin-bottom: 0.35rem; font-weight: 700; }
+    .card p, .card li { font-size: 0.84rem; color: var(--brown-dark); }
+    .card ul { padding-left: 1rem; margin: 0; }
+    .card li { margin-bottom: 0.3rem; }
+    .why { display: block; margin-top: 0.35rem; font-size: 0.78rem; color: var(--sage); font-style: italic; line-height: 1.45; }
+    .stat { text-align: center; padding: 1rem 0.6rem; }
+    .stat .num { font-family: "Source Serif 4", Georgia, serif; font-size: 2.2rem; font-weight: 700; color: var(--brown); line-height: 1; }
+    .stat .lbl { font-size: 0.78rem; margin-top: 0.3rem; color: var(--accent); }
+    .timeline { position: relative; z-index: 1; display: grid; gap: 0.55rem; }
+    .timeline-item {
+      display: grid; grid-template-columns: 6.5rem 1fr; gap: 0.75rem; align-items: start;
+      background: var(--white); border-radius: 12px; padding: 0.65rem 0.9rem; border: 1px solid rgba(141,123,104,0.14);
+    }
+    .timeline-item .phase { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--brown); }
+    .timeline-item strong { display: block; font-size: 0.88rem; margin-bottom: 0.12rem; }
+    .timeline-item .what { font-size: 0.8rem; color: var(--brown-dark); display: block; margin-bottom: 0.15rem; }
+    .timeline-item .why { font-size: 0.76rem; color: var(--sage); font-style: italic; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.82rem; position: relative; z-index: 1; }
+    th, td { text-align: left; padding: 0.5rem 0.6rem; border-bottom: 1px solid rgba(141,123,104,0.16); vertical-align: top; }
+    th { width: 28%; color: var(--brown); font-weight: 700; background: rgba(141,123,104,0.06); }
+    .url { font-family: ui-monospace, Consolas, monospace; font-size: 0.76rem; word-break: break-all; color: var(--brown); }
+    .footer-note {
+      position: absolute; bottom: 10mm; left: 18mm; right: 18mm; font-size: 0.72rem; color: var(--sage);
+      border-top: 1px solid rgba(141,123,104,0.15); padding-top: 0.5rem; display: flex; justify-content: space-between;
+    }
+    .highlight {
+      background: rgba(141,123,104,0.12); border-left: 4px solid var(--brown);
+      padding: 0.75rem 0.95rem; border-radius: 0 10px 10px 0; font-size: 0.86rem; margin: 0.85rem 0; position: relative; z-index: 1;
+    }
+    .feature-list { position: relative; z-index: 1; display: grid; gap: 0.45rem; }
+    .feature-item {
+      background: var(--white); border-radius: 10px; padding: 0.55rem 0.85rem;
+      border: 1px solid rgba(141,123,104,0.14); font-size: 0.82rem;
+    }
+    .feature-item strong { color: var(--brown); }
+    @media print {
+      body { background: white; }
+      .slide { margin: 0; box-shadow: none; page-break-after: always; }
+      @page { size: A4 landscape; margin: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- 1 KAPAK -->
+<section class="slide slide--cover">
+  <span class="badge">Proje Özeti · Ağustos 2026</span>
+  <h1>Şifa Hanım Aktar</h1>
+  <p class="subtitle">Aktar dükkanı için hazırlanan dijital bitki kataloğu. Müşterinin “bu ne işe yarar, nasıl kullanılır?” sorusuna gece gündüz cevap verebilen bir rehber.</p>
+  <p class="meta">
+    219 bitki kartı · pfaf.org kaynaklı içerik · Mobil uyumlu<br />
+    sifahanimaktar.netlify.app · sifahanimaktar.vercel.app
+  </p>
+</section>
+
+<!-- 2 NEDEN BU PROJE -->
+<section class="slide">
+  <p class="slide-label">01 · Başlangıç</p>
+  <h2>Neden böyle bir siteye ihtiyaç vardı?</h2>
+  <p class="lead">Aktarda en çok tekrar eden sorular belliydi: “Bu neye iyi gelir?”, “Nasıl demlenir?”, “Hamilelikte içilir mi?” Dükkan kapalıyken de bu sorular geliyordu ama cevap verecek bir yer yoktu.</p>
+  <div class="grid-2">
+    <div class="card">
+      <h3>Sorun</h3>
+      <p>200’den fazla bitki var; hepsini ezberlemek imkânsız. Instagram’da tek tek anlatmak yetmiyor. Google’da “şifalı bitki rehberi” arayan biri dükkanı bulamıyordu.</p>
+      <span class="why">Çözüm sadece “site yapalım” değil; aranabilir, kategorize, güvenilir bir kaynak olması gerekiyordu.</span>
+    </div>
+    <div class="card">
+      <h3>Hedef</h3>
+      <p>Dükkan vitrini gibi duran ama internetten erişilebilen bir katalog. Okuyan kişi Latin isim görmesin, “demleme / gargara / sürme” gibi pratik bilgi görsün.</p>
+      <span class="why">Hedef kitle: aktara gelen müşteri, evde bitki kullanan biri, WhatsApp’tan link alıp okuyacak tanıdık.</span>
+    </div>
+    <div class="card">
+      <h3>İsim: Şifa Hanım Aktar</h3>
+      <p>Marka adı dükkanla birebir örtüşüyor. Site bir “startup landing page” gibi değil, yıllardır bu işi yapan bir aktarın dijital defteri gibi durmalıydı.</p>
+    </div>
+    <div class="card">
+      <h3>Bugünkü durum</h3>
+      <p>Site canlı. 219 bitki var, her birinde fotoğraf, kullanım metni, uyarı. Google’a kayıt yapıldı, sitemap gönderildi. Telefondan da açılıyor.</p>
+    </div>
+  </div>
+  <div class="footer-note"><span>Şifa Hanım Aktar</span><span>2 / 16</span></div>
+</section>
+
+<!-- 3 YOLCULUK -->
+<section class="slide">
+  <p class="slide-label">02 · Nasıl gelindi buraya</p>
+  <h2>Adım adım ne oldu, neden o yolu seçtik</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="phase">Temmuz</div>
+      <div>
+        <strong>İlk sürüm: düz HTML</strong>
+        <span class="what">index.html + detail.html, 10–12 bitki, sol menü, 3×3 grid.</span>
+        <span class="why">Hızlı prototip için en basit yol buydu. Tasarımı ve akışı görmek istedik; React’e geçmeden önce “nasıl görünmeli” sorusu netleşsin diye.</span>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="phase">Veri</div>
+      <div>
+        <strong>PFAF’tan 219 bitki çekildi</strong>
+        <span class="what">Plants For A Future — ücretsiz, her bitki için kullanım ve uyarı alanları var.</span>
+        <span class="why">Elle 219 bitki yazmak haftalar sürerdi. PFAF seçilmesinin sebebi: kaynak linki gösterilebiliyor, içerik yapısı düzenli, tıbbi bitkiler için uygun.</span>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="phase">React</div>
+      <div>
+        <strong>client/ klasörüne taşındı</strong>
+        <span class="what">Vite + React 19. Favoriler, arama, sayfalama artık sayfa yenilemeden çalışıyor.</span>
+        <span class="why">HTML sürümünde her filtrede sayfa baştan yükleniyordu. Müşteri telefondan 5 bitkiye bakıp geri döndüğünde yerini kaybediyordu — SPA bunu çözdü.</span>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="phase">Metin</div>
+      <div>
+        <strong>219 bitkinin metni baştan yazıldı</strong>
+        <span class="what">“Ne işe yarar / Nasıl kullanılır / Nelere dikkat” formatına geçildi. Botanik tablolar kaldırıldı.</span>
+        <span class="why">PFAF metinleri İngilizce kaynaklı ve teknik. “Lamiaceae” veya “infüzyon” okuyan müşteri kapanıyordu; aktar tezgâhında konuşulan dil farklı.</span>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="phase">Yayın</div>
+      <div>
+        <strong>Netlify + Vercel’e çıkıldı</strong>
+        <span class="what">Ücretsiz hosting, otomatik build. Google Search Console’a kayıt.</span>
+        <span class="why">Sunucu kirası yok, domain almadan hemen yayına alınabiliyor. İki platform: biri kotası dolunca diğeri yedek; mobil operatörde .netlify.app bazen açılmıyordu.</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-note"><span>Şifa Hanım Aktar</span><span>3 / 16</span></div>
+</section>
+
+<!-- 4 VERİ -->
+<section class="slide">
+  <p class="slide-label">03 · Veri</p>
+  <h2>219 bitki — sayılar ve mantık</h2>
+  <div class="grid-3" style="margin-bottom:0.85rem;">
+    <div class="card stat"><div class="num">219</div><div class="lbl">toplam kayıt</div></div>
+    <div class="card stat"><div class="num">166</div><div class="lbl">tıbbi</div></div>
+    <div class="card stat"><div class="num">29</div><div class="lbl">aromatik</div></div>
+    <div class="card stat"><div class="num">24</div><div class="lbl">süs</div></div>
+    <div class="card stat"><div class="num">166</div><div class="lbl">PubMed vaka</div></div>
+    <div class="card stat"><div class="num">222</div><div class="lbl">Google URL</div></div>
+  </div>
+  <div class="grid-2">
+    <div class="card">
+      <h3>Tek dosya: plants.json</h3>
+      <p>Tüm bitkiler <code>data/plants.json</code> içinde. Site bunu okuyor, başka yere bakmıyor.</p>
+      <span class="why">Veritabanı kurmak hosting maliyeti demek. JSON dosyası düzenlenebilir, yedeklenebilir, build sırasında siteye kopyalanıyor — basit ve kırılgan değil.</span>
+    </div>
+    <div class="card">
+      <h3>Kaynak: pfaf.org</h3>
+      <p>Her bitkide PFAF linki ve çekilme tarihi duruyor. LLM ile üretilmiş doğrulanmamış veri siteye hiç girmedi; <code>data/medicinal/</code> klasöründe ayrı tutuldu.</p>
+      <span class="why">Sağlık içeriğinde “uydurma” riski kabul edilemez. Yanlış doz bilgisi ciddi sorun. O yüzden sadece kaynak gösterilebilen veri kullanıldı.</span>
+    </div>
+    <div class="card">
+      <h3>166 örnek vaka</h3>
+      <p>PubMed’den çekilmiş gerçek olay özetleri — “bir kişide ne olmuş” formatında. Her birinde uyarı metni var.</p>
+      <span class="why">Sadece “faydalıdır” demek yetmiyordu. Kısa gerçek hikâye güven veriyor ama “herkese aynı sonuç çıkmaz” diye de uyarıyoruz.</span>
+    </div>
+    <div class="card">
+      <h3>Görseller</h3>
+      <p>Her bitkinin fotoğrafı veya SVG illüstrasyonu var. Eksik kalanlar için Openverse/Wikimedia adayları taranıp elle seçildi.</p>
+      <span class="why">Metin okuyan biri “acaba bu mu?” diye görsele bakıyor. Tezgâhta poşetin üstündeki bitkiyi tanıması lazım.</span>
+    </div>
+  </div>
+  <div class="footer-note"><span>Şifa Hanım Aktar</span><span>4 / 16</span></div>
+</section>
+
+<!-- 5 VERİ HATTI -->
+<section class="slide">
+  <p class="slide-label">04 · Arka planda çalışan işler</p>
+  <h2>50’den fazla Python script — ne işe yarıyor?</h2>
+  <p class="lead">Bitki bilgisi tek tek kopyala-yapıştır yapılmadı. Her adımın sebebi: 219 kayıtta tutarlılık ve tekrarlanabilirlik.</p>
+  <table>
+    <tr>
+      <th>build_site_from_pfaf.py</th>
+      <td>PFAF ham kayıtlarını site formatına çevirir.<span class="why"> Elle formatlamak hata yapar; script her bitkiye aynı alan yapısını verir.</span></td>
+    </tr>
+    <tr>
+      <th>rewrite-sifa-metinleri.py</th>
+      <td>219 metni aktar diline çevirir — “demleme”, “gargara”, “çay” kelimeleri.<span class="why"> Çeviri makinesi yetmez; aktarda anlatılan üslup ayrı bir iş.</span></td>
+    </tr>
+    <tr>
+      <th>fetch_pubmed_cases.py</th>
+      <td>Bitki adına göre PubMed’de olay ara, özet çek.<span class="why"> Vaka metinleri elle bulunamazdı; otomasyon + elle kontrol.</span></td>
+    </tr>
+    <tr>
+      <th>fetch_plant_photos.py</th>
+      <td>Fotoğraf adayı topla, boyut/kalite filtrele.<span class="why"> 219 bitki için tek tek Google Images aramak saatler alır.</span></td>
+    </tr>
+    <tr>
+      <th>friendly_habit_terms.py</th>
+      <td>“Çok yıllık otsu” gibi ifadeleri sadeleştirir.<span class="why"> PFAF botanik terim kullanıyor; müşteri “bu ne demek?” diyor.</span></td>
+    </tr>
+    <tr>
+      <th>validate_medicinal.py</th>
+      <td>Eksik alan, bozuk JSON, tutarsız ID kontrolü.<span class="why"> Bir bitkinin uyarısı boş kalırsa site yayına girmeden yakalanmalı.</span></td>
+    </tr>
+  </table>
+  <div class="footer-note"><span>Şifa Hanım Aktar</span><span>5 / 16</span></div>
+</section>
+
+<!-- 6 İÇERİK -->
+<section class="slide">
+  <p class="slide-label">05 · Yazım tarzı</p>
+  <h2>Metinler neden böyle?</h2>
+  <div class="grid-2">
+    <div class="card">
+      <h3>Eskiden (PFAF ham hali)</h3>
+      <ul>
+        <li>Botanik familya, coğrafya tablosu, sulama/ışık tablosu</li>
+        <li>“Infüzyon”, “antiseptik”, “Lamiaceae”</li>
+        <li>5 paragraf okuyunca hâlâ “ne yapacağım?” belirsiz</li>
+      </ul>
+      <span class="why">Bu format ansiklopedi için iyi; tezgâh önünde 30 saniyede cevap için değil.</span>
+    </div>
+    <div class="card">
+      <h3>Şimdi</h3>
+      <ul>
+        <li><strong>Ne işe yarar?</strong> — mide, uyku, boğaz gibi somut</li>
+        <li><strong>Nasıl kullanılır?</strong> — “1 tatlı kaşığı, 5 dk demle” tarzı</li>
+        <li><strong>Nelere dikkat?</strong> — hamilelik, ilaç etkileşimi, doz</li>
+        <li>Etiketler: #mide #uyku #çay — tıklayınca benzer bitkiler gelir</li>
+      </ul>
+      <span class="why">Etiketler Instagram’daki hashtag gibi düşünüldü: “mide için ne vardı?” diye arayan direkt filtrelesin.</span>
+    </div>
+  </div>
+  <div class="highlight">
+    Küçük örnek: Coğrafya alanı artık “Aktardan alınır; nerede yetiştiği şifa açısından önemli değil” diyor — çünkü müşteri zaten dükkanından alıyor, Avrupa’da mı yetişiyor onu merak etmiyor.
+  </div>
+  <div class="footer-note"><span>Şifa Hanım Aktar</span><span>6 / 16</span></div>
+</section>
+
+<!-- 7 TEKNİK -->
+<section class="slide">
+  <p class="slide-label">06 · Teknik tercihler</p>
+  <h2>Neden React, neden statik, neden backend yok?</h2>
+  <div class="grid-2">
+    <div class="card">
+      <h3>React + Vite</h3>
+      <p>Arama, filtre, favori — hepsi anında. Sayfa yenilenmiyor.</p>
+      <span class="why">Müşteri 20 bitkiye bakıp geri döndüğünde kaldığı sayfa duruyor. URL’de <code>?q=papatya&page=2</code> var; link paylaşınca aynı sonuç açılıyor.</span>
+    </div>
+    <div class="card">
+      <h3>Canlıda backend yok</h3>
+      <p>Netlify/Vercel sadece HTML+JS+JSON sunuyor. Express/SQLite sadece bilgisayarda geliştirme için duruyor.</p>
+      <span class="why">Aylık sunucu parası yok. Bitki verisi zaten değişmiyor her gün — statik dosya yeterli. API olmadığı için deploy sırasında bir bug çıktı: /api isteği index.html dönüyordu, detay sayfası çöküyordu; JSON fallback ile düzeltildi.</span>
+    </div>
+    <div class="card">
+      <h3>3×3 grid, 9’ar sayfa</h3>
+      <p>Masaüstünde tam 3 satır × 3 sütun. Mobilde tek sütun.</p>
+      <span class="why">219 bitkiyi tek sayfada göstermek telefonu kilitler. 9’luk sayfalama Google arama sonuçlarına da benziyor — kullanıcı alışkın.</span>
+    </div>
+    <div class="card">
+      <h3>localStorage</h3>
+      <p>Favoriler, son bakılanlar, profil adı, bakım notu — tarayıcıda kalıyor.</p>
+      <span class="why">Üyelik sistemi kurmak gereksizdi; müşteri “kaydol” demeden kalp ikonuna bassın yeter. Eksi: telefon değişince favoriler gitmez, bilinçli tercih.</span>
+    </div>
+  </div>
+  <div class="footer-note"><span>Şifa Hanım Aktar</span><span>7 / 16</span></div>
+</section>
+
+<!-- 8 ÖZELLİKLER -->
+<section class="slide">
+  <p class="slide-label">07 · Sitede neler var</p>
+  <h2>Her özellik bir ihtiyaca karşılık geliyor</h2>
+  <div class="feature-list">
+    <div class="feature-item"><strong>Arama (/ tuşu)</strong> — Türkçe veya botanik ad. <span class="why">“Ihlamur” mu “Tilia” mı yazdığını bilen müşteri de var.</span></div>
+    <div class="feature-item"><strong>Kategori filtresi</strong> — Tıbbi / Aromatik / Süs. <span class="why">Süs bitkisi alan kişi tıbbi uyarı görmek istemiyor; ayrı tutuldu.</span></div>
+    <div class="feature-item"><strong>Favoriler</strong> — Kalp simgesi, <code>?fav=1</code> ile liste. <span class="why">Müşteri “bunları sık alıyorum” listesi tutabilsin diye.</span></div>
+    <div class="feature-item"><strong>Son bakılanlar</strong> — Ana sayfada yatay şerit. <span class="why">Detaydan geri dönünce “az önce ne bakmıştım?” sorusu.</span></div>
+    <div class="feature-item"><strong>Paylaş butonu</strong> — WhatsApp’a link gider, önizleme görseli çıkar. <span class="why">Müşteriler birbirine “şuna bak” diye link atıyor; OG etiketleri bunun için eklendi.</span></div>
+    <div class="feature-item"><strong>Yazdır</strong> — Detay sayfası temiz çıktı. <span class="why">Yaşlı müşteri telefon yerine kağıt isteyebiliyor.</span></div>
+    <div class="feature-item"><strong>Bakım notu</strong> — Süs bitkisi favorilerde sulama aralığı. <span class="why">Tıbbi bitkide anlamsız; saksıdaki nane için mantıklı.</span></div>
+    <div class="feature-item"><strong>Boş arama kaydı</strong> — Bulunamayan arama API’ye yazılıyor (yerelde). <span class="why">“X bitkisi yok” diye arayan olursa hangi bitkiyi eklemek lazım görülsün diye.</span></div>
+    <div class="feature-item"><strong>Tıbbi uyarı kutusu</strong> — Her detayda sabit. <span class="why">Yasal ve etik: site teşhis koymuyor, doktora danışın diyor.</span></div>
+  </div>
+  <div class="footer-note"><span>Şifa Hanım Aktar</span><span>8 / 16</span></div>
+</section>
+
+<!-- 9 TASARIM -->
+<section class="slide">
+  <p class="slide-label">08 · Görünüm</p>
+  <h2>Tasarım neden böyle görünüyor?</h2>
+  <div class="grid-3">
+    <div class="card" style="background:#fdfbf7;"><h3>Krem zemin</h3><p>#FDFBF7<br/>Göz yormuyor, kağıt/kraft hissi.</p></div>
+    <div class="card" style="background:#8d7b68;color:#fff;"><h3 style="color:#fff;">Toprak kahve</h3><p style="color:#f5efe6;">#8D7B68<br/>Menü, başlık, butonlar.</p></div>
+    <div class="card" style="background:#c8b6a6;"><h3>Kil tonu</h3><p>Kenarlık, ikincil vurgu.</p></div>
+  </div>
+  <div class="grid-2" style="margin-top:0.85rem;">
+    <div class="card">
+      <h3>Neden krem/kahve?</h3>
+      <p>Beyaz arka plan + mavi buton “teknoloji sitesi” gibi dururdu. Aktar dükkanı ahşap raf, kraft poşet, kurutulmuş bitki rengi — site de o sıcaklıkta kalsın diye toprak paleti seçildi.</p>
+    </div>
+    <div class="card">
+      <h3>Font &amp; mobil</h3>
+      <p>Source Sans 3 gövde, Source Serif 4 başlık. Sol menü masaüstünde sabit; telefonda hamburger + altta filtre çubuğu — başparmakla tek elle kullanım için.</p>
+      <span class="why">Mobil trafik bekleniyordu; WhatsApp linki telefonda açılacak.</span>
+    </div>
+  </div>
+  <div class="footer-note"><span>Şifa Hanım Aktar</span><span>9 / 16</span></div>
+</section>
+
+<!-- 10 SEO -->
+<section class="slide">
+  <p class="slide-label">09 · Google’da bulunmak</p>
+  <h2>SEO ne için yapıldı?</h2>
+  <div class="grid-2">
+    <div class="card">
+      <h3>İnsanlar ne arıyor?</h3>
+      <p>“Papatya çayı ne işe yarar”, “kekik suyu mide”, “şifalı bitkiler listesi” — bunlar Google’da yazılıyor. Site bu aramalara çıkmazsa sadece linke tıklayan tanıdık görür.</p>
+    </div>
+    <div class="card">
+      <h3>Ne eklendi?</h3>
+      <ul>
+        <li><code>sitemap.xml</code> — 222 URL, build’de otomatik</li>
+        <li><code>robots.txt</code> — Google’a “hepsini tara”</li>
+        <li>Her bitki sayfasına ayrı başlık + açıklama</li>
+        <li>WhatsApp paylaşımında görsel + başlık (Open Graph)</li>
+        <li>Schema.org — Google’a “bu bir bitki rehberi sitesi” demek</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Etiket sistemi</h3>
+      <p>#mide, #uyku, #çay — detay sayfasından ana sayfaya filtre gönderiyor.</p>
+      <span class="why">Google’da “uyku için bitki” aramasıyla siteye gelen, sitede de aynı filtreyle devam etsin diye.</span>
+    </div>
+    <div class="card">
+      <h3>Sınırlama (dürüst not)</h3>
+      <p>Site React SPA — meta etiketleri JavaScript ile güncelleniyor. Google çoğunu okuyor ama her bot okumaz. İleride sayfa başına statik HTML üretmek daha sağlam olur.</p>
+    </div>
+  </div>
+  <div class="footer-note"><span>Şifa Hanım Aktar</span><span>10 / 16</span></div>
+</section>
+
+<!-- 11 DEPLOY -->
+<section class="slide">
+  <p class="slide-label">10 · Yayında</p>
+  <h2>Canlı adresler ve yaşanan teknik işler</h2>
+  <table>
+    <tr><th>Netlify</th><td class="url">sifahanimaktar.netlify.app</td></tr>
+    <tr><th>Vercel</th><td class="url">sifahanimaktar.vercel.app</td></tr>
+    <tr>
+      <th>Neden ikisi?</th>
+      <td>Netlify’da Search Console kotası doldu; Vercel’de ikinci mülk açıldı. Ayrıca bazı mobil operatörlerde .netlify.app DNS’te takılıyordu — Vercel yedek.</td>
+    </tr>
+    <tr>
+      <th>Build sırası</th>
+      <td>Asset kopyala → sitemap üret → Vite build → <code>client/dist/</code> yayınla</td>
+    </tr>
+    <tr>
+      <th>Windows sorunu</th>
+      <td>Vercel Linux’ta build alıyor; Windows’taki junction (sembolik link) kopyalanamıyordu — asset’ler düz kopyaya çevrildi, <code>.vercelignore</code> eklendi.</td>
+    </tr>
+    <tr>
+      <th>Netlify /api bug</th>
+      <td>Express olmadığı halde /api isteği index.html dönüyordu; detay sayfası “null id” hatası veriyordu. Çözüm: production’da direkt JSON oku, /api’ye gitme.</td>
+    </tr>
+  </table>
+  <div class="footer-note"><span>Şifa Hanım Aktar</span><span>11 / 16</span></div>
+</section>
+
+<!-- 12 SEARCH CONSOLE -->
+<section class="slide">
+  <p class="slide-label">11 · Google Search Console</p>
+  <h2>İndeksleme — şu an ne durumda?</h2>
+  <div class="grid-2">
+    <div class="card">
+      <h3>Netlify mülkü</h3>
+      <ul>
+        <li>HTML dosyasıyla doğrulandı</li>
+        <li>Sitemap gönderildi — 222 URL, durum: Başarılı</li>
+        <li>“Dizine ekle” kotası doldu — artık elle istek atılamıyor</li>
+      </ul>
+      <span class="why">Kota dolunca panik etmeye gerek yok; sitemap zaten Google’a “şu sayfalar var” diyor. Beklemek normal.</span>
+    </div>
+    <div class="card">
+      <h3>Vercel mülkü</h3>
+      <ul>
+        <li>URL öneki olarak eklendi (domain değil — .vercel.app DNS doğrulaması olmaz)</li>
+        <li>Ana sayfa dizine eklendi görünüyor</li>
+        <li><code>site:sifahanimaktar.vercel.app</code> henüz boş — 3–7 gün normal</li>
+      </ul>
+      <span class="why">Google hemen her şeyi göstermez. Marka adı araması genelde önce çıkar, genel aramalar sonra.</span>
+    </div>
+  </div>
+  <div class="highlight">
+    Kalıcı çözüm: <strong>sifahanimaktar.com</strong> gibi kendi domain’i almak. Hem müşteriye verilecek link daha ciddi durur, hem DNS/operatör sorunu biter, hem Search Console’da tek mülk yeter.
+  </div>
+  <div class="footer-note"><span>Şifa Hanım Aktar</span><span>12 / 16</span></div>
+</section>
+
+<!-- 13 SORUNLAR -->
+<section class="slide">
+  <p class="slide-label">12 · Eksikler ve bilinen sorunlar</p>
+  <h2>Henüz tam olmayan yerler</h2>
+  <table>
+    <tr><th>Favoriler</th><td><strong>Çözüldü.</strong> Hesap + kalıcı oturum + profilde JSON dışa/içe aktarma (telefon değişince yedek).</td></tr>
+    <tr><th>Canlıda arama logu</th><td><strong>Çözüldü.</strong> Netlify Forms + Vercel API + yerel kuyruk yedeği.</td></tr>
+    <tr><th>Eksik örnek vakalar</th><td><strong>Çözüldü.</strong> PubMed olmayanlara “aktar tezgâhı senaryosu” eklendi (klinik uydurma değil, açık etiketli).</td></tr>
+    <tr><th>İki canlı URL</th><td><strong>Çözüldü.</strong> Canonical hep Netlify: sifahanimaktar.netlify.app (Google tek adresi seçer).</td></tr>
+    <tr><th>Eski HTML dosyaları</th><td><strong>Çözüldü.</strong> Vanilla site <code>legacy/</code> klasörüne taşındı; canlıda yalnızca React.</td></tr>
+    <tr><th>Tıbbi sorumluluk</th><td>Bilgilendirme amaçlı; her detayda uyarı kutusu + iletişim WhatsApp. Domain alınca daha da güçlenir.</td></tr>
+  </table>
+  <div class="footer-note"><span>Şifa Hanım Aktar</span><span>13 / 16</span></div>
+</section>
+
+<!-- 14 GELECEK -->
+<section class="slide">
+  <p class="slide-label">13 · Sırada ne olabilir</p>
+  <h2>Öncelik sırasına göre</h2>
+  <div class="grid-2">
+    <div class="card">
+      <h3>En mantıklı ilk adımlar</h3>
+      <ul>
+        <li><strong>Domain al</strong> — müşteriye .netlify.app yerine .com ver</li>
+        <li><strong>Mağaza bilgisi</strong> — adres, telefon, çalışma saati, harita</li>
+        <li><strong>Git → otomatik deploy</strong> — her güncelleme elle terminal açmadan çıksın</li>
+        <li><strong>Eksik 53 vaka</strong> — elle yazılmış kısa örnekler eklenebilir</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Daha sonra</h3>
+      <ul>
+        <li>Bitki sayfalarını statik HTML olarak önceden üret (SEO + WhatsApp önizleme)</li>
+        <li>Çevrimdışı kullanım (PWA) — internetsiz vitrin</li>
+        <li>“Bu bitkiyi sordum, yoktu” formu — hangi bitki talep ediliyor gör</li>
+        <li>Instagram/Facebook vitrin linki sabitle</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-note"><span>Şifa Hanım Aktar</span><span>14 / 16</span></div>
+</section>
+
+<!-- 15 DOSYALAR -->
+<section class="slide">
+  <p class="slide-label">14 · Proje dosyaları</p>
+  <h2>Nerede ne var?</h2>
+  <table>
+    <tr><th><code>client/src/pages/</code></th><td>Ana sayfa, detay, profil, ayarlar — kullanıcının gördüğü ekranlar</td></tr>
+    <tr><th><code>data/plants.json</code></th><td>219 bitkinin tamamı — site buradan besleniyor</td></tr>
+    <tr><th><code>scripts/*.py</code></th><td>Veri çekme, çeviri, fotoğraf, kalite kontrol — siteyi elle doldurmak yerine</td></tr>
+    <tr><th><code>client/scripts/</code></th><td>Build öncesi: asset kopyala, sitemap yaz</td></tr>
+    <tr><th><code>styles/</code></th><td>Renk, grid, kart, mobil — tek tasarım sistemi</td></tr>
+    <tr><th><code>presentation/</code></th><td>Bu sunumun HTML ve PDF hali</td></tr>
+  </table>
+  <div class="footer-note"><span>Şifa Hanım Aktar</span><span>15 / 16</span></div>
+</section>
+
+<!-- 16 KAPANIŞ -->
+<section class="slide slide--cover" style="justify-content:center;">
+  <span class="badge">Özet</span>
+  <h1 style="font-size:2.4rem;line-height:1.2;">219 bitki, tek adreste.<br/>Ara, filtrele, paylaş.</h1>
+  <p class="subtitle" style="margin-bottom:1.5rem;">
+    Aktar tezgâhındaki bilgi artık internette de duruyor — PFAF kaynaklı, sade Türkçe, mobil uyumlu.
+  </p>
+  <p class="meta">
+    sifahanimaktar.netlify.app<br />
+    sifahanimaktar.vercel.app<br /><br />
+    Ağustos 2026
+  </p>
+</section>
+
+</body>
+</html>

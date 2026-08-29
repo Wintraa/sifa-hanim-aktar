@@ -1,0 +1,16 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "npm --prefix client install",
+  "buildCommand": "node client/scripts/prepare-public.mjs && node client/scripts/generate-sitemap.mjs && npm --prefix client run build",
+  "outputDirectory": "client/dist",
+  "build": {
+    "env": {
+      "SITE_URL": "https://sifahanimaktar.netlify.app"
+    }
+  },
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/$1" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}

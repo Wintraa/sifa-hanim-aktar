@@ -1,0 +1,14 @@
+# Vercel'e Windows junction yüklenmesin; build sırasında kopyalanır
+client/public/assets
+client/node_modules
+node_modules
+.netlify
+.vercel
+.agents
+database
+*.db-wal
+*.db-shm
+exports
+scripts/_candidates
+data/pubmed-*-raw.json
+data/pubmed-vakalar-progress.json

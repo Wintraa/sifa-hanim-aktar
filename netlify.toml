@@ -1,0 +1,27 @@
+# Netlify: React vitrini. Build client/ içinden çalışır.
+[build]
+  base = "client"
+  command = "npm install && node scripts/prepare-public.mjs && node scripts/generate-sitemap.mjs && npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+  SITE_URL = "https://sifahanimaktar.netlify.app"
+
+# Google Search Console doğrulama dosyası SPA yedeğine düşmesin.
+[[redirects]]
+  from = "/google8a881356b5a15b66.html"
+  to = "/google8a881356b5a15b66.html"
+  status = 200
+  force = false
+
+# /api Express'i Netlify'de yok. 200 + HTML dönmesin; aksi halde detay sayfası çöker.
+[[redirects]]
+  from = "/api/*"
+  to = "/index.html"
+  status = 404
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
