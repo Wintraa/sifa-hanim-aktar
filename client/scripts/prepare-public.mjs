@@ -15,6 +15,7 @@ const destAssets = path.join(clientRoot, "public", "assets");
 const destData = path.join(clientRoot, "public", "data");
 const srcAssets = path.join(repoRoot, "assets");
 const srcJson = path.join(repoRoot, "data", "plants.json");
+const srcProducts = path.join(repoRoot, "data", "products.json");
 
 /** Windows junction / bozuk symlink varsa kaldır, sonra klasör aç. */
 function ensureRealDir(dir) {
@@ -38,6 +39,11 @@ if (!fs.existsSync(srcJson)) {
   throw new Error(`plants.json bulunamadı: ${srcJson}`);
 }
 fs.copyFileSync(srcJson, path.join(destData, "plants.json"));
+
+if (!fs.existsSync(srcProducts)) {
+  throw new Error(`products.json bulunamadı: ${srcProducts}`);
+}
+fs.copyFileSync(srcProducts, path.join(destData, "products.json"));
 
 if (!fs.existsSync(srcAssets)) {
   throw new Error(`assets klasörü bulunamadı: ${srcAssets}`);

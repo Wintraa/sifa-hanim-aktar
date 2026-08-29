@@ -158,7 +158,7 @@ export default function DetailPage() {
   return (
     <>
       <header className="detail-header">
-        <Link className="back-button" to="/">
+        <Link className="back-button" to="/bitkiler">
           Kataloğa Dön
         </Link>
         <div className="detail-header__title">
@@ -232,7 +232,7 @@ export default function DetailPage() {
           <section className="detail-empty" aria-labelledby="detailEmptyTitle">
             <h2 id="detailEmptyTitle">Bitki bulunamadı</h2>
             <p>{error || "İstenen bitki bilgisi yüklenemedi veya bağlantı geçersiz."}</p>
-            <Link className="back-button" to="/">
+            <Link className="back-button" to="/bitkiler">
               Kataloğa Dön
             </Link>
           </section>

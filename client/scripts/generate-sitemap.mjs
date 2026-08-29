@@ -8,6 +8,7 @@ import { fileURLToPath } from "node:url";
 const clientRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const repoRoot   = path.resolve(clientRoot, "..");
 const srcJson    = path.join(repoRoot, "data", "plants.json");
+const srcProducts = path.join(repoRoot, "data", "products.json");
 const outFile    = path.join(clientRoot, "public", "sitemap.xml");
 
 const rawBase =
@@ -19,14 +20,18 @@ const BASE = rawBase.startsWith("http") ? rawBase.replace(/\/$/, "") : `https://
 const TODAY = new Date().toISOString().slice(0, 10);
 
 const plants = JSON.parse(fs.readFileSync(srcJson, "utf-8"));
+const products = fs.existsSync(srcProducts)
+  ? JSON.parse(fs.readFileSync(srcProducts, "utf-8"))
+  : [];
 
 const staticUrls = [
-  { loc: `${BASE}/`,       changefreq: "weekly",  priority: "1.0" },
+  { loc: `${BASE}/`, changefreq: "daily", priority: "1.0" },
+  { loc: `${BASE}/bitkiler`, changefreq: "weekly", priority: "0.9" },
   { loc: `${BASE}/iletisim`, changefreq: "monthly", priority: "0.7" },
   { loc: `${BASE}/giris`, changefreq: "monthly", priority: "0.3" },
   { loc: `${BASE}/kayit`, changefreq: "monthly", priority: "0.5" },
   { loc: `${BASE}/profil`, changefreq: "monthly", priority: "0.4" },
-  { loc: `${BASE}/ayarlar`,changefreq: "monthly", priority: "0.3" },
+  { loc: `${BASE}/ayarlar`, changefreq: "monthly", priority: "0.3" },
 ];
 
 const plantUrls = plants.map((p) => ({
@@ -35,7 +40,13 @@ const plantUrls = plants.map((p) => ({
   priority: "0.8",
 }));
 
-const all = [...staticUrls, ...plantUrls];
+const productUrls = products.map((p) => ({
+  loc: `${BASE}/urun/${p.id}`,
+  changefreq: "weekly",
+  priority: "0.85",
+}));
+
+const all = [...staticUrls, ...productUrls, ...plantUrls];
 
 const xml = [
   '<?xml version="1.0" encoding="UTF-8"?>',

@@ -5,6 +5,7 @@ import {
   logoutAccount,
   registerAccount,
   updateAccountProfile,
+  isAdminUser,
 } from "../lib/auth.js";
 
 const AuthContext = createContext(null);
@@ -44,6 +45,7 @@ export function AuthProvider({ children }) {
     () => ({
       user,
       isLoggedIn: Boolean(user),
+      isAdmin: isAdminUser(user),
       login,
       register,
       logout,

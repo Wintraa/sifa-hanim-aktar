@@ -4,6 +4,11 @@
  * Canlıda: Netlify Forms + yerel kuyruk yedeği.
  */
 import { enqueueMissingSearch } from "../lib/missing-searches.js";
+import {
+  mergeProducts,
+  PRODUCTS_CACHE_KEY,
+  isValidProduct,
+} from "../lib/products.js";
 
 const API_BASE = "/api";
 
@@ -175,6 +180,46 @@ export const api = {
     const all = await api.getPlantsWithFallback();
     const found = all.find((p) => Number(p.id) === numId);
     if (!found) throw new Error("Bitki bulunamadı.");
+    return found;
+  },
+
+  async getProductsWithFallback() {
+    try {
+      const raw = sessionStorage.getItem(PRODUCTS_CACHE_KEY);
+      if (raw) {
+        const cached = JSON.parse(raw);
+        if (Array.isArray(cached) && cached.length) return cached;
+      }
+    } catch {
+      /* ignore */
+    }
+
+    const response = await fetch("/data/products.json");
+    if (!response.ok) {
+      throw new Error("Ürün verileri yüklenemedi.");
+    }
+    const data = await response.json();
+    const list = Array.isArray(data) ? data : data?.products;
+    if (!Array.isArray(list)) {
+      throw new Error("Ürün verisi geçersiz.");
+    }
+    const merged = mergeProducts(list.filter(isValidProduct));
+    try {
+      sessionStorage.setItem(PRODUCTS_CACHE_KEY, JSON.stringify(merged));
+    } catch {
+      /* ignore */
+    }
+    return merged;
+  },
+
+  async getProductWithFallback(id) {
+    const numId = Number(id);
+    if (!Number.isInteger(numId) || numId <= 0) {
+      throw new Error("Ürün bulunamadı.");
+    }
+    const all = await api.getProductsWithFallback();
+    const found = all.find((p) => Number(p.id) === numId);
+    if (!found) throw new Error("Ürün bulunamadı.");
     return found;
   },
 };

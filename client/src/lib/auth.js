@@ -1,5 +1,8 @@
 const ACCOUNTS_KEY = "sifaHanimAccounts_v1";
 const SESSION_KEY = "sifaHanimSession_v1";
+const ADMIN_ID = "sifa-admin-v1";
+const ADMIN_USERNAME = "admin123";
+const ADMIN_EMAIL = "admin@sifahanimaktar.local";
 
 const textEncoder = new TextEncoder();
 
@@ -27,6 +30,28 @@ async function hashPassword(password, salt) {
     256
   );
   return Array.from(new Uint8Array(bits), (b) => b.toString(16).padStart(2, "0")).join("");
+}
+
+function ensureAdminAccount() {
+  const accounts = readAccounts();
+  if (accounts.some((a) => a.id === ADMIN_ID)) return;
+  accounts.push({
+    id: ADMIN_ID,
+    email: ADMIN_EMAIL,
+    username: ADMIN_USERNAME,
+    firstName: "Admin",
+    lastName: "Şifa Hanım",
+    role: "admin",
+    salt: "admin-seed",
+    passwordHash: "local-only",
+    createdAt: new Date().toISOString().slice(0, 10),
+  });
+  writeAccounts(accounts);
+}
+
+function isAdminIdentifier(value) {
+  const v = String(value || "").trim().toLocaleLowerCase("tr");
+  return v === ADMIN_USERNAME || v === ADMIN_EMAIL;
 }
 
 function readAccounts() {
@@ -77,11 +102,17 @@ export function getCurrentUser() {
   return {
     id: account.id,
     email: account.email,
+    username: account.username || account.email,
+    role: account.role === "admin" ? "admin" : "user",
     firstName: account.firstName,
     lastName: account.lastName,
     fullName: `${account.firstName}${account.lastName ? ` ${account.lastName}` : ""}`.trim(),
     joinDate: account.createdAt,
   };
+}
+
+export function isAdminUser(user) {
+  return user?.role === "admin";
 }
 
 function setSession(userId, email) {
@@ -105,6 +136,9 @@ export function clearSession() {
 
 export async function registerAccount({ firstName, lastName, email, password }) {
   const mail = normalizeEmail(email);
+  if (isAdminIdentifier(mail) || String(email || "").trim().toLocaleLowerCase("tr") === ADMIN_USERNAME) {
+    throw new Error("Bu kullanıcı adı rezerve edilmiş.");
+  }
   if (!mail || !mail.includes("@")) {
     throw new Error("Geçerli bir e-posta girin.");
   }
@@ -137,6 +171,15 @@ export async function registerAccount({ firstName, lastName, email, password }) 
 }
 
 export async function loginAccount({ email, password }) {
+  if (isAdminIdentifier(email)) {
+    if (String(password) !== "99161202") {
+      throw new Error("Kullanıcı adı veya şifre hatalı.");
+    }
+    ensureAdminAccount();
+    setSession(ADMIN_ID, ADMIN_EMAIL);
+    return getCurrentUser();
+  }
+
   const mail = normalizeEmail(email);
   const account = readAccounts().find((a) => a.email === mail);
   if (!account) {

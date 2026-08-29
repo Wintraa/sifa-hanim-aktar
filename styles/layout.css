@@ -39,6 +39,35 @@
   gap: var(--space-1);
 }
 
+.sidebar__mode-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-1);
+}
+
+.sidebar__mode-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  background: rgba(255, 250, 244, 0.8);
+  color: var(--text-main);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition-interactive);
+}
+
+.sidebar__mode-link:hover,
+.sidebar__mode-link.is-active {
+  border-color: rgba(141, 123, 104, 0.45);
+  background: rgba(141, 123, 104, 0.12);
+  color: var(--text-main);
+}
+
 .sidebar__footer {
   margin-top: auto;
   padding: var(--space-2);

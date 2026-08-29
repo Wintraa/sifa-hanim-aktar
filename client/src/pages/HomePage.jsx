@@ -222,6 +222,7 @@ export default function HomePage() {
     <>
       <div className="site-shell">
         <Sidebar
+          mode="plants"
           selectedTypes={selectedTypes}
           favoritesOnly={favoritesOnly}
           onFilter={handleFilter}
@@ -241,6 +242,7 @@ export default function HomePage() {
 
         <div className="main-panel">
           <Topbar
+            catalogMode="plants"
             searchValue={searchInput}
             onSearchChange={handleSearchChange}
             onMenuToggle={() => setMenuOpen((v) => !v)}
@@ -369,6 +371,8 @@ export default function HomePage() {
                     bilgilendirme amaçlıdır; teşhis veya tedavi yerine geçmez.
                   </p>
                   <p className="site-footer__link-row">
+                    <Link to="/">Ürün vitrini</Link>
+                    {" · "}
                     <Link to="/iletisim">İletişim &amp; WhatsApp</Link>
                     {" · "}
                     <Link to="/kayit">Hesap aç</Link>

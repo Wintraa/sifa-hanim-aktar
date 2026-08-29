@@ -92,7 +92,7 @@ export function applyHomeSeo() {
   applyPageSeo({
     title: `${SITE_NAME} — ${SITE_TAGLINE}`,
     description: DEFAULT_DESCRIPTION,
-    path: "/",
+    path: "/bitkiler",
     imagePath: SITE_LOGO_PATH,
     jsonLd: {
       "@context": "https://schema.org",

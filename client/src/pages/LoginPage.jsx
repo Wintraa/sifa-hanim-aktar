@@ -35,8 +35,8 @@ export default function LoginPage() {
   return (
     <main className="detail-main auth-page" id="main-content" style={{ paddingTop: "2rem" }}>
       <header className="detail-header" style={{ position: "static", marginBottom: "1.5rem" }}>
-        <Link className="back-button" to="/">
-          Kataloğa Dön
+        <Link className="back-button" to="/bitkiler">
+          Bitki kütüphanesine dön
         </Link>
         <div className="detail-header__title">
           <p className="section-label">Hesap</p>
@@ -50,10 +50,10 @@ export default function LoginPage() {
         </p>
         <form className="care-form" onSubmit={handleSubmit}>
           <label className="profile-field">
-            <span>E-posta</span>
+            <span>E-posta veya kullanıcı adı</span>
             <input
-              type="email"
-              autoComplete="email"
+              type="text"
+              autoComplete="username"
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
