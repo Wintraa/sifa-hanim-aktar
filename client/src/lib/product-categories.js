@@ -1,7 +1,8 @@
 /**
- * Ürün kategorileri — admin localStorage'da yönetir, sol menüde listelenir.
+ * Ürün kategorileri — sunucu JSON + admin localStorage birleşimi.
  */
 const STORAGE_KEY = "sifa_product_categories_v1";
+let cachedBaseCategories = null;
 
 function readRaw() {
   try {
@@ -17,10 +18,33 @@ function writeRaw(list) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
 }
 
-export function getProductCategories() {
-  return readRaw()
+/** Build'den gelen kategori listesi (data/product-categories.json). */
+export async function loadBaseCategories() {
+  if (cachedBaseCategories) return cachedBaseCategories;
+  try {
+    const response = await fetch("/data/product-categories.json");
+    if (response.ok) {
+      const data = await response.json();
+      cachedBaseCategories = Array.isArray(data) ? data : [];
+      return cachedBaseCategories;
+    }
+  } catch {
+    /* ignore */
+  }
+  cachedBaseCategories = [];
+  return cachedBaseCategories;
+}
+
+function normalizeCategoryList(list) {
+  return list
     .filter((c) => c && Number(c.id) && String(c.ad || "").trim())
     .sort((a, b) => Number(a.sira ?? a.id) - Number(b.sira ?? b.id));
+}
+
+export function getProductCategories() {
+  const local = normalizeCategoryList(readRaw());
+  if (local.length) return local;
+  return normalizeCategoryList(cachedBaseCategories || []);
 }
 
 export function getCategoryNames() {

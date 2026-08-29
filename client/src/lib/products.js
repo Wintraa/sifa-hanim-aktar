@@ -5,7 +5,7 @@ import { getCategoryNames } from "./product-categories.js";
 
 const OVERRIDES_KEY = "sifa_product_overrides_v1";
 const DELETED_KEY = "sifa_product_deleted_v1";
-const PRODUCTS_CACHE_KEY = "sifa-products-v3";
+const PRODUCTS_CACHE_KEY = "sifa-products-v4";
 const PURGE_FLAG = "sifa_demo_catalog_purged_v1";
 /** Eski demo vitrin (Papatya, Ihlamur vb.) — artık gösterilmez. */
 const LEGACY_DEMO_IDS = new Set(Array.from({ length: 24 }, (_, i) => i + 1));

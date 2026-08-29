@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "ad": "Ağrı Kremi",
+    "sira": 1
+  },
+  {
+    "id": 2,
+    "ad": "Aromatik Yağlar",
+    "sira": 2
+  },
+  {
+    "id": 3,
+    "ad": "Baharatlar",
+    "sira": 3
+  },
+  {
+    "id": 4,
+    "ad": "Çay",
+    "sira": 4
+  },
+  {
+    "id": 5,
+    "ad": "Detox Ürünleri",
+    "sira": 5
+  },
+  {
+    "id": 6,
+    "ad": "Kahve",
+    "sira": 6
+  },
+  {
+    "id": 7,
+    "ad": "Kurutulmuş Ürünler",
+    "sira": 7
+  },
+  {
+    "id": 8,
+    "ad": "Macunlar",
+    "sira": 8
+  },
+  {
+    "id": 9,
+    "ad": "Meyve Özü",
+    "sira": 9
+  },
+  {
+    "id": 10,
+    "ad": "Sirkeler",
+    "sira": 10
+  }
+]

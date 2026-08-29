@@ -15,6 +15,7 @@ import { CategoryEditModal } from "../components/catalog/CategoryEditModal.jsx";
 import { Pagination } from "../components/catalog/Pagination.jsx";
 import { WhatsAppFloatButton } from "../components/layout/ShopContact.jsx";
 import { SHOP } from "../config/shop.js";
+import { loadBaseCategories, notifyCategoriesChanged } from "../lib/product-categories.js";
 
 const PAGE_SIZE = 9;
 
@@ -53,6 +54,10 @@ export default function ProductsPage() {
   useEffect(() => {
     loadProducts();
   }, [loadProducts]);
+
+  useEffect(() => {
+    loadBaseCategories().then(() => notifyCategoriesChanged());
+  }, []);
 
   useEffect(() => {
     applyPageSeo({
