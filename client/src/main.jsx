@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App.jsx";
 import { applyDensityPreference } from "./lib/preferences.js";
+import { purgeLegacyDemoProducts } from "./lib/products.js";
 
 // Eski sitedeki tasarım sistemi (sırayla)
 import "../../styles/tokens.css";
@@ -13,6 +14,7 @@ import "../../styles/pages.css";
 import "../../styles/responsive.css";
 
 applyDensityPreference();
+purgeLegacyDemoProducts();
 
 const rootEl = document.getElementById("root");
 if (!rootEl) {

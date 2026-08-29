@@ -5,7 +5,10 @@ import { getCategoryNames } from "./product-categories.js";
 
 const OVERRIDES_KEY = "sifa_product_overrides_v1";
 const DELETED_KEY = "sifa_product_deleted_v1";
-const PRODUCTS_CACHE_KEY = "sifa-products-v2";
+const PRODUCTS_CACHE_KEY = "sifa-products-v3";
+const PURGE_FLAG = "sifa_demo_catalog_purged_v1";
+/** Eski demo vitrin (Papatya, Ihlamur vb.) — artık gösterilmez. */
+const LEGACY_DEMO_IDS = new Set(Array.from({ length: 24 }, (_, i) => i + 1));
 
 const isValidProduct = (p) =>
   p &&
@@ -30,6 +33,33 @@ export function readDeletedProductIds() {
   } catch {
     return [];
   }
+}
+
+/** Tarayıcıda kalan eski demo ürünleri (id 1–24) bir kez temizler. */
+export function purgeLegacyDemoProducts() {
+  if (localStorage.getItem(PURGE_FLAG)) return;
+
+  const overrides = readProductOverrides();
+  let changed = false;
+  for (const id of LEGACY_DEMO_IDS) {
+    if (overrides[id]) {
+      delete overrides[id];
+      changed = true;
+    }
+  }
+  if (changed) {
+    localStorage.setItem(OVERRIDES_KEY, JSON.stringify(overrides));
+  }
+
+  try {
+    sessionStorage.removeItem(PRODUCTS_CACHE_KEY);
+    sessionStorage.removeItem("sifa-products-v2");
+    sessionStorage.removeItem("sifa-products-v1");
+  } catch {
+    /* ignore */
+  }
+
+  localStorage.setItem(PURGE_FLAG, "1");
 }
 
 export function mergeProducts(baseList) {

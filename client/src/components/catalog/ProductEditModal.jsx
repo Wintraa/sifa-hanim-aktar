@@ -100,7 +100,7 @@ export function ProductEditModal({ product, isNew = false, onClose, onSaved }) {
             <input
               required
               autoFocus
-              placeholder="Örn: Papatya Çiçeği"
+              placeholder="Örn: Kuru Adaçayı"
               value={form.ad || ""}
               onChange={(e) => setField("ad", e.target.value)}
             />

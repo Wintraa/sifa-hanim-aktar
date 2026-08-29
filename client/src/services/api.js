@@ -8,6 +8,7 @@ import {
   mergeProducts,
   PRODUCTS_CACHE_KEY,
   isValidProduct,
+  purgeLegacyDemoProducts,
 } from "../lib/products.js";
 
 const API_BASE = "/api";
@@ -184,15 +185,7 @@ export const api = {
   },
 
   async getProductsWithFallback() {
-    try {
-      const raw = sessionStorage.getItem(PRODUCTS_CACHE_KEY);
-      if (raw) {
-        const cached = JSON.parse(raw);
-        if (Array.isArray(cached) && cached.length) return cached;
-      }
-    } catch {
-      /* ignore */
-    }
+    purgeLegacyDemoProducts();
 
     const response = await fetch("/data/products.json");
     if (!response.ok) {
