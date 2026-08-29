@@ -14,7 +14,7 @@ const rawBase =
   process.env.SITE_URL ||
   process.env.VERCEL_PROJECT_PRODUCTION_URL ||
   process.env.VERCEL_URL ||
-  "https://sifahanimaktar.netlify.app";
+  "https://sifahanimaktar.vercel.app";
 const BASE = rawBase.startsWith("http") ? rawBase.replace(/\/$/, "") : `https://${rawBase.replace(/\/$/, "")}`;
 const TODAY = new Date().toISOString().slice(0, 10);
 

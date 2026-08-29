@@ -6,7 +6,7 @@
   "outputDirectory": "client/dist",
   "build": {
     "env": {
-      "SITE_URL": "https://sifahanimaktar.netlify.app"
+      "SITE_URL": "https://sifahanimaktar.vercel.app"
     }
   },
   "rewrites": [

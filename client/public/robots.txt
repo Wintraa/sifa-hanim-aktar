@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sifahanimaktar.netlify.app/sitemap.xml
+Sitemap: https://sifahanimaktar.vercel.app/sitemap.xml

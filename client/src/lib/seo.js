@@ -4,7 +4,9 @@ import { assetUrl } from "./assetUrl.js";
 const SITE_NAME = "Şifa Hanım Aktar";
 const SITE_TAGLINE = "Şifalı Bitki Kütüphanesi";
 /** Google için tek ana adres (çift deploy duplicate content önlemi). */
-export const CANONICAL_ORIGIN = "https://sifahanimaktar.netlify.app";
+export const CANONICAL_ORIGIN = "https://sifahanimaktar.vercel.app";
+/** Arama sonuçları / paylaşım önizlemesi için marka logosu. */
+export const SITE_LOGO_PATH = "/assets/brand/sifa-hanim-logo.png";
 const DEFAULT_DESCRIPTION =
   "Şifa Hanım Aktar bitki kütüphanesi: şifalı bitkiler, tıbbi ve aromatik otlar. Ne işe yarar, nasıl kullanılır, nelere dikkat edilir — aktar rehberi.";
 
@@ -86,10 +88,12 @@ export function applyPageSeo({
 
 export function applyHomeSeo() {
   const base = CANONICAL_ORIGIN;
+  const logoUrl = absoluteUrl(SITE_LOGO_PATH);
   applyPageSeo({
     title: `${SITE_NAME} — ${SITE_TAGLINE}`,
     description: DEFAULT_DESCRIPTION,
     path: "/",
+    imagePath: SITE_LOGO_PATH,
     jsonLd: {
       "@context": "https://schema.org",
       "@graph": [
@@ -100,6 +104,12 @@ export function applyHomeSeo() {
           alternateName: `${SITE_NAME} ${SITE_TAGLINE}`,
           url: base,
           description: DEFAULT_DESCRIPTION,
+          logo: {
+            "@type": "ImageObject",
+            url: logoUrl,
+            width: 512,
+            height: 512,
+          },
         },
         {
           "@type": "WebSite",
