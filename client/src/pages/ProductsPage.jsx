@@ -5,6 +5,7 @@ import { useAuth } from "../context/AuthContext.jsx";
 import { isAdminUser } from "../lib/auth.js";
 import { createEmptyProduct } from "../lib/products.js";
 import { getTopClickedProducts, isInVitrin } from "../lib/product-clicks.js";
+import { debounce } from "../lib/utils.js";
 import { applyPageSeo } from "../lib/seo.js";
 import { showToast } from "../lib/toast.js";
 import { Sidebar } from "../components/layout/Sidebar.jsx";
@@ -18,6 +19,20 @@ import { SHOP } from "../config/shop.js";
 import { loadBaseCategories, notifyCategoriesChanged } from "../lib/product-categories.js";
 
 const PAGE_SIZE = 9;
+
+function productMatchesSearch(product, query) {
+  if (!query) return true;
+  const hay = [
+    product.ad,
+    product.kategori,
+    product.kisaAciklama,
+    product.aciklama,
+    ...(product.etiketler || []),
+  ]
+    .join(" ")
+    .toLocaleLowerCase("tr");
+  return hay.includes(query);
+}
 
 export default function ProductsPage() {
   const { user } = useAuth();
@@ -34,9 +49,11 @@ export default function ProductsPage() {
   const [addingNew, setAddingNew] = useState(false);
   const [addingCategory, setAddingCategory] = useState(false);
   const [page, setPage] = useState(1);
+  const [searchInput, setSearchInput] = useState(() => searchParams.get("q") || "");
 
   const selectedCategory = searchParams.get("kat") || "";
   const featuredOnly = searchParams.get("one") === "1";
+  const searchQuery = (searchParams.get("q") || "").trim().toLocaleLowerCase("tr");
 
   const loadProducts = useCallback(async () => {
     setLoading(true);
@@ -66,6 +83,31 @@ export default function ProductsPage() {
       path: "/",
     });
   }, []);
+
+  useEffect(() => {
+    setSearchInput(searchParams.get("q") || "");
+  }, [searchParams]);
+
+  useEffect(() => {
+    const onKey = (e) => {
+      const tag = e.target?.tagName;
+      if (e.key === "/" && tag !== "INPUT" && tag !== "TEXTAREA") {
+        e.preventDefault();
+        document.querySelector("#searchInput")?.focus();
+      }
+      if (e.key === "Escape") {
+        document.querySelector("#searchInput")?.blur();
+        setMenuOpen(false);
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
+
+  useEffect(() => {
+    document.body.classList.toggle("has-open-menu", menuOpen);
+    return () => document.body.classList.remove("has-open-menu");
+  }, [menuOpen]);
 
   const openAddForm = useCallback(() => {
     if (!isAdmin) {
@@ -109,6 +151,19 @@ export default function ProductsPage() {
     [searchParams, setSearchParams]
   );
 
+  const debouncedSearch = useMemo(
+    () =>
+      debounce((value) => {
+        updateParams({ q: value.trim() || null });
+      }, 180),
+    [updateParams]
+  );
+
+  const handleSearchChange = (value) => {
+    setSearchInput(value);
+    debouncedSearch(value);
+  };
+
   const handleFilter = (value) => {
     setMenuOpen(false);
     if (value === "Tumu") {
@@ -143,8 +198,11 @@ export default function ProductsPage() {
     } else if (selectedCategory) {
       list = list.filter((p) => p.kategori === selectedCategory);
     }
+    if (searchQuery) {
+      list = list.filter((p) => productMatchesSearch(p, searchQuery));
+    }
     return list;
-  }, [products, featuredOnly, selectedCategory]);
+  }, [products, featuredOnly, selectedCategory, searchQuery]);
 
   const totalPages = Math.max(1, Math.ceil(filteredProducts.length / PAGE_SIZE));
   const safePage = Math.min(page, totalPages);
@@ -180,11 +238,12 @@ export default function ProductsPage() {
         <div className="main-panel">
           <Topbar
             catalogMode="products"
-            searchValue=""
-            onSearchChange={() => {}}
+            searchValue={searchInput}
+            onSearchChange={handleSearchChange}
             onMenuToggle={() => setMenuOpen((v) => !v)}
             menuOpen={menuOpen}
             isAdmin={isAdmin}
+            onFavoritesClick={() => navigate("/bitkiler?fav=1")}
           />
 
           <main className="content" id="main-content">
@@ -227,14 +286,28 @@ export default function ProductsPage() {
 
               {!loading && !error && products.length > 0 && filteredProducts.length === 0 ? (
                 <div className="empty-state admin-empty">
-                  <h4>{featuredOnly ? "Vitrin henüz boş" : "Bu kategoride ürün yok"}</h4>
+                  <h4>
+                    {searchQuery
+                      ? `"${searchParams.get("q")}" için sonuç yok`
+                      : featuredOnly
+                        ? "Vitrin henüz boş"
+                        : "Bu kategoride ürün yok"}
+                  </h4>
                   <p>
-                    {featuredOnly
-                      ? "En çok tıklanan ürünler burada otomatik görünür. Önce birkaç ürüne tıklanması gerekir."
-                      : null}
+                    {searchQuery
+                      ? "Farklı bir kelime dene veya aramayı temizle."
+                      : featuredOnly
+                        ? "En çok tıklanan ürünler burada otomatik görünür. Önce birkaç ürüne tıklanması gerekir."
+                        : null}
                   </p>
-                  <button className="back-button empty-state__cta" type="button" onClick={() => handleFilter("Tumu")}>
-                    Tüm ürünlere dön
+                  <button
+                    className="back-button empty-state__cta"
+                    type="button"
+                    onClick={() =>
+                      searchQuery ? handleSearchChange("") : handleFilter("Tumu")
+                    }
+                  >
+                    {searchQuery ? "Aramayı temizle" : "Tüm ürünlere dön"}
                   </button>
                 </div>
               ) : null}

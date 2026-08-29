@@ -132,7 +132,7 @@ export function Topbar({
                   role="menuitem"
                   onClick={() => {
                     setMenuOpenUser(false);
-                    onFavoritesClick();
+                    onFavoritesClick?.();
                   }}
                 >
                   {favoriteCount > 0 ? `Favorilerim (${favoriteCount})` : "Favorilerim"}
@@ -188,7 +188,7 @@ export function Topbar({
                   role="menuitem"
                   onClick={() => {
                     setMenuOpenUser(false);
-                    onFavoritesClick();
+                    onFavoritesClick?.();
                   }}
                 >
                   {favoriteCount > 0 ? `Favorilerim (${favoriteCount})` : "Favorilerim"}
