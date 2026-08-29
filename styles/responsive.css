@@ -101,6 +101,14 @@
     align-items: center;
   }
 
+  .topbar__titles {
+    display: none;
+  }
+
+  .topbar__logo {
+    max-height: 2.75rem;
+  }
+
   .topbar__right {
     width: 100%;
   }

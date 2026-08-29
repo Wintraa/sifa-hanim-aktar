@@ -1,12 +1,13 @@
 import { setMetaContent } from "./utils.js";
 import { assetUrl } from "./assetUrl.js";
+import { SITE_LOGO_SRC } from "../config/brand.js";
 
 const SITE_NAME = "Şifa Hanım Aktar";
 const SITE_TAGLINE = "Şifalı Bitki Kütüphanesi";
 /** Google için tek ana adres (çift deploy duplicate content önlemi). */
 export const CANONICAL_ORIGIN = "https://sifahanimaktar.vercel.app";
 /** Arama sonuçları / paylaşım önizlemesi için marka logosu. */
-export const SITE_LOGO_PATH = "/assets/brand/sifa-hanim-logo.png";
+export const SITE_LOGO_PATH = SITE_LOGO_SRC;
 const DEFAULT_DESCRIPTION =
   "Şifa Hanım Aktar bitki kütüphanesi: şifalı bitkiler, tıbbi ve aromatik otlar. Ne işe yarar, nasıl kullanılır, nelere dikkat edilir — aktar rehberi.";
 
