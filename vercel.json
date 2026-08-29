@@ -11,10 +11,7 @@
   },
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api/$1" },
-    {
-      "source": "/((?!api/|assets/|brand/|data/|favicon\\.ico|favicon-48x48\\.png|apple-touch-icon\\.png|icon-512\\.png|site\\.webmanifest|sitemap\\.xml|robots\\.txt|google[^/]*\\.html).*)",
-      "destination": "/index.html"
-    }
+    { "source": "/(.*)", "destination": "/index.html" }
   ],
   "headers": [
     {

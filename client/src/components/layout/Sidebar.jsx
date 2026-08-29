@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { SITE_LOGO_ALT, SITE_LOGO_SRC } from "../../config/brand.js";
 
 const FILTERS = [
   { value: "Tumu", label: "Tüm Bitkiler" },
@@ -33,17 +32,9 @@ export function Sidebar({
   return (
     <aside className={`sidebar${isOpen ? " is-open" : ""}`} id="sidebar">
       <div className="sidebar__brand">
-        <Link to="/" className="sidebar__logo-link" aria-label="Ana sayfa — Şifa Hanım Aktar">
-          <img
-            className="site-logo sidebar__logo"
-            src={SITE_LOGO_SRC}
-            alt={SITE_LOGO_ALT}
-            width="200"
-            height="80"
-            decoding="async"
-          />
-        </Link>
-        <h2>Kategoriler</h2>        <p>
+        <span className="sidebar__eyebrow">Şifa Hanım Aktar</span>
+        <h2>Kategoriler</h2>
+        <p>
           Doğanın sunduğu şifalı otları, aromatik yağları ve süs bitkilerini kategorilerine göre
           detaylıca inceleyin.
         </p>
