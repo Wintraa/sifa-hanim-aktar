@@ -115,6 +115,24 @@
           if (!document.getElementById("boot-screen")) return;
           showBootError("Yükleme uzun sürdü. Ctrl+Shift+R yapın veya birkaç saniye bekleyip tekrar deneyin.");
         }, 8000);
+
+        window.addEventListener("load", function () {
+          var cssLink = document.querySelector('link[rel="stylesheet"][href*="/assets/"]');
+          if (!cssLink || sessionStorage.getItem("sifa-css-reload")) return;
+          var cssOk = false;
+          try {
+            cssOk = !!(cssLink.sheet && cssLink.sheet.cssRules && cssLink.sheet.cssRules.length);
+          } catch (err) {
+            cssOk = !!cssLink.sheet;
+          }
+          if (cssOk) return;
+          sessionStorage.setItem("sifa-css-reload", "1");
+          var href = cssLink.getAttribute("href") || "";
+          cssLink.href = href.split("?")[0] + "?v=" + Date.now();
+          window.setTimeout(function () {
+            if (!cssLink.sheet) location.reload();
+          }, 1200);
+        });
       })();
     </script>
     <script type="module" src="/src/main.jsx"></script>

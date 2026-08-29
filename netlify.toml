@@ -21,6 +21,19 @@
   to = "/index.html"
   status = 404
 
+# SPA: uzantılı dosyalar (css/js/png) HTML'e dönmesin — eski önbellek bozulmasın
+[[redirects]]
+  from = "/assets/*"
+  to = "/assets/:splat"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/data/*"
+  to = "/data/:splat"
+  status = 200
+  force = false
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
