@@ -1,10 +1,8 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { saveProductOverride, deleteProductOverride } from "../../lib/products.js";
 import { getCategoryNames, CATEGORIES_CHANGED } from "../../lib/product-categories.js";
-import { compressImageFile } from "../../lib/imageUpload.js";
-import { productImageUrl } from "../../lib/assetUrl.js";
 import { showToast } from "../../lib/toast.js";
-
+import { AdminProductImageControls } from "./AdminProductImageControls.jsx";
 /** Aktar vitrininde sık kullanılan birimler */
 const BIRIM_SECENEKLERI = [
   "adet",
@@ -23,24 +21,16 @@ const BIRIM_SECENEKLERI = [
   "paket",
 ];
 
-export function ProductEditModal({ product, isNew = false, onClose, onSaved }) {
+export function ProductEditModal({ product, isNew = false, isAdmin = true, onClose, onSaved }) {
   const [form, setForm] = useState({ ...product, etiketlerText: "" });
   const [categories, setCategories] = useState(() => getCategoryNames());
   const [saving, setSaving] = useState(false);
-  const [imageLoading, setImageLoading] = useState(false);
-  const [imageFileName, setImageFileName] = useState("");
-  const [isDragging, setIsDragging] = useState(false);
-  const fileInputRef = useRef(null);
-
   useEffect(() => {
     setForm({
       ...product,
       etiketlerText: (product.etiketler || []).join(", "),
     });
-    setImageFileName("");
-    setIsDragging(false);
   }, [product]);
-
   useEffect(() => {
     const reload = () => setCategories(getCategoryNames());
     reload();
@@ -58,62 +48,7 @@ export function ProductEditModal({ product, isNew = false, onClose, onSaved }) {
 
   const setField = (key, value) => setForm((prev) => ({ ...prev, [key]: value }));
 
-  const applyImageFile = async (file) => {
-    if (!file) return;
-    setImageLoading(true);
-    try {
-      const dataUrl = await compressImageFile(file);
-      setField("resimUrl", dataUrl);
-      setImageFileName(file.name);
-      showToast("Görsel seçildi. Kaydetmeyi unutmayın.", "success");
-    } catch (err) {
-      showToast(err.message || "Görsel yüklenemedi.", "error");
-    } finally {
-      setImageLoading(false);
-    }
-  };
-
-  const handleImagePick = async (e) => {
-    const file = e.target.files?.[0];
-    e.target.value = "";
-    await applyImageFile(file);
-  };
-
-  const handleDragEnter = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    if (!imageLoading) setIsDragging(true);
-  };
-
-  const handleDragOver = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    if (!imageLoading) setIsDragging(true);
-  };
-
-  const handleDragLeave = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    if (e.currentTarget.contains(e.relatedTarget)) return;
-    setIsDragging(false);
-  };
-
-  const handleDrop = async (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setIsDragging(false);
-    if (imageLoading) return;
-    const file = e.dataTransfer.files?.[0];
-    await applyImageFile(file);
-  };
-
-  const clearImage = () => {
-    setField("resimUrl", "");
-    setImageFileName("");
-  };
-
-  const handleSave = (e) => {
-    e.preventDefault();
+  const handleSave = (e) => {    e.preventDefault();
     setSaving(true);
     try {
       const kategori =
@@ -177,75 +112,18 @@ export function ProductEditModal({ product, isNew = false, onClose, onSaved }) {
         <form className="product-edit-form" onSubmit={handleSave}>
           <p className="product-edit-form__intro">Zorunlu alanları doldurup kaydet.</p>
 
-          <div
-            className={`product-edit-form__image${isDragging ? " is-dragging" : ""}`}
-            onDragEnter={handleDragEnter}
-            onDragOver={handleDragOver}
-            onDragLeave={handleDragLeave}
-            onDrop={handleDrop}
-          >
-            <span className="product-edit-form__image-label">Ürün görseli</span>
-
-            {!form.resimUrl ? (
-              <label
-                htmlFor="product-edit-image-input"
-                className="product-edit-form__dropzone"
-              >
-                <span className="product-edit-form__dropzone-icon" aria-hidden="true">
-                  +
-                </span>
-                <span className="product-edit-form__dropzone-hint">
-                  Fotoğrafı buraya sürükleyip bırakın
-                </span>
-                <span className="product-edit-form__dropzone-sub">
-                  veya tıklayıp bilgisayardan seçin
-                </span>
-              </label>
-            ) : (
-              <div className="product-edit-form__dropzone product-edit-form__dropzone--has-image">
-                <div className="product-edit-form__preview">
-                  <img src={productImageUrl(form.resimUrl)} alt="Seçilen ürün görseli önizlemesi" />
-                </div>
-              </div>
-            )}
-
-            <input
-              id="product-edit-image-input"
-              ref={fileInputRef}
-              type="file"
-              accept="image/jpeg,image/png,image/webp,image/gif,image/*"
-              hidden
-              onChange={handleImagePick}
-            />
-
-            <div className="product-edit-form__image-actions">
-              {imageLoading ? (
-                <span className="add-product-btn product-edit-form__pick-btn is-disabled" aria-live="polite">
-                  Görsel işleniyor…
-                </span>
-              ) : (
-                <label htmlFor="product-edit-image-input" className="add-product-btn product-edit-form__pick-btn">
-                  {form.resimUrl ? "Görseli Değiştir" : "Görsel Ekle"}
-                </label>
-              )}
-              {form.resimUrl ? (
-                <button
-                  className="dropdown-link dropdown-link--button"
-                  type="button"
-                  onClick={clearImage}
-                >
-                  Görseli Kaldır
-                </button>
-              ) : null}
+          {isAdmin ? (
+            <div className="product-edit-form__image">
+              <span className="product-edit-form__image-label">Ürün görseli</span>
+              <AdminProductImageControls
+                isAdmin={isAdmin}
+                imageUrl={form.resimUrl}
+                onImageChange={(url) => setField("resimUrl", url)}
+              />
             </div>
+          ) : null}
 
-            {imageFileName ? (
-              <p className="product-edit-form__image-name">Seçilen dosya: {imageFileName}</p>
-            ) : null}
-          </div>
-
-          <label className="profile-field">
-            <span>Ürün adı *</span>
+          <label className="profile-field">            <span>Ürün adı *</span>
             <input
               required
               autoFocus

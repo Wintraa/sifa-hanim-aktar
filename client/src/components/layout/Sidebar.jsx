@@ -63,7 +63,9 @@ export function Sidebar({
         <h2>{isProducts ? "Ürünler" : "Bitki Kütüphanesi"}</h2>
         <p>
           {isProducts
-            ? "Sol menüden kategori seç; admin olarak kendi kategorilerini ekleyebilirsin."
+            ? isAdmin
+              ? "Kategori seçin veya yeni kategori ekleyin."
+              : "Kategoriye göre filtreleyin veya arama kutusunu kullanın."
             : "Şifalı otların ne işe yaradığını, nasıl kullanıldığını keşfedin."}
         </p>
       </div>

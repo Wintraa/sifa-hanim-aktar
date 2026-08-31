@@ -169,6 +169,29 @@
   justify-content: flex-end;
 }
 
+.topbar__whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.5rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-md);
+  background: #25d366;
+  color: #fff;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.28);
+  transition: filter 0.15s ease, transform 0.15s ease;
+}
+
+.topbar__whatsapp:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+  color: #fff;
+}
+
 .content {
   display: grid;
   gap: var(--space-4);
@@ -217,8 +240,8 @@
 }
 
 .products-grid {
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: var(--space-2);
+  grid-template-columns: repeat(auto-fill, minmax(168px, 1fr));
+  gap: 1rem;
 }
 
 .pagination {

@@ -3,7 +3,7 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import { api } from "../services/api.js";
 import { useAuth } from "../context/AuthContext.jsx";
 import { isAdminUser } from "../lib/auth.js";
-import { createEmptyProduct, getFeaturedProducts } from "../lib/products.js";
+import { createEmptyProduct, getFeaturedProducts, saveProductOverride } from "../lib/products.js";
 import { isInVitrin } from "../lib/product-clicks.js";
 import { debounce } from "../lib/utils.js";
 import { applyPageSeo } from "../lib/seo.js";
@@ -11,11 +11,14 @@ import { showToast } from "../lib/toast.js";
 import { Sidebar } from "../components/layout/Sidebar.jsx";
 import { Topbar } from "../components/layout/Topbar.jsx";
 import { ProductCard } from "../components/catalog/ProductCard.jsx";
+import { ProductGridSkeleton } from "../components/catalog/ProductGridSkeleton.jsx";
 import { ProductEditModal } from "../components/catalog/ProductEditModal.jsx";
 import { CategoryEditModal } from "../components/catalog/CategoryEditModal.jsx";
 import { Pagination } from "../components/catalog/Pagination.jsx";
 import { WhatsAppFloatButton } from "../components/layout/ShopContact.jsx";
+import { ShopFooter } from "../components/layout/ShopFooter.jsx";
 import { ShopHero, ShopTrustStrip } from "../components/catalog/ShopHero.jsx";
+import { AdminPhotoHint } from "../components/catalog/AdminPhotoHint.jsx";
 import { SHOP } from "../config/shop.js";
 import { whatsappUrl } from "../lib/whatsapp.js";
 import { loadBaseCategories, notifyCategoriesChanged } from "../lib/product-categories.js";
@@ -192,6 +195,18 @@ export default function ProductsPage() {
     setAddingCategory(false);
   };
 
+  const handleProductImageChange = useCallback(
+    (productWithImage) => {
+      try {
+        saveProductOverride(productWithImage);
+        loadProducts();
+      } catch (err) {
+        showToast(err.message || "Resim kaydedilemedi.", "error");
+      }
+    },
+    [loadProducts]
+  );
+
   const filteredProducts = useMemo(() => {
     let list = [...products];
     if (featuredOnly) {
@@ -267,7 +282,7 @@ export default function ProductsPage() {
           />
 
           <main className="content" id="main-content">
-            <section className="admin-panel shop-page" aria-labelledby="productsPanelTitle">
+            <section className="shop-page" aria-labelledby="productsPanelTitle">
               {!loading && !error && products.length > 0 ? (
                 <>
                   <ShopHero productCount={products.length} />
@@ -291,7 +306,9 @@ export default function ProductsPage() {
                 ) : null}
               </div>
 
-              {loading ? <p className="plants-section__intro">Yükleniyor…</p> : null}
+              <AdminPhotoHint isAdmin={isAdmin} />
+
+              {loading ? <ProductGridSkeleton count={12} /> : null}
               {error ? (
                 <div className="empty-state">
                   <h4>Hata</h4>
@@ -359,6 +376,7 @@ export default function ProductsPage() {
                           setAddingNew(false);
                           setEditingProduct(p);
                         }}
+                        onImageChange={handleProductImageChange}
                       />
                     ))}
                   </div>
@@ -380,6 +398,7 @@ export default function ProductsPage() {
                     </a>
                   </div>
                   <Pagination currentPage={safePage} totalPages={totalPages} onPageChange={setPage} />
+                  <ShopFooter />
                 </>
               ) : null}
             </section>
@@ -393,6 +412,7 @@ export default function ProductsPage() {
         <ProductEditModal
           product={editingProduct}
           isNew={addingNew}
+          isAdmin={isAdmin}
           onClose={closeForm}
           onSaved={() => {
             loadProducts();

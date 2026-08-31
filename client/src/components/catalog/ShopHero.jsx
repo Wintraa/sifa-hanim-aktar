@@ -5,11 +5,11 @@ export function ShopHero({ productCount = 0 }) {
   return (
     <section className="shop-hero" aria-labelledby="shopHeroTitle">
       <div className="shop-hero__copy">
-        <p className="section-label">Çan / Çanakkale · Aktar</p>
-        <h1 id="shopHeroTitle">Doğal ürünler, güvenilir dükkan</h1>
+        <p className="section-label">Çan · Çanakkale</p>
+        <h1 id="shopHeroTitle">{SHOP.name}</h1>
         <p className="shop-hero__text">
-          Baharat, çay, macun, sirke ve daha fazlası — sipariş ve fiyat bilgisi için WhatsApp veya
-          Instagram üzerinden bize ulaşın. Hızlı yanıt, yerel teslimat imkânı.
+          Baharat, çay, macun, sirke ve doğal ürünler — yerel aktarımızdan kapınıza. Fiyat ve stok
+          için WhatsApp&apos;tan yazmanız yeterli; genelde birkaç dakika içinde dönüş yapılır.
         </p>
         <div className="shop-hero__actions">
           <a
@@ -49,12 +49,20 @@ export function ShopHero({ productCount = 0 }) {
 }
 
 export function ShopTrustStrip() {
+  const items = [
+    "Yerel aktar dükkanı",
+    "WhatsApp ile hızlı sipariş",
+    "Anında fiyat bilgisi",
+    "Çan teslimat",
+  ];
+
   return (
-    <div className="trust-strip" role="note">
-      <span>✓ Yerel Şifa Hanım Aktar dükkanı</span>
-      <span>✓ WhatsApp ile hızlı sipariş</span>
-      <span>✓ Fiyat bilgisi anında</span>
-      <span>✓ Güvenli iletişim</span>
+    <div className="trust-strip" role="note" aria-label="Güven bilgileri">
+      {items.map((item) => (
+        <span key={item} className="trust-strip__pill">
+          {item}
+        </span>
+      ))}
     </div>
   );
 }

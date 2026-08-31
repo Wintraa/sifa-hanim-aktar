@@ -3,7 +3,12 @@ import { Link, useParams } from "react-router-dom";
 import { api } from "../services/api.js";
 import { applyPageSeo } from "../lib/seo.js";
 import { recordProductClick } from "../lib/product-clicks.js";
+import { saveProductOverride } from "../lib/products.js";
+import { isAdminUser } from "../lib/auth.js";
+import { useAuth } from "../context/AuthContext.jsx";
+import { showToast } from "../lib/toast.js";
 import { SHOP } from "../config/shop.js";
+import { AdminProductImageControls } from "../components/catalog/AdminProductImageControls.jsx";
 import { ProductContactLinks } from "../components/catalog/ProductContactLinks.jsx";
 import { ProductImage } from "../components/catalog/ProductImage.jsx";
 import { RelatedProducts } from "../components/catalog/RelatedProducts.jsx";
@@ -12,6 +17,8 @@ import { WhatsAppFloatButton } from "../components/layout/ShopContact.jsx";
 
 export default function ProductDetailPage() {
   const { id } = useParams();
+  const { user } = useAuth();
+  const isAdmin = isAdminUser(user);
   const [product, setProduct] = useState(null);
   const [allProducts, setAllProducts] = useState([]);
   const [error, setError] = useState("");
@@ -87,6 +94,17 @@ export default function ProductDetailPage() {
 
   const lead = product.kisaAciklama?.replace(/\s*—\s*Şifa Hanım Aktar\.?\s*$/i, "") || product.kategori;
 
+  const handleAdminImageChange = (resimUrl) => {
+    try {
+      const updated = { ...product, resimUrl };
+      saveProductOverride(updated);
+      setProduct(updated);
+      showToast("Ürün resmi kaydedildi.", "success");
+    } catch (err) {
+      showToast(err.message || "Kaydedilemedi.", "error");
+    }
+  };
+
   return (
     <>
       <main className="detail-main product-detail" id="main-content">
@@ -115,6 +133,12 @@ export default function ProductDetailPage() {
               alt={`${product.ad} görseli`}
               width="960"
               height="720"
+            />
+            <AdminProductImageControls
+              isAdmin={isAdmin}
+              imageUrl={product.resimUrl}
+              showPreview={false}
+              onImageChange={handleAdminImageChange}
             />
           </figure>
 

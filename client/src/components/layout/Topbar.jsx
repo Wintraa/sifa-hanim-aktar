@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext.jsx";
+import { SHOP } from "../../config/shop.js";
+import { whatsappUrl } from "../../lib/whatsapp.js";
 
 export function Topbar({
   catalogMode = "products",
@@ -11,7 +13,8 @@ export function Topbar({
   onFavoritesClick,
   favoriteCount,
   isAdmin = false,
-}) {  const [menuOpenUser, setMenuOpenUser] = useState(false);
+}) {
+  const [menuOpenUser, setMenuOpenUser] = useState(false);
   const { user, isLoggedIn, logout } = useAuth();
   const navigate = useNavigate();
   const dropdownRef = useRef(null);
@@ -57,12 +60,24 @@ export function Topbar({
           <h1>Şifa Hanım Aktar</h1>
           <p className="topbar__subtitle">
             {isPlants ? "Şifalı bitki kütüphanesi" : "Doğal ürünler & aktar vitrini"}
-            {isAdmin ? " · Admin" : ""}
+            {isAdmin ? " · Admin modu" : ""}
           </p>
         </div>
       </div>
 
       <div className="topbar__right">
+        {!isPlants ? (
+          <a
+            className="topbar__whatsapp"
+            href={whatsappUrl(SHOP.whatsappMessages.order)}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp ile sipariş ver"
+          >
+            WhatsApp
+          </a>
+        ) : null}
+
         <label className="search-box" htmlFor="searchInput">
           <span className="visually-hidden">
             {isPlants ? "Bitki ara" : "Ürün ara"}. Kısayol: / odaklanır, Esc kapatır.

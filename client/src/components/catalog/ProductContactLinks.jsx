@@ -12,10 +12,25 @@ export function ProductContactLinks({
   productName = "",
   birim = "",
   compact = false,
+  card = false,
   panel = false,
 }) {
   const message = orderMessage(productName, birim);
-  const waLabel = compact ? "Sipariş Ver" : "WhatsApp ile Sipariş Ver";
+  const waLabel = card ? "WhatsApp" : compact ? "Sipariş Ver" : "WhatsApp ile Sipariş Ver";
+
+  if (card) {
+    return (
+      <a
+        className="product-card__wa"
+        href={whatsappUrl(message)}
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {waLabel}
+      </a>
+    );
+  }
 
   if (panel) {
     return (
