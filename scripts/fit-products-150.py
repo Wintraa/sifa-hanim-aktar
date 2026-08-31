@@ -1,23 +1,25 @@
 """
-Ürün fotoğraflarını 150x150 (retina: 300x300) kare kadraja oturtur.
-Ürünün başı ve tabanı kesilmez — contain + beyaz kenar kırpma.
+Profesyonel urun thumbnail — Aktar orijinalinden.
+- Acik/gri kenarlar kirpilir
+- Sabit krem zemin (#FDFBF7)
+- Urun basi ve tabani KESILMEZ (contain)
+- Cikti: 400x400 (150px grid icin retina)
 """
 from __future__ import annotations
 
 import json
 from pathlib import Path
 
-from PIL import Image
+from PIL import Image, ImageEnhance, ImageFilter
 
 REPO = Path(__file__).resolve().parents[1]
 AKTAR = REPO.parent / "Aktar"
 PRODUCTS_JSON = REPO / "data" / "products.json"
 OUT_DIR = REPO / "assets" / "products"
 
-# CSS 150px; 2x retina
-TARGET = 300
-PAD = 0.07
-WHITE_THRESH = 246
+TARGET = 400
+PAD = 0.035
+BG = (253, 251, 247)  # --bg site kremi
 
 EXACT = {
     1: "Esila Kuyruk.jpg",
@@ -133,23 +135,31 @@ def resolve_aktar(wanted: str, files: list[str]) -> str | None:
     return None
 
 
-def is_near_white(px, thresh: int = WHITE_THRESH) -> bool:
-    r, g, b = px[:3]
-    return r >= thresh and g >= thresh and b >= thresh
+def is_background(r: int, g: int, b: int) -> bool:
+    """Beyaz, acik gri, krem kenarlar."""
+    mx, mn = max(r, g, b), min(r, g, b)
+    lum = 0.299 * r + 0.587 * g + 0.114 * b
+    if lum >= 248:
+        return True
+    if lum >= 215 and (mx - mn) <= 22:
+        return True
+    return False
 
 
-def trim_whitespace(im: Image.Image) -> Image.Image:
+def trim_content(im: Image.Image) -> Image.Image:
     rgb = im.convert("RGB")
     w, h = rgb.size
     px = rgb.load()
-    step = 2 if max(w, h) > 800 else 1
+    step = 1 if max(w, h) < 1200 else 2
 
     min_x, min_y = w, h
     max_x, max_y = 0, 0
     found = False
+
     for y in range(0, h, step):
         for x in range(0, w, step):
-            if not is_near_white(px[x, y]):
+            r, g, b = px[x, y]
+            if not is_background(r, g, b):
                 found = True
                 min_x = min(min_x, x)
                 min_y = min(min_y, y)
@@ -159,49 +169,36 @@ def trim_whitespace(im: Image.Image) -> Image.Image:
     if not found:
         return rgb
 
-    margin = max(4, int(min(w, h) * 0.015))
+    # Urun basi/sonu icin ince kenar payi
+    margin = max(3, int(min(w, h) * 0.008))
     min_x = max(0, min_x - margin)
     min_y = max(0, min_y - margin)
     max_x = min(w - 1, max_x + margin)
     max_y = min(h - 1, max_y + margin)
 
-    cropped_w = max_x - min_x + 1
-    cropped_h = max_y - min_y + 1
-    if cropped_w < w * 0.3 or cropped_h < h * 0.3:
+    cw = max_x - min_x + 1
+    ch = max_y - min_y + 1
+    if cw < w * 0.25 or ch < h * 0.25:
         return rgb
 
     return rgb.crop((min_x, min_y, max_x + 1, max_y + 1))
 
 
-def sample_bg(im: Image.Image) -> tuple[int, int, int]:
-    w, h = im.size
-    pts = [
-        im.getpixel((min(2, w - 1), min(2, h - 1))),
-        im.getpixel((max(0, w - 3), min(2, h - 1))),
-        im.getpixel((min(2, w - 1), max(0, h - 3))),
-        im.getpixel((max(0, w - 3), max(0, h - 3))),
-    ]
-    return (
-        sum(p[0] for p in pts) // 4,
-        sum(p[1] for p in pts) // 4,
-        sum(p[2] for p in pts) // 4,
-    )
+def fit_thumb(im: Image.Image) -> Image.Image:
+    src = trim_content(im)
+    # Hafif keskinlestir
+    src = ImageEnhance.Sharpness(src).enhance(1.08)
+    src = ImageEnhance.Contrast(src).enhance(1.04)
 
-
-def fit_square(im: Image.Image) -> Image.Image:
-    """Kare kadraj — ürün tamamen sığar (baş ve taban kesilmez)."""
-    src = trim_whitespace(im.convert("RGB"))
-    bg = sample_bg(src)
-    canvas = Image.new("RGB", (TARGET, TARGET), bg)
-
+    canvas = Image.new("RGB", (TARGET, TARGET), BG)
     avail = TARGET * (1 - 2 * PAD)
     scale = min(avail / src.width, avail / src.height)
-    new_w = max(1, int(src.width * scale))
-    new_h = max(1, int(src.height * scale))
-    resized = src.resize((new_w, new_h), Image.Resampling.LANCZOS)
+    nw = max(1, int(src.width * scale))
+    nh = max(1, int(src.height * scale))
+    resized = src.resize((nw, nh), Image.Resampling.LANCZOS)
 
-    dx = (TARGET - new_w) // 2
-    dy = (TARGET - new_h) // 2
+    dx = (TARGET - nw) // 2
+    dy = (TARGET - nh) // 2
     canvas.paste(resized, (dx, dy))
     return canvas
 
@@ -213,7 +210,7 @@ def main() -> None:
     aktar_files = [
         f.name
         for f in AKTAR.iterdir()
-        if f.suffix.lower() in {".jpg", ".jpeg", ".png", ".webp"}
+        if f.suffix.lower() in {".jpg", ".jpeg", ".png", ".webp"} and f.stat().st_size > 500
     ]
     products = json.loads(PRODUCTS_JSON.read_text(encoding="utf-8"))
     OUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -231,31 +228,30 @@ def main() -> None:
         if wanted:
             resolved = resolve_aktar(wanted, aktar_files)
             if resolved:
-                src_path = AKTAR / resolved
-                if src_path.stat().st_size > 0:
-                    source = src_path
+                source = AKTAR / resolved
 
         if source is None and dest.exists() and dest.stat().st_size > 1000:
             source = dest
+            print(f"WARN #{pid:02d} mevcut dosyadan")
 
         if source is None:
             print(f"SKIP #{pid:02d} kaynak yok")
             continue
 
         with Image.open(source) as im:
-            fitted = fit_square(im)
+            out = fit_thumb(im)
             tmp = dest.with_suffix(".tmp.jpg")
-            fitted.save(tmp, "JPEG", quality=88, optimize=True)
+            out.save(tmp, "JPEG", quality=92, optimize=True, progressive=True)
             tmp.replace(dest)
 
-        product["resimUrl"] = f"assets/products/{dest.name}?v=sq150"
+        product["resimUrl"] = f"assets/products/{dest.name}?v=pro-v2"
         ok += 1
-        print(f"OK #{pid:02d} {dest.name}")
+        print(f"OK #{pid:02d} <- {source.name}")
 
     PRODUCTS_JSON.write_text(
         json.dumps(products, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
-    print(f"\n{ok}/86 kare kadraj hazir")
+    print(f"\n{ok}/86 hazir")
 
 
 if __name__ == "__main__":
