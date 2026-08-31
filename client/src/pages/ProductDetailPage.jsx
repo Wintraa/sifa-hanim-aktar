@@ -1,17 +1,19 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { api } from "../services/api.js";
-import { productImageUrl } from "../lib/assetUrl.js";
 import { applyPageSeo } from "../lib/seo.js";
 import { recordProductClick } from "../lib/product-clicks.js";
 import { SHOP } from "../config/shop.js";
 import { ProductContactLinks } from "../components/catalog/ProductContactLinks.jsx";
+import { ProductImage } from "../components/catalog/ProductImage.jsx";
+import { RelatedProducts } from "../components/catalog/RelatedProducts.jsx";
 import { ShopTrustStrip } from "../components/catalog/ShopHero.jsx";
 import { WhatsAppFloatButton } from "../components/layout/ShopContact.jsx";
 
 export default function ProductDetailPage() {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
+  const [allProducts, setAllProducts] = useState([]);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
 
@@ -21,9 +23,13 @@ export default function ProductDetailPage() {
       setLoading(true);
       setError("");
       try {
-        const data = await api.getProductWithFallback(id);
+        const [data, list] = await Promise.all([
+          api.getProductWithFallback(id),
+          api.getProductsWithFallback(),
+        ]);
         if (!cancelled) {
           setProduct(data);
+          setAllProducts(list);
           recordProductClick(data.id);
         }
       } catch (err) {
@@ -36,6 +42,13 @@ export default function ProductDetailPage() {
       cancelled = true;
     };
   }, [id]);
+
+  const relatedProducts = useMemo(() => {
+    if (!product?.kategori) return [];
+    return allProducts.filter(
+      (p) => p.kategori === product.kategori && Number(p.id) !== Number(product.id)
+    );
+  }, [allProducts, product]);
 
   useEffect(() => {
     if (!product) return;
@@ -51,7 +64,10 @@ export default function ProductDetailPage() {
   if (loading) {
     return (
       <main className="detail-main product-detail" id="main-content">
-        <p className="plants-section__intro">Ürün yükleniyor…</p>
+        <div className="product-detail__skeleton" aria-hidden="true">
+          <div className="skeleton-block skeleton-block--wide" />
+          <div className="skeleton-block" />
+        </div>
       </main>
     );
   }
@@ -68,6 +84,8 @@ export default function ProductDetailPage() {
       </main>
     );
   }
+
+  const lead = product.kisaAciklama?.replace(/\s*—\s*Şifa Hanım Aktar\.?\s*$/i, "") || product.kategori;
 
   return (
     <>
@@ -91,8 +109,9 @@ export default function ProductDetailPage() {
 
         <section className="product-detail__layout">
           <figure className="product-detail__media info-card">
-            <img
-              src={productImageUrl(product.resimUrl)}
+            <ProductImage
+              className="product-detail__photo"
+              src={product.resimUrl}
               alt={`${product.ad} görseli`}
               width="960"
               height="720"
@@ -101,8 +120,13 @@ export default function ProductDetailPage() {
 
           <div className="product-detail__side">
             <article className="info-card product-detail__info">
-              <p className="product-detail__lead">{product.kisaAciklama}</p>
-              {product.aciklama ? <p className="product-detail__body">{product.aciklama}</p> : null}
+              <p className="product-detail__lead">{lead}</p>
+              {product.aciklama ? <p className="product-detail__body">{product.aciklama}</p> : (
+                <p className="product-detail__body">
+                  Sipariş ve fiyat bilgisi için WhatsApp veya Instagram üzerinden bize ulaşın — genelde birkaç
+                  dakika içinde dönüş yapılır.
+                </p>
+              )}
               {product.etiketler?.length ? (
                 <div className="product-card__tags">
                   {product.etiketler.map((tag) => (
@@ -117,6 +141,12 @@ export default function ProductDetailPage() {
             <ProductContactLinks productName={product.ad} birim={product.birim} panel />
           </div>
         </section>
+
+        <RelatedProducts
+          products={relatedProducts}
+          currentId={product.id}
+          title={`${product.kategori} — benzer ürünler`}
+        />
       </main>
 
       <WhatsAppFloatButton />

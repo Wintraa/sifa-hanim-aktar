@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import { productImageUrl } from "../../lib/assetUrl.js";
 import { recordProductClick } from "../../lib/product-clicks.js";
 import { ProductContactLinks } from "./ProductContactLinks.jsx";
+import { ProductImage } from "./ProductImage.jsx";
 
 export function ProductCard({ product, visibleIndex = 0, isAdmin = false, onEdit, inVitrin = false }) {
   const detailHref = `/urun/${product.id}`;
@@ -16,9 +16,9 @@ export function ProductCard({ product, visibleIndex = 0, isAdmin = false, onEdit
           aria-label={`${product.ad} detayı`}
           onClick={trackClick}
         >
-          <img
+          <ProductImage
             className="product-card__image"
-            src={productImageUrl(product.resimUrl)}
+            src={product.resimUrl}
             alt={`${product.ad} ürün görseli`}
             width="640"
             height="480"
@@ -44,7 +44,9 @@ export function ProductCard({ product, visibleIndex = 0, isAdmin = false, onEdit
           </Link>
         </h4>
         {product.birim ? <p className="product-card__unit">{product.birim}</p> : null}
-        <p className="product-card__desc">{product.kisaAciklama}</p>
+        {product.kisaAciklama ? (
+          <p className="product-card__desc">{product.kisaAciklama.replace(/\s*—\s*Şifa Hanım Aktar\.?\s*$/i, "")}</p>
+        ) : null}
         <Link className="product-card__detail-link" to={detailHref} onClick={trackClick}>
           Ürünü incele →
         </Link>

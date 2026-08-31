@@ -6,7 +6,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Ağrı Kremi",
-    "resimUrl": "",
+    "resimUrl": "assets/products/01-esila-kuyruk-yagl-krem.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -18,7 +18,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Ağrı Kremi",
-    "resimUrl": "",
+    "resimUrl": "assets/products/02-ard-c-ozlu-krem.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -30,7 +30,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Ağrı Kremi",
-    "resimUrl": "",
+    "resimUrl": "assets/products/03-akilli-krem.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -42,7 +42,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Ağrı Kremi",
-    "resimUrl": "",
+    "resimUrl": "assets/products/04-radian-masaj-kremi.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -54,7 +54,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Aromatik Yağlar",
-    "resimUrl": "",
+    "resimUrl": "assets/products/05-corek-otu-yag.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -66,7 +66,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Aromatik Yağlar",
-    "resimUrl": "",
+    "resimUrl": "assets/products/06-kantaron-yag.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -78,7 +78,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Aromatik Yağlar",
-    "resimUrl": "",
+    "resimUrl": "assets/products/07-udi-hindi-yag.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -90,7 +90,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Aromatik Yağlar",
-    "resimUrl": "",
+    "resimUrl": "assets/products/08-hint-yag.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -102,7 +102,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Aromatik Yağlar",
-    "resimUrl": "",
+    "resimUrl": "assets/products/09-hindistan-cevizi-yag-150ml-organik-sertifikal.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -114,7 +114,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Aromatik Yağlar",
-    "resimUrl": "",
+    "resimUrl": "assets/products/10-hindistan-cevizi-yag-150ml.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -126,7 +126,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Baharatlar",
-    "resimUrl": "",
+    "resimUrl": "assets/products/11-pul-biber-ac-dokme.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -138,7 +138,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Baharatlar",
-    "resimUrl": "",
+    "resimUrl": "assets/products/12-pul-biber-tatl-dokme.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -150,7 +150,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Baharatlar",
-    "resimUrl": "",
+    "resimUrl": "assets/products/13-toz-biber-ac-dokme.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -162,7 +162,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Baharatlar",
-    "resimUrl": "",
+    "resimUrl": "assets/products/14-toz-biber-tatl-dokme.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -174,7 +174,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Baharatlar",
-    "resimUrl": "",
+    "resimUrl": "assets/products/15-isot-dokme.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -186,7 +186,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Baharatlar",
-    "resimUrl": "",
+    "resimUrl": "assets/products/16-kimyon-dokme.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -198,7 +198,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Baharatlar",
-    "resimUrl": "",
+    "resimUrl": "assets/products/17-kekik-dokme.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -210,7 +210,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Baharatlar",
-    "resimUrl": "",
+    "resimUrl": "assets/products/18-tarc-n-dokme.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -222,7 +222,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Baharatlar",
-    "resimUrl": "",
+    "resimUrl": "assets/products/19-kara-biber-dokme.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -234,7 +234,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Baharatlar",
-    "resimUrl": "",
+    "resimUrl": "assets/products/20-sumak-dokme.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -246,7 +246,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Baharatlar",
-    "resimUrl": "",
+    "resimUrl": "assets/products/21-cubuk-tarc-n-dokme.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -258,7 +258,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Baharatlar",
-    "resimUrl": "",
+    "resimUrl": "assets/products/22-zencefil-toz-dokme.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -270,7 +270,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Baharatlar",
-    "resimUrl": "",
+    "resimUrl": "assets/products/23-zerdecal-toz-dokme.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -282,7 +282,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Baharatlar",
-    "resimUrl": "",
+    "resimUrl": "assets/products/24-beyaz-susam-dokme.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -294,7 +294,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Baharatlar",
-    "resimUrl": "",
+    "resimUrl": "assets/products/25-simitlik-susam-dokme.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -306,7 +306,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Baharatlar",
-    "resimUrl": "",
+    "resimUrl": "assets/products/26-karanfil-dokme.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -318,7 +318,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Baharatlar",
-    "resimUrl": "",
+    "resimUrl": "assets/products/27-corek-otu-dokme.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -330,7 +330,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Baharatlar",
-    "resimUrl": "",
+    "resimUrl": "assets/products/28-keten-tohumu-dokme.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -342,7 +342,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Baharatlar",
-    "resimUrl": "",
+    "resimUrl": "assets/products/29-rezene-dokme.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -354,7 +354,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Baharatlar",
-    "resimUrl": "",
+    "resimUrl": "assets/products/30-k-na-dokme.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -366,7 +366,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Çay",
-    "resimUrl": "",
+    "resimUrl": "assets/products/31-k-s-cay-200gr.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -378,7 +378,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Çay",
-    "resimUrl": "",
+    "resimUrl": "assets/products/32-atom-cay-150gr.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -390,7 +390,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Çay",
-    "resimUrl": "",
+    "resimUrl": "assets/products/33-form-cay-130gr.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -402,7 +402,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Çay",
-    "resimUrl": "",
+    "resimUrl": "assets/products/34-beyaz-cay-demlik-poset-20-li.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -414,7 +414,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Çay",
-    "resimUrl": "",
+    "resimUrl": "assets/products/35-yesil-cay-demlik-poset-20-li.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -426,7 +426,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Çay",
-    "resimUrl": "",
+    "resimUrl": "assets/products/36-yesil-cay-dokme.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -438,7 +438,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Çay",
-    "resimUrl": "",
+    "resimUrl": "assets/products/37-seylan-cay.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -450,7 +450,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Çay",
-    "resimUrl": "",
+    "resimUrl": "assets/products/38-esila-kay-s-l-biberiyeli-kar-s-k-bitkisel-cay.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -462,7 +462,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Detox Ürünleri",
-    "resimUrl": "",
+    "resimUrl": "assets/products/39-zuhre-ana-bromelain-surubu.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -474,7 +474,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Detox Ürünleri",
-    "resimUrl": "",
+    "resimUrl": "assets/products/40-zuhre-ana-kekre-termojenik-mix.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -486,7 +486,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Detox Ürünleri",
-    "resimUrl": "",
+    "resimUrl": "assets/products/41-momordica-coconut-mix.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -498,7 +498,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Detox Ürünleri",
-    "resimUrl": "",
+    "resimUrl": "assets/products/42-lokman-aktar-detox-sirkesi.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -510,7 +510,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Detox Ürünleri",
-    "resimUrl": "",
+    "resimUrl": "assets/products/43-sandaloz-sak-zl-elma-sirkesi.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -522,7 +522,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Detox Ürünleri",
-    "resimUrl": "",
+    "resimUrl": "assets/products/44-aserola-extract.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -534,7 +534,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Detox Ürünleri",
-    "resimUrl": "",
+    "resimUrl": "assets/products/45-matcha-detox-sade.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -546,7 +546,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Detox Ürünleri",
-    "resimUrl": "",
+    "resimUrl": "assets/products/46-matcha-bromelain.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -558,7 +558,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Detox Ürünleri",
-    "resimUrl": "",
+    "resimUrl": "assets/products/47-matcha-cilekli.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -570,7 +570,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Detox Ürünleri",
-    "resimUrl": "",
+    "resimUrl": "assets/products/48-hindibal-diyet-kahvesi.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -582,7 +582,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Kahve",
-    "resimUrl": "",
+    "resimUrl": "assets/products/49-sifa-han-m-turk-kahvesi.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -594,7 +594,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Kahve",
-    "resimUrl": "",
+    "resimUrl": "assets/products/50-ad-yaman-kervansaray-dibek-kahvesi-200gr.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -606,7 +606,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Kahve",
-    "resimUrl": "",
+    "resimUrl": "assets/products/51-ad-yaman-kervansaray-menengic-kahvesi-200gr.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -618,7 +618,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Kurutulmuş Ürünler",
-    "resimUrl": "",
+    "resimUrl": "assets/products/52-dolmal-k-biber-kurusu-50-lik-dizi.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -630,7 +630,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Kurutulmuş Ürünler",
-    "resimUrl": "",
+    "resimUrl": "assets/products/53-dolmal-k-kuru-patl-can-50-li-dizi.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -642,7 +642,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Kurutulmuş Ürünler",
-    "resimUrl": "",
+    "resimUrl": "assets/products/54-kuru-domates.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -654,7 +654,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Kurutulmuş Ürünler",
-    "resimUrl": "",
+    "resimUrl": "assets/products/55-kuru-incir.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -666,7 +666,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Kurutulmuş Ürünler",
-    "resimUrl": "",
+    "resimUrl": "assets/products/56-dut-kurusu.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -678,7 +678,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Macunlar",
-    "resimUrl": "",
+    "resimUrl": "assets/products/57-civan-percemli-hay-t-tohumlu-bitkisel-kar-s-ml-macun.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -690,7 +690,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Macunlar",
-    "resimUrl": "",
+    "resimUrl": "assets/products/58-ball-polenli-ginsengli-bitkisel-kar-s-ml-macun.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -702,7 +702,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Macunlar",
-    "resimUrl": "",
+    "resimUrl": "assets/products/59-and-z-pekmezli-enginarl-zerdecall-bitkisel-kar-s-ml-.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -714,7 +714,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Macunlar",
-    "resimUrl": "",
+    "resimUrl": "assets/products/60-yak-otlu-provit-bitkisel-kar-s-ml-macun.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -726,7 +726,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Macunlar",
-    "resimUrl": "",
+    "resimUrl": "assets/products/61-45-performans-enerji-guc.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -738,7 +738,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Macunlar",
-    "resimUrl": "",
+    "resimUrl": "assets/products/62-bodrum-mandalina-macunu.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -750,7 +750,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Macunlar",
-    "resimUrl": "",
+    "resimUrl": "assets/products/63-zuhre-ana-kids-macunu.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -762,7 +762,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Macunlar",
-    "resimUrl": "",
+    "resimUrl": "assets/products/64-zuhre-ana-kozalak-macunu.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -774,7 +774,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Macunlar",
-    "resimUrl": "",
+    "resimUrl": "assets/products/65-zuhre-ana-propolis-macunu.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -786,7 +786,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Macunlar",
-    "resimUrl": "",
+    "resimUrl": "assets/products/66-zuhre-ana-sultan-macunu.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -798,7 +798,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Macunlar",
-    "resimUrl": "",
+    "resimUrl": "assets/products/67-zuhre-ana-stevia-katk-l-kozolak-macunu.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -810,7 +810,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Meyve Özü",
-    "resimUrl": "",
+    "resimUrl": "assets/products/68-zuhre-ana-tropikal-meyve-ozu.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -822,7 +822,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Meyve Özü",
-    "resimUrl": "",
+    "resimUrl": "assets/products/69-zuhre-ana-yaban-mersini-ozu.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -834,7 +834,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Meyve Özü",
-    "resimUrl": "",
+    "resimUrl": "assets/products/70-zuhre-ana-visne-ozu.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -846,7 +846,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Meyve Özü",
-    "resimUrl": "",
+    "resimUrl": "assets/products/71-zuhre-ana-karadut-ozu.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -858,7 +858,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Meyve Özü",
-    "resimUrl": "",
+    "resimUrl": "assets/products/72-and-z-pekmez-ozu.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -870,7 +870,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Meyve Özü",
-    "resimUrl": "",
+    "resimUrl": "assets/products/73-hurma-pekmez-ozu.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -882,7 +882,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Meyve Özü",
-    "resimUrl": "",
+    "resimUrl": "assets/products/74-harnup-keci-boynuzu-ozu.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -894,7 +894,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Meyve Özü",
-    "resimUrl": "",
+    "resimUrl": "assets/products/75-dut-pekmez-ozu.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -906,7 +906,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Meyve Özü",
-    "resimUrl": "",
+    "resimUrl": "assets/products/76-mesir-i-sifa-k-z-lc-k-ozu.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -918,7 +918,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Sirkeler",
-    "resimUrl": "",
+    "resimUrl": "assets/products/77-elma-sirkesi.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -930,7 +930,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Sirkeler",
-    "resimUrl": "",
+    "resimUrl": "assets/products/78-kozalak-surubu.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -942,7 +942,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Sirkeler",
-    "resimUrl": "",
+    "resimUrl": "assets/products/79-al-c-sirkesi.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -954,7 +954,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Sirkeler",
-    "resimUrl": "",
+    "resimUrl": "assets/products/80-ananas-sirkesi.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -966,7 +966,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Sirkeler",
-    "resimUrl": "",
+    "resimUrl": "assets/products/81-enginar-sirkesi.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -978,7 +978,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Sirkeler",
-    "resimUrl": "",
+    "resimUrl": "assets/products/82-uzum-sirkesi.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -990,7 +990,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Sirkeler",
-    "resimUrl": "",
+    "resimUrl": "assets/products/83-gul-sirkesi.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -1002,7 +1002,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Sirkeler",
-    "resimUrl": "",
+    "resimUrl": "assets/products/84-sifa-han-m-sultan-sirkesi.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -1014,7 +1014,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Sirkeler",
-    "resimUrl": "",
+    "resimUrl": "assets/products/85-caks-r-koku-suyu.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []
@@ -1026,7 +1026,7 @@
     "aciklama": "",
     "birim": "adet",
     "kategori": "Sirkeler",
-    "resimUrl": "",
+    "resimUrl": "assets/products/86-enginar-suyu.jpg",
     "oneCikan": false,
     "stokta": true,
     "etiketler": []

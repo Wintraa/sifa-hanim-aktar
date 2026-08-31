@@ -30,6 +30,12 @@
       ]
     },
     {
+      "source": "/assets/products/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400, must-revalidate" }
+      ]
+    },
+    {
       "source": "/assets/(.*)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
@@ -44,7 +50,7 @@
     {
       "source": "/data/products.json",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=3600, stale-while-revalidate=86400" }
+        { "key": "Cache-Control", "value": "public, max-age=60, must-revalidate" }
       ]
     },
     {

@@ -1971,3 +1971,97 @@
 .whatsapp-float__label {
   font-size: 0.875rem;
 }
+
+/* Benzer ürünler — detay sayfası */
+.related-products {
+  margin-top: var(--space-4);
+  padding-top: var(--space-3);
+  border-top: 1px solid rgba(141, 123, 104, 0.2);
+}
+
+.related-products h2 {
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-serif);
+  font-size: var(--font-lg);
+  color: var(--text-main);
+}
+
+.related-products__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-2);
+}
+
+.related-products__card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: var(--space-2);
+  border: 1px solid rgba(141, 123, 104, 0.22);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 250, 244, 0.95);
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition-interactive);
+}
+
+.related-products__card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+  border-color: rgba(141, 123, 104, 0.4);
+}
+
+.related-products__img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  background: var(--surface-muted, #f5efe6);
+}
+
+.related-products__cat {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--accent-brown);
+}
+
+.related-products__name {
+  font-size: 0.9375rem;
+  line-height: 1.35;
+  color: var(--text-main);
+}
+
+/* Detay yükleme iskeleti */
+.product-detail__skeleton {
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
+}
+
+.skeleton-block {
+  min-height: 12rem;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(
+    90deg,
+    rgba(200, 182, 166, 0.18) 0%,
+    rgba(200, 182, 166, 0.32) 50%,
+    rgba(200, 182, 166, 0.18) 100%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.4s ease-in-out infinite;
+}
+
+.skeleton-block--wide {
+  min-height: 20rem;
+}
+
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}

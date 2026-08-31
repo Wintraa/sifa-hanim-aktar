@@ -9,6 +9,7 @@ import {
   PRODUCTS_CACHE_KEY,
   isValidProduct,
   purgeLegacyDemoProducts,
+  syncCatalogImagesOverStaleOverrides,
 } from "../lib/products.js";
 
 const API_BASE = "/api";
@@ -186,8 +187,9 @@ export const api = {
 
   async getProductsWithFallback() {
     purgeLegacyDemoProducts();
+    syncCatalogImagesOverStaleOverrides();
 
-    const response = await fetch("/data/products.json");
+    const response = await fetch("/data/products.json?v=aktar-v1", { cache: "no-store" });
     if (!response.ok) {
       throw new Error("Ürün verileri yüklenemedi.");
     }

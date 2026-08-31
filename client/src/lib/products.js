@@ -5,10 +5,16 @@ import { getCategoryNames } from "./product-categories.js";
 
 const OVERRIDES_KEY = "sifa_product_overrides_v1";
 const DELETED_KEY = "sifa_product_deleted_v1";
-const PRODUCTS_CACHE_KEY = "sifa-products-v4";
+const PRODUCTS_CACHE_KEY = "sifa-products-v5";
 const PURGE_FLAG = "sifa_demo_catalog_purged_v1";
+const IMAGE_SYNC_FLAG = "sifa_catalog_images_synced_v1";
 /** Eski demo vitrin (Papatya, Ihlamur vb.) — artık gösterilmez. */
 const LEGACY_DEMO_IDS = new Set(Array.from({ length: 24 }, (_, i) => i + 1));
+
+/** Admin'in tarayıcıya yüklediği görsel (data/blob). Katalog yolunu ezmesin. */
+function isUserUploadedImage(url) {
+  return /^(data:|blob:)/i.test(String(url || "").trim());
+}
 
 const isValidProduct = (p) =>
   p &&
@@ -62,6 +68,41 @@ export function purgeLegacyDemoProducts() {
   localStorage.setItem(PURGE_FLAG, "1");
 }
 
+/**
+ * Admin kaydı eski placeholder / bitki SVG / boş yolu tutuyorsa
+ * katalog (Aktar) fotoğraflarını ezer. Bir kez temizle.
+ */
+export function syncCatalogImagesOverStaleOverrides() {
+  if (localStorage.getItem(IMAGE_SYNC_FLAG)) return;
+
+  const overrides = readProductOverrides();
+  let changed = false;
+  for (const [id, patch] of Object.entries(overrides)) {
+    if (!patch || typeof patch !== "object") continue;
+    if (isUserUploadedImage(patch.resimUrl)) continue;
+    if ("resimUrl" in patch) {
+      delete patch.resimUrl;
+      overrides[id] = patch;
+      changed = true;
+    }
+  }
+  if (changed) {
+    localStorage.setItem(OVERRIDES_KEY, JSON.stringify(overrides));
+  }
+
+  try {
+    sessionStorage.removeItem(PRODUCTS_CACHE_KEY);
+    sessionStorage.removeItem("sifa-products-v4");
+    sessionStorage.removeItem("sifa-products-v3");
+    sessionStorage.removeItem("sifa-products-v2");
+    sessionStorage.removeItem("sifa-products-v1");
+  } catch {
+    /* ignore */
+  }
+
+  localStorage.setItem(IMAGE_SYNC_FLAG, "1");
+}
+
 /** Admin panelinde "Öne çıkan" işaretli ürünler. */
 export function getFeaturedProducts(products) {
   return products.filter((p) => Boolean(p.oneCikan));
@@ -74,7 +115,15 @@ export function mergeProducts(baseList) {
 
   for (const item of baseList) {
     if (!isValidProduct(item) || deleted.has(Number(item.id))) continue;
-    byId.set(Number(item.id), { ...item, ...(overrides[item.id] || {}) });
+    const patch = overrides[item.id] || overrides[String(item.id)];
+    const next = { ...item, ...(patch || {}), id: Number(item.id) };
+    // Katalog fotoğrafı varsayılan; yalnızca admin yüklemesi korunur.
+    if (isUserUploadedImage(patch?.resimUrl)) {
+      next.resimUrl = patch.resimUrl;
+    } else if (item.resimUrl) {
+      next.resimUrl = item.resimUrl;
+    }
+    byId.set(Number(item.id), next);
   }
 
   for (const [id, patch] of Object.entries(overrides)) {
