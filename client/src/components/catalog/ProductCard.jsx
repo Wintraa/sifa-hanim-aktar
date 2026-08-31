@@ -6,6 +6,10 @@ import { ProductImage } from "./ProductImage.jsx";
 export function ProductCard({ product, visibleIndex = 0, isAdmin = false, onEdit, inVitrin = false }) {
   const detailHref = `/urun/${product.id}`;
   const trackClick = () => recordProductClick(product.id);
+  const lead = product.kisaAciklama
+    ? product.kisaAciklama.replace(/\s*—\s*Şifa Hanım Aktar\.?\s*$/i, "").trim()
+    : "";
+  const showLead = lead && lead.toLocaleLowerCase("tr") !== String(product.kategori || "").toLocaleLowerCase("tr");
 
   return (
     <article className={`product-card${inVitrin ? " product-card--featured" : ""}`}>
@@ -43,13 +47,10 @@ export function ProductCard({ product, visibleIndex = 0, isAdmin = false, onEdit
             {product.ad}
           </Link>
         </h4>
-        {product.birim ? <p className="product-card__unit">{product.birim}</p> : null}
-        {product.kisaAciklama ? (
-          <p className="product-card__desc">{product.kisaAciklama.replace(/\s*—\s*Şifa Hanım Aktar\.?\s*$/i, "")}</p>
+        {product.birim && product.birim !== "adet" ? (
+          <p className="product-card__unit">{product.birim}</p>
         ) : null}
-        <Link className="product-card__detail-link" to={detailHref} onClick={trackClick}>
-          Ürünü incele →
-        </Link>
+        {showLead ? <p className="product-card__desc">{lead}</p> : null}
         <div className="product-card__footer">
           <ProductContactLinks productName={product.ad} birim={product.birim} compact />
           {isAdmin ? (
