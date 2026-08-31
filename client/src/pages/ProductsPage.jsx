@@ -20,7 +20,7 @@ import { SHOP } from "../config/shop.js";
 import { whatsappUrl } from "../lib/whatsapp.js";
 import { loadBaseCategories, notifyCategoriesChanged } from "../lib/product-categories.js";
 
-const PAGE_SIZE = 9;
+const PAGE_SIZE = 24;
 
 function productMatchesSearch(product, query) {
   if (!query) return true;
