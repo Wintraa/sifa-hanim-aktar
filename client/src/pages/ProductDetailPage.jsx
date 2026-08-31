@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { api } from "../services/api.js";
 import { applyPageSeo } from "../lib/seo.js";
 import { recordProductClick } from "../lib/product-clicks.js";
-import { saveProductOverride } from "../lib/products.js";
+import { saveProductImageOverride } from "../lib/products.js";
 import { isAdminUser } from "../lib/auth.js";
 import { useAuth } from "../context/AuthContext.jsx";
 import { showToast } from "../lib/toast.js";
@@ -96,9 +96,8 @@ export default function ProductDetailPage() {
 
   const handleAdminImageChange = (resimUrl) => {
     try {
-      const updated = { ...product, resimUrl };
-      saveProductOverride(updated);
-      setProduct(updated);
+      const updated = saveProductImageOverride(product, resimUrl);
+      setProduct({ ...product, ...updated, resimUrl });
       showToast("Ürün resmi kaydedildi.", "success");
     } catch (err) {
       showToast(err.message || "Kaydedilemedi.", "error");
@@ -128,6 +127,7 @@ export default function ProductDetailPage() {
         <section className="product-detail__layout">
           <figure className="product-detail__media info-card">
             <ProductImage
+              key={product.resimUrl}
               className="product-detail__photo"
               src={product.resimUrl}
               alt={`${product.ad} görseli`}

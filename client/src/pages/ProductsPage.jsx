@@ -3,7 +3,14 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import { api } from "../services/api.js";
 import { useAuth } from "../context/AuthContext.jsx";
 import { isAdminUser } from "../lib/auth.js";
-import { createEmptyProduct, getFeaturedProducts, saveProductOverride } from "../lib/products.js";
+import {
+  createEmptyProduct,
+  getFeaturedProducts,
+  saveProductImageOverride,
+  PRODUCTS_CHANGED,
+  purgeLegacyDemoProducts,
+  syncCatalogImagesOverStaleOverrides,
+} from "../lib/products.js";
 import { isInVitrin } from "../lib/product-clicks.js";
 import { debounce } from "../lib/utils.js";
 import { applyPageSeo } from "../lib/seo.js";
@@ -46,6 +53,7 @@ export default function ProductsPage() {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const [products, setProducts] = useState([]);
+  const [baseProducts, setBaseProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
@@ -60,22 +68,53 @@ export default function ProductsPage() {
   const featuredOnly = searchParams.get("one") === "1";
   const searchQuery = (searchParams.get("q") || "").trim().toLocaleLowerCase("tr");
 
-  const loadProducts = useCallback(async () => {
-    setLoading(true);
+  const loadProducts = useCallback(async ({ silent = false } = {}) => {
+    if (!silent) {
+      setLoading(true);
+    }
     setError("");
     try {
-      const data = await api.getProductsWithFallback();
-      setProducts(data);
+      purgeLegacyDemoProducts();
+      syncCatalogImagesOverStaleOverrides();
+      const response = await fetch("/data/products.json?v=aktar-v1", { cache: "no-store" });
+      if (!response.ok) throw new Error("Ürün verileri yüklenemedi.");
+      const data = await response.json();
+      const list = Array.isArray(data) ? data : data?.products;
+      if (!Array.isArray(list)) throw new Error("Ürün verisi geçersiz.");
+      setBaseProducts(list);
+      const merged = api.remergeProducts(list);
+      setProducts(merged);
     } catch (err) {
       setError(err.message || "Ürünler yüklenemedi.");
     } finally {
-      setLoading(false);
+      if (!silent) setLoading(false);
     }
   }, []);
+
+  const refreshMergedProducts = useCallback(() => {
+    if (baseProducts.length) {
+      setProducts(api.remergeProducts(baseProducts));
+      return;
+    }
+    loadProducts({ silent: true });
+  }, [baseProducts, loadProducts]);
 
   useEffect(() => {
     loadProducts();
   }, [loadProducts]);
+
+  useEffect(() => {
+    const onProductsChanged = () => refreshMergedProducts();
+    const onPageShow = (event) => {
+      if (event.persisted) refreshMergedProducts();
+    };
+    window.addEventListener(PRODUCTS_CHANGED, onProductsChanged);
+    window.addEventListener("pageshow", onPageShow);
+    return () => {
+      window.removeEventListener(PRODUCTS_CHANGED, onProductsChanged);
+      window.removeEventListener("pageshow", onPageShow);
+    };
+  }, [refreshMergedProducts]);
 
   useEffect(() => {
     loadBaseCategories().then(() => notifyCategoriesChanged());
@@ -198,13 +237,19 @@ export default function ProductsPage() {
   const handleProductImageChange = useCallback(
     (productWithImage) => {
       try {
-        saveProductOverride(productWithImage);
-        loadProducts();
+        saveProductImageOverride(productWithImage, productWithImage.resimUrl);
+        setProducts((prev) =>
+          prev.map((p) =>
+            Number(p.id) === Number(productWithImage.id)
+              ? { ...p, resimUrl: productWithImage.resimUrl }
+              : p
+          )
+        );
       } catch (err) {
         showToast(err.message || "Resim kaydedilemedi.", "error");
       }
     },
-    [loadProducts]
+    []
   );
 
   const filteredProducts = useMemo(() => {

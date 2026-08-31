@@ -8,6 +8,14 @@ const DELETED_KEY = "sifa_product_deleted_v1";
 const PRODUCTS_CACHE_KEY = "sifa-products-v5";
 const PURGE_FLAG = "sifa_demo_catalog_purged_v1";
 const IMAGE_SYNC_FLAG = "sifa_catalog_images_synced_v1";
+/** Admin görsel kaydedince tüm sayfalar dinler. */
+export const PRODUCTS_CHANGED = "sifa-products-changed";
+
+export function notifyProductsChanged() {
+  if (typeof window !== "undefined") {
+    window.dispatchEvent(new Event(PRODUCTS_CHANGED));
+  }
+}
 /** Eski demo vitrin (Papatya, Ihlamur vb.) — artık gösterilmez. */
 const LEGACY_DEMO_IDS = new Set(Array.from({ length: 24 }, (_, i) => i + 1));
 
@@ -117,8 +125,8 @@ export function mergeProducts(baseList) {
     if (!isValidProduct(item) || deleted.has(Number(item.id))) continue;
     const patch = overrides[item.id] || overrides[String(item.id)];
     const next = { ...item, ...(patch || {}), id: Number(item.id) };
-    // Katalog fotoğrafı varsayılan; yalnızca admin yüklemesi korunur.
-    if (isUserUploadedImage(patch?.resimUrl)) {
+    // Admin override görseli her zaman katalog fotosunun önüne geçer.
+    if (patch?.resimUrl) {
       next.resimUrl = patch.resimUrl;
     } else if (item.resimUrl) {
       next.resimUrl = item.resimUrl;
@@ -163,13 +171,32 @@ export function saveProductOverride(product) {
     throw new Error("Ürün adı zorunlu.");
   }
   const overrides = readProductOverrides();
-  overrides[id] = { ...product, id };
+  const prev = overrides[id] || overrides[String(id)] || {};
+  overrides[id] = { ...prev, ...product, id };
   localStorage.setItem(OVERRIDES_KEY, JSON.stringify(overrides));
   try {
     sessionStorage.removeItem(PRODUCTS_CACHE_KEY);
   } catch {
     /* ignore */
   }
+  notifyProductsChanged();
+}
+
+/** Sadece görsel güncelle — vitrin + detay aynı anda senkron kalır. */
+export function saveProductImageOverride(product, resimUrl) {
+  const id = Number(product.id);
+  if (!id) throw new Error("Ürün id geçersiz.");
+  const overrides = readProductOverrides();
+  const prev = overrides[id] || overrides[String(id)] || {};
+  overrides[id] = { ...product, ...prev, id, resimUrl: String(resimUrl || "").trim() };
+  localStorage.setItem(OVERRIDES_KEY, JSON.stringify(overrides));
+  try {
+    sessionStorage.removeItem(PRODUCTS_CACHE_KEY);
+  } catch {
+    /* ignore */
+  }
+  notifyProductsChanged();
+  return overrides[id];
 }
 
 export function deleteProductOverride(id) {

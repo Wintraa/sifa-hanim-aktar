@@ -207,6 +207,11 @@ export const api = {
     return merged;
   },
 
+  /** Tarayıcı override'ları ile anında birleştir (ağ beklemeden). */
+  remergeProducts(baseList) {
+    return mergeProducts(baseList.filter(isValidProduct));
+  },
+
   async getProductWithFallback(id) {
     const numId = Number(id);
     if (!Number.isInteger(numId) || numId <= 0) {
