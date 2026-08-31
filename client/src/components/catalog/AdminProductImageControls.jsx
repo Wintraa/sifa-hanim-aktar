@@ -1,15 +1,18 @@
 import { useRef, useState } from "react";
 import { productImageUrl } from "../../lib/assetUrl.js";
 import { compressImageFile } from "../../lib/imageUpload.js";
+import { clearProductImageOverride } from "../../lib/products.js";
 import { showToast } from "../../lib/toast.js";
+import { uploadProductImagePermanent } from "../../services/productImages.js";
 import { ImageEditorPortal } from "./ImageEditorPortal.jsx";
 
 /**
  * Sadece admin: Görsel Ekle + Görsel Düzenle.
- * overlay = fotoğrafın üstünde bar (vitrin kartları).
+ * Kayıt → sunucuya kalıcı (products.json + assets/products).
  */
 export function AdminProductImageControls({
   isAdmin = false,
+  product = null,
   imageUrl = "",
   onImageChange,
   showPreview = true,
@@ -20,9 +23,38 @@ export function AdminProductImageControls({
   const [editorOpen, setEditorOpen] = useState(false);
   const [editorSrc, setEditorSrc] = useState("");
 
-  if (!isAdmin) return null;
+  if (!isAdmin || !product) return null;
 
-  const hasImage = Boolean(String(imageUrl || "").trim());
+  const hasImage = Boolean(String(imageUrl || product.resimUrl || "").trim());
+
+  const persistImage = async (dataUrl, fromEditor = false) => {
+    setLoading(true);
+    try {
+      const result = await uploadProductImagePermanent(product.id, dataUrl);
+      clearProductImageOverride(product.id);
+      onImageChange?.(result.resimUrl);
+      if (result.github) {
+        showToast(
+          "Görsel GitHub'a kaydedildi. Vercel deploy bitince herkes görür (1–2 dk).",
+          "success"
+        );
+      } else {
+        showToast("Görsel kalıcı kaydedildi — vitrin güncellendi.", "success");
+      }
+    } catch (err) {
+      if (fromEditor) {
+        onImageChange?.(dataUrl);
+        showToast(
+          `Sunucuya yazılamadı (${err.message}). Sadece bu tarayıcıda görünür.`,
+          "info"
+        );
+      } else {
+        showToast(err.message || "Görsel kaydedilemedi.", "error");
+      }
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const handlePickFile = async (e) => {
     const file = e.target.files?.[0];
@@ -31,8 +63,9 @@ export function AdminProductImageControls({
     setLoading(true);
     try {
       const dataUrl = await compressImageFile(file);
-      onImageChange?.(dataUrl);
-      showToast("Görsel eklendi. «Görsel Düzenle» ile yerleştir.", "success");
+      setEditorSrc(dataUrl);
+      setEditorOpen(true);
+      showToast("Fotoğraf yüklendi. Konumlandırıp «Görseli Uygula» de.", "success");
     } catch (err) {
       showToast(err.message || "Görsel yüklenemedi.", "error");
     } finally {
@@ -46,15 +79,14 @@ export function AdminProductImageControls({
       fileInputRef.current?.click();
       return;
     }
-    setEditorSrc(productImageUrl(imageUrl));
+    setEditorSrc(productImageUrl(imageUrl || product.resimUrl));
     setEditorOpen(true);
   };
 
-  const handleEditorApply = (dataUrl) => {
-    onImageChange?.(dataUrl);
+  const handleEditorApply = async (dataUrl) => {
     setEditorOpen(false);
     setEditorSrc("");
-    showToast("Görsel kaydedildi.", "success");
+    await persistImage(dataUrl, true);
   };
 
   const handleEditorCancel = () => {
@@ -74,7 +106,7 @@ export function AdminProductImageControls({
       <div className={rootClass}>
         {showPreview && hasImage && !overlay ? (
           <div className="admin-image-controls__preview">
-            <img src={productImageUrl(imageUrl)} alt="Ürün görseli önizlemesi" />
+            <img src={productImageUrl(imageUrl || product.resimUrl)} alt="Ürün görseli önizlemesi" />
           </div>
         ) : null}
 

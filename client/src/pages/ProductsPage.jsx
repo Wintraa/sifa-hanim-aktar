@@ -6,7 +6,6 @@ import { isAdminUser } from "../lib/auth.js";
 import {
   createEmptyProduct,
   getFeaturedProducts,
-  saveProductImageOverride,
   PRODUCTS_CHANGED,
   purgeLegacyDemoProducts,
   syncCatalogImagesOverStaleOverrides,
@@ -234,23 +233,15 @@ export default function ProductsPage() {
     setAddingCategory(false);
   };
 
-  const handleProductImageChange = useCallback(
-    (productWithImage) => {
-      try {
-        saveProductImageOverride(productWithImage, productWithImage.resimUrl);
-        setProducts((prev) =>
-          prev.map((p) =>
-            Number(p.id) === Number(productWithImage.id)
-              ? { ...p, resimUrl: productWithImage.resimUrl }
-              : p
-          )
-        );
-      } catch (err) {
-        showToast(err.message || "Resim kaydedilemedi.", "error");
-      }
-    },
-    []
-  );
+  const handleProductImageChange = useCallback((productWithImage) => {
+    setProducts((prev) =>
+      prev.map((p) =>
+        Number(p.id) === Number(productWithImage.id)
+          ? { ...p, resimUrl: productWithImage.resimUrl }
+          : p
+      )
+    );
+  }, []);
 
   const filteredProducts = useMemo(() => {
     let list = [...products];

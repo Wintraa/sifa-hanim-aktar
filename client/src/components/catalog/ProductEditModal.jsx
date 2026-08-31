@@ -117,6 +117,7 @@ export function ProductEditModal({ product, isNew = false, isAdmin = true, onClo
               <span className="product-edit-form__image-label">Ürün görseli</span>
               <AdminProductImageControls
                 isAdmin={isAdmin}
+                product={form}
                 imageUrl={form.resimUrl}
                 onImageChange={(url) => setField("resimUrl", url)}
               />

@@ -3,10 +3,9 @@ import { Link, useParams } from "react-router-dom";
 import { api } from "../services/api.js";
 import { applyPageSeo } from "../lib/seo.js";
 import { recordProductClick } from "../lib/product-clicks.js";
-import { saveProductImageOverride } from "../lib/products.js";
+import { clearProductImageOverride } from "../lib/products.js";
 import { isAdminUser } from "../lib/auth.js";
 import { useAuth } from "../context/AuthContext.jsx";
-import { showToast } from "../lib/toast.js";
 import { SHOP } from "../config/shop.js";
 import { AdminProductImageControls } from "../components/catalog/AdminProductImageControls.jsx";
 import { ProductContactLinks } from "../components/catalog/ProductContactLinks.jsx";
@@ -95,13 +94,8 @@ export default function ProductDetailPage() {
   const lead = product.kisaAciklama?.replace(/\s*—\s*Şifa Hanım Aktar\.?\s*$/i, "") || product.kategori;
 
   const handleAdminImageChange = (resimUrl) => {
-    try {
-      const updated = saveProductImageOverride(product, resimUrl);
-      setProduct({ ...product, ...updated, resimUrl });
-      showToast("Ürün resmi kaydedildi.", "success");
-    } catch (err) {
-      showToast(err.message || "Kaydedilemedi.", "error");
-    }
+    clearProductImageOverride(product.id);
+    setProduct((prev) => ({ ...prev, resimUrl }));
   };
 
   return (
@@ -136,6 +130,7 @@ export default function ProductDetailPage() {
             />
             <AdminProductImageControls
               isAdmin={isAdmin}
+              product={product}
               imageUrl={product.resimUrl}
               showPreview={false}
               onImageChange={handleAdminImageChange}

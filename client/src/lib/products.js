@@ -182,6 +182,31 @@ export function saveProductOverride(product) {
   notifyProductsChanged();
 }
 
+/** Sadece görsel override'ını kaldır — katalog yolu geçerli olsun. */
+export function clearProductImageOverride(productId) {
+  const id = Number(productId);
+  const overrides = readProductOverrides();
+  const key = overrides[id] !== undefined ? id : overrides[String(id)] !== undefined ? String(id) : null;
+  if (key === null) return;
+
+  const patch = { ...overrides[key] };
+  delete patch.resimUrl;
+  const remaining = Object.keys(patch).filter((k) => k !== "id");
+  if (remaining.length === 0) {
+    delete overrides[id];
+    delete overrides[String(id)];
+  } else {
+    overrides[key] = patch;
+  }
+  localStorage.setItem(OVERRIDES_KEY, JSON.stringify(overrides));
+  try {
+    sessionStorage.removeItem(PRODUCTS_CACHE_KEY);
+  } catch {
+    /* ignore */
+  }
+  notifyProductsChanged();
+}
+
 /** Sadece görsel güncelle — vitrin + detay aynı anda senkron kalır. */
 export function saveProductImageOverride(product, resimUrl) {
   const id = Number(product.id);

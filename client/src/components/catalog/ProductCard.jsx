@@ -40,6 +40,7 @@ export function ProductCard({
         {isAdmin ? (
           <AdminProductImageControls
             isAdmin
+            product={product}
             overlay
             showPreview={false}
             imageUrl={product.resimUrl}
