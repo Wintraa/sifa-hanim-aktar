@@ -92,7 +92,7 @@ const EXACT = {
   81: "enginar.jpg",
   82: "üzüm.jpg",
   83: "Gül Sirkesi.jpeg",
-  84: "Sultan Sirke.jpeg",
+  84: "Sultan.jpeg",
   85: "Çakşır.jpg",
   86: "Enginat.jpg",
 };
