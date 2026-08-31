@@ -24,9 +24,9 @@ export function ProductCard({ product, visibleIndex = 0, isAdmin = false, onEdit
             className="product-card__image"
             src={product.resimUrl}
             alt={`${product.ad} ürün görseli`}
-            width="640"
-            height="480"
-            loading={visibleIndex < 3 ? "eager" : "lazy"}
+            width="150"
+            height="150"
+            loading={visibleIndex < 6 ? "eager" : "lazy"}
             decoding="async"
           />
         </Link>

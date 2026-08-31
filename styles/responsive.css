@@ -1,6 +1,6 @@
 /* Büyük tablet: kartlar iki sütuna, geniş içerikler tek sütuna iner */
 @media (max-width: 68.75rem) {
-  .plants-grid,
+  .plants-grid:not(.products-grid),
   .tables-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -139,11 +139,15 @@
     width: 100%;
   }
 
-  .plants-grid,
+  .plants-grid:not(.products-grid),
   .tables-grid,
   .profile-info-grid,
   .profile-form-grid {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
 
   .search-box {
