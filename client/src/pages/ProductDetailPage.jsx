@@ -9,6 +9,7 @@ import { useAuth } from "../context/AuthContext.jsx";
 import { SHOP } from "../config/shop.js";
 import { AdminProductImageControls } from "../components/catalog/AdminProductImageControls.jsx";
 import { ProductContactLinks } from "../components/catalog/ProductContactLinks.jsx";
+import { CartFloatButton } from "../components/catalog/CartFloatButton.jsx";
 import { ProductImage } from "../components/catalog/ProductImage.jsx";
 import { RelatedProducts } from "../components/catalog/RelatedProducts.jsx";
 import { ShopTrustStrip } from "../components/catalog/ShopHero.jsx";
@@ -157,7 +158,7 @@ export default function ProductDetailPage() {
               ) : null}
             </article>
 
-            <ProductContactLinks productName={product.ad} birim={product.birim} panel />
+            <ProductContactLinks product={product} productName={product.ad} birim={product.birim} panel />
           </div>
         </section>
 
@@ -169,6 +170,7 @@ export default function ProductDetailPage() {
       </main>
 
       <WhatsAppFloatButton />
+      <CartFloatButton />
     </>
   );
 }

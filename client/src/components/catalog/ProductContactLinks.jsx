@@ -1,5 +1,6 @@
 import { SHOP } from "../../config/shop.js";
 import { whatsappUrl, instagramUrl } from "../../lib/whatsapp.js";
+import { AddToCartButton } from "./AddToCartButton.jsx";
 
 function orderMessage(productName, birim) {
   if (!productName) return SHOP.whatsappMessages.order;
@@ -11,6 +12,7 @@ function orderMessage(productName, birim) {
 export function ProductContactLinks({
   productName = "",
   birim = "",
+  product = null,
   compact = false,
   card = false,
   panel = false,
@@ -36,24 +38,27 @@ export function ProductContactLinks({
     return (
       <aside className="product-order-panel" aria-label="Sipariş ve iletişim">
         <p className="product-order-panel__eyebrow">Sipariş</p>
-        <h2 className="product-order-panel__title">Fiyat ve stok için bize yazın</h2>
+        <h2 className="product-order-panel__title">Sepete ekle, toplu fiyat sor</h2>
         <p className="product-order-panel__text">
-          Ürünü sepete eklemek yerine WhatsApp veya Instagram üzerinden doğrudan sipariş
-          verebilirsiniz. Genelde birkaç dakika içinde dönüş yapılır.
+          Sepete ekle, vitrinden biriken ürünleri tek WhatsApp mesajıyla sor — fiyat ve stok
+          genelde birkaç dakika içinde gelir. Premium aktar deneyimi, kapına kadar.
         </p>
         <ul className="product-order-panel__list">
-          <li>Hızlı fiyat bilgisi</li>
+          <li>Sepete ekle → toplu fiyat sorusu</li>
           <li>Çan / Çanakkale teslimat seçenekleri</li>
           <li>Güvenilir aktar danışmanlığı</li>
         </ul>
         <div className="product-order-panel__actions">
+          {product?.stokta !== false ? (
+            <AddToCartButton product={product} className="product-order-panel__cart" />
+          ) : null}
           <a
             className="product-order-panel__cta product-order-panel__cta--whatsapp"
             href={whatsappUrl(message)}
             target="_blank"
             rel="noopener noreferrer"
           >
-            WhatsApp Sipariş
+            Tek Ürün WhatsApp
           </a>
           <a
             className="product-order-panel__cta product-order-panel__cta--instagram"

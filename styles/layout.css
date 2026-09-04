@@ -169,27 +169,45 @@
   justify-content: flex-end;
 }
 
-.topbar__whatsapp {
+.topbar__whatsapp,
+.topbar__cart {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.35rem;
   min-height: 2.5rem;
   padding: 0.45rem 0.9rem;
   border-radius: var(--radius-md);
-  background: #25d366;
-  color: #fff;
   font-size: 0.8125rem;
   font-weight: 700;
   text-decoration: none;
   white-space: nowrap;
-  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.28);
   transition: filter 0.15s ease, transform 0.15s ease;
+}
+
+.topbar__whatsapp {
+  background: #25d366;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.28);
+}
+
+.topbar__cart {
+  border: 1px solid rgba(141, 123, 104, 0.28);
+  background: rgba(255, 250, 244, 0.92);
+  color: var(--text-main);
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(74, 62, 61, 0.08);
 }
 
 .topbar__whatsapp:hover {
   filter: brightness(1.05);
   transform: translateY(-1px);
   color: #fff;
+}
+
+.topbar__cart:hover {
+  filter: brightness(1.02);
+  transform: translateY(-1px);
 }
 
 .content {
@@ -240,8 +258,13 @@
 }
 
 .products-grid {
-  grid-template-columns: repeat(auto-fill, minmax(168px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.15rem;
+}
+
+.products-grid--vitrine {
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.25rem;
 }
 
 .pagination {

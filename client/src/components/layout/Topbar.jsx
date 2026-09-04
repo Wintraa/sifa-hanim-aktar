@@ -1,8 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext.jsx";
-import { SHOP } from "../../config/shop.js";
-import { whatsappUrl } from "../../lib/whatsapp.js";
+import { useCart } from "../../context/CartContext.jsx";
 
 export function Topbar({
   catalogMode = "products",
@@ -16,6 +15,7 @@ export function Topbar({
 }) {
   const [menuOpenUser, setMenuOpenUser] = useState(false);
   const { user, isLoggedIn, logout } = useAuth();
+  const { itemCount, closeCart } = useCart();
   const navigate = useNavigate();
   const dropdownRef = useRef(null);
 
@@ -67,15 +67,15 @@ export function Topbar({
 
       <div className="topbar__right">
         {!isPlants ? (
-          <a
-            className="topbar__whatsapp"
-            href={whatsappUrl(SHOP.whatsappMessages.order)}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="WhatsApp ile sipariş ver"
+          <Link
+            to="/sepet"
+            className="topbar__cart"
+            onClick={closeCart}
+            aria-label={itemCount > 0 ? `Sepetim, ${itemCount} ürün` : "Sepetim"}
           >
-            WhatsApp
-          </a>
+            Sepet
+            {itemCount > 0 ? <span className="topbar__cart-badge">{itemCount}</span> : null}
+          </Link>
         ) : null}
 
         <label className="search-box" htmlFor="searchInput">

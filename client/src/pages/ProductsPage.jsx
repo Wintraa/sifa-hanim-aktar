@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams, Link } from "react-router-dom";
 import { api } from "../services/api.js";
 import { useAuth } from "../context/AuthContext.jsx";
 import { isAdminUser } from "../lib/auth.js";
@@ -22,9 +22,11 @@ import { ProductEditModal } from "../components/catalog/ProductEditModal.jsx";
 import { CategoryEditModal } from "../components/catalog/CategoryEditModal.jsx";
 import { Pagination } from "../components/catalog/Pagination.jsx";
 import { WhatsAppFloatButton } from "../components/layout/ShopContact.jsx";
+import { CartFloatButton } from "../components/catalog/CartFloatButton.jsx";
 import { ShopFooter } from "../components/layout/ShopFooter.jsx";
 import { ShopHero, ShopTrustStrip } from "../components/catalog/ShopHero.jsx";
 import { AdminPhotoHint } from "../components/catalog/AdminPhotoHint.jsx";
+import { ProductSearchBar } from "../components/catalog/ProductSearchBar.jsx";
 import { SHOP } from "../config/shop.js";
 import { whatsappUrl } from "../lib/whatsapp.js";
 import { loadBaseCategories, notifyCategoriesChanged } from "../lib/product-categories.js";
@@ -33,11 +35,13 @@ const PAGE_SIZE = 24;
 
 function productMatchesSearch(product, query) {
   if (!query) return true;
+  // Arama: ad / kategori / birim / açıklama / etiket
   const hay = [
     product.ad,
     product.kategori,
     product.kisaAciklama,
     product.aciklama,
+    product.birim,
     ...(product.etiketler || []),
   ]
     .join(" ")
@@ -121,8 +125,9 @@ export default function ProductsPage() {
 
   useEffect(() => {
     applyPageSeo({
-      title: `${SHOP.name} — Ürünler`,
-      description: "Şifa Hanım Aktar ürün vitrini.",
+      title: `${SHOP.name} — Doğal Ürün Vitrini`,
+      description:
+        "Şifa Hanım Aktar ürün vitrini. Baharat, çay, macun ve doğal ürünler — sepete ekle, WhatsApp ile anında fiyat öğren.",
       path: "/",
     });
   }, []);
@@ -323,6 +328,12 @@ export default function ProductsPage() {
                 <>
                   <ShopHero productCount={products.length} />
                   <ShopTrustStrip />
+                  <ProductSearchBar
+                    value={searchInput}
+                    onChange={handleSearchChange}
+                    onClear={() => handleSearchChange("")}
+                    resultCount={searchQuery ? filteredProducts.length : null}
+                  />
                 </>
               ) : (
                 <div className="admin-panel__head">
@@ -334,12 +345,22 @@ export default function ProductsPage() {
               )}
 
               <div className="shop-page__toolbar">
-                {resultsLabel ? <p className="shop-page__results">{resultsLabel}</p> : null}
-                {isAdmin ? (
-                  <button className="add-product-btn" type="button" onClick={openAddForm}>
-                    + Ürün Ekle
-                  </button>
-                ) : null}
+                <div>
+                  <p className="section-label" id="productsPanelTitle">
+                    Vitrin
+                  </p>
+                  {resultsLabel ? <p className="shop-page__results">{resultsLabel}</p> : null}
+                </div>
+                <div className="shop-page__toolbar-actions">
+                  <Link className="shop-page__cart-link" to="/sepet">
+                    Sepetim
+                  </Link>
+                  {isAdmin ? (
+                    <button className="add-product-btn" type="button" onClick={openAddForm}>
+                      + Ürün Ekle
+                    </button>
+                  ) : null}
+                </div>
               </div>
 
               <AdminPhotoHint isAdmin={isAdmin} />
@@ -400,7 +421,7 @@ export default function ProductsPage() {
 
               {!loading && !error && visible.length > 0 ? (
                 <>
-                  <div className="plants-grid products-grid" aria-live="polite">
+                  <div className="plants-grid products-grid products-grid--vitrine" aria-live="polite">
                     {visible.map((product, index) => (
                       <ProductCard
                         key={product.id}
@@ -416,22 +437,28 @@ export default function ProductsPage() {
                       />
                     ))}
                   </div>
-                  <div className="shop-page__cta">
+                  <div className="shop-page__cta shop-page__cta--vitrine">
                     <div>
-                      <h2>Sipariş için bir mesaj yeter</h2>
+                      <p className="section-label">Hemen sipariş</p>
+                      <h2>Beğendiğin ürünler sepetinde — fiyatı tek mesajla öğren</h2>
                       <p>
-                        Fiyat, stok ve teslimat bilgisi için WhatsApp üzerinden yazın — genelde birkaç
-                        dakika içinde dönüş yapılır.
+                        Sepete ekle, toplu listeyi WhatsApp&apos;tan gönder. Stok, gramaj ve teslimat
+                        bilgisi genelde birkaç dakika içinde gelir.
                       </p>
                     </div>
-                    <a
-                      className="shop-page__cta-btn"
-                      href={whatsappUrl(SHOP.whatsappMessages.order)}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      WhatsApp ile Sipariş Ver
-                    </a>
+                    <div className="shop-page__cta-actions">
+                      <Link className="shop-page__cta-btn shop-page__cta-btn--cart" to="/sepet">
+                        Sepete Git
+                      </Link>
+                      <a
+                        className="shop-page__cta-btn"
+                        href={whatsappUrl(SHOP.whatsappMessages.order)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        WhatsApp ile Sipariş Ver
+                      </a>
+                    </div>
                   </div>
                   <Pagination currentPage={safePage} totalPages={totalPages} onPageChange={setPage} />
                   <ShopFooter />
@@ -443,6 +470,7 @@ export default function ProductsPage() {
       </div>
 
       <WhatsAppFloatButton />
+      <CartFloatButton />
 
       {isAdmin && editingProduct ? (
         <ProductEditModal

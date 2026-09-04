@@ -11,8 +11,8 @@ export function ShopFooter() {
           <p className="section-label">{SHOP.tagline}</p>
           <h2>{SHOP.name}</h2>
           <p className="shop-footer__text">
-            Çan&apos;daki yerel aktarımızda baharat, çay, macun, sirke ve doğal ürünler. Sipariş ve
-            fiyat bilgisi için WhatsApp üzerinden hızlıca ulaşabilirsiniz.
+            Çan&apos;daki yerel aktarımızda seçilmiş baharat, çay, macun ve doğal ürünler.
+            Beğendiklerini sepete ekle; fiyat ve stok için WhatsApp&apos;tan tek mesaj yeter.
           </p>
         </div>
 
